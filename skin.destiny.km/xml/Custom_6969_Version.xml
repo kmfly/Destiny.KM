@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="6969">
+	<defaultcontrol always="true">110</defaultcontrol>
+	<controls>
+		<control type="group" id="9010">
+			<animation type="WindowOpen">
+				<effect type="slide" time="700" start="0,800" end="0,0" tween="sine" easing="out"/>
+				<effect type="fade" time="600" start="0" end="100"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" time="500" start="0,0" end="0,800" tween="sine" easing="in"/>
+				<effect type="fade" time="600" start="100" end="0"/>
+			</animation>
+			<control type="image">
+				<left>-20</left>
+				<top>-20</top>
+				<width>200</width>
+				<height>1100</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+				<bordersize>6</bordersize>
+				<colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+			</control>
+			<control type="image">
+				<left>165</left>
+				<top>-20</top>
+				<width>800</width>
+				<height>1100</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+				<bordersize>6</bordersize>
+				<colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+			</control>
+			<!-- KM 20200617 - Version Info -->
+			<control type="label">
+				<left>195</left>
+				<top>65</top>
+				<width>700</width>
+				<height>38</height>
+				<font>primal_60_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]Version Info[/UPPERCASE]</label>
+			</control>
+			<!-- KM 20200617 - Back button -->
+			<control type="button" id="100">
+				<description>Close Window button</description>
+				<left>850</left>
+				<top>55</top>
+				<width>60</width>
+				<height>60</height>
+				<label/>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>default/close_selected.png</texturefocus>
+				<texturenofocus>default/close.png</texturenofocus>
+				<onleft>110</onleft>
+				<onright>9000</onright>
+				<onup>1860</onup>
+				<ondown>110</ondown>
+			</control>
+			<control type="grouplist" id="9001">
+				<left>172</left>
+				<top>160</top>
+				<width>787</width>
+				<height>880</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>63</pagecontrol>
+				<onleft>100</onleft>
+				<onright>100</onright>
+				<!-- KM 20200617 - Destiny Version -->
+				<control type="label" id="106">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20_Bold</font>
+					<label>Destiny Version</label>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>30</textoffsetx>
+				</control>
+				<control type="button" id="110">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<ondown>111</ondown>
+					<label>4.0.1</label>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+				</control>
+				<control type="label" id="107">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20_Bold</font>
+					<label>Skinner</label>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>30</textoffsetx>
+				</control>
+				<control type="button" id="111">
+					<ondown>112</ondown>
+					<onright>100</onright>
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<label>Jugger</label>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+				</control>
+				<!-- KM 20200617 - Skin Renewal Verion -->
+				<control type="label" id="108">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20_Bold</font>
+					<label>Destiny Renewal Version</label>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>30</textoffsetx>
+				</control>
+				<control type="button" id="112">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<ondown>113</ondown>
+					<onright>100</onright>
+					<label>1.3.2-3</label>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+				</control>
+				<control type="label" id="109">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20_Bold</font>
+					<label>Skinner</label>
+					<textoffsetx>30</textoffsetx>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="button" id="113">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<ondown>113</ondown>
+					<onright>100</onright>
+					<label>KM</label>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

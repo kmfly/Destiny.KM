@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="120">
+	<defaultcontrol always="true">602</defaultcontrol>
+	<controls>
+		<control type="button" id="380">
+			<texturefocus>-</texturefocus>
+			<texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+			<onfocus>SetFocus(5000)</onfocus>
+		</control>
+		<control type="group">
+			<top>0</top>
+			<animation effect="slide" start="0,-218" end="0,-100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,-100" end="0,-218" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,0" end="0,-218" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)">Conditional</animation>
+			<animation effect="slide" end="0,100" time="400" tween="cubic" condition="ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(201).HasFocus">Conditional</animation>
+			<control type="image">
+				<left>150</left>
+				<top>-150</top>
+				<width>1670</width>
+				<height>270</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">skin/button_klein.png</texture>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+				<bordersize>6</bordersize>
+				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			</control>
+			<control type="progress">
+				<left>157</left>
+				<top>114</top>
+				<width>1657</width>
+				<height>10</height>
+				<info>Player.ProgressCache</info>
+			</control>
+			<control type="image">
+				<left>157</left>
+				<top>124</top>
+				<width>1657</width>
+				<height>105</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			</control>
+			<control type="image">
+				<left>167</left>
+				<top>138</top>
+				<width>80</width>
+				<height>80</height>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+			</control>
+			<control type="label">
+				<left>255</left>
+				<top>140</top>
+				<width>1300</width>
+				<height>45</height>
+				<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_20_Bold</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<visible>!VideoPlayer.Content(Episodes)</visible>
+			</control>
+			<control type="label">
+				<description>Next Label</description>
+				<left>255</left>
+				<top>175</top>
+				<width>1300</width>
+				<height>45</height>
+				<label>다음 곡: $INFO[MusicPlayer.Offset(1).Artist] - $INFO[MusicPlayer.Offset(1).Title]</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_15</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<visible>!VideoPlayer.Content(Episodes)</visible>
+			</control>
+			<control type="label">
+				<left>1650</left>
+				<top>140</top>
+				<width>150</width>
+				<height>38</height>
+				<label>$INFO[System.Time(hh.mm)]</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>primal_18_Bold</font>
+			</control>
+			<control type="label">
+				<left>1595</left>
+				<top>180</top>
+				<width>205</width>
+				<height>38</height>
+				<label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>primal_18_Bold</font>
+			</control>
+			<!-- GROUP FOR PLAYER CONTROLS -->
+			<control type="group" id="100">
+				<left>200</left>
+				<top>5</top>
+				<control type="button" id="600">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus>buttons/music/PrevTrack_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/PrevTrack.png</texturenofocus>
+					<onleft>703</onleft>
+					<onright>601</onright>
+					<ondown>380</ondown>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="togglebutton" id="601">
+					<left>80</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus>buttons/music/pause_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/pause.png</texturenofocus>
+					<usealttexture>Player.Paused</usealttexture>
+					<alttexturefocus>buttons/music/play_f.png</alttexturefocus>
+					<alttexturenofocus>buttons/music/play.png</alttexturenofocus>
+					<onleft>600</onleft>
+					<onright>602</onright>
+					<ondown>380</ondown>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="602">
+					<left>160</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus>buttons/music/stop_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/stop.png</texturenofocus>
+					<onleft>601</onleft>
+					<onright>603</onright>
+					<ondown>380</ondown>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="button" id="603">
+					<left>240</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus>buttons/music/NextTrack_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/NextTrack.png</texturenofocus>
+					<onleft>602</onleft>
+					<onright>704</onright>
+					<ondown>380</ondown>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+			</control>
+			<!-- GROUP FOR REPEAT AND RANDOM BUTTONS -->
+			<control type="group" id="201">
+				<left>530</left>
+				<top>5</top>
+				<control type="button" id="704">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus/>
+					<texturenofocus/>
+					<onclick>PlayerControl(Repeat)</onclick>
+					<onleft>603</onleft>
+					<onright>705</onright>
+					<ondown>380</ondown>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texture colordiffuse="$VAR[ColorIcons]">buttons/music/repeat.png</texture>
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<visible>!Control.HasFocus(704)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texture colordiffuse="$VAR[ColorIcons]">buttons/music/repeat_f.png</texture>
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<visible>Control.HasFocus(704)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texture colordiffuse="$VAR[ColorIcons]">buttons/music/repeatOne.png</texture>
+					<visible>Playlist.IsRepeatOne</visible>
+					<visible>!Control.HasFocus(704)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texture colordiffuse="$VAR[ColorIcons]">buttons/music/repeatOne_f.png</texture>
+					<visible>Playlist.IsRepeatOne</visible>
+					<visible>Control.HasFocus(704)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texture colordiffuse="$VAR[ColorIcons]">buttons/music/repeatAll.png</texture>
+					<visible>Playlist.IsRepeat</visible>
+					<visible>!Control.HasFocus(704)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texture colordiffuse="$VAR[ColorIcons]">buttons/music/repeatAll_f.png</texture>
+					<visible>Playlist.IsRepeat</visible>
+					<visible>Control.HasFocus(704)</visible>
+				</control>
+				<control type="togglebutton" id="705">
+					<left>80</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus>buttons/music/Randomoff_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/Randomoff.png</texturenofocus>
+					<usealttexture>Playlist.IsRandom</usealttexture>
+					<alttexturefocus>buttons/music/Randomon_f.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[ColorButton]">buttons/music/Randomon.png</alttexturenofocus>
+					<onclick>PlayerControl(Random)</onclick>
+					<onleft>704</onleft>
+					<onright>706</onright>
+					<ondown>380</ondown>
+				</control>
+				<control type="button" id="706">
+					<left>160</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus>buttons/music/playlist_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/playlist.png</texturenofocus>
+					<onleft>705</onleft>
+					<onright>708</onright>
+					<onup>600</onup>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<!-- <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[MusicPlayer.Artist]+$INFO[MusicPlayer.Title] &amp;search_type=videos)</onclick> -->
+					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+				</control>
+				
+				
+				<control type="image">
+					<left>260</left>
+					<top>20</top>
+					<width>4</width>
+					<height>60</height>
+					<texture background="true">default/separator22.png</texture>
+				</control>
+				
+				
+				
+				
+				<control type="button" id="708">
+					<left>300</left>
+					<top>32</top>
+					<width>39</width>
+					<height>39</height>
+					
+					<texturefocus>buttons/music/musicvideos_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/musicvideos.png</texturenofocus>
+					<onleft>706</onleft>
+					<onright>709</onright>
+					<onup>600</onup>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[MusicPlayer.Artist]+$INFO[MusicPlayer.Title] &amp;search_type=videos, return)</onclick>
+					
+				</control>
+				<control type="button" id="709">
+					<left>380</left>
+					<top>25</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>buttons/music/singer_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/singer.png</texturenofocus>
+					
+					<onleft>708</onleft>
+					<onright>710</onright>
+					<onup>600</onup>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[MusicPlayer.Artist] &amp;search_type=videos , return)</onclick>
+				</control>
+				<control type="button" id="710">
+					<left>460</left>
+					<top>25</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>buttons/music/newsong_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/newsong.png</texturenofocus>
+					<onleft>709</onleft>
+					<onright>711</onright>
+					<onup>600</onup>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=최신곡 &amp;search_type=videos , return)</onclick>
+				</control>
+				<control type="button" id="711">
+					<left>540</left>
+					<top>25</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>buttons/music/oldkpop_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/oldkpop.png</texturenofocus>
+					<onleft>710</onleft>
+					<onright>712</onright>
+					<onup>600</onup>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=올드가요 &amp;search_type=videos , return)</onclick>
+				</control>
+				<control type="button" id="712">
+					<left>620</left>
+					<top>25</top>
+					<width>52</width>
+					<height>52</height>
+					<texturefocus>buttons/music/oldpop_f.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/oldpop.png</texturenofocus>
+					<onleft>711</onleft>
+					<onright>712</onright>
+					<onup>600</onup>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=올드팝 &amp;search_type=videos , return)</onclick>
+				</control>
+			</control>
+			<!-- SETTING GROUP -->
+			<control type="group" id="200">
+				<left>840</left>
+				<top>5</top>
+				<!-- <control type="button" id="500">
+					<left>0</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/music/Viz_b.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/Viz.png</texturenofocus>
+					<onleft>700</onleft>
+					<onright>701</onright>
+					<ondown>380</ondown>
+				</control> -->
+				<!-- <control type="button" id="701">
+					<left>80</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/music/PresetSettings_b.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/PresetSettings.png</texturenofocus>
+					<onleft>500</onleft>
+					<onright>702</onright>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+				</control> -->
+				<!-- <control type="button" id="702">
+					<left>160</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/music/Pre_b.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/Pre.png</texturenofocus>
+					<onleft>701</onleft>
+					<onright>703</onright>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(122)</onclick>
+				</control> -->
+				<!-- LYRICS  -->
+				<!-- <control type="button" id="704">
+					<left>240</left>
+					<top>10</top>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/music/lyrics.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/lyrics.png</texturenofocus>
+					<onleft>703</onleft>
+					<onright>600</onright>
+					<onup>604</onup>
+					<ondown>380</ondown>
+					<onclick>Close</onclick>
+					<onclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path2)])</onclick>
+				</control> -->
+			</control>
+			<control type="label">
+				<left>1750</left>
+				<top>10</top>
+				<width>690</width>
+				<height>38</height>
+				<label>$INFO[Player.Time]</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>primal_18_Bold</font>
+				<textcolor>white</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<include condition="Skin.HasSetting(musikinfopanel)">MusicInfoModePanels</include>
+			<animation effect="slide" start="0,0" end="0,380" time="300" tween="quadratic" easing="out" condition="!Player.ShowInfo">Conditional</animation>
+		</control>
+	</controls>
+</window>

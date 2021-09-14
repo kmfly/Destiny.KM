@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1100">
+	<!-- <defaultcontrol always="true">904</defaultcontrol> -->
+	<onunload condition="!String.IsEmpty(Window(home).Property(CastMemberTumb))">ClearProperty(CastMemberTumb,home)</onunload>
+	<onunload>Skin.Reset(SearchTerm)</onunload>
+	
+	<controls>
+		
+		
+		<control type="group" id="9000">
+			<animation type="WindowOpen">
+				<effect type="slide" time="700" start="0,800" end="0,0" tween="sine" easing="out"/>
+				<effect type="fade" time="600" start="0" end="100"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" time="500" start="0,0" end="0,800" tween="sine" easing="in"/>
+				<effect type="fade" time="600" start="100" end="0"/>
+			</animation>
+			
+			
+			
+			<control type="image">
+				<left>-20</left>
+				<top>-20</top>
+				<width>200</width>
+				<height>1100</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+				<bordersize>6</bordersize>
+				<colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+			</control>
+			<control type="image">
+				<left>165</left>
+				<top>-20</top>
+				<width>800</width>
+				<height>1100</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+				<bordersize>6</bordersize>
+				<colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+			</control>
+		
+			<control type="label">
+				<left>195</left>
+				<top>65</top>
+				<width>700</width>
+				<height>38</height>
+				<font>primal_60_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>filmography</label>
+			</control>
+			
+			
+			<control type="label">
+                        <font>primal_13</font>
+                        <label>$INFO[Container(904).ListItem.Property(Age)]</label>
+  						
+                        <wrapmultiline>true</wrapmultiline>
+
+                        <top>500</top>
+                        <left>5</left>
+                        <width>150</width>
+                        <height>50</height>
+                        <aligny>top</aligny>
+                        <align>center</align>
+                        <textoffsetx>0</textoffsetx>
+                        <scroll>false</scroll>
+                        <scrollspeed>20</scrollspeed>
+
+                    </control>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<control type="panel" id="999">
+                <top>10</top>
+                <height>300</height>
+                <width>300</width>
+                <left>10</left>
+               
+                <!-- <include>SlideInAndOutAnimationRNL</include> -->
+             
+                <orientation>horizontal</orientation>
+
+                <itemlayout height="225" width="180">
+
+                    <control type="image">
+
+                        <width>500</width>
+                        <height>150</height>
+                        <texture background="true">skin/button_klein_tranz50.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                        <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+
+                    </control>
+
+                    <control type="image">
+                        <texture
+                            background="true"
+                            diffuse="special://skin/media/home/roundmask.png"
+                            fallback="DefaultActor.png">$INFO[Window(home).Property(CastMemberTumb)]</texture>
+
+                        <width>140</width>
+                        <height>150</height>
+
+                    </control>
+					<control type="label">
+                        <font>primal_13</font>
+                       <label>$INFO[Container(10051).ListItem.Property(Age)]</label>
+  						
+                        <wrapmultiline>true</wrapmultiline>
+
+                        <top>600</top>
+                        <left>5</left>
+                        <width>150</width>
+                        <height>50</height>
+                        <aligny>top</aligny>
+                        <align>center</align>
+                        <textoffsetx>0</textoffsetx>
+                        <scroll>false</scroll>
+                        <scrollspeed>20</scrollspeed>
+
+                    </control>
+					<!-- <control type="image">
+                        <texture
+                            background="true"
+                            diffuse="special://skin/media/home/roundmask.png"
+                            fallback="DefaultActor.png">$INFO[Window(home).Property(CastMemberTumb)]</texture>
+
+                        <width>140</width>
+                        <height>150</height>
+
+                    </control> -->
+                    <control type="label">
+                        <font>primal_13</font>
+                        <label>$INFO[Container(904).ListItem.Born]</label>
+  						
+                        <wrapmultiline>true</wrapmultiline>
+
+                        <top>160</top>
+                        <left>5</left>
+                        <width>150</width>
+                        <height>50</height>
+                        <aligny>top</aligny>
+                        <align>center</align>
+                        <textoffsetx>0</textoffsetx>
+                        <scroll>false</scroll>
+                        <scrollspeed>20</scrollspeed>
+
+                    </control>
+
+                </itemlayout>
+                <focusedlayout height="225" width="180">
+                    <control type="image">
+                        <left>-10</left>
+                        <top>-12</top>
+                        <width>160</width>
+                        <height>170</height>
+                        <texture background="true">skin/button_klein.png</texture>
+                        <bordertexture border="10">ThumbShadow.png</bordertexture>
+                        <bordersize>6</bordersize>
+                        <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+
+                    </control>
+                    <control type="image">
+                        <texture
+                            background="true"
+                            diffuse="special://skin/media/home/roundmask.png"
+                            fallback="DefaultActor.png">$INFO[ListItem.Art(thumb)]</texture>
+                        <width>140</width>
+                        <height>150</height>
+
+                    </control>
+
+                    <control type="label">
+                        <font>primal_13</font>
+                        <label>$INFO[ListItem.Label,[B],[/B][CR]]$INFO[ListItem.Label2]</label>
+                        <label>$INFO[ListItem.Label]</label>
+                        <wrapmultiline>true</wrapmultiline>
+
+                        <top>160</top>
+                        <left>5</left>
+                        <width>150</width>
+                        <height>50</height>
+                        <aligny>top</aligny>
+                        <align>center</align>
+                        <textoffsetx>0</textoffsetx>
+                        <scroll>false</scroll>
+                        <scrollspeed>20</scrollspeed>
+
+                    </control>
+
+                </focusedlayout>
+
+                <content target="videos">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22year%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22director%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Container(903).ListItem.Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
+
+            </control>
+
+			<control type="label">
+				<left>195</left>
+				<top>600</top>
+				<width>700</width>
+				<height>38</height>
+				<font>primal_30_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<!-- <label>$INFO[Container(904).ListItem.label]</label> -->
+				<label>$INFO[Container(904).ListItem.Label]</label>
+				
+			</control>
+			
+			<control type="label">
+				<left>195</left>
+				<top>650</top>
+				<width>700</width>
+				<height>38</height>
+				<font>primal_30_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<!-- <label>$INFO[Container(904).ListItem.label]</label> -->
+				<label>$INFO[Container(904).ListItem.Birthday]</label>
+				<label>테스트</label>
+				
+			</control>
+
+			
+
+
+
+						
+			<control type="grouplist" id="9001">
+				<left>172</left>
+				<top>160</top>
+				<width>787</width>
+				<height>880</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>63</pagecontrol>
+				<onleft>100</onleft>
+				<onright>100</onright>
+			
+				<!-- <control type="label" id="106">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20_Bold</font>
+					<label>Destiny Version</label>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>30</textoffsetx>
+				</control>
+				
+				<control type="label" id="107">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20_Bold</font>
+					<label>Skinner</label>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>30</textoffsetx>
+				</control> -->
+				
+				<!-- KM 20200617 - Skin Renewal Verion -->
+				<!-- <control type="label" id="108">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20_Bold</font>
+					<label>Destiny Renewal Version</label>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>30</textoffsetx>
+				</control>
+				
+				<control type="label" id="109">
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20_Bold</font>
+					<label>Skinner</label>
+					<textoffsetx>30</textoffsetx>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control> -->
+				
+			</control>
+		</control>
+	</controls>
+</window>

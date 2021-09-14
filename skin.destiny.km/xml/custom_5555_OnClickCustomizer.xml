@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="5555" type="dialog">
+	<!-- <defaultcontrol always="true">90100</defaultcontrol> -->
+	<depth>DepthOSD</depth>
+	
+	<defaultcontrol always="true">100</defaultcontrol>
+	<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>300</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<left>10</left>
+			<top>-290</top>
+			<right>10</right>
+			<height>750</height>
+			<texture background="true">skin/button_klein_tranz50.png</texture>
+			<!-- <colordiffuse>44E1E1E1</colordiffuse> -->
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		</control>
+		
+		<control type="button" id="100">
+					<description>Close Button</description>
+					<top>470</top>
+					<left>10</left>
+					<width>150</width>
+					<height>40</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>primal_15_Bold</font>
+					<label>CLOSE</label>
+					<label>[COLOR ColorFontSelected]$LOCALIZE[31036][/COLOR]</label>
+					<onclick>close</onclick>
+				
+		</control>
+			
+		<control type="grouplist">
+			<left>20</left>
+			<top>-270</top>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<textcolor>$VAR[BackColorButton]</textcolor>
+				<label>콘텐츠 정보</label>
+				<!-- <label>[COLOR ColorFontSelected]$LOCALIZE[31036][/COLOR]</label> -->
+				<font>primal_16_Bold</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>[COLOR ColorFontSelected]콘텐츠 제목[/COLOR] : $INFO[VideoPlayer.Title] </label>
+				<scroll>true</scroll>
+				<font>primal_15_Bold</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>[COLOR ColorFontSelected]콘텐츠 경로[/COLOR] : $INFO[Player.Filenameandpath] </label>
+				<scroll>true</scroll>
+				<font>primal_15_Bold</font>
+				<!-- <shadowcolor>black</shadowcolor> -->
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="image">
+				<width>2</width>
+				<height>4</height>
+				<colordiffuse>00E1E1E1</colordiffuse>
+				<texture background="true">default/separator22.png</texture>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<textcolor>$VAR[BackColorButton]</textcolor>
+				<label>비디오 정보</label>
+				<font>primal_16_Bold</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>$INFO[VideoPlayer.VideoCodec,[COLOR ColorFontSelected]$LOCALIZE[31033][/COLOR] : ]</label>
+				<font>primal_15_Bold</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>$INFO[Player.Process(videodecoder),[COLOR ColorFontSelected]$LOCALIZE[31139][/COLOR] : ]$VAR[VideoHWDecoder, (,)]</label>
+				<font>primal_15_Bold</font>
+				<!-- <shadowcolor>black</shadowcolor> -->
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>$INFO[Player.Process(videowidth),[COLOR ColorFontSelected]$LOCALIZE[38031][/COLOR] :  , x ]$INFO[Player.Process(videoheight),, Pixel]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
+				<font>primal_15_Bold</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>$INFO[Player.Process(deintmethod),[COLOR ColorFontSelected]$LOCALIZE[16038][/COLOR] : ]</label>
+				<font>primal_15_Bold</font>
+				<!-- <shadowcolor>black</shadowcolor> -->
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="image">
+				<width>2</width>
+				<height>4</height>
+				<colordiffuse>00E1E1E1</colordiffuse>
+				<texture background="true">default/separator22.png</texture>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<textcolor>$VAR[BackColorButton]</textcolor>
+				<label>오디오 정보</label>
+				<font>primal_16_Bold</font>
+				<!-- <shadowcolor>black</shadowcolor> -->
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>$INFO[VideoPlayer.AudioCodec,[COLOR ColorFontSelected]$LOCALIZE[31034][/COLOR] : ]</label>
+				<font>primal_15_Bold</font>
+				<!-- <shadowcolor>black</shadowcolor> -->
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>$INFO[VideoPlayer.AudioChannels,[COLOR ColorFontSelected]$LOCALIZE[31035][/COLOR] : ]</label>
+				<font>primal_15_Bold</font>
+				<!-- <shadowcolor>black</shadowcolor> -->
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>[COLOR ColorFontSelected]$LOCALIZE[460][/COLOR] : $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
+				<font>primal_15_Bold</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image">
+				<width>2</width>
+				<height>4</height>
+				<texture background="false">default/separator22.png</texture>
+				<colordiffuse>00E1E1E1</colordiffuse>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<textcolor>$VAR[BackColorButton]</textcolor>
+				<label>시스템 정보</label>
+				<font>primal_16_Bold</font>
+				<!-- <shadowcolor>black</shadowcolor> -->
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>$INFO[System.Memory(used.percent),[COLOR ColorFontSelected]메모리/CPU 사용량[/COLOR] : ,]$INFO[System.CpuUsage, / ] </label>
+				<font>primal_15_Bold</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			
+			<control type="label" id="777">
+				<width>1600</width>
+				<height>40</height>
+				<aligny>bottom</aligny>
+				<label>$INFO[System.FPS,[COLOR ColorFontSelected]초당 프레임 [/COLOR]: ,fps ]</label>
+				<font>primal_15_Bold</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			
+		
+			
+			
+			
+				
+		</control>
+		
+		
+		
+	
+		
+		
+	</controls>
+</window>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+	<smartplaylist type="movies">
+		<name>Korea Movies</name>
+		<match>one</match>
+		<rule field="country" operator="contains">
+		<value>한국</value></rule>
+		<rule field="country" operator="contains">
+		<value>South Korea</value></rule>
+		<rule field="country" operator="contains">
+		<value>korea</value></rule>
+		<rule field="country" operator="contains">
+		<value>Korea</value></rule>
+
+		
+		<order direction="ascending">sorttitle</order>
+	</smartplaylist>
+
+
+
+
+
+
+
+

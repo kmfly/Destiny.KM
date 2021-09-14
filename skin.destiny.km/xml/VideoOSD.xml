@@ -1,0 +1,725 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="2901">
+	<defaultcontrol always="true">1604</defaultcontrol>
+	<controls>
+		<include>BigInfosTime</include>
+		<include>CommonHomeButton</include>
+		<include>HomePlaying</include>
+		<control type="group">
+			<animation type="WindowOpen">
+				<effect type="slide" time="700" start="0,800" end="0,0" tween="sine" easing="out"/>
+				<effect type="fade" time="600" start="0" end="100"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" time="500" start="0,0" end="0,800" tween="sine" easing="in"/>
+				<effect type="fade" time="600" start="100" end="0"/>
+			</animation>
+			<animation effect="slide" start="0" end="0,150" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(pvrchannelguide) | Window.IsVisible(pvrosdchannels)">Conditional</animation>
+		<!-- 	<animation type="Conditional" condition="System.IdleTime(5) + !Player.Caching" reversible="true">
+				<effect type="fade" start="100" end="0" time="400"/>
+			</animation> -->
+			<control type="button">
+				<description>background close area</description>
+				<left>0</left>
+				<top>0</top>
+				<width>100%</width>
+				<bottom>280</bottom>
+				<texturefocus/>
+				<texturenofocus/>
+				<onclick>Action(close)</onclick>
+			</control>
+			<!-- KM 디스크 이미지 효과 -->
+			<!-- <control type="image">
+				<left>90</left>
+				<top>437</top>
+				<width>300</width>
+				<height>300</height>
+				<aligny>top</aligny>
+				<aspectratio>keep</aspectratio>
+				<fadetime>300</fadetime>
+				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
+				<texture>$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Discart)]</texture>
+				<visible>Skin.HasSetting(show_discart)</visible>
+				<visible>!VideoPlayer.Content(musicvideos)</visible>
+			</control> -->
+			<control type="image">
+				<left>0</left>
+				<top>540</top>
+				<width>400</width>
+				<height>400</height>
+				<aligny>top</aligny>
+				<aspectratio align="left">keep</aspectratio>
+				<fadetime>300</fadetime>
+				<texture background="true">$INFO[Player.Art(poster)]</texture>
+				<visible>!Skin.HasSetting(show_discart) + !Window.IsVisible(MusicVisualisation.xml)</visible>
+				<visible>!VideoPlayer.Content(musicvideos)</visible>
+			</control>
+			<control type="image">
+				<left>-50</left>
+				<top>940</top>
+				<width>2000</width>
+				<height>210</height>
+				<texture background="true">skin/button_klein_tranz90.png</texture>
+				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			</control>
+			<control type="progress">
+				<left>0</left>
+				<top>940</top>
+				<width>1920</width>
+				<height>15</height>
+				<info>Player.ProgressCache</info>
+			</control>
+			<!-- KM 터치용 Seek -->
+			<control type="slider">
+				<left>0</left>
+				<top>940</top>
+				<width>1920</width>
+				<height>15</height>
+				<reveal>true</reveal>
+				<texturesliderbar>progress/bg.png</texturesliderbar>
+				<textureslidernib colordiffuse="$VAR[ColorFontNormal]">button/scrollbarpoint.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[ColorFontNormal]">button/scrollbarpoint.png</textureslidernibfocus>
+				<textureslidernibfocus colordiffuse="$VAR[ColorFontNormal]">button/osd_slider_nib.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<action>seek</action>
+				<visible>Player.Seeking | !Player.Seeking </visible>
+			</control>
+			<!-- <control type="image">
+					<left>1430</left>
+					<top>880</top>
+					<width>480</width>
+					<height>50</height>
+					<texture background="true">skin/button_klein_tranz50.png</texture>
+				
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+				</control> -->
+			
+			<!-- KM 비디오OSD에 미디어정보 표기 -->
+			<control type="grouplist" id="200">
+				<left>1405</left>
+				<align>right</align>
+				<top>980</top>
+				<width>500</width>
+				<height>120</height>
+				<itemgap>5</itemgap>
+				<orientation>horizontal</orientation>
+				
+				
+				<control type="image">
+					<width>90</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]</texture>
+					<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+				</control>
+								
+				<control type="image">
+					<width>90</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]</texture>
+					<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+				</control>
+				<control type="image">
+					<description>AudioCodecFlagging</description>
+					<width>90</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
+					<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+				</control>
+				<control type="image">
+					<description>AudioCodecFlagging</description>
+					<width>90</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</texture>
+					<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+				
+				</control>
+				<control type="image">
+					<description>AudioCodecFlagging</description>
+					<width>90</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]</texture>
+					<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+				
+				</control>
+			
+			</control>
+			
+			<control type="grouplist" id="200">
+				<left>0</left>
+				<top>980</top>
+				<width>1900</width>
+				<height>120</height>
+				<itemgap>0</itemgap>
+				<pagecontrol>1802</pagecontrol>
+				<scrolltime tween="sine" easing="out">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>false</usecontrolcoords>
+				<onleft>200</onleft>
+				<onright>200</onright>
+				<onup>1830</onup>
+				<ondown>1830</ondown>
+				<control type="button" id="1630">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/left.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/left.png</texturenofocus>
+					<onclick>ReloadSkin()</onclick>
+					<onclick>back</onclick>
+				</control>
+				<control type="button" id="1601">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/PrevTrack.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/PrevTrack.png</texturenofocus>
+					<onclick>PlayerControl(Previous)</onclick>
+					<onclick>back</onclick>
+				</control>
+				<control type="button" id="1602">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/rewind.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/rewind.png</texturenofocus>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="button" id="1603">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/skipback.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/skipback.png</texturenofocus>
+					<onclick>Seek(-10)</onclick>
+					<!-- <onclick>back</onclick> -->
+				</control>
+				<control type="togglebutton" id="1604">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/pause.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/pause.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus colordiffuse="$VAR[BackColorButton]">osd/play.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[ColorIcons]">osd/play.png</alttexturenofocus>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="1605">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/skipgo.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/skipgo.png</texturenofocus>
+					<onclick>Seek(10)</onclick>
+					<!-- <onclick>back</onclick> -->
+				</control>
+				<control type="button" id="1606">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/stop.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/stop.png</texturenofocus>
+					<onclick>PlayerControl(Stop)</onclick>
+					<!-- <onclick>back</onclick> -->
+				</control>
+				<control type="button" id="1607">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/forward.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/forward.png</texturenofocus>
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="1609">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/NextTrack.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/NextTrack.png</texturenofocus>
+					<onclick>PlayerControl(Next)</onclick>
+					<onclick>back</onclick>
+				</control>
+				<control type="image" id="1610">
+					<width>2</width>
+					<height>80</height>
+					<texture background="true">default/separator22.png</texture>
+				</control>
+				<!-- Added instance seek back and forth by KM 20200425 -->
+				<control type="button" id="1611" description="PlaySpeedUp">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/tempoup.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/tempoup.png</texturenofocus>
+					<onclick>PlayerControl(tempoup)</onclick>
+					<!-- <onclick>back</onclick> -->
+					<visible>Player.TempoEnabled</visible>
+				</control>
+				<control type="button" id="1612" description="PlaySpeedDown">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/tempodown.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/tempodown.png</texturenofocus>
+					<onclick>PlayerControl(tempodown)</onclick>
+					<!-- <onclick>back</onclick> -->
+					<visible>Player.TempoEnabled</visible>
+				</control>
+				<control type="button" id="1613">
+					<width>80</width>
+					<height>75</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/seekbar.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/seekbar.png</texturenofocus>
+					<onup>404</onup>
+					<!-- <onclick>XBMC.ReloadSkin()</onclick> -->
+					<onclick>pause</onclick>
+					<onclick>ActivateWindow(8014)</onclick>
+					<onclick>play</onclick>
+					<onclick>back</onclick>
+				</control>
+				<control type="togglebutton" id="1620" description="ShowSubtitles">
+					<width>75</width>
+					<height>75</height>
+					<!-- <onclick>XBMC.ReloadSkin()</onclick> -->
+					<onclick>ShowSubtitles</onclick>
+					<selected>VideoPlayer.SubtitlesEnabled</selected>
+					<visible>VideoPlayer.HasSubtitles</visible>
+					<texturefocus>osd/suboff.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/suboff.png</texturenofocus>
+					<alttexturefocus>osd/subon.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[ColorIcons]">osd/subon.png</alttexturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>back</onclick>
+				</control>
+				<control type="button" id="1621">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/subtitles.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/subtitles.png</texturenofocus>
+					<onup>404</onup>
+					<!-- <onclick>XBMC.ReloadSkin()</onclick> -->
+					<onclick>ActivateWindow(osdsubtitlesettings)</onclick>
+					<onclick>back</onclick>
+				</control>
+				<control type="button" id="1622">
+					<width>75</width>
+					<height>75</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/subsync1.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/subsync1.png</texturenofocus>
+					<visible>VideoPlayer.HasSubtitles</visible>
+					<!-- <onclick>XBMC.ReloadSkin()</onclick> -->
+					<onclick>Action(SubtitleDelay)</onclick>
+					<onclick>back</onclick>
+					<!-- <colordiffuse>$VAR[ColorTextVar]</colordiffuse> -->
+				</control>
+				<control type="button" id="1623">
+					<visible>VideoPlayer.IsStereoscopic</visible>
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/3d.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/3d.png</texturenofocus>
+					<onup>501</onup>
+				</control>
+				<!-- Added subtitle on/off by KM 20200402 -->
+				<control type="button" id="1624">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/audio.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/audio.png</texturenofocus>
+					<!-- <onclick>XBMC.ReloadSkin()</onclick> -->
+					<onclick>ActivateWindow(124)</onclick>
+					<onclick>back</onclick>
+				</control>
+				<control type="button" id="1625">
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/video.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/video.png</texturenofocus>
+					<!-- <onclick>XBMC.ReloadSkin()</onclick> -->
+					<onclick>ActivateWindow(123)</onclick>
+					<onclick>back</onclick>
+				</control>
+				<control type="button" id="1626">
+					
+					<width>80</width>
+					<height>80</height>
+					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/video/info.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/video/info.png</texturenofocus>
+				<!-- 	<texturefocus colordiffuse="$VAR[BackColorButton]">osd/info3.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/info3.png</texturenofocus> -->
+					<onup>404</onup>
+					<!-- <onclick>XBMC.ReloadSkin()</onclick> -->
+					<onclick>ActivateWindow(5555)</onclick>
+					<onclick>back</onclick>
+				</control>
+				
+			</control>
+			
+			<!-- GROUP FOR CAST -->
+			<control type="group" id="40101">
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<animation effect="zoom" start="100" end="0" time="1000" delay="250" condition="!Control.HasFocus(1608)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="1000" delay="500" condition="Control.HasFocus(1608)">Conditional</animation>
+				<animation effect="fade" start="100" end="50,50" time="450" delay="0">WindowClose</animation>
+				<left>715</left>
+				<top>305</top>
+				<visible>Control.HasFocus(1608)</visible>
+				<control type="image">
+					<left>240</left>
+					<top>305</top>
+					<width>560</width>
+					<height>360</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">skin/button_klein_tranz90.png</texture>
+					<bordertexture border="10">ThumbShadow.png</bordertexture>
+					<bordersize>7</bordersize>
+					<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+				</control>
+				<control type="label">
+					<description>CastandRole</description>
+					<left>280</left>
+					<top>390</top>
+					<width>440</width>
+					<height>190</height>
+					<label>$INFO[VideoPlayer.CastandRole]</label>
+					<font>primal_18</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				</control>
+			</control>
+			<!-- STEREOSCOPIC 3D !LiveTV -->
+			<control type="group">
+				<visible>Control.HasFocus(1614) | ControlGroup(500).HasFocus</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<left>1070</left>
+				<top>580</top>
+				<control type="image">
+					<description>Header</description>
+					<left>0</left>
+					<top>100</top>
+					<width>320</width>
+					<height>255</height>
+					<texture background="true">skin/button_klein.png</texture>
+					<bordertexture border="10">ThumbShadow.png</bordertexture>
+					<bordersize>7</bordersize>
+					<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+				</control>
+				<control type="label" id="">
+					<left>20</left>
+					<top>135</top>
+					<width>280</width>
+					<height>15</height>
+					<font>primal_18</font>
+					<label>$LOCALIZE[36501]</label>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+			</control>
+			<control type="grouplist" id="500">
+				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<left>1080</left>
+				<top>760</top>
+				<width>300</width>
+				<height>400</height>
+				<itemgap>5</itemgap>
+				<onleft>1613</onleft>
+				<onright>1613</onright>
+				<onup>500</onup>
+				<ondown>1613</ondown>
+				<orientation>vertical</orientation>
+				<visible>Control.HasFocus(1614) | ControlGroup(500).HasFocus</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="radiobutton" id="503">
+					<height>50</height>
+					<width>300</width>
+					<textoffsetx>15</textoffsetx>
+					<aligny>center</aligny>
+					<font>primal_18</font>
+					<label>$LOCALIZE[50162]</label>
+					<onclick>ToggleStereoMode</onclick>
+					<selected>Integer.IsGreater(System.StereoscopicMode,0)</selected>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="502">
+					<height>50</height>
+					<width>300</width>
+					<aligny>center</aligny>
+					<font>primal_18</font>
+					<textoffsetx>15</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[50163]</label>
+					<onclick>StereoMode</onclick>
+				</control>
+				<control type="radiobutton" id="501">
+					<height>50</height>
+					<width>300</width>
+					<textoffsetx>15</textoffsetx>
+					<aligny>center</aligny>
+					<font>primal_18</font>
+					<label>$LOCALIZE[50164]</label>
+					<onclick>StereoModeToMono</onclick>
+					<selected>String.IsEqual(System.StereoscopicMode,7)</selected>
+					<pulseonselect>false</pulseonselect>
+				</control>
+			</control>
+			<!-- Subtitles !LiveTV -->
+			<!-- control type="group">
+	        <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+	        <visible>Control.HasFocus(1612) | ControlGroup(400).HasFocus</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<left>970</left>
+			<top>530</top>
+	      <control type="image">
+			<description>Header</description>
+			<left>0</left>
+			<top>100</top>
+			<width>320</width>
+			<height>310</height>
+			<texture background="true">skin/button_klein.png</texture>	
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>	
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  </control>
+		  <control type="label" id="">
+			<left>20</left>
+			<top>135</top>
+			<width>280</width>
+			<height>15</height>
+			<font>primal_18</font>
+			<label>$LOCALIZE[24012]</label>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+		  </control>
+	  </control>
+	  <control type="grouplist" id="400">
+		  <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+		  <animation effect="fade" time="200">VisibleChange</animation>
+		  <left>980</left>
+		  <top>710</top>
+		  <width>300</width>
+		  <height>400</height>
+		  <itemgap>5</itemgap>
+		  <onleft>1612</onleft>
+		  <onright>1612</onright>
+		  <onup>500</onup>
+		  <ondown>1612</ondown>
+		  <orientation>vertical</orientation>
+		  <visible>Control.HasFocus(1612) | ControlGroup(400).HasFocus</visible>
+		  <include>VisibleFadeEffect</include>
+		  <control type="togglebutton" id="401">
+			  <description>Download with Subtitles script</description>
+			  <height>50</height>
+			  <width>300</width>
+			  <font>primal_18</font>
+			  <label>$LOCALIZE[33003]</label>
+			  <textoffsetx>15</textoffsetx>
+			  <aligny>center</aligny>
+			  <onclick>Close</onclick>
+			  <onclick>Dialog.Close(VideoOSD)</onclick>
+			  <onclick>ActivateWindow(SubtitleSearch)</onclick>
+			  no point in downloading subtitles for live programs
+			  <enable>!VideoPlayer.Content(LiveTV)</enable>
+		  </control>
+		  <control type="button" id="402">
+			  <height>50</height>
+			  <width>300</width>
+			  <aligny>center</aligny>
+			  <font>primal_18</font>
+			  <textoffsetx>15</textoffsetx>
+			  <pulseonselect>false</pulseonselect>
+			  <label>$LOCALIZE[22006]</label>
+			  <onclick>SubtitleDelay</onclick>
+			  <visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+		  </control>
+		  <control type="button" id="403">
+			  <height>50</height>
+			  <width>300</width>
+			  <aligny>center</aligny>
+			  <font>primal_18</font>
+			  <textoffsetx>15</textoffsetx>
+			  <pulseonselect>false</pulseonselect>
+			  <label>$LOCALIZE[209]</label>
+			  <label2>$INFO[VideoPlayer.SubtitlesLanguage,[COLOR=Selected],[/COLOR]]</label2>
+			  <enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
+			  <onclick>CycleSubtitle</onclick>
+			  <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
+			  <visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+		  </control>
+		  <control type="radiobutton" id="404">
+			  <height>50</height>
+			  <width>300</width>
+			  <textoffsetx>15</textoffsetx>
+			  <aligny>center</aligny>
+			  <font>primal_18</font>
+			  <label>$LOCALIZE[449]</label>
+			  <radioposx>200</radioposx>
+			  <onclick>ShowSubtitles</onclick>
+			  <selected>VideoPlayer.SubtitlesEnabled</selected>
+			  <visible>VideoPlayer.HasSubtitles</visible>
+			  <pulseonselect>false</pulseonselect>
+		  </control>
+     </control -->
+		</control>
+		<control type="group">
+			<left>560</left>
+			<top>390</top>
+			<control type="group">
+				<left>260</left>
+				<top>10</top>
+				<control type="image">
+					<left>230</left>
+					<top>17</top>
+					<width>180</width>
+					<height>180</height>
+					<texture>osd/rewind.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Rewinding</visible>
+				</control>
+				<control type="image">
+					<left>230</left>
+					<top>17</top>
+					<width>180</width>
+					<height>180</height>
+					<texture>osd/forward.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Forwarding</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>osd/OSDPause.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Paused + Player.HasVideo </visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>osd/OSDPlay.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Playing</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>osd/OSD2x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Rewinding2x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>osd/OSD4x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Rewinding4x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>osd/OSD8x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Rewinding8x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>210</width>
+					<height>210</height>
+					<texture>osd/OSD16x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Rewinding16x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>210</width>
+					<height>210</height>
+					<texture>osd/OSD32x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Rewinding32x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>osd/OSD2x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Forwarding2x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>osd/OSD4x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Forwarding4x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>osd/OSD8x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Forwarding8x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>210</width>
+					<height>210</height>
+					<texture>osd/OSD16x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Forwarding16x</visible>
+				</control>
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>210</width>
+					<height>210</height>
+					<texture>osd/OSD32x.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Forwarding32x</visible>
+				</control>
+				<!-- Added instance seek osd by KM 20200402 -->
+				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>210</width>
+					<height>210</height>
+					<texture>osd/seek.png</texture>
+					<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>Player.Seeking</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
