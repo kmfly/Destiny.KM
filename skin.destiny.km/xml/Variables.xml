@@ -183,6 +183,8 @@
 	</variable>
 	<variable name="PosterThumb">
 		<value condition="Container.Content(Episodes)">$INFO[ListItem.Art(season.poster)]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Art(poster)]</value>
+		
 		<value condition="Container.Content(Actors)">$INFO[ListItem.Icon]</value>
 		<value condition="Container.Content(Genres) | Container(9010).HasFocus(260031)">$VAR[VarMovieGenreIcon]</value>
 		<value condition="Container.Content(Addons)">$INFO[ListItem.Icon]</value>

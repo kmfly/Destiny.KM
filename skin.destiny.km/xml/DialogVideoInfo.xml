@@ -176,7 +176,6 @@
 						<width>300</width>
 						<height>50</height>
 						<label>$LOCALIZE[208]</label>
-
 						<textwidth>260</textwidth>
 						<ondown>ActivateWindow(1121)</ondown>
 					</control>
@@ -313,10 +312,11 @@
 								<orientation>horizontal</orientation>
 								<!-- <include>VisibleFadeEffect</include> -->
 								<visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
-								<include>VideoCodecFlaggingConditions</include>
-								<include>AudioCodecFlaggingConditions</include>
+								<include>KM_MediaInfo_Icon</include>
+								<!-- <include>VideoCodecFlaggingConditions</include>
+								<include>AudioCodecFlaggingConditions</include> -->
 								<!-- <include>AspectCodecFlaggingConditions</include> -->
-								<include>VideoMPAAFlaggingConditions</include>
+								<!-- <include>VideoMPAAFlaggingConditions</include> -->
 								<visible>!Player.HasVideo </visible>
 								<visible>!Control.HasFocus(20) </visible>
 								<visible>!Control.HasFocus(50) </visible>

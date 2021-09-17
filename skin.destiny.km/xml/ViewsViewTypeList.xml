@@ -1732,19 +1732,20 @@
             <control type="image">
                 <left>200</left>
                 <top>50</top>
-                <width>360</width>
-                <height>460</height>
-                <texture
+                <width>650</width>
+                <height>450</height>
+                <!-- <texture
                     background="true"
-                    fallback="special://skin/media/home/defaulttvshows.png">$VAR[PosterThumb]</texture>
+                    fallback="special://skin/media/home/defaulttvshows.png">$VAR[PosterThumb]</texture> -->
+                <texture>$INFO[ListItem.Icon]</texture>
                 <bordertexture border="10">-</bordertexture>
                 <bordersize>7</bordersize>
                 <aspectratio align="center" aligny="top">stretch</aspectratio>
                 <visible>Container.Content(Episodes)</visible>
             </control>
             <control type="label">
-                <left>600</left>
-                <top>60</top>
+                <left>900</left>
+                <top>100</top>
                 <width>1000</width>
                 <height>36</height>
                 <font>primal_28_Bold</font>
@@ -1759,8 +1760,8 @@
                 <visible>Container.Content(Episodes)</visible>
             </control>
             <control type="label">
-                <left>600</left>
-                <top>110</top>
+                <left>900</left>
+                <top>150</top>
                 <width>1000</width>
                 <height>36</height>
                 <font>primal_18_Bold</font>
@@ -1775,7 +1776,7 @@
                 <visible>Container.Content(Episodes)</visible>
             </control>
             <control type="label">
-                <left>600</left>
+                <left>900</left>
                 <top>200</top>
                 <width>1000</width>
                 <height>36</height>
@@ -1793,7 +1794,7 @@
             </control>
            
             <control type="label">
-                <left>600</left>
+                <left>900</left>
                 <top>230</top>
                 <width>1800</width>
                 <height>36</height>
@@ -1810,7 +1811,7 @@
             </control>
 
              <control type="label">
-                <left>600</left>
+                <left>900</left>
                 <top>260</top>
                 <width>1800</width>
                 <height>36</height>
@@ -1829,7 +1830,7 @@
 
             <control type="textbox">
                 <description>Movie Plot</description>
-                <left>600</left>
+                <left>900</left>
                 <top>330</top>
                 <width>800</width>
                 <height>150</height>
@@ -2010,7 +2011,7 @@
             </control>
             <control type="scrollbar" id="1610">
                 <include>Animation.ZoomIn</include>
-                <include>SlideInAndOutAnimationRNL</include>
+                <!-- <include>SlideInAndOutAnimationRNL</include> -->
                 <left>1875</left>
                 <top>560</top>
                 <width>10</width>
@@ -2063,7 +2064,7 @@
 
     <!-- ////////////////////////////////// -->
 
-<include name="View_903_Plex_View">
+    <include name="View_903_Plex_View">
     <control type="group">
         <animation
             effect="zoom"
@@ -2084,7 +2085,7 @@
             <width>1692</width>
             <height>1000</height>
             <onright condition="String.IsEmpty(Container(904).ListItem.label)">905</onright>
-            <onright>904</onright>
+            <onright>9031</onright>
             <onleft>9020</onleft>
             <!-- <onup>903</onup> -->
             <ondown>903</ondown>
@@ -2172,6 +2173,7 @@
                         <texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
                         <!-- <colordiffuse>$VAR[BackColorButton]</colordiffuse> -->
                     </control>
+                    
                     <control type="button">
                         <description>hidden button to fetch data for usage in other ctrls or windows...</description>
                         <visible allowhiddenfocus="true">false</visible>
@@ -2179,6 +2181,8 @@
                         <onfocus>ClearProperty(kentet1)</onfocus>
 
                     </control>
+                    
+                    
                 </control>
             </focusedlayout>
 
@@ -2229,6 +2233,7 @@
             <onclick condition="Container(903).Content(Movies)">SetFocus(9000)</onclick>
 
             <visible>!Container.Content(seasons)</visible>
+            <visible>!Player.Playing</visible>
             <!-- <visible allowhiddenfocus="true">!Container(904).IsUpdating</visible> -->
             <orientation>horizontal</orientation>
             <itemlayout height="225" width="180">
@@ -2444,14 +2449,9 @@
             <onback>ClearProperty(ShowCastContent,Home)</onback>
 
             <visible>String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)</visible>
-            <visible>![Control.HasFocus(903)| Control.HasFocus(905) | Control.HasFocus(906] </visible>
+            <visible>![Control.HasFocus(903)|Control.HasFocus(9031)| Control.HasFocus(905) | Control.HasFocus(906] </visible>
             <visible>![ControlGroup(9020).HasFocus | ControlGroup(290000).HasFocus | Control.HasFocus(810)
                 |Control.HasFocus(811)|Control.HasFocus(812)|Control.HasFocus(815)]</visible>
-           
-
-             
-            <!-- <visible>System.IdleTime(1)</visible> -->
-
             <onback>SetFocus(903)</onback>
 
             <itemlayout height="225" width="180">
@@ -2685,12 +2685,30 @@
             <focusedlayout height="10" width="10" />
             <content target="videos">plugin://plugin.video.themoviedb.helper/?info=details&amp;type=person&amp;query=$INFO[Container(904).ListItem.Label]</content>
           </control>
+        <control type="group">
+            <visible>!Control.HasFocus(9000) + Container.Content(Movies)</visible>
+            <visible>!ListItem.IsCollection</visible>
+                 
+            <visible>![String.IsEqual(ListItem.label,..) | Control.HasFocus(904) | Control.HasFocus(1210) | Control.HasFocus(1220) |
+                Control.HasFocus(1230) | Control.HasFocus(1240)]</visible>
+            <visible>Player.Playing</visible>
+            <control type="label">
+                <left>935</left>
+                <top>80</top>
+                <width>800</width>
+                <height>36</height>
+                <font>primal_30_Bold</font>
+                <textcolor>$VAR[ColorFontNormal]</textcolor>
+                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                <align>justify</align>
+                <aligny>center</aligny>
+                <label fallback="정보 없슴">예고편-$INFO[ListItem.Label]</label>
+                
+            </control>
 
 
-
-        
-        
-        
+        </control>
         <control type="group">
 
             <visible>!Control.HasFocus(9000) + Container.Content(Movies)</visible>
@@ -2698,7 +2716,27 @@
                  
             <visible>![String.IsEqual(ListItem.label,..) | Control.HasFocus(904) | Control.HasFocus(1210) | Control.HasFocus(1220) |
                 Control.HasFocus(1230) | Control.HasFocus(1240)]</visible>
+            <visible>!Player.Playing</visible>
 
+            
+            
+            <control type="label">
+                <left>935</left>
+                <top>80</top>
+                <width>800</width>
+                <height>36</height>
+                <font>primal_30_Bold</font>
+                <textcolor>$VAR[ColorFontNormal]</textcolor>
+                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                <align>justify</align>
+                <aligny>center</aligny>
+                <label fallback="정보 없슴">$INFO[ListItem.Label]</label>
+                
+            </control>
+            
+            
+            
             <!-- /////////영화용 감독/각본/제작/장르/-->
 
             <control type="label">
@@ -2773,6 +2811,7 @@
                 <align>justify</align>
                 <aligny>center</aligny>
                 <label fallback=".NA.">감독:</label>
+               
             </control>
             <control type="label">
                 <left>1000</left>
@@ -2934,110 +2973,7 @@
                 <shadowcolor>50000000</shadowcolor>
                 <visible>!String.IsEmpty(Container(903).ListItem.Rating)</visible>
             </control>
-            <!-- <control type="label">
-                <left>940</left>
-                <top>260</top>
-                <width>150</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback=".NA.">감독:</label>
-            </control>
-            <control type="label">
-                <left>1000</left>
-                <top>260</top>
-                <width>590</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback="정보 없슴">$INFO[ListItem.Director]</label>
-            </control>
-            <control type="label">
-                <left>940</left>
-                <top>290</top>
-                <width>150</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback=".NA.">각본:</label>
-            </control>
-            <control type="label">
-                <left>1000</left>
-                <top>290</top>
-                <width>590</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback="정보 없슴">$INFO[ListItem.Writer]</label>
-            </control>
-            <control type="label">
-                <left>940</left>
-                <top>320</top>
-                <width>150</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label>제작:</label>
-            </control>
-            <control type="label">
-                <left>1000</left>
-                <top>320</top>
-                <width>590</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback="정보 없슴">$INFO[ListItem.Studio]</label>
-            </control>
-            <control type="label">
-                <left>940</left>
-                <top>350</top>
-                <width>150</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback="정보 없슴">장르:</label>
-            </control>
-            <control type="label">
-                <left>1000</left>
-                <top>350</top>
-                <width>590</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback="정보 없슴">$INFO[ListItem.Genre]</label>
-            </control> -->
+         
         </control>
         <control type="group">
             
@@ -3390,11 +3326,12 @@
         <control type="group">
             <!-- <visible>String.IsEqual(ListItem.DBType,movie) +
             !String.IsEmpty(ListItem.DBID)</visible> -->
-            <visible>![Control.HasFocus(903) | Control.HasFocus(905) | Control.HasFocus(906] </visible>
+            <visible>![Control.HasFocus(903) | Control.HasFocus(9031)| Control.HasFocus(905) | Control.HasFocus(906] </visible>
             <visible>![ControlGroup(9020).HasFocus| ControlGroup(290000).HasFocus |Control.HasFocus(810)
                 |Control.HasFocus(811)|Control.HasFocus(812)|Control.HasFocus(815)]</visible>
+             <!-- 필모그래피-->
             <control type="label" id="999">
-                <!-- 필모그래피-->
+               
                 <font>primal_15_Bold</font>
                 <label>$LOCALIZE[32041] - </label>
                 <textcolor>$VAR[ColorFontNormal]</textcolor>
@@ -3480,7 +3417,7 @@
             
             <itemgap>1</itemgap>
             <orientation>vertical</orientation>
-            <visible>![Control.HasFocus(903) | Control.HasFocus(905) | Control.HasFocus(906] </visible>
+            <visible>![Control.HasFocus(903) |Control.HasFocus(9031)| Control.HasFocus(905) | Control.HasFocus(906] </visible>
             <visible>![ControlGroup(9020).HasFocus| ControlGroup(290000).HasFocus |Control.HasFocus(810)
                 |Control.HasFocus(811)|Control.HasFocus(812)|Control.HasFocus(815)]</visible>
             <visible>!Container(9200).IsUpdating</visible>
@@ -3510,15 +3447,9 @@
                 <textcolor>$VAR[ColorFontSelected]</textcolor>
                 <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
             </control>
-            
-        
         
         </control>
-
-
-
-
-        <!-- KM:Movie/TV쇼 Poster -->
+ <!-- KM:Movie/TV쇼 Poster -->
         <control type="image">
             <left>400</left>
             <top>60</top>
@@ -3526,12 +3457,12 @@
             <height>800</height>
             <include>SlideInAndOutAnimationRNL</include>
             <texture background="true">$INFO[ListItem.Art(poster)]</texture>
-
             <bordertexture border="10">ThumbShadow.png</bordertexture>
             <bordersize>6</bordersize>
             <aspectratio align="center" aligny="top">stretch</aspectratio>
             <visible>Control.IsVisible(903) | ListItem.IsCollection</visible>
         </control>
+        
         <control type="image">
             <left>950</left>
             <top>310</top>
@@ -3547,8 +3478,36 @@
         </control>
         
         
-       
+       <!-- 트레일러 버튼 -->
         
+       <control type="videowindow" id="2">
+        <description>Trailer Video Window</description>
+        <posx>930</posx>
+        <posy>30</posy>
+        <width>50%</width>
+        <height>70%</height>
+        <visible>Control.HasFocus(9031)</visible>
+        </control> 
+       
+       
+       <control type="button" id="9031">
+            <left>820</left>
+            <top>80</top>
+            <width>48</width>
+            <height>48</height>
+            <onleft>903</onleft>
+            <onright>904</onright>
+            <onup>904</onup>
+            <ondown>906</ondown>
+            <texturenofocus>special://skin/media/home/trailer_search.png</texturenofocus>
+            <texturefocus colordiffuse="$VAR[BackColorButton]">special://skin/media/home/trailer_search.png</texturefocus>
+            <!-- <onfocus condition="!IsEmpty(ListItem.trailer)">PlayMedia($INFO[ListItem.Trailer],1)</onfocus> -->
+            <onfocus condition="!IsEmpty(ListItem.trailer)">AlarmClock(preview_delay,PlayMedia($INFO[ListItem.Trailer],1),00:03,silent)</onfocus>
+            <onunfocus condition="System.HasAlarm(preview_delay)">CancelAlarm(preview_delay,silent)</onunfocus>
+            <onunfocus>stop</onunfocus>
+            <visible>Skin.HasSetting(movie_trailerflag)</visible>
+           
+        </control>
         
         <control type="textbox">
             <description>Movie Plot</description>
@@ -3562,12 +3521,11 @@
             <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
             <autoscroll time="2000" delay="10000" repeat="5000">true</autoscroll>
 		</control>
-        
-        
-        
+          
         <include>KM_MediaInfo_Icon</include>
     </control>
-</include>
+
+    </include>
 
     <include name="View_601_Poster_Movies">
         <control type="group">
@@ -5917,12 +5875,6 @@
                         <visible>String.IsEqual(ListItem.label,..)</visible>
                     </control>
 
-                    <!-- <control type="image"> <left>5</left> <top>5</top> <width>178</width>
-                    <height>270</height> <texture background="true"
-                    fallback="default/noposter.jpg">$INFO[ListItem.Icon]</texture> <bordertexture
-                    border="10">ThumbShadow.png</bordertexture> <bordersize>6</bordersize>
-                    <aspectratio align="left" aligny="top">stretch</aspectratio>
-                    <visible>String.IsEqual(ListItem.label,..)</visible> </control> -->
 
                     <control type="image">
                         <left>5</left>
