@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9d42a2f-c8cd-475b-a36a-72acba967267" name="Changes" comment="Commit" />
+    <list default="true" id="f9d42a2f-c8cd-475b-a36a-72acba967267" name="Changes" comment="Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.destiny.km/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.destiny.km/playlists/Random Episodes.xsp" beforeDir="false" afterPath="$PROJECT_DIR$/skin.destiny.km/playlists/Random Episodes.xsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.destiny.km/playlists/RecentlyAddedSongs.xsp" beforeDir="false" afterPath="$PROJECT_DIR$/skin.destiny.km/playlists/RecentlyAddedSongs.xsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.destiny.km/xml/ViewsViewTypeList.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.destiny.km/xml/ViewsViewTypeList.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631883171687</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit">
+      <created>1631884625848</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1631884625848</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
