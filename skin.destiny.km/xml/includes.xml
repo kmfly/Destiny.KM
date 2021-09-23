@@ -20,6 +20,8 @@
 	<include file="IncludesPVR.xml"/>
 	<include file="IncludesMusic.xml"/>
 	<include file="Variables.xml"/>
+	<include file="IncludesDialogContextMenu.xml"/>
+
 	<include file="script-skinshortcuts-includes.xml"/>
 	<constant name="FanartCrossfadeTime">200</constant>
 	<constant name="IconCrossfadeTime">200</constant>

@@ -251,7 +251,7 @@
 					<onclick>ActivateWindow(4115)</onclick>
 				</control>
 				<!-- 영화트레일러 기능 온오프로 대체 -->
-				<!-- <control type="button" id="3041">
+				<control type="button" id="3041">
 					<description>Farbsettings</description>
 					<width>787</width>
 					<height>60</height>
@@ -261,8 +261,8 @@
 					<textwidth>600</textwidth>
 					<onclick>Skin.ToggleSetting(homebigrandomwidget)</onclick>
 					<selected>Skin.HasSetting(homebigrandomwidget)</selected>
-				</control> -->
-				<control type="radiobutton" id="3041">
+				</control>
+				<!-- <control type="radiobutton" id="3041">
 					<label>영화 트레일러 기능</label>
 					<width>787</width>
 					<height>60</height>
@@ -271,7 +271,7 @@
 					<textwidth>600</textwidth>
 					<onclick>Skin.ToggleSetting(movie_trailerflag)</onclick>
 					<selected>Skin.HasSetting(movie_trailerflag)</selected>
-				</control>
+				</control> -->
 				<control type="radiobutton" id="3042">
 					<label>$LOCALIZE[50409]</label>
 					<width>787</width>

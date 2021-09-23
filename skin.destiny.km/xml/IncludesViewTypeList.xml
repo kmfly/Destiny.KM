@@ -157,6 +157,7 @@
 					<visible>Container.Content(Movies) | Container.Content(TVShows)| Container.Content(Seasons)|Container.Content(Addons)</visible> -->
 					<visible>Container.Content(Movies)| Container.Content(TVShows) | Container.Content(Seasons) |System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) </visible>
 					<visible>![Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Window.IsVisible(Pictures)]</visible>
+					<visible>!Container.Content(Episodes)</visible>
 							
 				</control>
 				<control type="button" id="815">
@@ -170,6 +171,7 @@
 					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible> -->
 					<visible>Container.Content(Movies)| Container.Content(TVShows) | Container.Content(Seasons) |System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) </visible>
 					<visible>![Container.Content(songs) | Container.Content(artists) | Container.Content(albums)|Window.IsVisible(Pictures)]</visible>
+					<visible>!Container.Content(Episodes)</visible>
 					
 				</control>
 				<!-- <control type="button" id="813">

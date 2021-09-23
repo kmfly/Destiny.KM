@@ -1726,62 +1726,37 @@
                 time="300"
                 tween="cubic"
                 easing="inout"
-                condition="ControlGroup(901).HasFocus">Conditional</animation>
+                condition="ControlGroup(9020).HasFocus">Conditional</animation>
             <visible>Control.IsVisible(901)</visible>
             <control type="image">
-                <left>800</left>
+                <left>500</left>
                 <top>0</top>
-                <width>1200</width>
-                <height>800</height>
+                <width>1500</width>
+                <height>700</height>
                 <texture diffuse="special://skin/backgrounds/overray_fanart.png">$INFO[ListItem.Icon]</texture>
-                <aspectratio align="right" aligny="top">stretch</aspectratio>
+                <aspectratio>stretch</aspectratio>
                 <visible>Container.Content(Episodes)</visible>
             </control>
-            
-            
-            
-            <control type="image" id="9000">
-                <left>200</left>
-                <top>800</top>
-                <width>90</width>
-                <height>90</height>
-                <texture background="true">skin/button_klein.png</texture>
-                <bordertexture border="10">ThumbShadow.png</bordertexture>
-                <bordersize>6</bordersize>
-                <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-            </control>    
-            <control type="button" id="9001">
-                   
-                <left>205</left>
-                <top>800</top>
-                <width>85</width>
-                <height>85</height>
-                <texturefocus colordiffuse="$VAR[BackColorButton]">osd/play.png</texturefocus>
-                <texturenofocus colordiffuse="$VAR[ColorIcons]">osd/play.png</texturenofocus>
-                <onclick>PlayMedia($INFO[Container(901).ListItem.FileNameAndPath],resume)</onclick>
-            </control>
+   
+
              <control type="list" id="901">
-                <left>176</left>
-                <top>500</top>
+                
+                <left>200</left>
+                <top>600</top>
                 <width>1692</width>
                 <height>1000</height>
                 <onright condition="String.IsEmpty(Container(901).ListItem.label)">905</onright>
                 <onright>901</onright>
-                <onleft>901</onleft>
+                <onleft>9020</onleft>
                 <!-- <onup>903</onup> -->
-                <ondown>9001</ondown>
+                <ondown>setfocus(9001)</ondown>
                 <preloaditems>3</preloaditems>
                 <viewtype label="View_901_Ep_View">list</viewtype>
                 <scrolltime tween="Quadratic" easing="out">500</scrolltime>
                 <focusposition>0</focusposition>
                 <orientation>horizontal</orientation>
                 <movement>1</movement>
-                <pagecontrol>9110</pagecontrol>
-                
-                
-                
-                
-                
+                <pagecontrol>9120</pagecontrol>
                 
                 <itemlayout height="260" width="430">
                     <control type="image">
@@ -1806,7 +1781,7 @@
                         <visible>String.IsEqual(ListItem.label,..)</visible>
                     </control>
                     <control type="image">
-                        <left>120</left>
+                        <left>350</left>
                         <top>15</top>
                         <width>30</width>
                         <height>30</height>
@@ -1875,7 +1850,7 @@
                             <visible>String.IsEqual(ListItem.label,..)</visible>
                         </control>
                         <control type="image">
-                            <left>120</left>
+                            <left>350</left>
                             <top>15</top>
                             <width>30</width>
                             <height>30</height>
@@ -1909,24 +1884,36 @@
                         
                     </control>
                 </focusedlayout>
-    
+                
+                
             </control>
-            <!-- 작업중 -->
-            
-            <control type="image">
-                <left>1000</left>
+            <control type="group">
                 <top>0</top>
-                <width>800</width>
-                <height>450</height>
-                <!-- <texture
-                    background="true"
-                    fallback="special://skin/media/home/defaulttvshows.png">$VAR[PosterThumb]</texture> -->
-                <!-- <texture>$INFO[ListItem.Icon]</texture> -->
-                <bordertexture border="10">-</bordertexture>
-                <bordersize>7</bordersize>
-                <aspectratio align="center" aligny="top">stretch</aspectratio>
-                <visible>Container.Content(Episodes)</visible>
+                <left>1000</left>
+
+                <include>KM_MediaInfo_Icon</include>
             </control>
+            
+
+            <control type="scrollbar" id="9120">
+                <include>Animation.ZoomIn</include>
+           
+                <left>250</left>
+                <top>850</top>
+                <width>1600</width>
+                <height>10</height>
+                <texturesliderbackground>progress/bg.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="$VAR[BackColorButton]">progress/blank.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">progress/blank.png</texturesliderbarfocus>
+                <textureslidernib>button/ScrollBarNib.png</textureslidernib>
+                <textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+                <onleft>611</onleft>
+                <onright>290000</onright>
+                <showonepage>false</showonepage>
+                <orientation>horizontal</orientation>
+                <visible>Control.IsVisible(901) + !Skin.HasSetting(viewnoscrollbar)</visible>
+            </control>
+            
             
             <control type="label">
                 <left>200</left>
@@ -1946,13 +1933,13 @@
             </control>
 
             <control type="image">
-                <left>192</left>
+                <left>195</left>
                 <top>90</top>
                 <width>95</width>
-                <height>6</height>
+                <height>3</height>
                 <texture background="true">skin/button_klein.png</texture>
-                <bordertexture border="10">ThumbShadow.png</bordertexture>
-                <bordersize>6</bordersize>
+                <bordertexture border="3">ThumbShadow.png</bordertexture>
+                <bordersize>3</bordersize>
                 <colordiffuse>$VAR[BackColorButton]</colordiffuse>
             </control>
             
@@ -1990,50 +1977,8 @@
                 <visible>!ListItem.IsCollection</visible>
                 <visible>Container.Content(Episodes)</visible>
             </control>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-           <!-- <control type="label">
-                <left>200</left>
-                <top>150</top>
-                <width>1000</width>
-                <height>36</height>
-                <font>primal_18_Bold</font>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback="정보 없슴">시즌:$INFO[ListItem.Season]</label>
-                <visible>!String.IsEqual(ListItem.label,..)</visible>
-                <visible>!ListItem.IsCollection</visible>
-                <visible>Container.Content(Episodes)</visible>
-            </control> -->
-            <!-- <control type="label">
-                <left>200</left>
-                <top>200</top>
-                <width>1000</width>
-                <height>36</height>
-                <font>primal_13_Bold</font>
-
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                <align>justify</align>
-                <aligny>center</aligny>
-                <label fallback="정보 없슴">에피소드:$INFO[ListItem.Episode]</label>
-                <visible>!String.IsEqual(ListItem.label,..)</visible>
-                <visible>!ListItem.IsCollection</visible>
-                <visible>Container.Content(Episodes)</visible>
-            </control> -->
            
+
             
 
              <control type="label">
@@ -2051,238 +1996,36 @@
                 <visible>!String.IsEqual(ListItem.label,..)</visible>
                 <visible>!ListItem.IsCollection</visible>
                 <visible>Container.Content(Episodes)</visible>
-            </control> 
+            </control>
+            
+            <control type="image">
+                <left>195</left>
+                <top>270</top>
+                <width>300</width>
+                <height>3</height>
+                <texture background="true">skin/button_klein.png</texture>
+                <bordertexture border="3">ThumbShadow.png</bordertexture>
+                <bordersize>3</bordersize>
+                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+            </control>
      
 
             <control type="textbox">
                 <description>Movie Plot</description>
                 <left>200</left>
-                <top>270</top>
+                <top>310</top>
                 <width>800</width>
-                <height>150</height>
+                <height>200</height>
                 <font>primal_13_Bold</font>
                 <align>left</align>
                 <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                 <label>[COLOR $VAR[ColorFontNormal]]$VAR[ExtendedInfoPlot][/COLOR]</label>
-                <autoscroll time="2000" delay="5000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+                <autoscroll time="9000" delay="10000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
             </control>
 
-            <!-- <control type="list" id="901">
-                <include>Animation.ZoomIn</include>
-                <left>200</left>
-                <top>530</top>
-                <include condition="!Skin.HasSetting(noinfo901)">ViewLowWidth901</include>
-                <include condition="Skin.HasSetting(noinfo901)">ViewBigWidth901</include>
-                <height>500</height>
-                <onright>901</onright>
-                <onleft>9020</onleft>
-                <onup>901</onup>
-
-                <ondown>901</ondown>
-                <viewtype label="View_901_Ep_View">list</viewtype>
-                <scrolltime tween="Quadratic" easing="out">500</scrolltime>
-                <focusposition>0</focusposition>
-                <orientation>vertical</orientation>
-                <movement>1</movement>
-                <pagecontrol>1610</pagecontrol>
-
-                <itemlayout height="310" width="540">
-
-                    <control type="image">
-                        <left>5</left>
-                        <top>5</top>
-                        <width>530</width>
-                        <height>260</height>
-                        <texture background="true">$VAR[Poster]</texture>
-                        <bordertexture border="10">ThumbShadow.png</bordertexture>
-                        <bordersize>6</bordersize>
-                        <aspectratio align="left" aligny="top">stretch</aspectratio>
-                        <visible>!String.IsEqual(ListItem.label,..)</visible>
-                    </control>
-                    <control type="image">
-                        <left>5</left>
-                        <top>5</top>
-                        <width>530</width>
-                        <height>260</height>
-                        <texture background="true">$INFO[ListItem.Art(poster)]</texture>
-                        <bordertexture border="10">ThumbShadow.png</bordertexture>
-                        <bordersize>6</bordersize>
-                        <aspectratio align="left" aligny="top">keep</aspectratio>
-                        <visible>String.IsEqual(ListItem.label,..)</visible>
-                    </control>
-                    <control type="label">
-                        <left>15</left>
-                        <top>270</top>
-                        <width>450</width>
-                        <height>45</height>
-                        <font>primal_13_Bold</font>
-                        <align>left</align>
-                        <aligny>top</aligny>
-                        <scroll>false</scroll>
-                        <textcolor>$VAR[ColorFontNormal]</textcolor>
-                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                        <label>에피소드:$INFO[ListItem.Episode]</label>
-                        <visible>!String.IsEqual(ListItem.label,..)</visible>
-
-                    </control>
-
-                    <control type="image">
-                        <left>5</left>
-                        <top>5</top>
-                        <width>530</width>
-                        <height>260</height>
-                        <texture background="true">special://skin/backgrounds/soon.jpg</texture>
-                        <aspectratio align="left" aligny="top">stretch</aspectratio>
-                        <visible>String.IsEqual(ListItem.label,..)</visible>
-                    </control>
-                    <control type="image">
-                        <left>480</left>
-                        <top>20</top>
-                        <width>40</width>
-                        <height>44</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
-                        
-                    </control>
-
-                </itemlayout>
-                <focusedlayout height="350" width="540">
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>540</width>
-                        <height>270</height>
-
-                        <texture background="true">skin/button_klein_tranz50.png</texture>
-                        <bordertexture border="10">ThumbShadow.png</bordertexture>
-                        <bordersize>2</bordersize>
-                        <aspectratio>stretch</aspectratio>
-                        <colordiffuse>FFFF002B</colordiffuse>
-                    </control>
-
-                    <control type="image">
-                        <left>5</left>
-                        <top>5</top>
-                        <width>530</width>
-                        <height>260</height>
-                        <texture background="true">$VAR[Poster]</texture>
-                        <bordertexture border="10">ThumbShadow.png</bordertexture>
-                        <bordersize>3</bordersize>
-                        <aspectratio align="left" aligny="top">stretch</aspectratio>
-                        <visible>String.IsEqual(ListItem.label,..)</visible>
-                    </control>
-
-                    <control type="image">
-                        <left>5</left>
-                        <top>5</top>
-                        <width>530</width>
-                        <height>260</height>
-                        <texture background="true">$VAR[Poster]</texture>
-                        <bordertexture border="10">ThumbShadow.png</bordertexture>
-                        <bordersize>3</bordersize>
-                        <aspectratio align="left" aligny="top">stretch</aspectratio>
-                        <visible>!String.IsEqual(ListItem.label,..)</visible>
-                    </control>
-                    <control type="image">
-                        <left>5</left>
-                        <top>5</top>
-                        <width>530</width>
-                        <height>260</height>
-                        <texture background="true">special://skin/backgrounds/soon.jpg</texture>
-                        <aspectratio align="left" aligny="top">stretch</aspectratio>
-                        <visible>String.IsEqual(ListItem.label,..)</visible>
-                    </control>
-
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>540</width>
-                        <height>270</height>
-                        <texture background="true">skin/button_klein_tranz50.png</texture>
-                        <bordertexture border="10">ThumbShadow.png</bordertexture>
-                        <bordersize>7</bordersize>
-                        <aspectratio>stretch</aspectratio>
-                        <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-                        <visible>!ListItem.IsCollection</visible>
-                    </control>
-
-                    <control type="image">
-                        <left>480</left>
-                        <top>20</top>
-                        <width>40</width>
-                        <height>44</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
-                        
-                    </control>
-                    <control type="label">
-                        <left>15</left>
-                        <top>270</top>
-                        <width>450</width>
-                        <height>45</height>
-                        <font>primal_13_Bold</font>
-                        <align>left</align>
-                        <aligny>top</aligny>
-                        <scroll>false</scroll>
-                        <textcolor>$VAR[ColorFontNormal]</textcolor>
-                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                        <label>에피소드:$INFO[ListItem.Episode]</label>
-                        <visible>!String.IsEqual(ListItem.label,..)</visible>
-
-                    </control>
-
-                </focusedlayout>
-            </control>
-             -->
-            <!-- <control type="scrollbar" id="1610">
-                <include>Animation.ZoomIn</include>
-               
-                <left>1875</left>
-                <top>560</top>
-                <width>10</width>
-                <height>500</height>
-                <texturesliderbackground>progress/bg.png</texturesliderbackground>
-                <texturesliderbar colordiffuse="$VAR[BackColorButton]">progress/blank.png</texturesliderbar>
-                <texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">progress/blank.png</texturesliderbarfocus>
-                <textureslidernib>button/ScrollBarNib.png</textureslidernib>
-                <textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
-                <onleft>611</onleft>
-                <onright>290000</onright>
-                <showonepage>false</showonepage>
-                <orientation>vertical</orientation>
-                <visible>Control.IsVisible(901) + !Skin.HasSetting(viewnoscrollbar)</visible>
-            </control> -->
+            
         </control>
 
-
-        <!-- <control type="grouplist" id="907">
-                <left>300</left>
-				<top>980</top>
-				<width>1900</width>
-				<height>120</height>
-				<itemgap>0</itemgap>
-				<pagecontrol>1802</pagecontrol>
-				<scrolltime tween="sine" easing="out">200</scrolltime>
-				<orientation>horizontal</orientation>
-				<usecontrolcoords>false</usecontrolcoords>
-				<onleft>200</onleft>
-				<onright>200</onright>
-				<onup>1830</onup>
-				<ondown>1830</ondown>
-
-                <control type="togglebutton" id="1604">
-					<width>80</width>
-					<height>80</height>
-					<texturefocus colordiffuse="$VAR[BackColorButton]">osd/pause.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[ColorIcons]">osd/pause.png</texturenofocus>
-					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturefocus colordiffuse="$VAR[BackColorButton]">osd/play.png</alttexturefocus>
-					<alttexturenofocus colordiffuse="$VAR[ColorIcons]">osd/play.png</alttexturenofocus>
-					<onclick>resume</onclick>
-				</control>
-        </control> -->
 
         <control type="group">
             <include>SlideInAndOutAnimationRNL</include>
@@ -2340,7 +2083,8 @@
             <width>1692</width>
             <height>1000</height>
             <onright condition="String.IsEmpty(Container(904).ListItem.label)">905</onright>
-            <onright>9031</onright>
+            <onright condition="Skin.HasSetting(videoyoutube)">9031</onright>
+            <onright condition="!Skin.HasSetting(videoyoutube)">904</onright>
             <onleft>9020</onleft>
             <!-- <onup>903</onup> -->
             <ondown>903</ondown>
@@ -2647,6 +2391,7 @@
             <onright>906</onright>
             <onload>ClearProperty(ContentVideoYoutube,Home)</onload>
             <orientation>horizontal</orientation>
+                  
 
             <!-- 이것만 키면 엑세스 초과 나옴 -->
             <!-- <visible allowhiddenfocus="true">!Container(906).IsUpdating</visible> -->
@@ -2686,7 +2431,7 @@
                     <aspectratio align="center" aligny="top">stretch</aspectratio>
                 </control>
             </focusedlayout>
-            <content limit="20" sortby="file" sortorder="" target="videos">$VAR[ContentVideoYoutube]</content>
+            <content limit="10" sortby="file" sortorder="" target="videos">$VAR[ContentVideoYoutube]</content>
         </control>
         <control type="panel" id="9000">
 
@@ -3735,6 +3480,7 @@
         
        <!-- 트레일러 버튼 -->
         
+       
        <control type="videowindow" id="2">
         <description>Trailer Video Window</description>
         <posx>930</posx>
@@ -3742,7 +3488,9 @@
         <width>50%</width>
         <height>70%</height>
         <visible>Control.HasFocus(9031)</visible>
-        </control> 
+        </control>
+        
+        
        
        
        <control type="button" id="9031">
@@ -3756,11 +3504,11 @@
             <ondown>906</ondown>
             <texturenofocus>special://skin/media/home/trailer_search.png</texturenofocus>
             <texturefocus colordiffuse="$VAR[BackColorButton]">special://skin/media/home/trailer_search.png</texturefocus>
-            <!-- <onfocus condition="!IsEmpty(ListItem.trailer)">PlayMedia($INFO[ListItem.Trailer],1)</onfocus> -->
-            <onfocus condition="!IsEmpty(ListItem.trailer)">AlarmClock(preview_delay,PlayMedia($INFO[ListItem.Trailer],1),00:03,silent)</onfocus>
+            <onfocus condition="!IsEmpty(ListItem.trailer)">AlarmClock(preview_delay,PlayMedia($ESCINFO[Container(906).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
             <onunfocus condition="System.HasAlarm(preview_delay)">CancelAlarm(preview_delay,silent)</onunfocus>
             <onunfocus>stop</onunfocus>
-            <visible>Skin.HasSetting(movie_trailerflag)</visible>
+            <!-- <visible>!Container(906).IsUpdating + Skin.HasSetting(videoyoutube)</visible> -->
+            <visible>!Container(906).IsUpdating + Skin.HasSetting(videoyoutube)</visible>
            
         </control>
         

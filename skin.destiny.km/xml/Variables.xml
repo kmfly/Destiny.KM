@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	
-	
+
+
 	<variable name="EmbuaryCast">
 		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID) + !String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;dbid=$INFO[ListItem.DBID]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie) + String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title='$ESCINFO[ListItem.Title]'</value>
@@ -14,8 +14,8 @@
 		<value condition="[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season)] + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem.TVShowTitle]'</value>
 		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem(1).DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem(1).TVShowTitle]'</value>
 		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem(2).DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem(2).TVShowTitle]'</value>
-		
-		
+
+
 		<value>-</value>
 	</variable>
 
@@ -25,14 +25,10 @@
 	</variable>
 
 	<variable name="ContentVideoYoutube">
-		<!-- <value>plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]</value> -->
-		 <value condition="String.IsEqual(Window.Property(videoyoutube),1)">plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]</value>
-		 
-
+		<value condition="String.IsEqual(Window.Property(videoyoutube),1)">plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]</value>
 	</variable>
-	
-	
-	
+
+
 	<variable name="VarWidgetsFanart">
 		<value condition="Control.HasFocus(603)">$INFO[Container(603).ListItem.Art(fanart)]</value>
 		<value condition="Control.HasFocus(903)">$INFO[Container(903).ListItem.Art(fanart)]</value>
@@ -118,8 +114,8 @@
 		<value condition="Container(9000).Hasfocus(26)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(27)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(28)">$INFO[Container(9000).ListItem.Label]</value>
-			
-		
+
+
 		<value condition="Container(9000).Hasfocus(30)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(31)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(32)">$INFO[Container(9000).ListItem.Label]</value>
@@ -144,7 +140,7 @@
 		<value condition="Control.HasFocus(18305)">$INFO[Container(18305).ListItem.Plot]</value>
 		<value condition="Control.HasFocus(18306)">$INFO[Container(18306).ListItem.Plot]</value>
 		<value condition="Control.HasFocus(18401)">$INFO[Container(18401).ListItem.TVShowTitle]</value>
-		
+
 		<value condition="Control.HasFocus(18308)">$INFO[Container(18308).ListItem.PlotOutline]</value>
 		<value condition="Control.HasFocus(18309)">$INFO[Container(18309).ListItem.Plot]</value>
 		<value condition="Control.HasFocus(18322)">$INFO[Container(18322).ListItem.Label]</value>
@@ -157,8 +153,8 @@
 		<value condition="Control.HasFocus(709051)">$INFO[Container(709051).ListItem.Label]</value>
 		<value condition="Control.HasFocus(888111)">$INFO[Container(888111).ListItem.Genre]</value>
 	</variable>
-	
-	
+
+
 	<variable name="MusicInfoLabel">
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
@@ -184,7 +180,7 @@
 	<variable name="PosterThumb">
 		<value condition="Container.Content(Episodes)">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Art(poster)]</value>
-		
+
 		<value condition="Container.Content(Actors)">$INFO[ListItem.Icon]</value>
 		<value condition="Container.Content(Genres) | Container(9010).HasFocus(260031)">$VAR[VarMovieGenreIcon]</value>
 		<value condition="Container.Content(Addons)">$INFO[ListItem.Icon]</value>
@@ -255,31 +251,31 @@
 			<property name="Icon">home/homeicons/clean.png</property>
 		</item>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t0"/>
+			<param name="knswitcheritem_id" value="t0" />
 		</include>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t1"/>
+			<param name="knswitcheritem_id" value="t1" />
 		</include>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t2"/>
+			<param name="knswitcheritem_id" value="t2" />
 		</include>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t3"/>
+			<param name="knswitcheritem_id" value="t3" />
 		</include>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t4"/>
+			<param name="knswitcheritem_id" value="t4" />
 		</include>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t5"/>
+			<param name="knswitcheritem_id" value="t5" />
 		</include>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t6"/>
+			<param name="knswitcheritem_id" value="t6" />
 		</include>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t7"/>
+			<param name="knswitcheritem_id" value="t7" />
 		</include>
 		<include name="KNSwitcherItem">
-			<param name="knswitcheritem_id" value="t8"/>
+			<param name="knswitcheritem_id" value="t8" />
 		</include>
 	</include>
 	<!-- KN SWITCHTIMER CLOSE  -->
@@ -427,8 +423,8 @@
 		<value condition="Skin.HasSetting(moviessets)">$INFO[ListItem.Art(poster)]</value>
 		<value condition="Skin.HasSetting(3dmovies)">$INFO[ListItem.Art(poster)]</value>
 		<value condition="Skin.HasSetting(movieactor)">$INFO[ListItem.Icon]</value>
-	
-		
+
+
 	</variable>
 	<variable name="HomeWidgetsVideos">
 		<value condition="!Skin.HasSetting(recentmovies2) + !Skin.HasSetting(recommendedmovies2) + !Skin.HasSetting(unseenmovies2) + !Skin.HasSetting(fsk18movies2) + !Skin.HasSetting(topratedmovies2) + !Skin.HasSetting(moviessets2)">special://skin/playlists/Movies Recent.xsp</value>
@@ -513,15 +509,15 @@
 		<value condition="Container(9000).Hasfocus(43) + Skin.HasSetting(movieplaylistButton1005)">$INFO[Skin.String(Playlist8HomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(44) + Skin.HasSetting(movieplaylistButton1006)">$INFO[Skin.String(Playlist9HomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(45) + Skin.HasSetting(movieplaylistButton1007)">$INFO[Skin.String(Playlist10HomeItem.Widget)]</value>
-		
+
 		<value condition="Container(9000).Hasfocus(24) + Skin.HasSetting(movieplaylistButton1008) ">$INFO[Skin.String(TvingHomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(23) + Skin.HasSetting(movieplaylistButton1009) ">$INFO[Skin.String(NetflixHomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(25) + Skin.HasSetting(movieplaylistButton1010)">$INFO[Skin.String(WaveHomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(26) + Skin.HasSetting(movieplaylistButton1011)">$INFO[Skin.String(WachaHomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(27) + Skin.HasSetting(movieplaylistButton1012)">$INFO[Skin.String(YoutubeHomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(28) + Skin.HasSetting(movieplaylistButton1013)">$INFO[Skin.String(SpotvHomeItem.Widget)]</value>
-				
-		
+
+
 	</variable>
 	<variable name="HomeWidgetsYoutube">
 		<value condition="!Skin.HasSetting(youtubenewuploadedvideostv) + !Skin.HasSetting(youtubemine) + !Skin.HasSetting(youtubelive) + !Skin.HasSetting(youtubelist)">plugin://plugin.video.youtube/special/popular_right_now/</value>
@@ -543,16 +539,16 @@
 		<value>Jetzt gerade beliebt</value>
 	</variable>
 	<variable name="HomeWidgetsMyChannel">
-		<value condition="Container(888809).Hasfocus(260103)"/>
+		<value condition="Container(888809).Hasfocus(260103)" />
 		<!--plugin.program.fritzact-->
 		<!--plugin.program.fritzact-->
-		<value condition="Container(888809).Hasfocus(260104)"/>
+		<value condition="Container(888809).Hasfocus(260104)" />
 		<!--plugin.program.newscenter-->
 		<!--plugin.program.newscenter-->
-		<value condition="Container(888809).Hasfocus(260105)"/>
+		<value condition="Container(888809).Hasfocus(260105)" />
 		<!--plugin.audio.radio_de-->
 		<!--plugin.audio.radio_de-->
-		<value condition="Container(888809).Hasfocus(260106)"/>
+		<value condition="Container(888809).Hasfocus(260106)" />
 		<!--plugin.video.netflix-->
 		<!--plugin.video.netflix-->
 		<value condition="Container(888809).Hasfocus(260107)">plugin://plugin.audio.prime_music/?url=https://www.amazon.de/s/ref=s9_aas_bw_srch?__mk_de_DE=%C5M%C5Z%D5%D1&amp;rh=i%3Adigital-music-album%2Cn%3A5686557031%2Cp_n_format_browse-bin%3A180848031%2Cp_n_date_first_available_prime%3A6969880031&amp;bbn=5686557031&amp;sort=featured-rank&amp;rw_html_to_wsrp=1&amp;pf_rd_m=A3JWKAKR8XB7XF&amp;pf_rd_s=merchandised-search-5&amp;pf_rd_r=6RVAXVCW0CXA3QF4F86R&amp;pf_rd_t=101&amp;pf_rd_p=805206707&amp;pf_rd_i=7457104031&amp;mode=listAlbums&amp;thumb=</value>
@@ -562,7 +558,7 @@
 		<!--plugin.video.amazon-test-->
 		<value condition="Container(888809).Hasfocus(260109)">plugin://plugin.video.maxdome?action=list&amp;use_filter=False&amp;id=spielfilm_genre_all</value>
 		<!--plugin.video.maxdome-->
-		<value condition="Container(888809).Hasfocus(260110)"/>
+		<value condition="Container(888809).Hasfocus(260110)" />
 		<!--plugin.video.youtube-->
 		<!--plugin.video.youtube-->
 		<value condition="Container(888809).Hasfocus(260111)">plugin://plugin.video.mediathekview/?mode=recentchannels</value>
@@ -691,129 +687,129 @@
 		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">$LOCALIZE[50191]: $INFO[ListItem.Property(WatchedEpisodes)] • $LOCALIZE[50192]: $INFO[ListItem.Property(UnWatchedEpisodes)]</value>
 		<value condition="Container.Content(Episodes)">$LOCALIZE[49972]: $INFO[ListItem.EndTime]</value>
 	</variable>
-	
-	 <variable name="RatingDecimalToPercentage">
-      
-	  <value condition="!String.IsEmpty(ListItem.Rating)">$VAR[RatingDecimalToPercentageListItemRating]</value>
-       
+
+	<variable name="RatingDecimalToPercentage">
+
+		<value condition="!String.IsEmpty(ListItem.Rating)">$VAR[RatingDecimalToPercentageListItemRating]</value>
+
 	</variable>
-	
+
 	<variable name="RatingDecimalToPercentageListItemRating">
-        <value condition="String.IsEqual(ListItem.Rating,0)"/>
-        <value condition="String.IsEqual(ListItem.Rating,0.0)"/>
-        <value condition="String.IsEqual(ListItem.Rating,0.1)">1</value>
-        <value condition="String.IsEqual(ListItem.Rating,0.2)">2</value>
-        <value condition="String.IsEqual(ListItem.Rating,0.3)">3</value>
-        <value condition="String.IsEqual(ListItem.Rating,0.4)">4</value>
-        <value condition="String.IsEqual(ListItem.Rating,0.5)">5</value>
-        <value condition="String.IsEqual(ListItem.Rating,0.6)">6</value>
-        <value condition="String.IsEqual(ListItem.Rating,0.7)">7</value>
-        <value condition="String.IsEqual(ListItem.Rating,0.8)">8</value>
-        <value condition="String.IsEqual(ListItem.Rating,0.9)">9</value>
-        <value condition="String.IsEqual(ListItem.Rating,1)">10</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.0)">10</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.1)">11</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.2)">12</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.3)">13</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.4)">14</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.5)">15</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.6)">16</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.7)">17</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.8)">18</value>
-        <value condition="String.IsEqual(ListItem.Rating,1.9)">19</value>
-        <value condition="String.IsEqual(ListItem.Rating,2)">20</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.0)">20</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.1)">21</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.2)">22</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.3)">23</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.4)">24</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.5)">25</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.6)">26</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.7)">27</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.8)">28</value>
-        <value condition="String.IsEqual(ListItem.Rating,2.9)">29</value>
-        <value condition="String.IsEqual(ListItem.Rating,3)">30</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.0)">30</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.1)">31</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.2)">32</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.3)">33</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.4)">34</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.5)">35</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.6)">36</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.7)">37</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.8)">38</value>
-        <value condition="String.IsEqual(ListItem.Rating,3.9)">39</value>
-        <value condition="String.IsEqual(ListItem.Rating,4)">40</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.0)">40</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.1)">41</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.2)">42</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.3)">43</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.4)">44</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.5)">45</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.6)">46</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.7)">47</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.8)">48</value>
-        <value condition="String.IsEqual(ListItem.Rating,4.9)">49</value>
-        <value condition="String.IsEqual(ListItem.Rating,5)">50</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.0)">50</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.1)">51</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.2)">52</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.3)">53</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.4)">54</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.5)">55</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.6)">56</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.7)">57</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.8)">58</value>
-        <value condition="String.IsEqual(ListItem.Rating,5.9)">59</value>
-        <value condition="String.IsEqual(ListItem.Rating,6)">60</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.0)">60</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.1)">61</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.2)">62</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.3)">63</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.4)">64</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.5)">65</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.6)">66</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.7)">67</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.8)">68</value>
-        <value condition="String.IsEqual(ListItem.Rating,6.9)">69</value>
-        <value condition="String.IsEqual(ListItem.Rating,7)">70</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.0)">70</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.1)">71</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.2)">72</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.3)">73</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.4)">74</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.5)">75</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.6)">76</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.7)">77</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.8)">78</value>
-        <value condition="String.IsEqual(ListItem.Rating,7.9)">79</value>
-        <value condition="String.IsEqual(ListItem.Rating,8)">80</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.0)">80</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.1)">81</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.2)">82</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.3)">83</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.4)">84</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.5)">85</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.6)">86</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.7)">87</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.8)">88</value>
-        <value condition="String.IsEqual(ListItem.Rating,8.9)">89</value>
-        <value condition="String.IsEqual(ListItem.Rating,9)">90</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.0)">90</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.1)">91</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.2)">92</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.3)">93</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.4)">94</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.5)">95</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.6)">96</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.7)">97</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.8)">98</value>
-        <value condition="String.IsEqual(ListItem.Rating,9.9)">99</value>
-        <value condition="String.IsEqual(ListItem.Rating,10)"/>
-        <value condition="String.IsEqual(ListItem.Rating,10.0)"/>
-    </variable>
-	
-	
+		<value condition="String.IsEqual(ListItem.Rating,0)" />
+		<value condition="String.IsEqual(ListItem.Rating,0.0)" />
+		<value condition="String.IsEqual(ListItem.Rating,0.1)">1</value>
+		<value condition="String.IsEqual(ListItem.Rating,0.2)">2</value>
+		<value condition="String.IsEqual(ListItem.Rating,0.3)">3</value>
+		<value condition="String.IsEqual(ListItem.Rating,0.4)">4</value>
+		<value condition="String.IsEqual(ListItem.Rating,0.5)">5</value>
+		<value condition="String.IsEqual(ListItem.Rating,0.6)">6</value>
+		<value condition="String.IsEqual(ListItem.Rating,0.7)">7</value>
+		<value condition="String.IsEqual(ListItem.Rating,0.8)">8</value>
+		<value condition="String.IsEqual(ListItem.Rating,0.9)">9</value>
+		<value condition="String.IsEqual(ListItem.Rating,1)">10</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.0)">10</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.1)">11</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.2)">12</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.3)">13</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.4)">14</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.5)">15</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.6)">16</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.7)">17</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.8)">18</value>
+		<value condition="String.IsEqual(ListItem.Rating,1.9)">19</value>
+		<value condition="String.IsEqual(ListItem.Rating,2)">20</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.0)">20</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.1)">21</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.2)">22</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.3)">23</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.4)">24</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.5)">25</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.6)">26</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.7)">27</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.8)">28</value>
+		<value condition="String.IsEqual(ListItem.Rating,2.9)">29</value>
+		<value condition="String.IsEqual(ListItem.Rating,3)">30</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.0)">30</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.1)">31</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.2)">32</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.3)">33</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.4)">34</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.5)">35</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.6)">36</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.7)">37</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.8)">38</value>
+		<value condition="String.IsEqual(ListItem.Rating,3.9)">39</value>
+		<value condition="String.IsEqual(ListItem.Rating,4)">40</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.0)">40</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.1)">41</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.2)">42</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.3)">43</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.4)">44</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.5)">45</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.6)">46</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.7)">47</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.8)">48</value>
+		<value condition="String.IsEqual(ListItem.Rating,4.9)">49</value>
+		<value condition="String.IsEqual(ListItem.Rating,5)">50</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.0)">50</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.1)">51</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.2)">52</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.3)">53</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.4)">54</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.5)">55</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.6)">56</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.7)">57</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.8)">58</value>
+		<value condition="String.IsEqual(ListItem.Rating,5.9)">59</value>
+		<value condition="String.IsEqual(ListItem.Rating,6)">60</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.0)">60</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.1)">61</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.2)">62</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.3)">63</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.4)">64</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.5)">65</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.6)">66</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.7)">67</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.8)">68</value>
+		<value condition="String.IsEqual(ListItem.Rating,6.9)">69</value>
+		<value condition="String.IsEqual(ListItem.Rating,7)">70</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.0)">70</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.1)">71</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.2)">72</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.3)">73</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.4)">74</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.5)">75</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.6)">76</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.7)">77</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.8)">78</value>
+		<value condition="String.IsEqual(ListItem.Rating,7.9)">79</value>
+		<value condition="String.IsEqual(ListItem.Rating,8)">80</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.0)">80</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.1)">81</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.2)">82</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.3)">83</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.4)">84</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.5)">85</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.6)">86</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.7)">87</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.8)">88</value>
+		<value condition="String.IsEqual(ListItem.Rating,8.9)">89</value>
+		<value condition="String.IsEqual(ListItem.Rating,9)">90</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.0)">90</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.1)">91</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.2)">92</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.3)">93</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.4)">94</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.5)">95</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.6)">96</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.7)">97</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.8)">98</value>
+		<value condition="String.IsEqual(ListItem.Rating,9.9)">99</value>
+		<value condition="String.IsEqual(ListItem.Rating,10)" />
+		<value condition="String.IsEqual(ListItem.Rating,10.0)" />
+	</variable>
+
+
 	<variable name="cdARTVar">
 		<value condition="[Window.IsActive(musicfiles) + String.IsEmpty(ListItem.FileExtension)]">$INFO[ListItem.Path]$INFO[ListItem.Label,,/cdart.png]</value>
 		<value condition="Container.Content(albums)">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist]/$INFO[ListItem.Label]/cdart.png</value>
@@ -1004,8 +1000,8 @@
 		<value condition="String.Contains(ListItem.Filenameandpath,.5.1)">6</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,.7.1)">8</value>
 	</variable>
-	
-	
+
+
 	<variable name="mpaa">
 		<!-- AUSTRALIA -->
 		<value condition="String.Contains(listitem.mpaa,Australia:G)">flagging/ratings/australia_g.png</value>
@@ -2169,7 +2165,7 @@
 	</variable>
 	<variable name="HomeMainMenuColor">
 		<value condition="Container(9000).Hasfocus(13)">FF696969</value>
-		<value/>
+		<value />
 	</variable>
 	<!-- Color Settings for Homebutton -->
 	<variable name="ColorBackWebOS0">
@@ -2296,12 +2292,12 @@
 
 	<!-- KM added -->
 	<variable name="ColorBackWebOS29">
-	
+
 		<value condition="Skin.HasSetting(ColorBackWebOS29)">$INFO[Skin.String(SelfColorWebOS29_Path)]</value>
 		<value>ColorBackHomeButton29</value>
 	</variable>
 	<variable name="ColorBackWebOS29">
-	
+
 		<value condition="Skin.HasSetting(ColorBackWebOS29)">$INFO[Skin.String(SelfColorWebOS29_Path)]</value>
 		<value>ColorBackHomeButton29</value>
 	</variable>
@@ -2316,56 +2312,35 @@
 		<value>ColorBackHomeButton31</value>
 	</variable>
 	<variable name="ColorBackWebOS32">
-	
+
 		<value condition="Skin.HasSetting(ColorBackWebOS32)">$INFO[Skin.String(SelfColorWebOS32_Path)]</value>
 		<value>ColorBackHomeButton32</value>
 	</variable>
 	<variable name="ColorBackWebOS33">
-	
+
 		<value condition="Skin.HasSetting(ColorBackWebOS33)">$INFO[Skin.String(SelfColorWebOS33_Path)]</value>
 		<value>ColorBackHomeButton33</value>
 	</variable>
 	<variable name="ColorBackWebOS34">
-	
+
 		<value condition="Skin.HasSetting(ColorBackWebOS34)">$INFO[Skin.String(SelfColorWebOS34_Path)]</value>
 		<value>ColorBackHomeButton34</value>
 	</variable>
 	<variable name="ColorBackWebOS35">
-	
+
 		<value condition="Skin.HasSetting(ColorBackWebOS35)">$INFO[Skin.String(SelfColorWebOS35_Path)]</value>
 		<value>ColorBackHomeButton35</value>
 	</variable>
 	<variable name="ColorBackWebOS36">
-	
+
 		<value condition="Skin.HasSetting(ColorBackWebOS36)">$INFO[Skin.String(SelfColorWebOS36_Path)]</value>
 		<value>ColorBackHomeButton36</value>
 	</variable>
 	<variable name="ColorBackWebOS37">
-	
+
 		<value condition="Skin.HasSetting(ColorBackWebOS37)">$INFO[Skin.String(SelfColorWebOS37_Path)]</value>
 		<value>ColorBackHomeButton37</value>
 	</variable>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	<!-- Color Settings for Homebutton Close -->

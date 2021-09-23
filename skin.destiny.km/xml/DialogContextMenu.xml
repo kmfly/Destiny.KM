@@ -1,43 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window id="106">
-	<defaultcontrol>996</defaultcontrol>
-	<coordinates>
-		<system>1</system>
-		<left>0</left>
-		<top>0</top>
-	</coordinates>
+<window>
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<!-- <onload>Close</onload> -->
+
 	<controls>
-		<control type="image" id="999">
-			<description>background image</description>
-			<left>25</left>
-			<top>0</top>
-			<width>450</width>
-			<texture background="true">skin/button_klein.png</texture>
-			<bordertexture border="10">ThumbShadow.png</bordertexture>
-			<bordersize>7</bordersize>
-			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
-		</control>
-		<control type="grouplist" id="996">
-			<description>grouplist for context buttons</description>
-			<left>40</left>
-			<top>15</top>
-			<width>420</width>
-			<height min="60" max="1045">auto</height>
-			<itemgap>2</itemgap>
-			<include>QuicklinksButton</include>
-			<include>ZusatzContentMenuButtonSimpleplaylists</include>
-		</control>
-		<control type="button" id="1000">
+		<!-- <control type="button">
 			<description>button template</description>
 			<left>40</left>
 			<top>-</top>
-			<width>420</width>
-			<height>77</height>
-			<font>primal_20</font>
+			<width>50%</width>
+			<height>50%</height>
 			<align>center</align>
-		</control>
+			
+			<font>primal_20</font>
+			
+		</control> -->
 	
-		<control type="button">
+		<!-- <control type="button">
 			<description>Close Window button</description>
 			<left>430</left>
 			<top>-10</top>
@@ -49,9 +28,11 @@
 			<texturefocus>special://skin/backgrounds/icon/km_close_sel.png</texturefocus>
 			<texturenofocus>special://skin/backgrounds/icon/km_close.png</texturenofocus>
 			<visible>!Skin.HasSetting(tablet_modus)</visible>
-		</control>
-		
-		
-		
-	</controls>
+			<visible>!Container.Content(Episodes)</visible>
+		</control> -->
+	<include condition="Container.Content(Episodes)">DialogContextMenu_TVshow_ep</include>
+	<include condition="Container.Content(movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons)">DialogContextMenu_movies</include>
+	<!-- condition="[Skin.HasTheme(classic) | Skin.HasSetting(smallContextMenu)]"	 -->
+</controls>
+	
 </window>
