@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="DialogContextMenu_TVshow_ep">
+		<control type="group">
+			<posx>210</posx>
+			<posy>310</posy>
+            <height>200</height>
+			<control type="image">
+				<description>background image</description>
+				<left>-15</left>
+				<top>40</top>
+				<width>400</width>
+				<texture background="true">skin/button_klein.png</texture>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+				<bordersize>7</bordersize>
+				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			</control>
+			
+			<control type="grouplist" id="996">
+				<description>grouplist for context buttons</description>
+				<left>0</left>
+				<top>70</top>
+				<width>370</width>
+				<height min="60" max="120">120</height>
+				<itemgap>2</itemgap>
+				<control type="button" id="1000">
+					<description>button template</description>
+					<left>1000</left>
+					<top>500</top>
+					<width>370</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<align>center</align>
+				</control>
+				
+			</control>
+			
+		
+			<!-- <control type="button">
+				<description>Close Window button</description>
+				<left>430</left>
+				<top>-10</top>
+				<width>48</width>
+				<height>48</height>
+				<label></label>
+				<font></font>
+				<onclick>Dialog.Close(106)</onclick>
+				<texturefocus>special://skin/backgrounds/icon/km_close_sel.png</texturefocus>
+				<texturenofocus>special://skin/backgrounds/icon/km_close.png</texturenofocus>
+				<visible>!Skin.HasSetting(tablet_modus)</visible>
+				<visible>!Container.Content(Episodes)</visible>
+			</control> -->
+		</control>
+			
+	</include>
+	<include name="DialogContextMenu_movies">
+		<control type="group">
+			<posx>400</posx>
+			<posy>-200</posy>
+            <height>620</height>
+			<control type="image">
+				<description>background image</description>
+				<left>-15</left>
+				<top>40</top>
+				<width>400</width>
+				<texture background="true">skin/button_klein.png</texture>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+				<bordersize>7</bordersize>
+				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			</control>
+			
+			<control type="grouplist" id="996">
+				<description>grouplist for context buttons</description>
+				<left>0</left>
+				<top>70</top>
+				<width>370</width>
+				<height min="60" max="1000">550</height>
+				<itemgap>2</itemgap>
+				<control type="button" id="1000">
+					<description>button template</description>
+					<left>1000</left>
+					<top>500</top>
+					<width>370</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<align>center</align>
+				</control>
+				
+			</control>
+			
+		
+			<!-- <control type="button">
+				<description>Close Window button</description>
+				<left>430</left>
+				<top>-10</top>
+				<width>48</width>
+				<height>48</height>
+				<label></label>
+				<font></font>
+				<onclick>Dialog.Close(106)</onclick>
+				<texturefocus>special://skin/backgrounds/icon/km_close_sel.png</texturefocus>
+				<texturenofocus>special://skin/backgrounds/icon/km_close.png</texturenofocus>
+				<visible>!Skin.HasSetting(tablet_modus)</visible>
+				<visible>!Container.Content(Episodes)</visible>
+			</control> -->
+		</control>
+
+	</include>
+	
+</includes>
