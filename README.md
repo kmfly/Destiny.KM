@@ -1,6 +1,6 @@
 # Destiny.KM
 # To Do list
-- [ ]4k선택시 랜덤으로 표시
+- [x]4k선택시 랜덤으로 표시
 - [ ]분류 재생목록 SJVA 게시물 확인
 - [x]Plex view 전환시 막대 애니메이션
 - [ ]Plex view시 트레일러 표시(빈지 참고)
