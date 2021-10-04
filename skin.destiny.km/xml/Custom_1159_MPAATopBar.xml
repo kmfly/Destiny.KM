@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1159">
+    <animation effect="fade" delay="600" start="0" end="100" time="400">WindowOpen</animation>
+    <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+    <visible>!String.IsEmpty(Window(Home).Property(DialogMPAATopBar))</visible>
+    <onload>AlarmClock(CloseMPAATopBar,ClearProperty(DialogMPAATopBar,Home),00:04,silent)</onload>
+
+    <controls>
+        <control type="group">
+            <visible>!Window.IsActive(videoosd) + Window.IsVisible(fullscreenvideo)</visible>
+            <visible>!String.IsEmpty(VideoPlayer.MPAA) + !String.Contains(VideoPlayer.MPAA,not rated) + !String.Contains(VideoPlayer.MPAA,n/a) + !String.Contains(VideoPlayer.MPAA,nr)</visible>
+
+
+            <control type="image">
+                <top>0</top>
+                <left>0</left>
+                <width>100%</width>
+                <height>100%</height>
+                <texture background="true">special://skin/media/new_video_osd/diffuse/gradient_subtle.png</texture>
+                <aspectratio scalediffuse="true">scale</aspectratio>
+            </control>
+
+            <control type="image">
+                <animation effect="zoom" end="100,1200" easing="inout" tween="sine" time="350" delay="900" condition="true">WindowOpen</animation>
+                <left>85</left>
+                <top>85</top>
+                <width>5</width>
+                <height>5</height>
+                <texture>special://skin/media/new_video_osd/color_white.png</texture>
+                <colordiffuse>ffcc0001</colordiffuse>
+                <aspectratio>stretch</aspectratio>
+            </control>
+
+            <control type="label">
+                <left>100</left>
+                <top>95</top>
+                <width>auto</width>
+                <height>100%</height>
+                <align>left</align>
+                <font>primal_20_Bold</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>ff373737</shadowcolor>
+                <label>$INFO[VideoPlayer.MPAA]</label>
+                <label>[B]$VAR[VideoRatingTopBarLabel][/B]</label>
+            </control>
+
+
+        </control>
+    </controls>
+</window>
