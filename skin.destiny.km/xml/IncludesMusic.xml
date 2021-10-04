@@ -594,20 +594,20 @@
 			<orientation>horizontal</orientation>
 			<itemgap>-1060</itemgap>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="150" end="100" center="960,540" time="960" tween="cubic"/>
-				<effect type="fade" end="100" time="960"/>
+				<effect type="zoom" start="150" end="100" center="960,540" time="960" tween="cubic" />
+				<effect type="fade" end="100" time="960" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="fade" start="100" end="0" time="240"/>
-				<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in"/>
+				<effect type="fade" start="100" end="0" time="240" />
+				<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
 			</animation>
 			<!-- Similar Artist -->
 			<control type="group" id="5000">
 				<width>2325</width>
 				<height>825</height>
 				<animation type="Conditional" condition="![ControlGroup(5000).HasFocus | Control.HasFocus(5012)]">
-					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout"/>
-					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto"/>
+					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
 				</animation>
 				<control type="button" id="5012">
 					<texturefocus>-</texturefocus>
@@ -733,8 +733,8 @@
 				<width>2325</width>
 				<height>825</height>
 				<animation type="Conditional" condition="![ControlGroup(6000).HasFocus | Control.HasFocus(6012)]">
-					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout"/>
-					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto"/>
+					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
 				</animation>
 				<control type="image">
 					<description>background image</description>
@@ -842,8 +842,8 @@
 				<width>2325</width>
 				<height>825</height>
 				<animation type="Conditional" condition="![ControlGroup(7000).HasFocus | Control.HasFocus(7012)]">
-					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout"/>
-					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto"/>
+					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
 				</animation>
 				<control type="button" id="7012">
 					<texturefocus>-</texturefocus>
@@ -937,8 +937,8 @@
 				<width>2325</width>
 				<height>825</height>
 				<animation type="Conditional" condition="![ControlGroup(8000).HasFocus | Control.HasFocus(8012)]">
-					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout"/>
-					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="1160,412"/>
+					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="1160,412" />
 				</animation>
 				<control type="button" id="8012">
 					<texturefocus>-</texturefocus>
@@ -1170,8 +1170,8 @@
 				<width>2325</width>
 				<height>825</height>
 				<animation type="Conditional" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9012)]">
-					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout"/>
-					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto"/>
+					<effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+					<effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
 				</animation>
 				<control type="button" id="9012">
 					<texturefocus>-</texturefocus>

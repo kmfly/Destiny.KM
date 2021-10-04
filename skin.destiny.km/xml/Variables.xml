@@ -2,30 +2,44 @@
 <includes>
 
 
-	<variable name="EmbuaryCast">
-		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID) + !String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;dbid=$INFO[ListItem.DBID]</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie) + String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title='$ESCINFO[ListItem.Title]'</value>
+	<variable name="VideoRatingTopBarLabel">
+		<value condition="String.Contains(VideoPlayer.MPAA,rated)">$INFO[VideoPlayer.MPAA]</value>
+		<value>$INFO[VideoPlayer.MPAA,등급 ,]</value>
+	</variable>
 
-		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID) + !String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=person&amp;type=movie&amp;dbid=$INFO[ListItem.DBID]</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie) + String.IsEqual(ListItem.DBID,0)">plugin://plugin.video.themoviedb.helper/?info=details&amp;type=person&amp;query=$INFO[ListItem.Label]'</value>
+
+	<variable name="EmbuaryCast">
+
+		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID) + !String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;dbid=$INFO[ListItem.DBID]</value>
+		<!-- <value condition="String.IsEqual(ListItem.DBType,movie) + String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title='$ESCINFO[ListItem.Title]'</value> -->
+
+		<!-- <value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID) + !String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=person&amp;type=movie&amp;dbid=$INFO[ListItem.DBID]</value> -->
+		<!-- <value condition="String.IsEqual(ListItem.DBType,movie) + String.IsEqual(ListItem.DBID,0)">plugin://plugin.video.themoviedb.helper/?info=details&amp;type=person&amp;query=$INFO[ListItem.Label]'</value> -->
 
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID) + !String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;dbid=$INFO[ListItem.DBID]</value>
-		<value condition="String.IsEqual(ListItem.DBType,tvshow) + String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem.TVShowTitle]'</value>
-		<value condition="[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season)] + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem.TVShowTitle]'</value>
+		<!-- <value condition="String.IsEqual(ListItem.DBType,tvshow) + String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem.TVShowTitle]'</value> -->
+		<!-- <value condition="[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season)] + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem.TVShowTitle]'</value>
 		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem(1).DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem(1).TVShowTitle]'</value>
-		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem(2).DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem(2).TVShowTitle]'</value>
+		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem(2).DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem(2).TVShowTitle]'</value> -->
 
 
 		<value>-</value>
 	</variable>
 
+
 	<variable name="Similiar_Content">
+		<!-- <value>special://skin/playlists/All Movies.xsp</value> -->
 		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</value>
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)">videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22year%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Container(904).ListItem.Label]%22%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(EncodedTitle)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
 	</variable>
-
+	<!-- <variable name="Similiar_Content">
+		<value>videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22검색키워드%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</value>
+		<value>videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22year%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Container(904).ListItem.Label]%22%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(EncodedTitle)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
+		<value>special://skin/playlists/korea.xsp</value>
+	</variable> -->
 	<variable name="ContentVideoYoutube">
-		<value condition="String.IsEqual(Window.Property(videoyoutube),1)">plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]</value>
+		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]+트레일러+예고편</value>
 	</variable>
 
 
@@ -1038,32 +1052,15 @@
 		<value condition="[String.Contains(ListItem.mpaa,Germany:18) | String.Contains(ListItem.mpaa,FSK 18) | String.Contains(ListItem.mpaa,DE-18)] + Skin.HasSetting(RatingColor)">flagging/ratings/Germany18_color.png</value>
 	</variable>
 	<variable name="mpaatext">
-		<!-- AUSTRALIA -->
-		<value condition="String.Contains(listitem.mpaa,Australia:G)">[COLOR FF0db14b]G[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,Australia:MA15+)">[COLOR FFed1c24]MA15+[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,Australia:R18+)">[COLOR FF000000]R18+[/COLOR]</value>
-		<!-- US -->
-		<value condition="String.Contains(listitem.mpaa,Rated G)">[COLOR FF0db14b]G[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,Rated PG) + !String.Contains(listitem.mpaa,Rated PG-13)">[COLOR FF0db14b]PG[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,Rated PG-13)">[COLOR FF0db14b]PG-13[/COLOR]</value>
-		<value condition="String.Contains(Listitem.mpaa,Rated R)">[COLOR FFed1c24]R[/COLOR]</value>
-		<value condition="String.Contains(Listitem.mpaa,Rated NC)">[COLOR FFffe600]NC[/COLOR]</value>
-		<value condition="[!ListItem.IsFolder | !String.Contains(Container.FolderPath,videodb)] + String.IsEmpty(ListItem.MPAA)">unrated</value>
-		<!-- UK -->
-		<value condition="String.Contains(listitem.mpaa,UK:U)">[COLOR FFffffff]U[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,UK:PG)">[COLOR FFffe600]PG[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,UK:12a)">[COLOR FF0db14b]12a[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,UK:12) + !String.Contains(listitem.mpaa,UK:12a)">[COLOR FF0db14b]12[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,UK:15)">[COLOR FF00a4e0]15[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,UK:18)">[COLOR FFed1c24]18[/COLOR]</value>
-		<value condition="String.Contains(listitem.mpaa,UK:R18)">[COLOR FFed1c24]R18[/COLOR]</value>
-		<!-- GERMANY -->
-		<value condition="String.Contains(ListItem.mpaa,Germany:o.A.) | String.Contains(ListItem.mpaa,o.A.)">o.A.</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:0) | String.Contains(ListItem.mpaa,FSK 0) | String.Contains(ListItem.mpaa,DE-0)">[COLOR FFffffff]FSK 0[/COLOR]</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:6) | String.Contains(ListItem.mpaa,FSK 6) | String.Contains(ListItem.mpaa,DE-6)">[COLOR FFffe600]FSK 6[/COLOR]</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:12) | String.Contains(ListItem.mpaa,FSK 12) | String.Contains(ListItem.mpaa,DE-12)">[COLOR FF0db14b]FSK 12[/COLOR]</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:16) | String.Contains(ListItem.mpaa,FSK 16) | String.Contains(ListItem.mpaa,DE-16)">[COLOR FF00a4e0]FSK 16[/COLOR]</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:18) | String.Contains(ListItem.mpaa,FSK 18) | String.Contains(ListItem.mpaa,DE-18)">[COLOR FFed1c24]FSK 18[/COLOR]</value>
+
+
+		<value condition="String.Contains(Window(Home).Property(ListItem.mpaa),전체)">special://skin/media/mpaa/kr_certificate_all.png</value>
+		<value condition="String.Contains(Window(Home).Property(ListItem.mpaa),12세이상관람가)">special://skin/media/mpaa/kr_certificate_12.png</value>
+		<value condition="String.Contains(Window(Home).Property(ListItem.mpaa),15세)">special://skin/media/mpaa/kr_certificate_15.png</value>
+		<value condition="String.Contains(Window(Home).Property(ListItem.mpaa),불가)">special://skin/media/mpaa/kr_certificate_18.png</value>
+		<value condition="String.Contains(Window(Home).Property(ListItem.mpaa),제한)">special://skin/media/mpaa/kr_certificate_r.png</value>
+
+
 	</variable>
 	<!-- ======================================================================================================================= -->
 	<!-- ============================================= SKIN FARBEINSTELLUNGEN ================================================== -->

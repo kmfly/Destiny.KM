@@ -1,63 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="ViewidAudio">
-		<views>55,608,702,704,705,706,901,902</views>
-	</include>
-	<include name="ViewsAudio">
-		<control type="group" id="777">
-			<visible>!Window.IsVisible(selectdialog)</visible>
-			<include>View_66_FileMode</include>
-			<!-- <include>View_608_Addons</include>
-			<include>View_702_Fanartlist</include>
-			<include>View_704_Poster_Fanart</include> -->
-			<include>View_705_Poster_Wall</include>
-			<include>View_706_Songlist</include>
-		</control>
-	</include>
+
+	<!-- active view mode : 55(파일모드),903(Plex view),901(에피소드 view),900(빅포스터),611(스몰포스터) -->
+
 	<include name="ViewidVideo">
-		<!-- 	<views>55,598,601,603,605,606,607,608,610,611,612</views> -->
-		<!-- <views>55,601,701,611,598,603,605,606,607,608,610,612</views> -->
-		<views>55,601,903,611,900,901,598,603,605,606,607,608,610,612</views>
+		<views>55,88,903,9824,900,901,1000</views>
 	</include>
 	<include name="ViewsVideo">
 		<control type="group" id="777">
 			<visible>!Window.IsVisible(selectdialog)</visible>
-			<!-- <include>View_55_FileMode</include> -->
-			<include>View_77_FileMode</include>
-			<include>View_598_Fanartlist</include>
-			<include>View_601_Poster_Movies</include>
+			<include>View_55_FileMode</include>
+			<!-- <include>View_77_FileMode</include> -->
 			<include>View_903_Plex_View</include>
+			<include>View_9824_Plex_View_OTT</include>
+			<include>View_900_POSTER</include>
 			<include>View_901_Ep_View</include>
-			<include>View_900_infowall_BIG</include>
-			<include>View_603_Posterlist</include>
-			<include>View_605_WallView</include>
-			<include>View_606_LogoFanart</include>
-			<include>View_607_Thumb</include>
+			<include>View_88_FileModeforvideoaddon</include>
+			<include>View_1000_VideoAddon</include>
+
+			<!-- <include>View_611_POSTER_SMALL</include> -->
+			<!-- <include>View_598_Fanartlist</include> -->
+			<!-- <include>View_601_Poster_Movies</include> -->
+			<!-- <include>View_605_WallView</include> -->
+			<!-- <include>View_606_LogoFanart</include> -->
+			<!-- <include>View_607_Thumb</include>
 			<include>View_608_Addons</include>
 			<include>View_610_BannerFull</include>
-			<include>View_611_Wall_Infos</include>
-			<include>View_Plex</include>
-			<include>View_612_Bibliothek</include>
+			<include>View_612_Bibliothek</include>  -->
+		</control>
+	</include>
+	<include name="ViewidAudio">
+		<views>66</views>
+	</include>
+	<include name="ViewsAudio">
+		<control type="group" id="777">
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<include>View_66_FileModeforMusic</include>
+			<!-- <include>View_706_Songlist</include> -->
 		</control>
 	</include>
 	<include name="ViewidPictures">
-		<views>55,580,581</views>
+		<views>77,580</views>
 	</include>
 	<include name="ViewsPictures">
 		<control type="group" id="777">
 			<visible>!Window.IsVisible(selectdialog)</visible>
-			<include>View_55_FileModeforPicture</include>
+			<include>View_77_FileModeforPicture</include>
 			<include>View_580_PictureWall</include>
 		</control>
 	</include>
 	<include name="ViewidAddons">
-		<views>55,608</views>
+		<views>77,9824,901</views>
 	</include>
 	<include name="ViewsAddons">
 		<control type="group" id="777">
 			<visible>!Window.IsVisible(selectdialog)</visible>
-			<include>View_55_FileMode</include>
-			<include>View_608_Addons</include>
+			<include>View_77_FileMode</include>
+			<include>View_903_Plex_View</include>
+			<include>View_9824_Plex_View_OTT</include>
+			<include>View_901_Ep_View</include>
 		</control>
 	</include>
 	<include name="ViewsidPVR">
@@ -96,7 +97,7 @@
 		<control type="group" id="777">
 			<visible>!Window.IsVisible(selectdialog)</visible>
 			<include>View_55_FileMode</include>
-			
+
 
 		</control>
 	</include>
@@ -127,17 +128,16 @@
 				<onback>777</onback>
 				<itemgap>2</itemgap>
 				<scrolltime tween="sine" easing="out">200</scrolltime>
-				
+
 				<control type="button" id="810">
-					<description>View</description>
+					<description>View,55,LIST</description>
 					<height>60</height>
 					<width>398</width>
-					<label>$LOCALIZE[50580]</label>
+					<label>LIST</label>
 					<onclick>Container.SetViewMode(55)</onclick>
 				</control>
-
 				<control type="button" id="811">
-					<description>View</description>
+					<description>View,903, Plex View</description>
 					<height>60</height>
 					<width>398</width>
 					<label>PLEX VIEW</label>
@@ -147,180 +147,59 @@
 				</control>
 
 				<control type="button" id="812">
-					<description>View</description>
+					<description>View,900, POSTER</description>
 					<height>60</height>
 					<width>398</width>
 					<label>BIG POSTER</label>
 					<onclick>Container.SetViewMode(900)</onclick>
-					<!--<onclick>Action(down)</onclick>-->
-					<!-- <visible>!Container.Content(Episodes)</visible>
-					<visible>Container.Content(Movies) | Container.Content(TVShows)| Container.Content(Seasons)|Container.Content(Addons)</visible> -->
 					<visible>Container.Content(Movies)| Container.Content(TVShows) | Container.Content(Seasons) |System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) </visible>
 					<visible>![Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Window.IsVisible(Pictures)]</visible>
 					<visible>!Container.Content(Episodes)</visible>
-							
+
 				</control>
+				<control type="button" id="813">
+					<description>View,901</description>
+					<height>60</height>
+					<width>398</width>
+					<label>EPISODE</label>
+					<onclick>Container.SetViewMode(901)</onclick>
+					<visible>Container.Content(Episodes)</visible>
+				</control>
+
 				<control type="button" id="815">
-					<description>View</description>
+					<description>View,1000, View_1000_VideoAddonPOSTER</description>
+					<height>60</height>
+					<width>398</width>
+					<label>AddonPOSTER</label>
+					<onclick>Container.SetViewMode(1000)</onclick>
+					<visible>Container.Content(Movies)| Container.Content(TVShows) | Container.Content(Seasons) |System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) </visible>
+					<visible>![Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Window.IsVisible(Pictures)]</visible>
+					<visible>!Container.Content(Episodes)</visible>
+
+				</control>
+
+
+				<!-- <control type="button" id="815">
+					<description>View,611</description>
 					<height>60</height>
 					<width>398</width>
 					<label>SMALL POSTER</label>
 					<onclick>Container.SetViewMode(611)</onclick>
-					<!--<onclick>Action(down)</onclick>-->
-					<!-- <visible>!Container.Content(Episodes)</visible>
-					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible> -->
 					<visible>Container.Content(Movies)| Container.Content(TVShows) | Container.Content(Seasons) |System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) </visible>
 					<visible>![Container.Content(songs) | Container.Content(artists) | Container.Content(albums)|Window.IsVisible(Pictures)]</visible>
 					<visible>!Container.Content(Episodes)</visible>
-					
-				</control>
-				<!-- <control type="button" id="813">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50582]</label>
-					<onclick>Container.SetViewMode(601)</onclick>
-					<visible>Container.Content(Movies)</visible>
 				</control> -->
-				<control type="button" id="814">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>TV EPISODE</label>
-					<onclick>Container.SetViewMode(901)</onclick>
-					<visible>Container.Content(Episodes)</visible>
-				</control>
-				
 
-				
-
-
-				<!-- ================= MUSIC ==================== -->
-				<!-- <control type="button" id="811">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50581]</label>
-					<onclick>Container.SetViewMode(702)</onclick>
-					
-					<visible>Container.Content(songs) | Container.Content(artists) | Container.Content(albums)</visible>
-				</control>
-				<control type="button" id="812">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50582]</label>
-					<onclick>Container.SetViewMode(704)</onclick>
-					
-					<visible>Container.Content(artists) | Container.Content(albums)</visible>
-				</control> -->
-				
 				<!-- OTT 인포월 추가 -->
-				
-				
-				
-				
-				
-				
-				
 				<control type="button" id="816">
-					<description>View</description>
+					<description>View,705</description>
 					<height>60</height>
 					<width>398</width>
 					<label>MUSIC ALBUM VIEW</label>
 					<onclick>Container.SetViewMode(705)</onclick>
 					<visible>Container.Content(artists) | Container.Content(albums)</visible>
 				</control>
-				<!-- <control type="button" id="817">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50584]</label>
-					<onclick>Container.SetViewMode(706)</onclick>
-					<visible>Container.Content(songs)</visible>
-				</control> -->
-				
-				
-				<!-- ================= MOVIES & TVSHOWS ==================== -->
-				
-				
-				<!-- <control type="button" id="818">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50585]</label>
-					<onclick>Container.SetViewMode(603)</onclick>
-					
-					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Musicvideos) | Container.Content(Genres) | Container.Content(Actors) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
-				</control> -->
-				<!-- <control type="button" id="819">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50581]</label>
-					<onclick>Container.SetViewMode(598)</onclick>
-					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Musicvideos)</visible>
-					
-				</control> -->
-				<!-- KM 20200618 Minimize Viewtype -->
-				<!-- <control type="button" id="826">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50583]</label>
-					<onclick>Container.SetViewMode(605)</onclick>
-					
-					<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
-				</control>
-				
-				
-				<control type="button" id="827">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50592]</label>
-					<onclick>Container.SetViewMode(606)</onclick>
-					
-					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)</visible>
-				</control> -->
-				<!-- <control type="button" id="828">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50591]</label>
-					<onclick>Container.SetViewMode(607)</onclick>
-					<onclick>Action(down)</onclick>
-					<visible>Container.Content(Episodes)</visible>
-				</control> -->
-				<!-- <control type="button" id="831">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50590]</label>
-					<onclick>Container.SetViewMode(610)</onclick>
-					
-					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
-				</control> -->
-				<!-- <control type="button" id="820">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50586]</label>
-					<onclick>Container.SetViewMode(612)</onclick>
-				
-					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
-					<visible>Container.Content(Movies) </visible>
-				</control> -->
-				<!-- ================= ADDONS ==================== -->
-				<!-- KM OTT 보기모드 -->
-				<!-- <control type="button" id="835">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>$LOCALIZE[50562]</label>
-					<onclick>Container.SetViewMode(611)</onclick>
 
-				</control> -->
 				<!-- ================= PICTURES ==================== -->
 				<control type="button" id="821">
 					<description>View</description>
@@ -332,19 +211,6 @@
 					<visible>Window.IsVisible(Pictures)</visible>
 					<visible>!Container.Content(Addons)</visible>
 				</control>
-
-				<!-- <control type="button" id="819">
-					<description>View</description>
-					<height>60</height>
-					<width>398</width>
-					<label>701모드</label>
-					<onclick>Container.SetViewMode(701)</onclick>
-					<visible>!Container.Content(movies)+!ListItem.IsCollection </visible>
-				<visible>String.IsEmpty(ListItem.Artist)</visible>
-				
-				<visible>!Container.Content(tvshows) + !Container.Content(Episodes) + !Container.Content(seasons) </visible>
-				</control> -->
-
 			</control>
 		</control>
 	</include>

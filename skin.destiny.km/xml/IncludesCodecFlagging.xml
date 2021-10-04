@@ -50,9 +50,24 @@
 			<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
 			<visible>!String.IsEqual(ListItem.VideoResolution,1080)</visible>
 			<!-- <visible>!$INFO[ListItem.VideoCodec]</visible> -->
-			<visible/>
+			<visible />
 		</control>
 	</include>
+
+	<include name="VideoCodecFlaggingConditions_videofullscreen">
+		<control type="image">
+			<description>Video Type Image</description>
+			<width>50</width>
+			<height>72</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$VAR[VideoFileTypeVar_videofullscreen,special://skin/flags/flags_color/video/,.png]</texture>
+			<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+			<!-- <visible>!ListItem.IsStereoscopic + !substring(ListItem.FilenameAndPath,3D)</visible> -->
+		</control>
+
+	</include>
+
+
 	<include name="KM_MediaFlaggingConditions">
 		<control type="group">
 			<visible>!ListItem.IsCollection</visible>
@@ -88,7 +103,7 @@
 				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
 				<visible>!String.IsEqual(ListItem.VideoResolution,1080)</visible>
 				<!-- <visible>!$INFO[ListItem.VideoCodec]</visible> -->
-				<visible/>
+				<visible />
 			</control>
 			<control type="image">
 				<description>비디오 코덱</description>
@@ -99,7 +114,7 @@
 				<!-- <texture>$INFO[VideoPlayer.VideoCodec,flagging/video/,.png]</texture> -->
 				<texture>$INFO[ListItem.VideoCodec,flagging/video/,.png]</texture>
 				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
-				
+
 			</control>
 			<control type="image">
 				<description>비디오 코덱 - 정보없을때</description>
@@ -362,9 +377,8 @@
 			<visible>!Control.IsVisible(598) + !Control.IsVisible(604)</visible>
 		</control>
 	</include>
-	
-	
-	
+
+
 	<include name="KM_MediaInfo_Icon">
 
 		<control type="grouplist">
@@ -375,65 +389,146 @@
 			<height>120</height>
 			<itemgap>5</itemgap>
 			<orientation>horizontal</orientation>
-		<control type="image">
-			<width>90</width>
-			<height>80</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</texture>
-			<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+			<control type="image">
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+			</control>
+			<control type="image">
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+			</control>
+			<control type="image">
+				<description>AudioCodecFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+			</control>
+			<control type="image">
+				<description>AudioCodecFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+
+			</control>
+			<control type="image">
+				<description>AudioCodecFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+
+			</control>
 		</control>
-		<control type="image">
-			<width>90</width>
-			<height>80</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
-			<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
-		</control>
-		<control type="image">
-			<description>AudioCodecFlagging</description>
-			<width>90</width>
-			<height>80</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-			<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
-		</control>
-		<control type="image">
-			<description>AudioCodecFlagging</description>
-			<width>90</width>
-			<height>80</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-			<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
-		
-		</control>
-		<control type="image">
-			<description>AudioCodecFlagging</description>
-			<width>90</width>
-			<height>80</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]</texture>
-			<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
-		
-		</control>
-	</control>
 	</include>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	<include name="KM_MediaInfo_Icon_fullscreen">
+
+		<control type="grouplist">
+			<!-- <left>380</left>
+			<align>right</align>
+			<top>980</top>
+			<width>500</width>
+			<height>120</height> -->
+			<itemgap>3</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[VideoPlayer.VideoResolution,special://skin/flags/flags_color/resolution/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+			</control>
+			<control type="image">
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[VideoPlayer.VideoCodec,special://skin/flags/flags_color/video/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+			</control>
+
+			<control type="image">
+				<description>AudioCodecFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[VideoPlayer.AudioCodec,special://skin/flags/flags_color/audio/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+
+			</control>
+
+
+			<control type="image">
+				<description>AudioChannelsFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[VideoPlayer.AudioChannels,special://skin/flags/flags_color/channels/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+
+			</control>
+		</control>
+	</include>
+
+	<include name="KM_MediaInfo_Icon_home">
+
+		<control type="grouplist">
+			<!-- <left>380</left>
+			<align>right</align>
+			<top>980</top>
+			<width>500</width>
+			<height>120</height> -->
+			<itemgap>3</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.VideoResolution,special://skin/flags/flags_color/resolution/,.png]</texture>
+				<colordiffuse>white</colordiffuse>
+			</control>
+			<control type="image">
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.VideoCodec,special://skin/flags/flags_color/video/,.png]</texture>
+				<colordiffuse>white</colordiffuse>
+			</control>
+
+			<control type="image">
+				<description>AudioCodecFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.AudioCodec,special://skin/flags/flags_color/audio/,.png]</texture>
+				<colordiffuse>white</colordiffuse>
+
+			</control>
+
+
+			<control type="image">
+				<description>AudioChannelsFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.AudioChannels,special://skin/flags/flags_color/channels/,.png]</texture>
+				<colordiffuse>white</colordiffuse>
+
+			</control>
+		</control>
+	</include>
+
+
 	<include name="KM_FlaggingConditionsLittle">
 		<control type="image">
 			<description>Video Type Image</description>
@@ -478,7 +573,7 @@
 			<texture>$VAR[noinfo_VideoResolution,flagging/video/,.png]</texture>
 			<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
 			<visible>!String.IsEqual(ListItem.VideoResolution,1080)</visible>
-			<visible/>
+			<visible />
 		</control>
 		<control type="image">
 			<description>VideoCodecFlagging</description>

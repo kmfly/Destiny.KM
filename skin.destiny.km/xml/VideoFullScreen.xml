@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>-</defaultcontrol>
+	<onload>Skin.SetBool(ForceVideoPlaybackStop)</onload>
+	<onload condition="Player.HasVideo + !Window.IsVisible(videoosd) + !Player.Paused">SetProperty(DialogMPAATopBar,1,home)</onload>
+	<onunload condition="[!String.IsEmpty(Window(Home).Property(BaseWindow)) + $EXP[IsPlayingUnrecognizedContent]] | [Player.HasVideo + !VideoPlayer.Content(livetv) + Skin.HasSetting(ForceVideoPlaybackStop)]">AlarmClock(StopPlayback,PlayerControl(Stop),00:00,silent)</onunload>
+
+
 	<controls>
 		<!-- media infos -->
 		<control type="group" id="1">
@@ -62,7 +67,7 @@
 					<texture background="true">skin/button_klein.png</texture>
 					<colordiffuse>$VAR[BackColorButton]</colordiffuse>
 				</control>
-				
+
 				<!-- KM 풀화면시 Live 채널 넘버 -->
 				<control type="label" id="1">
 					<left>20</left>
@@ -142,7 +147,7 @@
 					<textcolor>$VAR[ColorFontNormal]</textcolor>
 					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
 				</control>
-				
+
 				<!-- <control type="label" id="1">
 					<left>350</left>
 					<top>870</top>
@@ -156,7 +161,7 @@
 					<textcolor>$VAR[ColorFontNormal]</textcolor>
 					<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
 				</control> -->
-				
+
 				<control type="progress" id="1">
 					<description>Progressbar</description>
 					<left>350</left>
@@ -219,7 +224,7 @@
 				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
 			  </control>
 -->
-			<control type="grouplist" id="200">
+				<control type="grouplist" id="200">
 					<left>1405</left>
 					<top>1000</top>
 					<itemgap>5</itemgap>
@@ -231,8 +236,8 @@
 						<texture>$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]</texture>
 						<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
 					</control>
-								
-					<control type="image" id="1">		
+
+					<control type="image" id="1">
 						<width>90</width>
 						<height>80</height>
 						<aspectratio>keep</aspectratio>
@@ -263,7 +268,7 @@
 						<texture>$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]</texture>
 						<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
 					</control>
-			</control>	
+				</control>
 				<!--			  
 			  <control type="label" id="1">
 				<left>800</left>

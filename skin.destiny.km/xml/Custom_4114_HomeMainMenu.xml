@@ -91,7 +91,7 @@
 					<label>$LOCALIZE[50236]</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 4 컬렉션 영화 -->				
+				<!-- KM 4 컬렉션 영화 -->
 				<item id="4">
 					<label>$LOCALIZE[50536]</label>
 					<onclick>noop</onclick>
@@ -151,7 +151,7 @@
 				</item>
 				<!-- KM 15 와챠 -->
 				<item id="15">
-					<label>와챠</label>
+					<label>왓챠</label>
 					<onclick>noop</onclick>
 				</item>
 
@@ -183,8 +183,8 @@
 				<item id="21">
 					<label>사용자 버튼 05</label>
 					<onclick>noop</onclick>
-				</item>			
-								
+				</item>
+
 
 				<!-- KM 22 재생목록 6 -->
 				<item id="22">
@@ -211,14 +211,14 @@
 					<label>사용자 버튼 10</label>
 					<onclick>noop</onclick>
 				</item>
-				
-								
+
+
 				<!-- KM  단순 재생목록 -->
 				<!-- <item id="5">
 					<label>$LOCALIZE[50554]</label>
 					<onclick>noop</onclick>
 				</item>				 -->
-				
+
 				<!-- KM 27 애드온 -->
 				<item id="27">
 					<label>$LOCALIZE[50197]</label>
@@ -229,20 +229,20 @@
 					<label>안드로이드앱</label>
 					<onclick>noop</onclick>
 				</item>
-				
+
 				<!-- KM 29 날씨 -->
 				<item id="29">
 					<label>$LOCALIZE[8]</label>
 					<onclick>noop</onclick>
 				</item>
-				
-				
+
+
 				<!-- KM 30 파일매니져 -->
 				<item id="30">
 					<label>파일매니져</label>
 					<onclick>noop</onclick>
 				</item>
-				
+
 				<!-- KM 31 옵션 -->
 				<item id="31">
 					<label>옵션</label>
@@ -261,8 +261,8 @@
 					<label>전원</label>
 					<onclick>noop</onclick>
 				</item> -->
-					
-				
+
+
 			</content>
 		</control>
 		<control type="group">
@@ -326,7 +326,7 @@
 					<label>$LOCALIZE[50269]</label>
 					<onclick>Skin.Reset(IconLiveTV_Icon)</onclick>
 				</control>
-				
+
 				<control type="radiobutton" id="8465">
 					<description>Color Button</description>
 					<width>1337</width>
@@ -1074,7 +1074,7 @@
 					<visible>Skin.HasSetting(ColorBackWebOS25)</visible>
 				</control>
 			</control>
-			
+
 			<!--===================================================================================================-->
 			<!--====================================== 음악 =================================================-->
 			<!--===================================================================================================-->
@@ -1353,7 +1353,7 @@
 					<visible>Skin.HasSetting(ColorBackWebOS22)</visible>
 				</control>
 			</control>
-			
+
 			<!--===================================================================================================-->
 			<!--====================================== 즐겨찾기 ===============================================-->
 			<!--===================================================================================================-->
@@ -1398,7 +1398,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_fav_Folder)</onclick>
 				</control>
 				<control type="button" id="8724">
-					
+
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1467,7 +1467,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_youtube_Folder)</onclick>
 				</control>
-				
+
 				<control type="button" id="5200">
 					<description>Icon</description>
 					<width>1337</width>
@@ -1485,7 +1485,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_Common_Folder)</onclick>
 					<onclick>Skin.Reset(IconCommon_Icon)</onclick>
-					
+
 				</control>
 				<control type="radiobutton" id="5400">
 					<description>Color Button</description>
@@ -1557,7 +1557,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Common_Folder)</onclick>
 				</control>
-				
+
 				<control type="button" id="2200">
 					<description>Icon</description>
 					<width>1337</width>
@@ -1575,7 +1575,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_Common_Folder)</onclick>
 					<onclick>Skin.Reset(IconCommon_Icon)</onclick>
-					
+
 				</control>
 				<control type="radiobutton" id="2400">
 					<description>Color Button</description>
@@ -1595,7 +1595,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS17_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS17)</visible>
 				</control>
-								
+
 				<control type="radiobutton" id="2600">
 					<font>primal_20</font>
 					<width>1337</width>
@@ -1604,7 +1604,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton1009)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton1009)</selected>
 				</control>
-				
+
 				<control type="button" id="2700">
 					<width>1337</width>
 					<height>50</height>
@@ -1615,7 +1615,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton1009)</visible>
 				</control>
 
-				
+
 			</control>
 
 
@@ -1653,7 +1653,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Tving_Folder)</onclick>
 				</control>
-							
+
 				<control type="button" id="1100">
 					<description>Icon</description>
 					<width>1337</width>
@@ -1672,7 +1672,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Tving_Folder)</onclick>
 					<onclick>Skin.Reset(IconTving_Icon)</onclick>
 				</control>
-			
+
 				<control type="radiobutton" id="1300">
 					<description>Color Button</description>
 					<width>1337</width>
@@ -1744,7 +1744,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Wave_Folder)</onclick>
 				</control>
-				
+
 				<control type="button" id="3100">
 					<description>Icon</description>
 					<width>1337</width>
@@ -1834,7 +1834,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Watcha_Folder)</onclick>
 				</control>
-				
+
 				<control type="button" id="4100">
 					<description>Icon</description>
 					<width>1337</width>
@@ -1843,7 +1843,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconWacha_Icon)</onclick>
 				</control>
-				
+
 				<control type="button" id="4200">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
@@ -1925,7 +1925,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Spotv_Folder)</onclick>
 				</control>
-				
+
 				<control type="button" id="6200">
 					<description>Icon</description>
 					<width>1337</width>
@@ -4058,7 +4058,6 @@
 					<visible>Skin.HasSetting(ColorBackWebOS23)</visible>
 				</control>
 			</control>
-			
 
 
 			<!--===================================================================================================-->
@@ -4107,7 +4106,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Filemanager_Folder)</onclick>
 				</control>
 				<control type="button" id="8724">
-				
+
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -4144,10 +4143,6 @@
 			</control>
 
 
-			
-			
-
-			
 			<!--===================================================================================================-->
 			<!--====================================== 옵션 ==============================================-->
 			<!--===================================================================================================-->
@@ -4272,7 +4267,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Search_Folder)</onclick>
 				</control>
 				<control type="button" id="8724">
-					
+
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -4353,7 +4348,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Power_Folder)</onclick>
 				</control>
 				<control type="button" id="8724">
-					
+
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -4389,8 +4384,8 @@
 				</control>
 			</control>
 
-			
-					<!--===================================================================================================-->
+
+			<!--===================================================================================================-->
 			<!--====================================== HOME WATCHLIST =============================================-->
 			<!--===================================================================================================-->
 			<!-- <control type="grouplist" id="9010">
@@ -4549,7 +4544,7 @@
 				</control>
 			</control> -->
 
-			
+
 		</control>
 	</controls>
 </window>

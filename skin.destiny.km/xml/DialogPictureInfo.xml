@@ -17,7 +17,7 @@
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<left>52r</left>
+				<left>100</left>
 				<top>60</top>
 				<width>1065</width>
 				<height>45</height>
@@ -25,13 +25,13 @@
 				<label>$LOCALIZE[13406]</label>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>blue</textcolor>
+				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="scrollbar" id="60">
 				<left>1852</left>
 				<top>135</top>
-				<width>38</width>
+				<width>10</width>
 				<height>900</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
@@ -44,7 +44,7 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="list" id="5">
-				<left>1005</left>
+				<left>750</left>
 				<top>135</top>
 				<width>840</width>
 				<height>902</height>
@@ -69,14 +69,14 @@
 						<height>52</height>
 						<font>primal_20</font>
 						<aligny>center</aligny>
-						<textcolor>blue</textcolor>
+						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<label>$INFO[ListItem.Label][COLOR=grey2] : [/COLOR]</label>
+						<!-- <align>right</align> -->
+						<label>$INFO[ListItem.Label]:</label>
 					</control>
 					<control type="label">
-						<left>255</left>
+						<left>500</left>
 						<top>0</top>
 						<width>585</width>
 						<height>52</height>
@@ -112,21 +112,22 @@
 						<height>52</height>
 						<font>primal_20</font>
 						<aligny>center</aligny>
-						<textcolor>blue</textcolor>
+						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<label>$INFO[ListItem.Label][COLOR=grey2] : [/COLOR]</label>
+						<!-- <align>right</align> -->
+						<label>[COLOR=red]$INFO[ListItem.Label]: [/COLOR]</label>
 					</control>
 					<control type="label">
-						<left>255</left>
+						<left>500</left>
 						<top>0</top>
 						<width>585</width>
 						<height>52</height>
 						<font>primal_20</font>
 						<aligny>center</aligny>
-						<shadowcolor>black</shadowcolor>
-						<selectedcolor>selected</selectedcolor>
+						<textcolor>red</textcolor>
+						<!-- <shadowcolor>black</shadowcolor>
+						<selectedcolor>selected</selectedcolor> -->
 						<align>left</align>
 						<info>ListItem.Label2</info>
 					</control>

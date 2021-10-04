@@ -1,17 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window id="25">
-	<defaultcontrol always="true">55</defaultcontrol>
-	<!--<onload>RunScript(script.extendedinfo,backend=true)</onload>-->
-	<!-- <onload>ClearProperty(kentest1)</onload> -->
-	
+	<defaultcontrol always="false">55</defaultcontrol>
+
+
 	<onload condition="Skin.HasSetting(tv_theme) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + !Skin.HasSetting(NextAiredInfo)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="Skin.HasSetting(tv_theme) + !SubString(Window(10025).Property(CinemaExperienceRunning),True)">RunScript(script.tvtunes,backend=True)</onload>
-	<!-- ////////////PlexView//////////// -->
-	<!-- <onload>ClearProperty(videoyoutube)</onload> -->
-	<!-- <onload>SetProperty(videoyoutube,1)</onload>
-	<onload condition="Skin.HasSetting(preloadcontent)">SetProperty(videoyoutube,1)</onload> -->
-	<!-- ////////////PlexView//////////// -->
 	<allowoverlay>no</allowoverlay>
 	<include>ViewidVideo</include>
 	<visible>!Skin.HasSetting(kiosk)</visible>
@@ -42,7 +36,7 @@
 				<bordersize>7</bordersize>
 				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
-				
+
 			</control>
 			<control type="group">
 				<left>-457</left>
@@ -93,14 +87,6 @@
 					<onclick>Control.SetFocus(9031)</onclick>
 					<visible>Control.IsVisible(598) | Control.IsVisible(603) | Control.IsVisible(604) | Control.IsVisible(611) | Control.IsVisible(900)|Control.IsVisible(901)</visible>
 				</control>
-				<!--<control type="button" id="2">
-          <description>View As button</description>
-          <height>60</height>
-		  <width>400</width>
-          <label>-</label>
-		  <textcolor>$VAR[ColorFontNormal]</textcolor>
-	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-        </control>-->
 				<control type="button" id="3">
 					<description>Sort by button</description>
 					<height>60</height>

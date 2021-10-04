@@ -162,8 +162,8 @@
 					<top>10</top>
 					<width>80</width>
 					<height>80</height>
-					<texturefocus/>
-					<texturenofocus/>
+					<texturefocus />
+					<texturenofocus />
 					<onclick>PlayerControl(Repeat)</onclick>
 					<onleft>603</onleft>
 					<onright>705</onright>
@@ -253,8 +253,8 @@
 					<!-- <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[MusicPlayer.Artist]+$INFO[MusicPlayer.Title] &amp;search_type=videos)</onclick> -->
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
 				</control>
-				
-				
+
+
 				<control type="image">
 					<left>260</left>
 					<top>20</top>
@@ -262,16 +262,14 @@
 					<height>60</height>
 					<texture background="true">default/separator22.png</texture>
 				</control>
-				
-				
-				
-				
+
+
 				<control type="button" id="708">
 					<left>300</left>
 					<top>32</top>
 					<width>39</width>
 					<height>39</height>
-					
+
 					<texturefocus>buttons/music/musicvideos_f.png</texturefocus>
 					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/musicvideos.png</texturenofocus>
 					<onleft>706</onleft>
@@ -280,7 +278,7 @@
 					<ondown>380</ondown>
 					<onclick>Close</onclick>
 					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[MusicPlayer.Artist]+$INFO[MusicPlayer.Title] &amp;search_type=videos, return)</onclick>
-					
+
 				</control>
 				<control type="button" id="709">
 					<left>380</left>
@@ -289,7 +287,7 @@
 					<height>52</height>
 					<texturefocus>buttons/music/singer_f.png</texturefocus>
 					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/singer.png</texturenofocus>
-					
+
 					<onleft>708</onleft>
 					<onright>710</onright>
 					<onup>600</onup>
@@ -344,58 +342,6 @@
 			<control type="group" id="200">
 				<left>840</left>
 				<top>5</top>
-				<!-- <control type="button" id="500">
-					<left>0</left>
-					<top>10</top>
-					<width>80</width>
-					<height>80</height>
-					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/music/Viz_b.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/Viz.png</texturenofocus>
-					<onleft>700</onleft>
-					<onright>701</onright>
-					<ondown>380</ondown>
-				</control> -->
-				<!-- <control type="button" id="701">
-					<left>80</left>
-					<top>10</top>
-					<width>80</width>
-					<height>80</height>
-					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/music/PresetSettings_b.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/PresetSettings.png</texturenofocus>
-					<onleft>500</onleft>
-					<onright>702</onright>
-					<ondown>380</ondown>
-					<onclick>Close</onclick>
-					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-				</control> -->
-				<!-- <control type="button" id="702">
-					<left>160</left>
-					<top>10</top>
-					<width>80</width>
-					<height>80</height>
-					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/music/Pre_b.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/Pre.png</texturenofocus>
-					<onleft>701</onleft>
-					<onright>703</onright>
-					<ondown>380</ondown>
-					<onclick>Close</onclick>
-					<onclick>ActivateWindow(122)</onclick>
-				</control> -->
-				<!-- LYRICS  -->
-				<!-- <control type="button" id="704">
-					<left>240</left>
-					<top>10</top>
-					<width>80</width>
-					<height>80</height>
-					<texturefocus colordiffuse="$VAR[BackColorButton]">buttons/music/lyrics.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[ColorIcons]">buttons/music/lyrics.png</texturenofocus>
-					<onleft>703</onleft>
-					<onright>600</onright>
-					<onup>604</onup>
-					<ondown>380</ondown>
-					<onclick>Close</onclick>
-					<onclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path2)])</onclick>
-				</control> -->
 			</control>
 			<control type="label">
 				<left>1750</left>

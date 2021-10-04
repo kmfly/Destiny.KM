@@ -4,12 +4,12 @@
 	<controls>
 		<control type="group" id="9010">
 			<animation type="WindowOpen">
-				<effect type="slide" time="700" start="0,800" end="0,0" tween="sine" easing="out"/>
-				<effect type="fade" time="600" start="0" end="100"/>
+				<effect type="slide" time="700" start="0,800" end="0,0" tween="sine" easing="out" />
+				<effect type="fade" time="600" start="0" end="100" />
 			</animation>
 			<animation type="WindowClose">
-				<effect type="slide" time="500" start="0,0" end="0,800" tween="sine" easing="in"/>
-				<effect type="fade" time="600" start="100" end="0"/>
+				<effect type="slide" time="500" start="0,0" end="0,800" tween="sine" easing="in" />
+				<effect type="fade" time="600" start="100" end="0" />
 			</animation>
 			<control type="image">
 				<left>-20</left>
@@ -51,7 +51,7 @@
 				<top>55</top>
 				<width>60</width>
 				<height>60</height>
-				<label/>
+				<label />
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>default/close_selected.png</texturefocus>
 				<texturenofocus>default/close.png</texturenofocus>
@@ -129,7 +129,7 @@
 					<font>primal_20</font>
 					<ondown>113</ondown>
 					<onright>100</onright>
-					<label>1.3.2-3</label>
+					<label>2.0.0</label>
 					<textoffsetx>30</textoffsetx>
 					<textwidth>600</textwidth>
 				</control>

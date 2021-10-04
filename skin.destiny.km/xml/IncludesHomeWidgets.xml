@@ -7,13 +7,7 @@
             MOVIES =============================================================-->
             <!--===========================================================================================================================================-->
             <control type="group">
-                <animation
-                    effect="slide"
-                    end="0,400"
-                    time="1000"
-                    tween="back"
-                    easing="inout"
-                    condition="Control.Hasfocus(888809) | Control.HasFocus(888810)">Conditional</animation>
+                <animation effect="slide" end="0,400" time="1000" tween="back" easing="inout" condition="Control.Hasfocus(888809) | Control.HasFocus(888810)">Conditional</animation>
                 <animation effect="slide" end="5.5,-30" center="auto" time="200">Focus</animation>
                 <control type="list" id="709051">
                     <left>150</left>
@@ -145,8 +139,7 @@
                             <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
                         </control>
                         <control type="label">
-                            <description>하단 홈 메뉴 최근 본 영화 진행 %
-                            </description>
+                            <description>하단 홈 메뉴 최근 본 영화 진행 %</description>
                             <left>65</left>
                             <top>40</top>
                             <height>34</height>
@@ -178,9 +171,6 @@
                             <width>900</width>
                             <height>36</height>
                             <font>primal_13_bold</font>
-                            <!-- <label>$LOCALIZE[31047] : [COLOR
-                            ff00ff7f]$VAR[RatingDecimalToPercentage,[B],% [/B][/COLOR]] $INFO[ListItem.Year]
-                            $INFO[ListItem.Duration(h,,시간]$INFO[ListItem.Duration(mm,,분]</label> -->
                             <label>$LOCALIZE[31047] : $VAR[RatingDecimalToPercentage]% $INFO[ListItem.Year] $INFO[ListItem.Duration(h,,시간]$INFO[ListItem.Duration(mm,,분]</label>
                             <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                             <align>left</align>
@@ -200,11 +190,7 @@
                             <align>left</align>
                             <aligny>top</aligny>
                         </control>
-                        <!-- <control type="textbox"> <description>Plot</description> <left>30</left>
-                        <top>190</top> <width>340</width> <height>100</height> <font>primal_13</font>
-                        <align>justify</align> <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
-                        </control> -->
+
                     </focusedlayout>
                     <content target="video">special://skin/playlists/Last Played Movies.xsp</content>
                 </control>
@@ -252,15 +238,9 @@
                 <visible>!Skin.HasSetting(NoWidgets)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(300004) | Control.HasFocus(18304) | Control.HasFocus(43446)">Conditional</animation>
-                   
-			
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300004) | Control.HasFocus(18304) | Control.HasFocus(43446)">Conditional</animation>
+
+
                 <control type="button" id="300004">
                     <left>310</left>
                     <top>607</top>
@@ -283,7 +263,7 @@
                         !Control.Hasfocus(888111)</visible>
                 </control>
                 <control type="panel" id="18304">
-                   <left>355</left>
+                    <left>355</left>
                     <top>250</top>
                     <width>1570</width>
                     <height>500</height>
@@ -387,8 +367,8 @@
                             <righttexture border="0" colordiffuse="$VAR[ColorFontNormal]">-</righttexture>
                             <info>ListItem.Progress</info>
                         </control>
-                        
-                        
+
+
                         <!-- <control type="textbox">
                             <description>Title</description>
                             <left>20</left>
@@ -425,9 +405,9 @@
                         </control> -->
                     </itemlayout>
                     <focusedlayout width="265" height="475">
-                        
-                        
-                         <control type="image">
+
+
+                        <control type="image">
                             <left>0</left>
                             <top>70</top>
                             <width>240</width>
@@ -438,9 +418,8 @@
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[BackColorButton]</colordiffuse>
                         </control>
-                        
-                        
-                        
+
+
                         <control type="image">
                             <left>0</left>
                             <top>70</top>
@@ -453,8 +432,8 @@
                             <colordiffuse>$VAR[BackColorButton]</colordiffuse>
                             <visible>Control.HasFocus(18304)</visible>
                         </control>
-                      
-                      <control type="image">
+
+                        <control type="image">
                             <left>0</left>
                             <top>70</top>
                             <width>240</width>
@@ -475,7 +454,7 @@
                             <righttexture border="0" colordiffuse="$VAR[ColorFontNormal]">-</righttexture>
                             <info>ListItem.Progress</info>
                         </control>
-                       <control type="label">
+                        <control type="label">
                             <description>Title label</description>
                             <left>15</left>
                             <top>330</top>
@@ -537,13 +516,7 @@
                 <visible>Container(9000).Hasfocus(1)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(18304) | Control.HasFocus(43446)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(18304) | Control.HasFocus(43446)">Conditional</animation>
                 <control type="panel" id="43446">
                     <left>355</left>
                     <top>500</top>
@@ -575,9 +548,7 @@
                             <top>6</top>
                             <width>300</width>
                             <height>199</height>
-                            <texture
-                                background="true"
-                                fallback="special://skin/backgrounds/fallback_addons.jpg">$INFO[ListItem.Thumb]</texture>
+                            <texture background="true" fallback="special://skin/backgrounds/fallback_addons.jpg">$INFO[ListItem.Thumb]</texture>
                             <aspectratio align="left" aligny="top">stretch</aspectratio>
                         </control>
                         <control type="image">
@@ -649,9 +620,7 @@
                             <top>6</top>
                             <width>300</width>
                             <height>199</height>
-                            <texture
-                                background="true"
-                                fallback="special://skin/backgrounds/fallback_addons.jpg">$INFO[ListItem.Thumb]</texture>
+                            <texture background="true" fallback="special://skin/backgrounds/fallback_addons.jpg">$INFO[ListItem.Thumb]</texture>
                             <aspectratio align="left" aligny="top">stretch</aspectratio>
                         </control>
                         <control type="image">
@@ -725,13 +694,7 @@
                 <visible>Container(9000).Hasfocus(2)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(300004) | Control.HasFocus(18305)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300004) | Control.HasFocus(18305)">Conditional</animation>
                 <control type="button" id="300004">
                     <left>310</left>
                     <top>607</top>
@@ -961,13 +924,7 @@
                 <visible>Container(9000).Hasfocus(3) | Container(9000).Hasfocus(16) | Container(9000).Hasfocus(53)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(300001) | Control.HasFocus(18306)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300001) | Control.HasFocus(18306)">Conditional</animation>
                 <!-- KM: 홈화면 슬라이드될때 표시되는 글씨 90도 -->
                 <control type="button" id="300001">
                     <include>Animation.ZoomIn</include>
@@ -982,8 +939,7 @@
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                     <texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
                     <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
-                    <onclick
-                        condition="!Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(3dmovies) + !Skin.HasSetting(movieactor)">Skin.SetBool(unseenmovies)</onclick>
+                    <onclick condition="!Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(3dmovies) + !Skin.HasSetting(movieactor)">Skin.SetBool(unseenmovies)</onclick>
                     <onclick condition="Skin.HasSetting(unseenmovies)">Skin.SetBool(recommendedmovies)</onclick>
                     <onclick condition="Skin.HasSetting(recommendedmovies)">Skin.SetBool(fsk18movies)</onclick>
                     <onclick condition="Skin.HasSetting(fsk18movies)">Skin.SetBool(moviessets)</onclick>
@@ -1213,7 +1169,7 @@
             <!--========================================================== WIDGETS MOVIES
             ENDE ============================================================-->
 
-             <!--===========================================================================================================================================-->
+            <!--===========================================================================================================================================-->
             <!--============================================================ WIDGETS MOVIE Collection
             ===============================================================-->
             <!--===========================================================================================================================================-->
@@ -1224,13 +1180,7 @@
                   </visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(300006) | Control.HasFocus(18306)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300006) | Control.HasFocus(18306)">Conditional</animation>
                 <!-- KM: 홈화면 슬라이드될때 표시되는 글씨 90도 -->
                 <control type="button" id="300006">
                     <include>Animation.ZoomIn</include>
@@ -1245,8 +1195,7 @@
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                     <texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
                     <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
-                    <onclick
-                        condition="!Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(3dmovies) + !Skin.HasSetting(movieactor)">Skin.SetBool(unseenmovies)</onclick>
+                    <onclick condition="!Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(3dmovies) + !Skin.HasSetting(movieactor)">Skin.SetBool(unseenmovies)</onclick>
                     <onclick condition="Skin.HasSetting(unseenmovies)">Skin.SetBool(recommendedmovies)</onclick>
                     <onclick condition="Skin.HasSetting(recommendedmovies)">Skin.SetBool(fsk18movies)</onclick>
                     <onclick condition="Skin.HasSetting(fsk18movies)">Skin.SetBool(moviessets)</onclick>
@@ -1477,7 +1426,6 @@
             ENDE ============================================================-->
 
 
-
             <!--===========================================================================================================================================-->
             <!--===========================================================================================================================================-->
             <!--============================================================ WIDGETS SERIES
@@ -1490,13 +1438,7 @@
                 <visible>Container(9000).Hasfocus(8) | Container(9000).Hasfocus(51)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(300002) | Control.HasFocus(18401)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300002) | Control.HasFocus(18401)">Conditional</animation>
                 <control type="button" id="300002">
                     <include>Animation.ZoomIn</include>
                     <left>310</left>
@@ -1510,8 +1452,7 @@
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                     <texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
                     <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
-                    <onclick
-                        condition="!Skin.HasSetting(recommendedtvshows) + !Skin.HasSetting(unseentvshows)">Skin.SetBool(unseentvshows)</onclick>
+                    <onclick condition="!Skin.HasSetting(recommendedtvshows) + !Skin.HasSetting(unseentvshows)">Skin.SetBool(unseentvshows)</onclick>
                     <onclick condition="Skin.HasSetting(unseentvshows)">Skin.SetBool(recommendedtvshows)</onclick>
                     <onclick condition="Skin.HasSetting(unseentvshows)">Skin.Reset(unseentvshows)</onclick>
                     <onclick condition="Skin.HasSetting(recommendedtvshows)">Skin.Reset(recommendedtvshows)</onclick>
@@ -1712,13 +1653,7 @@
                     Container(9000).Hasfocus(20) | Container(9000).Hasfocus(41) |
                     Container(9000).Hasfocus(42) | Container(9000).Hasfocus(43) |
                     Container(9000).Hasfocus(44) | Container(9000).Hasfocus(45) |Container(9000).Hasfocus(23)| Container(9000).Hasfocus(24) |Container(9000).Hasfocus(25)|Container(9000).Hasfocus(26)|Container(9000).Hasfocus(27)|Container(9000).Hasfocus(28)</visible>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(18309)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(18309)">Conditional</animation>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
                 <control type="label">
@@ -1912,7 +1847,7 @@
                         </control>
                     </focusedlayout>
                     <!-- <content limit="" sortby="" sortorder="" target="videos">plugin://plugin.video.netflix/directory/video_list_sorted/myList/queue/?reload=$INFO[Window(Home).Property(widgetreload)]$INFO[Window(Home).Property(widgetreload2)]</content> -->
-                     <content limit="" sortby="" sortorder="" target="videos">$VAR[HomeWidgetsPlaylisten]</content>
+                    <content limit="" sortby="" sortorder="" target="videos">$VAR[HomeWidgetsPlaylisten]</content>
                     <!-- <content target="video">$VAR[HomeWidgetsPlaylisten]</content> -->
                 </control>
             </control>
@@ -1930,13 +1865,7 @@
                 <visible>!Skin.HasSetting(NoWidgets)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(300005) | Control.HasFocus(18311) | Control.HasFocus(18330)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300005) | Control.HasFocus(18311) | Control.HasFocus(18330)">Conditional</animation>
                 <control type="button" id="300005">
                     <left>310</left>
                     <top>607</top>
@@ -1949,8 +1878,7 @@
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                     <texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
                     <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
-                    <onclick
-                        condition="!Skin.HasSetting(randommusic) + !Skin.HasSetting(albumsrecentlyplayedmusic)">Skin.SetBool(albumsrecentlyplayedmusic)</onclick>
+                    <onclick condition="!Skin.HasSetting(randommusic) + !Skin.HasSetting(albumsrecentlyplayedmusic)">Skin.SetBool(albumsrecentlyplayedmusic)</onclick>
                     <onclick condition="Skin.HasSetting(albumsrecentlyplayedmusic)">Skin.SetBool(randommusic)</onclick>
                     <onclick condition="Skin.HasSetting(albumsrecentlyplayedmusic)">Skin.Reset(albumsrecentlyplayedmusic)</onclick>
                     <onclick condition="Skin.HasSetting(randommusic)">Skin.Reset(randommusic)</onclick>
@@ -2198,13 +2126,7 @@
                 <visible>Container(9000).Hasfocus(10)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(300005) | Control.HasFocus(18311) | Control.HasFocus(18330)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300005) | Control.HasFocus(18311) | Control.HasFocus(18330)">Conditional</animation>
                 <!-- <control type="panel" id="18330"> <left>355</left> <top>500</top>
                 <width>1570</width> <height>220</height> <onleft>300005</onleft>
                 <onright>18330</onright> <onup>18311</onup> <ondown>9000</ondown>
@@ -2246,13 +2168,7 @@
                 <visible>Container(9000).Hasfocus(11)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(18501)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(18501)">Conditional</animation>
                 <control type="label">
                     <left>310</left>
                     <top>607</top>
@@ -2463,19 +2379,13 @@
                 </control>
             </control>
 
-               <control type="group">
+            <control type="group">
                 <left>1580</left>
                 <visible>!Skin.HasSetting(NoWidgets)</visible>
                 <visible>Container(9000).Hasfocus(12)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation
-                    effect="slide"
-                    end="-1580,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.HasFocus(18601)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(18601)">Conditional</animation>
                 <control type="label">
                     <left>280</left>
                     <top>607</top>
@@ -2490,7 +2400,7 @@
                     <angle>90</angle>
                     <label>안드로이드앱</label>
                 </control>
-                                
+
                 <control type="panel" id="18601">
                     <left>355</left>
                     <top>250</top>
@@ -2535,7 +2445,7 @@
                             <bordersize>6</bordersize>
                             <aspectratio align="center" aligny="top">stretch</aspectratio>
                         </control>
-                                            
+
                         <control type="label">
                             <description>Title label</description>
                             <left>30</left>
@@ -2549,13 +2459,13 @@
                             <textcolor>$VAR[ColorFontNormal]</textcolor>
                             <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                         </control>
-                        
-                        
+
+
                     </itemlayout>
                     <focusedlayout width="265" height="475">
-                        
-                                            
-                      <control type="image">
+
+
+                        <control type="image">
                             <left>0</left>
                             <top>0</top>
                             <width>260</width>
@@ -2586,8 +2496,8 @@
                             <bordersize>6</bordersize>
                             <aspectratio align="center" aligny="top">stretch</aspectratio>
                         </control>
-                       
-                        
+
+
                         <control type="label">
                             <description>Title label</description>
                             <left>30</left>
@@ -2601,157 +2511,39 @@
                             <textcolor>$VAR[ColorFontNormal]</textcolor>
                             <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                         </control>
-                        
-                        
-                       
-                        
+
+
                     </focusedlayout>
                     <content target="Programs">androidapp://sources/apps/</content>
                 </control>
             </control>
-            <!--===========================================================================================================================================-->
-            <!--========================================================== WIDGETS ADDONS
-            ENDE ============================================================-->
-            <!--===========================================================================================================================================-->
-            <!--===========================================================================================================================================-->
-            <!--============================================================ WIDGETS AMAZON
-            ===============================================================-->
-            <!--===========================================================================================================================================-->
-            <!--<control type="group"> <left>1580</left>
-            <visible>!Skin.HasSetting(NoWidgets)</visible>
-            <visible>Container(9000).Hasfocus(40)</visible>
-            <visible>System.HasAddon(plugin.video.amazon-test)</visible>
-            <include>Fade_Widgets</include> <include>widget_outzoom_submenu</include>
-            <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout"
-            condition="Control.HasFocus(300005) |
-            Control.HasFocus(18322)">Conditional</animation> <control type="button"
-            id="300005"> <include>Animation.ZoomIn</include> <left>280</left> <top>607</top>
-            <height>45</height> <width>290</width> <font>primal_16_Title</font>
-            <label>Amazon Prime Video</label> <textcolor>$VAR[ColorFontNormal]</textcolor>
-            <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
-            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> <texturenofocus
-            colordiffuse="$VAR[ColorIcons]">-</texturenofocus> <texturefocus
-            colordiffuse="$VAR[BackColorButton]">-</texturefocus> <onclick
-            condition="!Skin.HasSetting(amazonmovies) +
-            !Skin.HasSetting(amazontvshows)">Skin.SetBool(amazontvshows)</onclick> <onclick
-            condition="Skin.HasSetting(amazontvshows)">Skin.Reset(amazontvshows)</onclick>
-            <onclick
-            condition="Skin.HasSetting(amazonmovies)">Skin.Reset(amazonmovies)</onclick>
-            <onleft>9000</onleft> <onright>18322</onright> <onup>1860</onup>
-            <ondown>9000</ondown> <angle>90</angle> </control> <control type="panel"
-            id="18322"> <left>355</left> <top>250</top> <width>1570</width>
-            <height>500</height> <onleft>300005</onleft> <onright>18322</onright>
-            <onup>1860</onup> <ondown>9000</ondown> <viewtype>list</viewtype>
-            <orientation>horizontal</orientation> <focusposition>0</focusposition>
-            <pagecontrol>-</pagecontrol> <itemlayout width="265" height="475"> <control
-            type="image"> <left>0</left> <top>0</top> <width>260</width>
-            <height>470</height> <texture
-            background="true">skin/button_klein_tranz80.png</texture> <bordertexture
-            border="10">ThumbShadow.png</bordertexture> <bordersize>6</bordersize>
-            <aspectratio>stretch</aspectratio>
-            <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse> </control> <control
-            type="image"> <left>10</left> <top>250</top> <width>240</width>
-            <height>210</height> <texture
-            background="true">skin/button_klein_tranz50.png</texture>
-            <aspectratio>stretch</aspectratio>
-            <colordiffuse>$VAR[BackColorFront]</colordiffuse> </control> <control
-            type="image"> <left>20</left> <top>40</top> <width>220</width>
-            <height>220</height> <texture background="true">$INFO[ListItem.Icon]</texture>
-            <bordertexture border="10">-</bordertexture> <bordersize>6</bordersize>
-            <aspectratio align="center" aligny="top">keep</aspectratio> </control> <control
-            type="label"> <description>Title label</description> <left>20</left>
-            <top>270</top> <height>34</height> <width>220</width>
-            <label>$INFO[ListItem.Label]</label> <align>left</align> <aligny>left</aligny>
-            <font>primal_15_Title</font> <textcolor>$VAR[ColorFontNormal]</textcolor>
-            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> </control> <control
-            type="textbox"> <description>Title</description> <left>20</left> <top>310</top>
-            <height>100</height> <width>220</width> <font>primal_15</font>
-            <align>left</align> <textcolor>white</textcolor>
-            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> <label>[COLOR
-            $VAR[ColorFontNormal]]$INFO[ListItem.Title][/COLOR]</label> <autoscroll
-            time="2000" delay="15000"
-            repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll> </control> <control
-            type="image"> <left>20</left> <top>425</top> <width>20</width>
-            <height>20</height> <texture
-            background="true">home/homeicons/timers.png</texture>
-            <aspectratio>stretch</aspectratio>
-            <colordiffuse>$VAR[ColorFontNormal]</colordiffuse> </control> <control
-            type="label"> <left>50</left> <top>420</top> <height>34</height>
-            <width>220</width> <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, -
-            ]</label> <align>left</align> <aligny>left</aligny> <font>primal_15_Title</font>
-            <textcolor>$VAR[ColorFontNormal]</textcolor>
-            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> </control> </itemlayout>
-            <focusedlayout width="265" height="475"> <control type="image"> <left>0</left>
-            <top>0</top> <width>260</width> <height>470</height> <texture
-            background="true">skin/button_klein_tranz80.png</texture> <bordertexture
-            border="10">ThumbShadow.png</bordertexture> <bordersize>6</bordersize>
-            <aspectratio>stretch</aspectratio>
-            <colordiffuse>$VAR[BackColorButton]</colordiffuse>
-            <visible>Control.HasFocus(18322)</visible> </control> <control type="image">
-            <left>10</left> <top>250</top> <width>240</width> <height>210</height> <texture
-            background="true">skin/button_klein_tranz50.png</texture>
-            <aspectratio>stretch</aspectratio>
-            <colordiffuse>$VAR[BackColorFront]</colordiffuse> </control> <control
-            type="image"> <left>20</left> <top>40</top> <width>220</width>
-            <height>220</height> <texture background="true">$INFO[ListItem.Icon]</texture>
-            <bordertexture border="10">-</bordertexture> <bordersize>6</bordersize>
-            <aspectratio align="center" aligny="top">keep</aspectratio> </control> <control
-            type="label"> <description>Title label</description> <left>20</left>
-            <top>270</top> <height>34</height> <width>220</width>
-            <label>$INFO[ListItem.Label]</label> <align>left</align> <aligny>left</aligny>
-            <font>primal_15_Title</font> <textcolor>$VAR[ColorFontNormal]</textcolor>
-            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> </control> <control
-            type="textbox"> <description>Title</description> <left>20</left> <top>310</top>
-            <height>100</height> <width>220</width> <font>primal_15</font>
-            <align>left</align> <textcolor>white</textcolor>
-            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> <label>[COLOR
-            $VAR[ColorFontNormal]]$INFO[ListItem.Title][/COLOR]</label> <autoscroll
-            time="2000" delay="15000"
-            repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll> </control> <control
-            type="image"> <left>20</left> <top>425</top> <width>20</width>
-            <height>20</height> <texture
-            background="true">home/homeicons/timers.png</texture>
-            <aspectratio>stretch</aspectratio>
-            <colordiffuse>$VAR[ColorFontNormal]</colordiffuse> </control> <control
-            type="label"> <left>50</left> <top>420</top> <height>34</height>
-            <width>220</width> <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, -
-            ]</label> <align>left</align> <aligny>left</aligny> <font>primal_15_Title</font>
-            <textcolor>$VAR[ColorFontNormal]</textcolor>
-            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> </control> </focusedlayout>
-            <content target="programs">$VAR[HomeWidgetsAmazon]</content> </control>
-            </control>-->
-            <!--===========================================================================================================================================-->
-            <!--========================================================== WIDGETS AMAZON
-            ENDE ============================================================-->
-            <!--===========================================================================================================================================-->
+
             <control type="group">
                 <left>355</left>
-                <animation
-                    effect="slide"
-                    end="-310,0"
-                    time="500"
-                    tween="Cubic"
-                    easing="inout"
-                    condition="Control.Hasfocus(888809) | Control.HasFocus(888810) | Skin.HasSetting(homebigrandomwidget)">Conditional</animation>
+                <animation effect="slide" end="-310,0" time="500" tween="Cubic" easing="inout" condition="Control.Hasfocus(888809) | Control.HasFocus(888810) | Skin.HasSetting(homebigrandomwidget)">Conditional</animation>
                 <top>0</top>
                 <!-- KM: 홈화면 모든영화선택시 맨위에 있는 영화제목표시 -->
 
-                <control type="label">
+                <control type="grouplist">
                     <left>5</left>
                     <top>90</top>
-                    <width>900</width>
-                    <height>36</height>
-                    <font>primal_60_Title</font>
-                    <label>$VAR[VarWidgetsLabelVertical]</label>
-                    <textcolor>$VAR[ColorFontNormal]</textcolor>
-                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <visible>!Control.Hasfocus(43944)</visible>
+                    <itemgap>1</itemgap>
+                    <orientation>horizontal</orientation>
+                    <control type="label">
+                        <width>900</width>
+                        <height>60</height>
+                        <font>primal_60_Title</font>
+                        <label>$VAR[VarWidgetsLabelVertical]</label>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <visible>!Control.Hasfocus(43944)</visible>
+                    </control>
                 </control>
-               
+
                 <!-- KM: 홈화면 모든영화선택시 영화장르표시 -->
-                <control type="label">
+                <!-- <control type="label">
                     <left>10</left>
                     <top>170</top>
                     <width>900</width>
@@ -2762,28 +2554,124 @@
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                     <align>left</align>
                     <aligny>top</aligny>
+                </control> -->
+
+
+                <control type="grouplist">
+                    <description>Media Codec Flagging Images</description>
+                    <top>650</top>
+                    <left>0</left>
+                    <width>1000</width>
+                    <itemgap>1</itemgap>
+                    <orientation>horizontal</orientation>
+                    <include>KM_MediaInfo_Icon_home</include>
+                    <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
                 </control>
-                <!-- KM 좋아요 퍼센테이지 추가 -->
-                <control type="label">
+
+                <!-- 작업 -->
+                <!-- <control type="group">
+                    <top>650</top>
+                    <left>0</left>
+                    <height>70</height>
+                    <width>85</width>
+                    <bottom>0</bottom>
+                    <right>0</right>
+                    <include>TomatoMeter</include>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + Skin.HasSetting(EnableRTAndMetaCriticRating)</visible>
+                    <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))">Conditional</animation>
+                    <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))">Conditional</animation>
+                </control> -->
+
+                <control type="grouplist">
+                    <!-- 팝콘지수 -->
+                    <top>280</top>
+                    <left>0</left>
+                    <itemgap>0</itemgap>
+                    <orientation>horizontal</orientation>
+                    <visible>!Control.HasFocus(709051)</visible>
+                    <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
+                    <control type="image">
+                        <width>50</width>
+                        <height>50</height>
+                        <bordersize>2</bordersize>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="$VAR[ColorIcons]">special://skin/flags/flags_color/pngegg.png</texture>
+                        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+                    </control>
+
+
+                    <control type="label">
+                        <width>auto</width>
+                        <height>80</height>
+                        <font>primal_18_Bold</font>
+                        <label fallback="정보 없슴"> $VAR[RatingDecimalToPercentage]%</label>
+                        <textcolor>ffffffff</textcolor>
+                        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+                    </control>
+                </control>
+
+
+                <control type="grouplist">
                     <left>10</left>
                     <top>210</top>
-                    <width>900</width>
-                    <height>36</height>
-                    <font>primal_15_Bold</font>
-                    <label>$LOCALIZE[31047] : $VAR[RatingDecimalToPercentage]% $INFO[ListItem.Year]/$INFO[ListItem.Duration(h,,시간]$INFO[ListItem.Duration(mm,,분]</label>
-                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                    <align>left</align>
-                    <aligny>top</aligny>
-                    <visible>Control.HasFocus(888111) | Control.HasFocus(18306)</visible>
-                    <!-- <visible>Control.HasFocus(888111) | Control.HasFocus(18306) |
-                    Control.HasFocus(43944)</visible> -->
-                    <visible>!Window.IsVisible(BusyDialog)</visible>
-                    <visible>!Container.Content(tvshows)</visible>
+                    <width>500</width>
+                    <height>100</height>
+                    <itemgap>10</itemgap>
+                    <orientation>horizontal</orientation>
+
+                    <control type="label">
+                        <width>auto</width>
+                        <height>36</height>
+                        <font>primal_18_Bold</font>
+                        <label fallback="정보 없슴">$INFO[ListItem.Year]</label>
+                        <!-- <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),,%]</label> -->
+                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <visible>Control.HasFocus(888111) | Control.HasFocus(18306)</visible>
+                        <!-- <visible>Control.HasFocus(888111) | Control.HasFocus(18306) |
+                        Control.HasFocus(43944)</visible> -->
+                        <visible>!Window.IsVisible(BusyDialog)</visible>
+                        <visible>!Container.Content(tvshows)</visible>
+                    </control>
+
+                    <control type="label">
+
+                        <width>auto</width>
+                        <height>36</height>
+                        <font>primal_18_Bold</font>
+                        <label fallback="정보 없슴">$INFO[ListItem.MPAA]</label>
+                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <visible>Control.HasFocus(888111) | Control.HasFocus(18306)</visible>
+                        <!-- <visible>Control.HasFocus(888111) | Control.HasFocus(18306) |
+                        Control.HasFocus(43944)</visible> -->
+                        <visible>!Window.IsVisible(BusyDialog)</visible>
+                        <visible>!Container.Content(tvshows)</visible>
+                    </control>
+
+                    <control type="label">
+
+                        <width>auto</width>
+                        <height>36</height>
+                        <font>primal_18_Bold</font>
+                        <label fallback="정보 없슴">$INFO[ListItem.Duration(h,,시간]$INFO[ListItem.Duration(mm,,분]</label>
+                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <visible>Control.HasFocus(888111) | Control.HasFocus(18306)</visible>
+                        <!-- <visible>Control.HasFocus(888111) | Control.HasFocus(18306) |
+                        Control.HasFocus(43944)</visible> -->
+                        <visible>!Window.IsVisible(BusyDialog)</visible>
+                        <visible>!Container.Content(tvshows)</visible>
+                    </control>
+
                 </control>
                 <!-- KM 홈화면 영화 줄거리 테두리 박스 -->
                 <control type="image">
                     <left>-10</left>
-                    <top>250</top>
+                    <top>350</top>
                     <width>935</width>
                     <height>300</height>
                     <align>justify</align>
@@ -2799,7 +2687,7 @@
                 <control type="textbox">
                     <description>Movie Plot</description>
                     <left>15</left>
-                    <top>280</top>
+                    <top>380</top>
                     <width>885</width>
                     <height>235</height>
                     <font>primal_15_Bold</font>
@@ -2808,15 +2696,7 @@
                     <autoscroll time="2000" delay="10000" repeat="5000">true</autoscroll>
                     <visible>Control.HasFocus(888111)</visible>
                 </control>
-                <!-- KM 홈화면 영화 줄거리 테두리 박스 -->
-                <!-- <control type="image"> <left>0</left> <top>290</top> <width>520</width>
-                <height>400</height> <align>justify</align> <texture
-                background="true">skin/button_klein_tranz20.png</texture> <bordertexture
-                border="20">ThumbShadow.png</bordertexture> <bordersize>7</bordersize>
-                <aspectratio>stretch</aspectratio>
-                <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-                <aspectratio>stretch</aspectratio> <visible>Control.HasFocus(888111)</visible>
-                </control> -->
+
             </control>
         </control>
     </include>
@@ -2832,13 +2712,7 @@
         <control type="group">
             <visible>!Skin.HasSetting(homebigrandomwidget)</visible>
             <visible>Window.IsVisible(home)</visible>
-            <animation
-                effect="slide"
-                end="-400,0"
-                time="500"
-                tween="Quadratic"
-                easing="out"
-                condition="Control.Hasfocus(888809) | Control.HasFocus(888810)">Conditional</animation>
+            <animation effect="slide" end="-400,0" time="500" tween="Quadratic" easing="out" condition="Control.Hasfocus(888809) | Control.HasFocus(888810)">Conditional</animation>
             <control type="wraplist" id="888111">
                 <left>0</left>
                 <top>0</top>
@@ -2892,63 +2766,16 @@
                         <textcolor>$VAR[BackColorButton]</textcolor>
                         <visible>Control.HasFocus(888111)</visible>
                     </control>
-                    <!-- <texture background="true">special://skin/backgrounds/shadow.png</texture>
-                    -->
-                    <!-- <control type="image"> <left>356</left> <top>260</top> <width>915</width>
-                    <height>220</height> <texture
-                    background="true">skin/cdcase_diffuse.png</texture> <bordertexture
-                    border="10">ThumbShadow.png</bordertexture> <bordersize>7</bordersize>
-                    <aspectratio>stretch</aspectratio>
-                    <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-                    <aspectratio>stretch</aspectratio> <visible>Control.HasFocus(888111)</visible>
-                    </control> -->
-                    <!-- <control type="image"> <left>365</left> <top>270</top> <width>895</width>
-                    <height>200</height> <texture
-                    background="true">$INFO[ListItem.Art(banner)]</texture>
-                    <aspectratio>stretch</aspectratio> <visible>Control.HasFocus(888111)</visible>
-                    </control> <control type="image"> <left>365</left> <top>270</top>
-                    <width>895</width> <height>200</height> <texture
-                    background="true">$INFO[ListItem.Art(fanart)]</texture>
-                    <aspectratio>stretch</aspectratio>
-                    <visible>String.IsEmpty(ListItem.Art(banner))</visible>
-                    <visible>Control.HasFocus(888111)</visible> </control> -->
-                    <!-- KM: 홈화면 좌측 추천 영화 설명 -->
-                    <!-- <control type="textbox"> <description>Movie Plot</description>
-                    <left>365</left> <top>250</top> <width>450</width> <height>350</height>
-                    <font>primal_16</font> <align>justify</align>
-                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> <label>[COLOR
-                    $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label> <autoscroll
-                    time="2000" delay="5000" repeat="5000">true</autoscroll>
-                    <visible>Control.HasFocus(888111)</visible> </control> -->
-                    <!-- <control type="textbox"> <description>Movie Plot</description>
-                    <left>360</left> <top>290</top> <width>450</width> <height>350</height>
-                    <font>primal_16</font> <textcolor>$VAR[ColorFontNormal]</textcolor>
-                    <align>justify</align> <label>$INFO[ListItem.Plot]</label> <autoscroll
-                    time="2000" delay="5000" repeat="5000">true</autoscroll>
-                    <visible>Control.HasFocus(888111)</visible> </control> -->
-                    <!-- <control type="image"> <left>320</left> <top>280</top> <width>550</width>
-                    <height>450</height> <align>justify</align> <texture
-                    background="true">skin/button_klein_tranz20.png</texture> <bordertexture
-                    border="10">ThumbShadow.png</bordertexture> <bordersize>7</bordersize>
-                    <aspectratio>stretch</aspectratio>
-                    <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-                    <aspectratio>stretch</aspectratio> <visible>Control.HasFocus(888111)</visible>
-                    </control> -->
-                    <!-- KM: 홈화면 우측 클리어아트명 -->
-                    <!-- <control type="image"> <left>1300</left> <top>320</top> <width>600</width>
-                    <height>520</height> <texture>$INFO[ListItem.Art(clearart)]</texture>
-                    <aspectratio scalediffuse="false" align="right" aligny="top">keep</aspectratio>
-                    <visible>Control.HasFocus(888111)</visible> </control> -->
                     <!-- KM: 홈화면 우측 팬아트 오버레이 -->
                     <control type="group">
                         <control type="image">
-                            <left>350</left>
+                            <left>0</left>
                             <top>0</top>
-                            <width>1600</width>
-                            <height>800</height>
+                            <width>1920</width>
+                            <height>1080</height>
                             <texture diffuse="special://skin/backgrounds/abc.png">$INFO[ListItem.Art(fanart)]</texture>
                             <!-- <texture>$INFO[ListItem.Art(fanart)]</texture> -->
-                            <aspectratio align="right" aligny="top">stretch</aspectratio>
+                            <aspectratio align="right" aligny="top">keep</aspectratio>
                             <visible>Control.HasFocus(888111)</visible>
                         </control>
                     </control>

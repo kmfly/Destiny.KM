@@ -50,7 +50,7 @@
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
                     </control>
 
-                     <control type="image">
+                    <control type="image">
                         <left>0</left>
                         <top>0</top>
                         <width>260</width>
@@ -158,7 +158,7 @@
                         <colordiffuse>$VAR[BackColorButton]</colordiffuse>
                         <visible>Control.HasFocus(43944)</visible>
                     </control>
-                   <control type="image">
+                    <control type="image">
                         <left>0</left>
                         <top>0</top>
                         <width>260</width>
@@ -170,7 +170,7 @@
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
                     </control>
 
-                     <control type="image">
+                    <control type="image">
                         <left>0</left>
                         <top>0</top>
                         <width>260</width>
@@ -269,7 +269,7 @@
             <!-- SUBMENU WIDGET PLAYLISTEN -->
             <control type="label">
                 <left>0</left>
-                <top>75</top>
+                <top>100</top>
                 <width>1000</width>
                 <height>36</height>
                 <font>primal_60_Title</font>

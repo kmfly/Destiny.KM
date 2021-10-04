@@ -44,7 +44,7 @@
 							<width>400</width>
 							<height>257</height>
 							<texture background="true" fallback="background.png">$INFO[ListItem.Icon]</texture>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -116,7 +116,7 @@
 						<width>400</width>
 						<height>257</height>
 						<texture background="true" fallback="background.png">$INFO[ListItem.Icon]</texture>
-						<aspectratio align="center" aligny="top">scale</aspectratio>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
