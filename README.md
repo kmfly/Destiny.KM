@@ -1,4 +1,5 @@
 # Destiny.KM
+https://github.com/kmfly/kodiskin/blob/master/README.md
 # To Do list
 - [x]4k선택시 랜덤으로 표시
 - [ ]분류 재생목록 SJVA 게시물 확인
