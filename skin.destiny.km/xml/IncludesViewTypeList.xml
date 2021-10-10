@@ -2,31 +2,20 @@
 <includes>
 
 	<!-- active view mode : 55(파일모드),903(Plex view),901(에피소드 view),900(빅포스터),611(스몰포스터) -->
+	<!-- 비디오 애드온은 myvideonave로 들어가기 때문에 기본적으로 viewvideo에 include 시켜줘야함 -->
 
 	<include name="ViewidVideo">
-		<views>55,88,903,9824,900,901,1000</views>
+		<views>55,88,903,900,901,1000</views>
 	</include>
 	<include name="ViewsVideo">
 		<control type="group" id="777">
 			<visible>!Window.IsVisible(selectdialog)</visible>
 			<include>View_55_FileMode</include>
-			<!-- <include>View_77_FileMode</include> -->
 			<include>View_903_Plex_View</include>
-			<include>View_9824_Plex_View_OTT</include>
 			<include>View_900_POSTER</include>
 			<include>View_901_Ep_View</include>
 			<include>View_88_FileModeforvideoaddon</include>
 			<include>View_1000_VideoAddon</include>
-
-			<!-- <include>View_611_POSTER_SMALL</include> -->
-			<!-- <include>View_598_Fanartlist</include> -->
-			<!-- <include>View_601_Poster_Movies</include> -->
-			<!-- <include>View_605_WallView</include> -->
-			<!-- <include>View_606_LogoFanart</include> -->
-			<!-- <include>View_607_Thumb</include>
-			<include>View_608_Addons</include>
-			<include>View_610_BannerFull</include>
-			<include>View_612_Bibliothek</include>  -->
 		</control>
 	</include>
 	<include name="ViewidAudio">
@@ -36,7 +25,7 @@
 		<control type="group" id="777">
 			<visible>!Window.IsVisible(selectdialog)</visible>
 			<include>View_66_FileModeforMusic</include>
-			<!-- <include>View_706_Songlist</include> -->
+			<!-- <include>View_9814_Muisc_View</include> -->
 		</control>
 	</include>
 	<include name="ViewidPictures">
@@ -50,14 +39,13 @@
 		</control>
 	</include>
 	<include name="ViewidAddons">
-		<views>77,9824,901</views>
+		<views>77,901</views>
 	</include>
 	<include name="ViewsAddons">
 		<control type="group" id="777">
 			<visible>!Window.IsVisible(selectdialog)</visible>
 			<include>View_77_FileMode</include>
 			<include>View_903_Plex_View</include>
-			<include>View_9824_Plex_View_OTT</include>
 			<include>View_901_Ep_View</include>
 		</control>
 	</include>
@@ -133,14 +121,14 @@
 					<description>View,55,LIST</description>
 					<height>60</height>
 					<width>398</width>
-					<label>LIST</label>
+					<label>KM LIST</label>
 					<onclick>Container.SetViewMode(55)</onclick>
 				</control>
 				<control type="button" id="811">
 					<description>View,903, Plex View</description>
 					<height>60</height>
 					<width>398</width>
-					<label>PLEX VIEW</label>
+					<label>KM VIEW</label>
 					<onclick>Container.SetViewMode(903)</onclick>
 					<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
 					<visible>Container.Content(Movies)|Container.Content(Sets)| Container.Content(TVShows) | Container.Content(Seasons) </visible>
@@ -150,9 +138,9 @@
 					<description>View,900, POSTER</description>
 					<height>60</height>
 					<width>398</width>
-					<label>BIG POSTER</label>
+					<label>KM POSTER</label>
 					<onclick>Container.SetViewMode(900)</onclick>
-					<visible>Container.Content(Movies)| Container.Content(TVShows) | Container.Content(Seasons) |System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) </visible>
+					<visible>Container.Content(Movies)| Container.Content(TVShows) | Container.Content(Seasons) |System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) | System.HasAddon(plugin.video.samsungtvm) |System.HasAddon(plugin.video.kakaotvm) | System.HasAddon(plugin.video.coupangm) | System.HasAddon(plugin.video.nsportsm)</visible>
 					<visible>![Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Window.IsVisible(Pictures)]</visible>
 					<visible>!Container.Content(Episodes)</visible>
 
@@ -161,21 +149,18 @@
 					<description>View,901</description>
 					<height>60</height>
 					<width>398</width>
-					<label>EPISODE</label>
+					<label>KM EPISODE</label>
 					<onclick>Container.SetViewMode(901)</onclick>
 					<visible>Container.Content(Episodes)</visible>
 				</control>
 
 				<control type="button" id="815">
-					<description>View,1000, View_1000_VideoAddonPOSTER</description>
+					<description>KM OTT LIST</description>
 					<height>60</height>
 					<width>398</width>
-					<label>AddonPOSTER</label>
+					<label>KM OTT LIST</label>
 					<onclick>Container.SetViewMode(1000)</onclick>
-					<visible>Container.Content(Movies)| Container.Content(TVShows) | Container.Content(Seasons) |System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) </visible>
-					<visible>![Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Window.IsVisible(Pictures)]</visible>
-					<visible>!Container.Content(Episodes)</visible>
-
+					<visible>System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) | System.HasAddon(plugin.video.samsungtvm) |System.HasAddon(plugin.video.kakaotvm) | System.HasAddon(plugin.video.coupangm) | System.HasAddon(plugin.video.nsportsm) </visible>
 				</control>
 
 
@@ -191,14 +176,13 @@
 				</control> -->
 
 				<!-- OTT 인포월 추가 -->
-				<control type="button" id="816">
-					<description>View,705</description>
+				<!-- <control type="button" id="816">
 					<height>60</height>
 					<width>398</width>
-					<label>MUSIC ALBUM VIEW</label>
-					<onclick>Container.SetViewMode(705)</onclick>
+					<label>MUSIC ALBUM VIEW123</label>
+					<onclick>Container.SetViewMode(9814)</onclick>
 					<visible>Container.Content(artists) | Container.Content(albums)</visible>
-				</control>
+				</control> -->
 
 				<!-- ================= PICTURES ==================== -->
 				<control type="button" id="821">

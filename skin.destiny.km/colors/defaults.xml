@@ -1,21 +1,21 @@
 <colors>
-    <color name="BackColorBackground">FF262626</color>
+	<color name="BackColorBackground">FF262626</color>
 	<color name="BackColorFront">FF404040</color>
 	<color name="BackColorButton">FFcf0652</color>
 	<color name="ColorButtonDialogeBack">FF262626</color>
 	<color name="ColorIcons">FFcbcccc</color>
 	<color name="ColorFlaggingIcons">FFcbcccc</color>
 	<color name="ColorFontNormal">FFcbcccc</color>
-	<color name="ColorButtonHomemenuBig">FF272530</color>	
+	<color name="ColorButtonHomemenuBig">FF272530</color>
 	<color name="ColorProgress">FFcbcccc</color>
-	<color name="ColorFontUnfocus">FFFFB80D</color>	
+	<color name="ColorFontUnfocus">FFFFB80D</color>
 	<color name="ColorFontSelected">FFfbc743</color>
 	<color name="ColorFontShadow">FF000000</color>
 	<color name="ColorButtonNoFocus">FF808080</color>
 	<color name="ColorFontNormalHomemenu">FFcbcccc</color>
 	<color name="ColorFontShadowHomemenu">FF000000</color>
 	<color name="ColorInfoBack">887c4819</color>
-	
+
 	<color name="ColorBackHomeButton0">FF353340</color>
 	<color name="ColorBackHomeButton1">FF173a1a</color>
 	<color name="ColorBackHomeButton2">FF3f1c37</color>
@@ -24,9 +24,9 @@
 	<color name="ColorBackHomeButton5">FF38350c</color>
 	<color name="ColorBackHomeButton6">FF392a2a</color>
 	<color name="ColorBackHomeButton7">FF446355</color>
-	<color name="ColorBackHomeButton8">FF9d1419</color>	
+	<color name="ColorBackHomeButton8">FF9d1419</color>
 	<color name="ColorBackHomeButton9">FF142d27</color>
-	<color name="ColorBackHomeButton10">FF184a4c</color>	
+	<color name="ColorBackHomeButton10">FF184a4c</color>
 	<color name="ColorBackHomeButton11">FF644f2a</color>
 	<color name="ColorBackHomeButton12">FF315E3F</color>
 	<color name="ColorBackHomeButton13">FF485d62</color>
@@ -57,16 +57,14 @@
 	<color name="ColorBackHomeButton37">FF610B4B</color>
 	<color name="ColorBackHomeButton38">FF2EFEF7</color>
 	<color name="ColorBackHomeButton39">FF0B4C5F</color>
-	<color name="ColorBackHomeButton40">FF3B0B0B</color>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	<color name="ColorBackHomeButton40">FFD66321</color>
+	<color name="ColorBackHomeButton41">FF2EFEF7</color>
+	<color name="ColorBackHomeButton42">FF441660</color>
+	<color name="ColorBackHomeButton43">FFF7FE2E</color>
+	<color name="ColorBackHomeButton44">FFBA55D3</color>
+	<color name="ColorBackHomeButton45">FF315E3F</color>
+	<color name="ColorBackHomeButton42">FF441660</color>
+	<color name="ColorBackHomeButton46">FF9A8309</color>
+
 
 </colors>

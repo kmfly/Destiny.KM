@@ -807,7 +807,7 @@
                             <left>50</left>
                             <top>420</top>
                             <height>34</height>
-                            <width>220</width>
+                            <width>190</width>
                             <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
                             <align>left</align>
                             <aligny>left</aligny>
@@ -898,7 +898,7 @@
                             <left>50</left>
                             <top>420</top>
                             <height>34</height>
-                            <width>220</width>
+                            <width>190</width>
                             <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
                             <align>left</align>
                             <aligny>left</aligny>
@@ -980,7 +980,7 @@
                             <top>0</top>
                             <width>260</width>
                             <height>470</height>
-                            <texture background="true">skin/button_klein.png</texture>
+                            <texture background="true">skin/button_klein_tranz70.png</texture>
                             <bordertexture border="10">ThumbShadow.png</bordertexture>
                             <bordersize>6</bordersize>
                             <aspectratio>stretch</aspectratio>
@@ -1009,7 +1009,7 @@
                         <control type="label">
                             <description>Title label</description>
                             <left>50</left>
-                            <top>363</top>
+                            <top>364</top>
                             <height>34</height>
                             <width>210</width>
                             <label>$INFO[ListItem.Label]</label>
@@ -1033,7 +1033,7 @@
                             </control>
                             <control type="label">
                                 <left>50</left>
-                                <top>395</top>
+                                <top>396</top>
                                 <height>34</height>
                                 <width>220</width>
                                 <label>$INFO[ListItem.RatingAndVotes]</label>
@@ -1046,7 +1046,7 @@
                             </control>
                             <control type="image">
                                 <left>20</left>
-                                <top>429</top>
+                                <top>431</top>
                                 <width>20</width>
                                 <height>20</height>
                                 <texture background="true">home/homeicons/timers.png</texture>
@@ -1055,10 +1055,11 @@
                             </control>
                             <control type="label">
                                 <left>50</left>
-                                <top>425</top>
+                                <top>429</top>
                                 <height>34</height>
                                 <width>220</width>
-                                <label>$INFO[ListItem.EndTime]</label>
+                                <!-- $INFO[Player.Time(mm:ss)] -->
+                                <label>$INFO[ListItem.Duration(hh:mm)]</label>
                                 <align>left</align>
                                 <aligny>left</aligny>
                                 <font>primal_15_Title</font>
@@ -1104,7 +1105,7 @@
                         <control type="label">
                             <description>Title label</description>
                             <left>50</left>
-                            <top>363</top>
+                            <top>364</top>
                             <height>34</height>
                             <width>200</width>
                             <label>$INFO[ListItem.Label]</label>
@@ -1128,7 +1129,7 @@
                             </control>
                             <control type="label">
                                 <left>50</left>
-                                <top>395</top>
+                                <top>396</top>
                                 <height>34</height>
                                 <width>220</width>
                                 <label>$INFO[ListItem.RatingAndVotes]</label>
@@ -1141,7 +1142,7 @@
                             </control>
                             <control type="image">
                                 <left>20</left>
-                                <top>429</top>
+                                <top>431</top>
                                 <width>20</width>
                                 <height>20</height>
                                 <texture background="true">home/homeicons/timers.png</texture>
@@ -1150,14 +1151,15 @@
                             </control>
                             <control type="label">
                                 <left>50</left>
-                                <top>425</top>
+                                <top>429</top>
                                 <height>34</height>
                                 <width>220</width>
-                                <label>$INFO[ListItem.EndTime]</label>
+                                <!-- $INFO[Player.Time(mm:ss)] -->
+                                <label>$INFO[ListItem.Duration(hh:mm)]</label>
                                 <align>left</align>
                                 <aligny>left</aligny>
                                 <font>primal_15_Title</font>
-                                <textcolor>$VAR[ColorFontNormal]</textcolor>
+                                <textcolor>FFEBE627</textcolor>
                                 <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                             </control>
                         </control>
@@ -1176,11 +1178,10 @@
             <control type="group">
                 <left>1580</left>
                 <visible>!Skin.HasSetting(NoWidgets)</visible>
-                <visible> Container(9000).Hasfocus(52)
-                  </visible>
+                <visible>Container(9000).Hasfocus(52)</visible>
                 <include>Fade_Widgets</include>
                 <include>widget_outzoom_submenu</include>
-                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300006) | Control.HasFocus(18306)">Conditional</animation>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300006) | Control.HasFocus(18307)">Conditional</animation>
                 <!-- KM: 홈화면 슬라이드될때 표시되는 글씨 90도 -->
                 <control type="button" id="300006">
                     <include>Animation.ZoomIn</include>
@@ -1211,13 +1212,13 @@
                     <onclick condition="Skin.HasSetting(3dmovies)">Skin.Reset(3dmovies)</onclick>
                     <onclick condition="Skin.HasSetting(movieactor)">Skin.Reset(movieactor)</onclick>
                     <onleft>9000</onleft>
-                    <onright>18306</onright>
+                    <onright>18307</onright>
                     <!-- KM: 모든영화에서 화살표 위로 누르면 영화선택되도록 수정 -->
-                    <onup>18306</onup>
+                    <onup>18307</onup>
                     <ondown>9000</ondown>
                     <angle>90</angle>
                 </control>
-                <control type="panel" id="18306">
+                <control type="panel" id="18307">
                     <left>355</left>
                     <top>250</top>
                     <width>1570</width>
@@ -1236,7 +1237,7 @@
                             <top>0</top>
                             <width>260</width>
                             <height>470</height>
-                            <texture background="true">skin/button_klein.png</texture>
+                            <texture background="true">skin/button_klein_tranz70.png</texture>
                             <bordertexture border="10">ThumbShadow.png</bordertexture>
                             <bordersize>6</bordersize>
                             <aspectratio>stretch</aspectratio>
@@ -1335,7 +1336,7 @@
                             <bordersize>6</bordersize>
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[BackColorButton]</colordiffuse>
-                            <visible>Control.HasFocus(18306)</visible>
+                            <visible>Control.HasFocus(18307)</visible>
                         </control>
                         <control type="image">
                             <left>0</left>
@@ -2201,14 +2202,14 @@
                             <left>0</left>
                             <top>0</top>
                             <width>260</width>
-                            <height>400</height>
-                            <texture background="true">skin/button_klein_tranz80.png</texture>
+                            <height>470</height>
+                            <texture background="true">skin/button_klein_tranz70.png</texture>
                             <bordertexture border="10">ThumbShadow.png</bordertexture>
                             <bordersize>6</bordersize>
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
                         </control>
-                        <control type="image">
+                        <!-- <control type="image">
                             <left>10</left>
                             <top>250</top>
                             <width>240</width>
@@ -2216,7 +2217,7 @@
                             <texture background="true">skin/button_klein_tranz50.png</texture>
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-                        </control>
+                        </control> -->
                         <control type="image">
                             <left>5</left>
                             <top>5</top>
@@ -2290,7 +2291,7 @@
                             <left>0</left>
                             <top>0</top>
                             <width>260</width>
-                            <height>400</height>
+                            <height>470</height>
                             <texture background="true">skin/button_klein_tranz70.png</texture>
                             <bordertexture border="10">ThumbShadow.png</bordertexture>
                             <bordersize>6</bordersize>
@@ -2298,7 +2299,7 @@
                             <colordiffuse>$VAR[BackColorButton]</colordiffuse>
                             <visible>Control.HasFocus(18501)</visible>
                         </control>
-                        <control type="image">
+                        <!-- <control type="image">
                             <left>10</left>
                             <top>250</top>
                             <width>240</width>
@@ -2306,7 +2307,7 @@
                             <texture background="true">skin/button_klein_tranz70.png</texture>
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-                        </control>
+                        </control> -->
                         <control type="image">
                             <left>5</left>
                             <top>5</top>
@@ -2589,7 +2590,7 @@
                     <itemgap>0</itemgap>
                     <orientation>horizontal</orientation>
                     <visible>!Control.HasFocus(709051)</visible>
-                    <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
+                    <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(18307) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
                     <control type="image">
                         <width>50</width>
                         <height>50</height>

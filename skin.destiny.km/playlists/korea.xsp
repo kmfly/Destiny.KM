@@ -12,7 +12,7 @@
 		<value>Korea</value></rule>
 
 		
-		<order direction="ascending">sorttitle</order>
+		<order direction="ascending">random</order>
 	</smartplaylist>
 
 

@@ -75,6 +75,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</focusedlayout>
+
+			<!-- 홈화면 홈메뉴 아이디 설정 -->
 			<content>
 				<!-- KM 1 라이브TV -->
 				<item id="1">
@@ -101,7 +103,6 @@
 					<label>$LOCALIZE[50204]</label>
 					<onclick>noop</onclick>
 				</item>
-
 				<!-- KM 6 비디오 -->
 				<item id="6">
 					<label>$LOCALIZE[3]</label>
@@ -154,115 +155,97 @@
 					<label>왓챠</label>
 					<onclick>noop</onclick>
 				</item>
-
 				<item id="16">
 					<label>스포티비</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 17 재생목록 1 -->
+				<!--  New OTT -->
 				<item id="17">
+					<label>삼성TV플러스</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="18">
+					<label>카카오 TV</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="19">
+					<label>쿠팡 PLAY</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="19">
+					<label>네이버 스포츠</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="30">
 					<label>사용자 버튼 01</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 18 재생목록 2 -->
-				<item id="18">
+				<item id="31">
 					<label>사용자 버튼 02</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 19 재생목록 3 -->
-				<item id="19">
+				<item id="32">
 					<label>사용자 버튼 03</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 20 재생목록 4 -->
-				<item id="20">
+				<item id="33">
 					<label>사용자 버튼 04</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 21 재생목록 5 -->
-				<item id="21">
+				<item id="34">
 					<label>사용자 버튼 05</label>
 					<onclick>noop</onclick>
 				</item>
-
-
-				<!-- KM 22 재생목록 6 -->
-				<item id="22">
+				<item id="35">
 					<label>사용자 버튼 06</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 23 재생목록 7 -->
-				<item id="23">
+				<item id="36">
 					<label>사용자 버튼 07</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 24 재생목록 8 -->
-				<item id="24">
+				<item id="37">
 					<label>사용자 버튼 08</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 25 재생목록 9 -->
-				<item id="25">
+				<item id="38">
 					<label>사용자 버튼 09</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 26 재생목록 10 -->
-				<item id="26">
+				<item id="39">
 					<label>사용자 버튼 10</label>
 					<onclick>noop</onclick>
 				</item>
-
-
-				<!-- KM  단순 재생목록 -->
-				<!-- <item id="5">
-					<label>$LOCALIZE[50554]</label>
-					<onclick>noop</onclick>
-				</item>				 -->
-
-				<!-- KM 27 애드온 -->
-				<item id="27">
+				<item id="40">
 					<label>$LOCALIZE[50197]</label>
 					<onclick>noop</onclick>
 				</item>
-				<!-- KM 28 안드로이드앱 -->
-				<item id="28">
+				<item id="41">
 					<label>안드로이드앱</label>
 					<onclick>noop</onclick>
 				</item>
-
-				<!-- KM 29 날씨 -->
-				<item id="29">
+				<item id="42">
+					<description>날씨</description>
 					<label>$LOCALIZE[8]</label>
 					<onclick>noop</onclick>
 				</item>
-
-
-				<!-- KM 30 파일매니져 -->
-				<item id="30">
+				<item id="43">
 					<label>파일매니져</label>
 					<onclick>noop</onclick>
 				</item>
-
-				<!-- KM 31 옵션 -->
-				<item id="31">
+				<item id="44">
 					<label>옵션</label>
 					<onclick>noop</onclick>
 				</item>
-
-
-				<!-- KM 32 서치 -->
-				<item id="32">
+				<item id="45">
 					<label>글로벌서치</label>
 					<onclick>noop</onclick>
 				</item>
-
 				<!-- KM 31 전원 -->
-				<!-- <item id="33">
+				<!-- <item id="46">
 					<label>전원</label>
 					<onclick>noop</onclick>
 				</item> -->
-
-
 			</content>
 		</control>
 		<control type="group">
@@ -1483,8 +1466,8 @@
 					<font>primal_20</font>
 					<label>[COLOR=yellow]$LOCALIZE[31051][/COLOR]</label>
 					<font>primal_20</font>
-					<onclick>Skin.Reset(Home_Custom_Back_Common_Folder)</onclick>
-					<onclick>Skin.Reset(IconCommon_Icon)</onclick>
+					<onclick>Skin.Reset(Home_Custom_Back_youtube_Folder)</onclick>
+					<onclick>Skin.Reset(Iconyoutube_Icon)</onclick>
 
 				</control>
 				<control type="radiobutton" id="5400">
@@ -1555,7 +1538,7 @@
 					<font>primal_20</font>
 					<label>$LOCALIZE[50399]</label>
 					<font>primal_20</font>
-					<onclick>Skin.SetImage(Home_Custom_Back_Common_Folder)</onclick>
+					<onclick>Skin.SetImage(Home_Custom_Back_netflix_Folder)</onclick>
 				</control>
 
 				<control type="button" id="2200">
@@ -1564,7 +1547,7 @@
 					<height>50</height>
 					<font>primal_20</font>
 					<label>$LOCALIZE[50268]</label>
-					<onclick>Skin.SetImage(IconCommon_Icon)</onclick>
+					<onclick>Skin.SetImage(Iconnetflix_Icon)</onclick>
 				</control>
 				<control type="button" id="2300">
 					<description>홈메뉴 아이콘/배경 초기화</description>
@@ -1573,8 +1556,8 @@
 					<font>primal_20</font>
 					<label>[COLOR=yellow]$LOCALIZE[31051][/COLOR]</label>
 					<font>primal_20</font>
-					<onclick>Skin.Reset(Home_Custom_Back_Common_Folder)</onclick>
-					<onclick>Skin.Reset(IconCommon_Icon)</onclick>
+					<onclick>Skin.Reset(Home_Custom_Back_netflix_Folder)</onclick>
+					<onclick>Skin.Reset(Iconnetflix_Icon)</onclick>
 
 				</control>
 				<control type="radiobutton" id="2400">
@@ -1801,7 +1784,7 @@
 			</control>
 
 			<!--===================================================================================================-->
-			<!--====================================== 와챠 ===============================================-->
+			<!--====================================== 왓챠 ===============================================-->
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
@@ -1941,8 +1924,8 @@
 					<font>primal_20</font>
 					<label>[COLOR=yellow]$LOCALIZE[31051][/COLOR]</label>
 					<font>primal_20</font>
-					<onclick>Skin.Reset(Home_Custom_Back_Wave_Folder)</onclick>
-					<onclick>Skin.Reset(IconWave_Icon)</onclick>
+					<onclick>Skin.Reset(Home_Custom_Back_Spotv_Folder)</onclick>
+					<onclick>Skin.Reset(IconSpotv_Icon)</onclick>
 				</control>
 				<control type="radiobutton" id="6400">
 					<description>Color Button</description>
@@ -1980,12 +1963,379 @@
 					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
 				</control>
 			</control>
+
+
+			<!--  New OTT -->
+			<!-- 17 포커스 아이디 / 41(버튼색깔)-->
+			<!--===================================================================================================-->
+			<!--====================================== SamsungTV ===============================================-->
+			<!--===================================================================================================-->
+			<control type="grouplist" id="9010">
+				<include>SlideInAndOutAnimationRNL</include>
+				<visible>Container(9080).Hasfocus(17)</visible>
+				<left>505</left>
+				<top>165</top>
+				<width>1337</width>
+				<height>810</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>66</pagecontrol>
+				<onleft>9080</onleft>
+				<onright>66</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<control type="radiobutton" id="6000">
+					<description>Hide Scripts Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50266]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_SamsungTV)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_SamsungTV)</selected>
+				</control>
+				<control type="button" id="6100">
+					<description>Single Image button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50399]</label>
+					<font>primal_20</font>
+					<onclick>Skin.SetImage(Home_Custom_Back_SamsungTV_Folder)</onclick>
+				</control>
+
+				<control type="button" id="6200">
+					<description>Icon</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50268]</label>
+					<onclick>Skin.SetImage(IconSamsungTV_Icon)</onclick>
+				</control>
+				<control type="button" id="6300">
+					<description>홈메뉴 아이콘/배경 초기화</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>[COLOR=yellow]$LOCALIZE[31051][/COLOR]</label>
+					<font>primal_20</font>
+					<onclick>Skin.Reset(Home_Custom_Back_SamsungTV_Folder)</onclick>
+					<onclick>Skin.Reset(IconSamsungTV_Icon)</onclick>
+				</control>
+				<control type="radiobutton" id="6400">
+					<description>Color Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50139]</label>
+					<onclick>Skin.ToggleSetting(ColorBackWebOS41)</onclick>
+					<selected>Skin.HasSetting(ColorBackWebOS41)</selected>
+				</control>
+				<control type="button" id="6500">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50314]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS35_Path)][/COLOR]</label2>
+					<onclick>Skin.SetString(SelfColorWebOS41_Path)</onclick>
+					<visible>Skin.HasSetting(ColorBackWebOS41)</visible>
+				</control>
+				<control type="radiobutton" id="6600">
+					<font>primal_20</font>
+					<width>1337</width>
+					<height>50</height>
+					<label>$LOCALIZE[31049]</label>
+					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
+					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
+				</control>
+				<control type="button" id="6700">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[31050]</label>
+					<label2>$INFO[Container(90000).ListItem.Property(Path)</label2>
+					<onclick>ActivateWindow(1121)</onclick>
+					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
+				</control>
+			</control>
+			<!--  New OTT -->
+			<!-- 18 포커스 아이디 / 42(버튼색깔)-->
+			<!--===================================================================================================-->
+			<!--====================================== 카카오TV ===============================================-->
+			<!--===================================================================================================-->
+			<control type="grouplist" id="9010">
+				<include>SlideInAndOutAnimationRNL</include>
+				<visible>Container(9080).Hasfocus(18)</visible>
+				<left>505</left>
+				<top>165</top>
+				<width>1337</width>
+				<height>810</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>66</pagecontrol>
+				<onleft>9080</onleft>
+				<onright>66</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<control type="radiobutton" id="6000">
+					<description>Hide Scripts Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50266]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Kakaotv)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Kakaotv)</selected>
+				</control>
+				<control type="button" id="6100">
+					<description>Single Image button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50399]</label>
+					<font>primal_20</font>
+					<onclick>Skin.SetImage(Home_Custom_Back_Kakaotv_Folder)</onclick>
+				</control>
+
+				<control type="button" id="6200">
+					<description>Icon</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50268]</label>
+					<onclick>Skin.SetImage(IconKakaotv_Icon)</onclick>
+				</control>
+				<control type="button" id="6300">
+					<description>홈메뉴 아이콘/배경 초기화</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>[COLOR=yellow]$LOCALIZE[31051][/COLOR]</label>
+					<font>primal_20</font>
+					<onclick>Skin.Reset(Home_Custom_Back_Kakaotv_Folder)</onclick>
+					<onclick>Skin.Reset(IconWave_Icon)</onclick>
+				</control>
+				<control type="radiobutton" id="6400">
+					<description>Color Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50139]</label>
+					<onclick>Skin.ToggleSetting(ColorBackWebOS42)</onclick>
+					<selected>Skin.HasSetting(ColorBackWebOS42)</selected>
+				</control>
+				<control type="button" id="6500">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50314]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS35_Path)][/COLOR]</label2>
+					<onclick>Skin.SetString(SelfColorWebOS42_Path)</onclick>
+					<visible>Skin.HasSetting(ColorBackWebOS42)</visible>
+				</control>
+				<control type="radiobutton" id="6600">
+					<font>primal_20</font>
+					<width>1337</width>
+					<height>50</height>
+					<label>$LOCALIZE[31049]</label>
+					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
+					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
+				</control>
+				<control type="button" id="6700">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[31050]</label>
+					<label2>$INFO[Container(90000).ListItem.Property(Path)</label2>
+					<onclick>ActivateWindow(1121)</onclick>
+					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
+				</control>
+			</control>
+			<!--  New OTT -->
+			<!-- 19 포커스 아이디 / 43(버튼색깔)-->
+			<!--===================================================================================================-->
+			<!--====================================== 쿠팡TV ===============================================-->
+			<!--===================================================================================================-->
+			<control type="grouplist" id="9010">
+				<include>SlideInAndOutAnimationRNL</include>
+				<visible>Container(9080).Hasfocus(19)</visible>
+				<left>505</left>
+				<top>165</top>
+				<width>1337</width>
+				<height>810</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>66</pagecontrol>
+				<onleft>9080</onleft>
+				<onright>66</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<control type="radiobutton" id="6000">
+					<description>Hide Scripts Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50266]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Coupang)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Coupang)</selected>
+				</control>
+				<control type="button" id="6100">
+					<description>Single Image button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50399]</label>
+					<font>primal_20</font>
+					<onclick>Skin.SetImage(Home_Custom_Back_Coupang_Folder)</onclick>
+				</control>
+
+				<control type="button" id="6200">
+					<description>Icon</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50268]</label>
+					<onclick>Skin.SetImage(IconCoupang_Icon)</onclick>
+				</control>
+				<control type="button" id="6300">
+					<description>홈메뉴 아이콘/배경 초기화</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>[COLOR=yellow]$LOCALIZE[31051][/COLOR]</label>
+					<font>primal_20</font>
+					<onclick>Skin.Reset(Home_Custom_Back_Coupang_Folder)</onclick>
+					<onclick>Skin.Reset(IconWave_Icon)</onclick>
+				</control>
+				<control type="radiobutton" id="6400">
+					<description>Color Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50139]</label>
+					<onclick>Skin.ToggleSetting(ColorBackWebOS43)</onclick>
+					<selected>Skin.HasSetting(ColorBackWebOS43)</selected>
+				</control>
+				<control type="button" id="6500">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50314]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS43_Path)][/COLOR]</label2>
+					<onclick>Skin.SetString(SelfColorWebOS43_Path)</onclick>
+					<visible>Skin.HasSetting(ColorBackWebOS43)</visible>
+				</control>
+				<control type="radiobutton" id="6600">
+					<font>primal_20</font>
+					<width>1337</width>
+					<height>50</height>
+					<label>$LOCALIZE[31049]</label>
+					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
+					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
+				</control>
+				<control type="button" id="6700">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[31050]</label>
+					<label2>$INFO[Container(90000).ListItem.Property(Path)</label2>
+					<onclick>ActivateWindow(1121)</onclick>
+					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
+				</control>
+			</control>
+			<!-- 20 포커스 아이디 / 44(버튼색깔)-->
+			<!--===================================================================================================-->
+			<!--====================================== 네이버 스포츠 ===============================================-->
+			<!--===================================================================================================-->
+			<control type="grouplist" id="9010">
+				<include>SlideInAndOutAnimationRNL</include>
+				<visible>Container(9080).Hasfocus(20)</visible>
+				<left>505</left>
+				<top>165</top>
+				<width>1337</width>
+				<height>810</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>66</pagecontrol>
+				<onleft>9080</onleft>
+				<onright>66</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<control type="radiobutton" id="6000">
+					<description>Hide Scripts Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50266]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Naversports)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Naversports)</selected>
+				</control>
+				<control type="button" id="6100">
+					<description>Single Image button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50399]</label>
+					<font>primal_20</font>
+					<onclick>Skin.SetImage(Home_Custom_Back_Naversports_Folder)</onclick>
+				</control>
+
+				<control type="button" id="6200">
+					<description>Icon</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50268]</label>
+					<onclick>Skin.SetImage(IconNaversports_Icon)</onclick>
+				</control>
+				<control type="button" id="6300">
+					<description>홈메뉴 아이콘/배경 초기화</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>[COLOR=yellow]$LOCALIZE[31051][/COLOR]</label>
+					<font>primal_20</font>
+					<onclick>Skin.Reset(Home_Custom_Back_Naversports_Folder)</onclick>
+					<onclick>Skin.Reset(IconWave_Icon)</onclick>
+				</control>
+				<control type="radiobutton" id="6400">
+					<description>Color Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50139]</label>
+					<onclick>Skin.ToggleSetting(ColorBackWebOS44)</onclick>
+					<selected>Skin.HasSetting(ColorBackWebOS44)</selected>
+				</control>
+				<control type="button" id="6500">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50314]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS44_Path)][/COLOR]</label2>
+					<onclick>Skin.SetString(SelfColorWebOS44_Path)</onclick>
+					<visible>Skin.HasSetting(ColorBackWebOS44)</visible>
+				</control>
+				<control type="radiobutton" id="6600">
+					<font>primal_20</font>
+					<width>1337</width>
+					<height>50</height>
+					<label>$LOCALIZE[31049]</label>
+					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
+					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
+				</control>
+				<control type="button" id="6700">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[31050]</label>
+					<label2>$INFO[Container(90000).ListItem.Property(Path)</label2>
+					<onclick>ActivateWindow(1121)</onclick>
+					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
+				</control>
+			</control>
+
+
 			<!--===================================================================================================-->
 			<!--====================================== HOME PLAYLIST 1 ============================================-->
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(17)</visible>
+				<visible>Container(9080).Hasfocus(30)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -2456,7 +2806,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(18)</visible>
+				<visible>Container(9080).Hasfocus(31)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -2836,7 +3186,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(19)</visible>
+				<visible>Container(9080).Hasfocus(32)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3215,7 +3565,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(20)</visible>
+				<visible>Container(9080).Hasfocus(33)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3302,7 +3652,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(21)</visible>
+				<visible>Container(9080).Hasfocus(34)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3389,7 +3739,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(22)</visible>
+				<visible>Container(9080).Hasfocus(35)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3476,7 +3826,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(23)</visible>
+				<visible>Container(9080).Hasfocus(36)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3563,7 +3913,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(24)</visible>
+				<visible>Container(9080).Hasfocus(37)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3650,7 +4000,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(25)</visible>
+				<visible>Container(9080).Hasfocus(38)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3737,7 +4087,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(26)</visible>
+				<visible>Container(9080).Hasfocus(39)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3819,13 +4169,12 @@
 					<visible>Skin.HasSetting(movieplaylistButton1007)</visible>
 				</control>
 			</control>
-
 			<!--===================================================================================================-->
 			<!--====================================== 애드온 ================================================-->
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(27)</visible>
+				<visible>Container(9080).Hasfocus(40)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3899,13 +4248,12 @@
 					<visible>Skin.HasSetting(ColorBackWebOS20)</visible>
 				</control>
 			</control>
-
 			<!--===================================================================================================-->
 			<!--====================================== 안드로이드 앱 ==============================================-->
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(28)</visible>
+				<visible>Container(9080).Hasfocus(41)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3984,7 +4332,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(29)</visible>
+				<visible>Container(9080).Hasfocus(42)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4058,16 +4406,12 @@
 					<visible>Skin.HasSetting(ColorBackWebOS23)</visible>
 				</control>
 			</control>
-
-
 			<!--===================================================================================================-->
 			<!--====================================== 파일매니저 ===============================================-->
 			<!--===================================================================================================-->
-
-
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(30)</visible>
+				<visible>Container(9080).Hasfocus(43)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4148,7 +4492,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(31)</visible>
+				<visible>Container(9080).Hasfocus(44)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4228,7 +4572,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(32)</visible>
+				<visible>Container(9080).Hasfocus(45)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4309,7 +4653,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(33)</visible>
+				<visible>Container(9080).Hasfocus(46)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4383,166 +4727,6 @@
 					<visible>Skin.HasSetting(ColorBackWebOS27)</visible>
 				</control>
 			</control>
-
-
-			<!--===================================================================================================-->
-			<!--====================================== HOME WATCHLIST =============================================-->
-			<!--===================================================================================================-->
-			<!-- <control type="grouplist" id="9010">
-				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(21)</visible>
-				<left>505</left>
-				<top>165</top>
-				<width>1337</width>
-				<height>810</height>
-				<itemgap>2</itemgap>
-				<pagecontrol>66</pagecontrol>
-				<onleft>9080</onleft>
-				<onright>66</onright>
-				<onup>9021</onup>
-				<ondown>9021</ondown>
-				<control type="radiobutton" id="8940">
-					<description>Hide Weather Button</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50266]</label>
-					<onclick>Skin.ToggleSetting(HomeMenuNoWatchlistButton)</onclick>
-					<selected>Skin.HasSetting(HomeMenuNoWatchlistButton)</selected>
-				</control>
-				<control type="button" id="8943">
-					<description>Single Image button</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50399]</label>
-					<font>primal_20</font>
-					<onclick>Skin.SetImage(Home_Custom_Back_Option_Folder)</onclick>
-				</control>
-				<control type="button" id="8944">
-					<description>Default Image button</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50400]</label>
-					<font>primal_20</font>
-					<onclick>Skin.Reset(Home_Custom_Back_Option_Folder)</onclick>
-				</control>
-				<control type="button" id="8945">
-					
-					<description>Icon</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50268]</label>
-					<onclick>Skin.SetImage(IconWatchlist_Icon)</onclick>
-				</control>
-				<control type="button" id="8946">
-					<description>Default Icon</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50269]</label>
-					<onclick>Skin.Reset(IconWatchlist_Icon)</onclick>
-				</control>
-				<control type="radiobutton" id="8947">
-					<description>Color Button</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50139]</label>
-					<onclick>Skin.ToggleSetting(ColorBackWebOS17)</onclick>
-					<selected>Skin.HasSetting(ColorBackWebOS17)</selected>
-				</control>
-				<control type="button" id="8948">
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50314]</label>
-					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS17_Path)][/COLOR]</label2>
-					<onclick>Skin.SetString(SelfColorWebOS17_Path)</onclick>
-					<visible>Skin.HasSetting(ColorBackWebOS17)</visible>
-				</control>
-			</control> -->
-			<!--===================================================================================================-->
-			<!--====================================== HOME WATCHLIST =============================================-->
-			<!--===================================================================================================-->
-			<!-- <control type="grouplist" id="9010">
-				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(9)</visible>
-				<left>505</left>
-				<top>165</top>
-				<width>1337</width>
-				<height>810</height>
-				<itemgap>2</itemgap>
-				<pagecontrol>66</pagecontrol>
-				<onleft>9080</onleft>
-				<onright>66</onright>
-				<onup>9009</onup>
-				<ondown>9009</ondown>
-				<control type="radiobutton" id="8770">
-					<description>Hide SimplePlaylists Button</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50231]</label>
-					<onclick>Skin.ToggleSetting(HomeMenuNoScriptWatchlistButton)</onclick>
-					<selected>Skin.HasSetting(HomeMenuNoScriptWatchlistButton)</selected>
-				</control>
-				<control type="button" id="8790">
-					<description>Single Image button</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50399]</label>
-					<font>primal_20</font>
-					<onclick>Skin.SetImage(Home_Custom_Back_ScriptWatchlist_Folder)</onclick>
-				</control>
-				<control type="button" id="8791">
-					<description>Default Image button</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50400]</label>
-					<font>primal_20</font>
-					<onclick>Skin.Reset(Home_Custom_Back_ScriptWatchlist_Folder)</onclick>
-				</control>
-				<control type="button" id="8792">
-					
-					<description>Icon</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50268]</label>
-					<onclick>Skin.SetImage(IconSimplePlaylists_Icon)</onclick>
-				</control>
-				<control type="button" id="8793">
-					<description>Default Icon</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50269]</label>
-					<onclick>Skin.Reset(IconSimplePlaylists_Icon)</onclick>
-				</control>
-				<control type="radiobutton" id="8794">
-					<description>Color Button</description>
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50139]</label>
-					<onclick>Skin.ToggleSetting(ColorBackWebOS21)</onclick>
-					<selected>Skin.HasSetting(ColorBackWebOS21)</selected>
-				</control>
-				<control type="button" id="8795">
-					<width>1337</width>
-					<height>50</height>
-					<font>primal_20</font>
-					<label>$LOCALIZE[50314]</label>
-					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS21_Path)][/COLOR]</label2>
-					<onclick>Skin.SetString(SelfColorWebOS21_Path)</onclick>
-					<visible>Skin.HasSetting(ColorBackWebOS21)</visible>
-				</control>
-			</control> -->
 
 
 		</control>

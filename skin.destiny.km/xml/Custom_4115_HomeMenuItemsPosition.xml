@@ -128,17 +128,15 @@
 					</control>
 				</focusedlayout>
 				<content>
+					<!-- 스킨메뉴 홈메뉴 순서 조정 -->
 					<item id="0">
 						<label>$LOCALIZE[50556]</label>
 						<icon>home/homeicons/close.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemLiveTV)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemRadio)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemMovies)</onclick>
-						<!-- <onclick>Skin.Reset(HomeMenuItemEmbyMovies)</onclick> -->
 						<onclick>Skin.Reset(HomeMenuItemCollection)</onclick>
-						<!-- <onclick>Skin.Reset(HomeMenuItemEmbyCollection)</onclick> -->
 						<onclick>Skin.Reset(HomeMenuItemTVShows)</onclick>
-						<!-- <onclick>Skin.Reset(HomeMenuItemEmbyTVShows)</onclick> -->
 						<onclick>Skin.Reset(HomeMenuItemVideos)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemPlayDisc)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemMusic)</onclick>
@@ -150,6 +148,11 @@
 						<onclick>Skin.Reset(HomeMenuItemWave)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemWatcha)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemSpotv)</onclick>
+						<!--  New OTT -->
+						<onclick>Skin.Reset(HomeMenuItemSamsungtv)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemKakaotv)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemCoupang)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemNaversports)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist1)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist2)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist3)</onclick>
@@ -168,15 +171,16 @@
 						<onclick>Skin.Reset(HomeMenuItemSearch)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemSimplePlaylists)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemPower)</onclick>
-
 						<visible></visible>
 					</item>
 					<item id="1">
+						<!-- 순서 변경 적용후 Click -->
 						<label>$LOCALIZE[50557]</label>
 						<icon>home/homeicons/refresh.png</icon>
 						<onclick>ReloadSkin()</onclick>
 						<visible></visible>
 					</item>
+					<!-- Live TV -->
 					<item id="2">
 						<label>$LOCALIZE[50062]</label>
 						<label2 fallback="1.">$INFO[Skin.String(HomeMenuItemLiveTV),,.]</label2>
@@ -201,14 +205,6 @@
 						<onclick>Skin.SetNumeric(HomeMenuItemMovies)</onclick>
 						<visible>!System.HasAddon(plugin.video.embycon)</visible>
 					</item>
-					<!-- <item id="4">
-						<label>$LOCALIZE[50558]</label>
-						<label2 fallback="3.">$INFO[Skin.String(HomeMenuItemEmbyMovies),,.]</label2>
-						<icon>home/homeicons/film.png</icon>
-						<onclick>Skin.Reset(HomeMenuItemEmbyMovies)</onclick>
-						<onclick>Skin.SetNumeric(HomeMenuItemEmbyMovies)</onclick>
-						<visible>System.HasAddon(plugin.video.embycon)</visible>
-					</item> -->
 					<item id="5">
 						<label>$LOCALIZE[50536]</label>
 						<label2 fallback="4.">$INFO[Skin.String(HomeMenuItemCollection),,.]</label2>
@@ -217,14 +213,6 @@
 						<onclick>Skin.SetNumeric(HomeMenuItemCollection)</onclick>
 						<visible>!System.HasAddon(plugin.video.embycon)</visible>
 					</item>
-					<!-- <item id="5">
-						<label>$LOCALIZE[50559]</label>
-						<label2 fallback="4.">$INFO[Skin.String(HomeMenuItemEmbyCollection),,.]</label2>
-						<icon>home/homeicons/collections.png</icon>
-						<onclick>Skin.Reset(HomeMenuItemEmbyCollection)</onclick>
-						<onclick>Skin.SetNumeric(HomeMenuItemEmbyCollection)</onclick>
-						<visible>System.HasAddon(plugin.video.embycon)</visible>
-					</item> -->
 					<item id="6">
 						<label>$LOCALIZE[50560]</label>
 						<label2 fallback="5.">$INFO[Skin.String(HomeMenuItemTVShows),,.]</label2>
@@ -233,14 +221,6 @@
 						<onclick>Skin.SetNumeric(HomeMenuItemTVShows)</onclick>
 						<visible>!System.HasAddon(plugin.video.embycon)</visible>
 					</item>
-					<!-- <item id="6">
-						<label>$LOCALIZE[50561]</label>
-						<label2 fallback="5.">$INFO[Skin.String(HomeMenuItemEmbyTVShows),,.]</label2>
-						<icon>home/homeicons/tvshows.png</icon>
-						<onclick>Skin.Reset(HomeMenuItemEmbyTVShows)</onclick>
-						<onclick>Skin.SetNumeric(HomeMenuItemEmbyTVShows)</onclick>
-						<visible>System.HasAddon(plugin.video.embycon)</visible>
-					</item> -->
 					<item id="7">
 						<label>$LOCALIZE[50175]</label>
 						<label2 fallback="6.">$INFO[Skin.String(HomeMenuItemVideos),,.]</label2>
@@ -288,7 +268,7 @@
 						<icon>special://skin/media/home/youtube.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemYoutube)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemYoutube)</onclick>
-						<visible></visible>
+						<visible>System.HasAddon(plugin.video.youtube)</visible>
 					</item>
 
 					<item id="13">
@@ -297,7 +277,7 @@
 						<icon>special://skin/media/home/netflix.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemNetflix)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemNetflix)</onclick>
-						<visible></visible>
+						<visible>System.HasAddon(plugin.video.netflix)</visible>
 					</item>
 					<item id="14">
 						<label>티빙</label>
@@ -305,7 +285,7 @@
 						<icon>special://skin/media/home/tvingm.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemTving)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemTving)</onclick>
-						<visible></visible>
+						<visible>System.HasAddon(plugin.video.tvingm)</visible>
 					</item>
 					<item id="15">
 						<label>웨이브</label>
@@ -313,175 +293,197 @@
 						<icon>special://skin/media/home/wavem.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemWave)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemWave)</onclick>
-						<visible></visible>
+						<visible>System.HasAddon(plugin.video.wavvem)</visible>
 					</item>
 					<item id="16">
-						<label>와챠</label>
+						<label>왓챠</label>
 						<label2 fallback="15.">$INFO[Skin.String(HomeMenuItemWatcha),,.]</label2>
 						<icon>special://skin/media/home/wacha.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemWatcha)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemWatcha)</onclick>
-						<visible></visible>
+						<visible>System.HasAddon(plugin.video.watcham)</visible>
 					</item>
 					<item id="17">
 						<label>스포티비</label>
 						<label2 fallback="16.">$INFO[Skin.String(HomeMenuItemSpotv),,.]</label2>
-						<icon>special://skin/media/home/spotv.png</icon>
+						<icon>special://skin/media/home/Spotv.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemSpotv)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemSpotv)</onclick>
-						<visible></visible>
+						<visible>System.HasAddon(plugin.video.spotvm)</visible>
+					</item>
+					<item id="18">
+						<label>삼성TV플러스</label>
+						<label2 fallback="17.">$INFO[Skin.String(HomeMenuItemSamsungtv),,.]</label2>
+						<icon>special://skin/media/home/samsungtvplus.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemSamsungtv)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemSamsungtv)</onclick>
+						<visible>System.HasAddon(plugin.video.samsungtvm)</visible>
+					</item>
+					<item id="19">
+						<label>카카오TV</label>
+						<label2 fallback="18.">$INFO[Skin.String(HomeMenuItemKakaotv),,.]</label2>
+						<icon>special://skin/media/home/kakao.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemKakaotv)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemKakaotv)</onclick>
+						<visible>System.HasAddon(plugin.video.kakaotvm)</visible>
+					</item>
+					<item id="20">
+						<label>쿠팡 PLAY</label>
+						<label2 fallback="19.">$INFO[Skin.String(HomeMenuItemCoupang),,.]</label2>
+						<icon>special://skin/media/home/Coupang.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemCoupang)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemCoupang)</onclick>
+						<visible>System.HasAddon(plugin.video.coupangm)</visible>
 					</item>
 
-					<item id="18">
+					<item id="21">
+						<label>네이버 스포츠</label>
+						<label2 fallback="20.">$INFO[Skin.String(HomeMenuItemNaversports),,.]</label2>
+						<icon>special://skin/media/home/Naversports.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemNaversports)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemNaversports)</onclick>
+						<visible>System.HasAddon(plugin.video.nsportsm)</visible>
+					</item>
+
+
+					<item id="22">
 						<label>사용자 버튼 01</label>
-						<label2 fallback="17.">$INFO[Skin.String(HomeMenuItemPlaylist1),,.]</label2>
+						<label2 fallback="21.">$INFO[Skin.String(HomeMenuItemPlaylist1),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist1)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist1)</onclick>
 						<visible></visible>
 					</item>
-					<item id="19">
+					<item id="23">
 						<label>사용자 버튼 02</label>
-						<label2 fallback="18.">$INFO[Skin.String(HomeMenuItemPlaylist2),,.]</label2>
+						<label2 fallback="22.">$INFO[Skin.String(HomeMenuItemPlaylist2),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist2)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist2)</onclick>
 						<visible></visible>
 					</item>
-					<item id="20">
+					<item id="24">
 						<label>사용자 버튼 03</label>
-						<label2 fallback="19.">$INFO[Skin.String(HomeMenuItemPlaylist3),,.]</label2>
+						<label2 fallback="23.">$INFO[Skin.String(HomeMenuItemPlaylist3),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist3)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist3)</onclick>
 						<visible></visible>
 					</item>
-					<item id="21">
+					<item id="25">
 						<label>사용자 버튼 04</label>
-						<label2 fallback="20.">$INFO[Skin.String(HomeMenuItemPlaylist4),,.]</label2>
+						<label2 fallback="24.">$INFO[Skin.String(HomeMenuItemPlaylist4),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist4)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist4)</onclick>
 						<visible></visible>
 					</item>
-					<item id="22">
+					<item id="26">
 						<label>사용자 버튼 05</label>
-						<label2 fallback="21.">$INFO[Skin.String(HomeMenuItemPlaylist5),,.]</label2>
+						<label2 fallback="25.">$INFO[Skin.String(HomeMenuItemPlaylist5),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist5)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist5)</onclick>
 						<visible></visible>
 					</item>
-					<item id="23">
+					<item id="27">
 						<label>사용자 버튼 06</label>
-						<label2 fallback="22.">$INFO[Skin.String(HomeMenuItemPlaylist6),,.]</label2>
+						<label2 fallback="26.">$INFO[Skin.String(HomeMenuItemPlaylist6),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist6)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist6)</onclick>
 						<visible></visible>
 					</item>
-					<item id="24">
+					<item id="28">
 						<label>사용자 버튼 07</label>
-						<label2 fallback="23.">$INFO[Skin.String(HomeMenuItemPlaylist7),,.]</label2>
+						<label2 fallback="27.">$INFO[Skin.String(HomeMenuItemPlaylist7),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist7)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist7)</onclick>
 						<visible></visible>
 					</item>
-					<item id="25">
+					<item id="29">
 						<label>사용자 버튼 08</label>
-						<label2 fallback="24.">$INFO[Skin.String(HomeMenuItemPlaylist8),,.]</label2>
+						<label2 fallback="28.">$INFO[Skin.String(HomeMenuItemPlaylist8),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist8)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist8)</onclick>
 						<visible></visible>
 					</item>
-					<item id="26">
+					<item id="30">
 						<label>사용자 버튼 09</label>
-						<label2 fallback="25.">$INFO[Skin.String(HomeMenuItemPlaylist9),,.]</label2>
+						<label2 fallback="29.">$INFO[Skin.String(HomeMenuItemPlaylist9),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist9)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist9)</onclick>
 						<visible></visible>
 					</item>
-					<item id="27">
+					<item id="31">
 						<label>사용자 버튼 10</label>
-						<label2 fallback="26.">$INFO[Skin.String(HomeMenuItemPlaylist10),,.]</label2>
+						<label2 fallback="30.">$INFO[Skin.String(HomeMenuItemPlaylist10),,.]</label2>
 						<icon>home/homeicons/film.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPlaylist10)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist10)</onclick>
 						<visible></visible>
 					</item>
-					
-					<item id="28">
+
+					<item id="32">
 						<label>$LOCALIZE[50562]</label>
-						<label2 fallback="27.">$INFO[Skin.String(HomeMenuItemAddons),,.]</label2>
+						<label2 fallback="31.">$INFO[Skin.String(HomeMenuItemAddons),,.]</label2>
 						<icon>home/homeicons/addons.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemAddons)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemAddons)</onclick>
 						<visible></visible>
 					</item>
-					<item id="29">
+					<item id="33">
 						<label>안드로이드 앱</label>
-						<label2 fallback="28.">$INFO[Skin.String(HomeMenuItemAndroidApps),,.]</label2>
+						<label2 fallback="32.">$INFO[Skin.String(HomeMenuItemAndroidApps),,.]</label2>
 						<icon>home/homeicons/musicvideos.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemAndroidApps)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemAndroidApps)</onclick>
 						<visible></visible>
 					</item>
-					<item id="30">
+					<item id="34">
 						<label>$LOCALIZE[50259]</label>
-						<label2 fallback="29.">$INFO[Skin.String(HomeMenuItemWeather),,.]</label2>
+						<label2 fallback="33.">$INFO[Skin.String(HomeMenuItemWeather),,.]</label2>
 						<icon>home/homeicons/weather.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemWeather)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemWeather)</onclick>
 						<visible></visible>
 					</item>
-					<item id="31">
+					<item id="35">
 						<label>파일매니져</label>
-						<label2 fallback="30.">$INFO[Skin.String(HomeMenuItemFileManager),,.]</label2>
+						<label2 fallback="34.">$INFO[Skin.String(HomeMenuItemFileManager),,.]</label2>
 						<icon>home/homeicons/games.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemFileManager)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemFileManager)</onclick>
 						<visible></visible>
 					</item>
-					
-					
-					
-					<item id="32">
+					<item id="36">
 						<label>$LOCALIZE[50077]</label>
-						<label2 fallback="31.">$INFO[Skin.String(HomeMenuItemSettings),,.]</label2>
+						<label2 fallback="35.">$INFO[Skin.String(HomeMenuItemSettings),,.]</label2>
 						<icon>home/homeicons/sonstiges.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemSettings)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemSettings)</onclick>
 						<visible></visible>
 					</item>
-					
-					<item id="33"> 
+					<item id="37">
 						<label>$LOCALIZE[49999]</label>
-						<label2 fallback="32.">$INFO[Skin.String(HomeMenuItemSearch),,.]</label2>
+						<label2 fallback="36.">$INFO[Skin.String(HomeMenuItemSearch),,.]</label2>
 						<icon>home/homeicons/search.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemSearch)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemSearch)</onclick>
 						<visible></visible>
 					</item>
-					<!-- <item id="33">
-						<label>$LOCALIZE[50554]</label>
-						<label2 fallback="32.">$INFO[Skin.String(HomeMenuItemSimplePlaylists),,.]</label2>
-						<icon>home/homeicons/news.png</icon>
-						<onclick>Skin.Reset(HomeMenuItemSimplePlaylists)</onclick>
-						<onclick>Skin.SetNumeric(HomeMenuItemSimplePlaylists)</onclick>
-						<visible></visible>
-					</item> -->
-					
-					<item id="34">
+					<item id="38">
 						<label>$LOCALIZE[50263]</label>
-						<label2 fallback="33.">$INFO[Skin.String(HomeMenuItemPower),,.]</label2>
+						<label2 fallback="37.">$INFO[Skin.String(HomeMenuItemPower),,.]</label2>
 						<icon>home/homeicons/off.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemPower)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemPower)</onclick>
 						<visible></visible>
 					</item>
+
 				</content>
 			</control>
 		</control>

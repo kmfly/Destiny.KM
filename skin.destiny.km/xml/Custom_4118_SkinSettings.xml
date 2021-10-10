@@ -44,7 +44,7 @@
 				<top>55</top>
 				<width>60</width>
 				<height>60</height>
-		  <label></label>
+				<label></label>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>default/close_selected.png</texturefocus>
 				<texturenofocus>default/close.png</texturenofocus>
@@ -77,7 +77,7 @@
 					<onclick>Skin.ToggleSetting(kiosk)</onclick>
 					<selected>Skin.HasSetting(kiosk)</selected>
 				</control> -->
-				
+
 				<control type="label" id="106">
 					<width>787</width>
 					<height>60</height>
@@ -272,7 +272,20 @@
 					<onclick>Skin.ToggleSetting(movie_trailerflag)</onclick>
 					<selected>Skin.HasSetting(movie_trailerflag)</selected>
 				</control>
+
 				<control type="radiobutton" id="3042">
+					<label>Video OSD OFF</label>
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+					<onclick>Skin.ToggleSetting(videoosdflag)</onclick>
+					<selected>Skin.HasSetting(videoosdflag)</selected>
+				</control>
+
+
+				<!-- <control type="radiobutton" id="3042">
 					<label>$LOCALIZE[50409]</label>
 					<width>787</width>
 					<height>60</height>
@@ -281,7 +294,7 @@
 					<textwidth>600</textwidth>
 					<onclick>Skin.ToggleSetting(homebigrandomwidget)</onclick>
 					<selected>Skin.HasSetting(homebigrandomwidget)</selected>
-				</control>
+				</control> -->
 				<control type="radiobutton" id="3043">
 					<label>$LOCALIZE[50394]</label>
 					<width>787</width>
@@ -819,19 +832,19 @@
 				<content>
 					<item id="2">
 						<label>$LOCALIZE[50107]</label>
-            <label2></label2>
+						<label2></label2>
 						<icon>home/homeicons/home.png</icon>
 						<onclick>noop</onclick>
 					</item>
 					<item id="1">
 						<label>$LOCALIZE[128]</label>
-            <label2></label2>
+						<label2></label2>
 						<icon>home/homeicons/blume.png</icon>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[50026]</label>
-            <label2></label2>
+						<label2></label2>
 						<icon>home/homeicons/view_poster.png</icon>
 						<onclick>noop</onclick>
 					</item>

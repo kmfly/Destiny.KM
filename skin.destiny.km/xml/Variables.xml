@@ -7,6 +7,11 @@
 		<value>$INFO[VideoPlayer.MPAA,등급 ,]</value>
 	</variable>
 
+	<variable name="Image_Overlay_List">
+		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(900)">special://skin/media/new_video_osd/watched/watched_48.png</value>
+		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(903)">special://skin/media/new_video_osd/watched/watched_32.png</value>
+
+	</variable>
 
 	<variable name="EmbuaryCast">
 
@@ -39,7 +44,12 @@
 		<value>special://skin/playlists/korea.xsp</value>
 	</variable> -->
 	<variable name="ContentVideoYoutube">
-		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]+트레일러+예고편</value>
+		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]+트레일러+예고편</value> -->
+		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$ESCINFO[ListItem.Label],return</value> -->
+		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q="$INFO[ListItem.Title]+영화", return</value> -->
+		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]+trailer+예고편&amp;search_type=videos</value>
+
+		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]&quot;,return</value> -->
 	</variable>
 
 
@@ -80,7 +90,7 @@
 		<value condition="Control.HasFocus(18402)">$INFO[Container(18402).ListItem.Art(fanart)]</value>
 		<value condition="Control.HasFocus(18403)">$INFO[Container(18403).ListItem.Art(fanart)]</value>
 	</variable>
-	<!-- KM 123 -->
+	<!-- 홈화면 타이틀 표시 -->
 	<variable name="VarWidgetsLabelVertical">
 		<value condition="Control.HasFocus(18304)">$INFO[Container(18304).ListItem.Label]</value>
 		<value condition="Control.HasFocus(18305)">$INFO[Container(18305).ListItem.Label]</value>
@@ -2324,7 +2334,6 @@
 		<value>ColorBackHomeButton34</value>
 	</variable>
 	<variable name="ColorBackWebOS35">
-
 		<value condition="Skin.HasSetting(ColorBackWebOS35)">$INFO[Skin.String(SelfColorWebOS35_Path)]</value>
 		<value>ColorBackHomeButton35</value>
 	</variable>
@@ -2339,6 +2348,54 @@
 		<value>ColorBackHomeButton37</value>
 	</variable>
 
+	<variable name="ColorBackWebOS38">
+
+		<value condition="Skin.HasSetting(ColorBackWebOS38)">$INFO[Skin.String(SelfColorWebOS38_Path)]</value>
+		<value>ColorBackHomeButton38</value>
+	</variable>
+
+	<variable name="ColorBackWebOS39">
+
+		<value condition="Skin.HasSetting(ColorBackWebOS39)">$INFO[Skin.String(SelfColorWebOS39_Path)]</value>
+		<value>ColorBackHomeButton39</value>
+	</variable>
+
+	<variable name="ColorBackWebOS40">
+
+		<value condition="Skin.HasSetting(ColorBackWebOS40)">$INFO[Skin.String(SelfColorWebOS40_Path)]</value>
+		<value>ColorBackHomeButton40</value>
+	</variable>
+
+	<variable name="ColorBackWebOS41">
+
+		<value condition="Skin.HasSetting(ColorBackWebOS41)">$INFO[Skin.String(SelfColorWebOS41_Path)]</value>
+		<value>ColorBackHomeButton41</value>
+	</variable>
+
+	<variable name="ColorBackWebOS42">
+
+		<value condition="Skin.HasSetting(ColorBackWebOS42)">$INFO[Skin.String(SelfColorWebOS42_Path)]</value>
+		<value>ColorBackHomeButton42</value>
+	</variable>
+
+	<variable name="ColorBackWebOS43">
+
+		<value condition="Skin.HasSetting(ColorBackWebOS43)">$INFO[Skin.String(SelfColorWebOS43_Path)]</value>
+		<value>ColorBackHomeButton43</value>
+	</variable>
+
+	<variable name="ColorBackWebOS44">
+		<value condition="Skin.HasSetting(ColorBackWebOS44)">$INFO[Skin.String(SelfColorWebOS44_Path)]</value>
+		<value>ColorBackHomeButton44</value>
+	</variable>
+	<variable name="ColorBackWebOS45">
+		<value condition="Skin.HasSetting(ColorBackWebOS45)">$INFO[Skin.String(SelfColorWebOS45_Path)]</value>
+		<value>ColorBackHomeButton45</value>
+	</variable>
+	<variable name="ColorBackWebOS46">
+		<value condition="Skin.HasSetting(ColorBackWebOS46)">$INFO[Skin.String(SelfColorWebOS46_Path)]</value>
+		<value>ColorBackHomeButton46</value>
+	</variable>
 
 	<!-- Color Settings for Homebutton Close -->
 	<!--================================ Pictures Widget Begin =========================================-->

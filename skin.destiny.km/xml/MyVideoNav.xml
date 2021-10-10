@@ -20,7 +20,7 @@
 		<include>CommonHomeBack</include>
 		<include>SideBladeForViews</include>
 		<include>ViewsVideo</include>
-		<include>HomePlaying</include>
+		<!-- <include>HomePlaying</include> -->
 		<include>JumpBarHorizontal</include>
 		<control type="group">
 			<visible>!Skin.HasSetting(kiosk)</visible>

@@ -5,9 +5,9 @@
 		<!-- ============================================= HOME MUSICSEKTION ============================================ -->
 		<!-- ============================================================================================================ -->
 		<control type="group">
-			<animation type="Conditional" condition="System.IdleTime(3) + !Player.Caching" reversible="true">
+			<!-- <animation type="Conditional" condition="System.IdleTime(3) + !Player.Caching" reversible="true">
 				<effect type="fade" start="100" end="0" time="400"/>
-			</animation>
+			</animation> -->
 			<visible>Window.IsVisible(Home) | !Skin.HasSetting(NoHomeDBCounter)</visible>
 			<control type="label">
 				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV) + !Skin.HasSetting(Use_Startup_DreamVideo)</visible>
@@ -26,7 +26,7 @@
 				<scrollsuffix> - </scrollsuffix>
 			</control>
 			<!-- NOW PLAYING INFO MOVIES -->
-			<control type="label">
+			<!-- <control type="label">
 				<visible>VideoPlayer.Content(Movies)</visible>
 				<visible>Player.HasVideo</visible>
 				<left>665</left>
@@ -41,28 +41,11 @@
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> - </scrollsuffix>
-			</control>
+			</control> -->
 			<!-- KM added 20200429 -->
-			<control type="label">
-				<visible>VideoPlayer.Content(Movies)</visible>
-				<visible>Player.HasVideo</visible>
-				<visible>Player.TempoEnabled</visible>
-				<top>18</top>
-				<align>left</align>
-				<label>$INFO[Player.PlaySpeed]X Play</label>
-				<font>primal_16_Title</font>
-			</control>
-			<control type="label">
-				<visible>VideoPlayer.Content(Episodes)</visible>
-				<visible>Player.HasVideo</visible>
-				<visible>Player.TempoEnabled</visible>
-				<top>18</top>
-				<align>left</align>
-				<label>$INFO[Player.PlaySpeed]X Play</label>
-				<font>primal_16_Title</font>
-			</control>
+
 			<!-- NOW PLAYING INFO LiveTV -->
-			<control type="label">
+			<!-- <control type="label">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 				<visible>Player.HasVideo</visible>
 				<left>665</left>
@@ -77,9 +60,9 @@
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> - </scrollsuffix>
-			</control>
+			</control> -->
 			<!-- NOW PLAYING EPISODES -->
-			<control type="label">
+			<!-- <control type="label">
 				<visible>VideoPlayer.Content(Episodes)</visible>
 				<visible>Player.HasVideo</visible>
 				<left>665</left>
@@ -94,15 +77,15 @@
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> - </scrollsuffix>
-			</control>
+			</control> -->
 			<!-- NOW PLAYING MUSIC -->
 			<control type="label">
 				<visible>Player.HasAudio</visible>
-				<left>665</left>
+				<left>850</left>
 				<top>18</top>
 				<height>45</height>
-				<width>1200</width>
-				<label>[B]$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Title, - ]$INFO[MusicPlayer.Year, (,)][/B] - $INFO[Player.Time]$INFO[Player.Duration, / ] - $LOCALIZE[50012]: $INFO[MusicPlayer.FinishTime]</label>
+				<width>1000</width>
+				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Title]-$INFO[Player.Time]</label>
 				<align>right</align>
 				<font>primal_16_Title</font>
 				<textcolor>$VAR[ColorFontNormal]</textcolor>

@@ -464,10 +464,19 @@
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[VideoPlayer.AudioCodec,special://skin/flags/flags_color/audio/,.png]</texture>
 				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
-
+				<visible>!String.Contains(Player.Filenameandpath,atmos)</visible>
 			</control>
 
+			<control type="image">
+				<description>AudioCodecFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>special://skin/flags/flags_color/audio/atmos.png</texture>
+				<colordiffuse>white</colordiffuse>
+				<visible>String.Contains(Player.Filenameandpath,atmos)</visible>
 
+			</control>
 			<control type="image">
 				<description>AudioChannelsFlagging</description>
 				<width>90</width>
@@ -475,8 +484,16 @@
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[VideoPlayer.AudioChannels,special://skin/flags/flags_color/channels/,.png]</texture>
 				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
-
 			</control>
+			<control type="image">
+				<description>VideoAspectratio</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[VideoPlayer.VideoAspect,special://skin/flags/flags_color/aspectratio/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
+			</control>
+
 		</control>
 	</include>
 
@@ -512,10 +529,19 @@
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[ListItem.AudioCodec,special://skin/flags/flags_color/audio/,.png]</texture>
 				<colordiffuse>white</colordiffuse>
+				<visible>!String.Contains(ListItem.Filenameandpath,atmos)</visible>
 
 			</control>
+			<control type="image">
+				<description>AudioCodecFlagging</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>special://skin/flags/flags_color/audio/atmos.png</texture>
+				<colordiffuse>white</colordiffuse>
+				<visible>String.Contains(ListItem.Filenameandpath,atmos)</visible>
 
-
+			</control>
 			<control type="image">
 				<description>AudioChannelsFlagging</description>
 				<width>90</width>
@@ -523,7 +549,14 @@
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[ListItem.AudioChannels,special://skin/flags/flags_color/channels/,.png]</texture>
 				<colordiffuse>white</colordiffuse>
-
+			</control>
+			<control type="image">
+				<description>VideoAspectratio</description>
+				<width>90</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.VideoAspect,special://skin/flags/flags_color/aspectratio/,.png]</texture>
+				<colordiffuse>$VAR[ColorFlaggingIcons]</colordiffuse>
 			</control>
 		</control>
 	</include>

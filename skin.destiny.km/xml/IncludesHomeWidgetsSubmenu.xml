@@ -87,8 +87,8 @@
 
                     <control type="label">
                         <description>Title label</description>
-                        <left>50</left>
-                        <top>370</top>
+                        <left>48</left>
+                        <top>373</top>
                         <height>34</height>
                         <width>200</width>
                         <label>$INFO[ListItem.Label]</label>
@@ -207,15 +207,15 @@
 
                     <control type="label">
                         <description>Title label</description>
-                        <left>50</left>
-                        <top>370</top>
+                        <left>48</left>
+                        <top>373</top>
                         <height>34</height>
                         <width>200</width>
                         <label>$INFO[ListItem.Label]</label>
                         <align>left</align>
                         <aligny>left</aligny>
                         <font>primal_15_Title</font>
-                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+                        <textcolor>ff00ff7f</textcolor>
                         <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                     </control>
                     <control type="group">
@@ -239,7 +239,7 @@
                             <align>left</align>
                             <aligny>left</aligny>
                             <font>primal_15_Title</font>
-                            <textcolor>$VAR[ColorFontNormal]</textcolor>
+                            <textcolor>FFEBE627</textcolor>
                             <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
 
                         </control>

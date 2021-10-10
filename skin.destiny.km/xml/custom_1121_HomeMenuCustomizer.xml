@@ -92,12 +92,16 @@
 					<include>HomeMenuPlaylist9</include>
 					<include>HomeMenuPlaylist10</include>
 					<include>HomeMenuTving</include>
+					<include>HomeMenuSamsungtv</include>
+					<include>HomeMenuKakaotv</include>
+					<include>HomeMenuCoupang</include>
+					<include>HomeMenuNaversports</include>
 					<include>HomeMenuNetflix</include>
 					<include>HomeMenuWave</include>
 					<include>HomeMenuWatcha</include>
 					<include>HomeMenuYoutube</include>
 					<include>HomeMenuSpotv</include>
-										
+
 				</content>
 			</control>
 			<control type="grouplist" id="90001">

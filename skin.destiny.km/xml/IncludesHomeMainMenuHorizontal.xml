@@ -10,6 +10,8 @@
 				<ondown>9001</ondown>
 				<onright>9000</onright>
 				<onleft>709051</onleft>
+
+				<!-- 홈화면 메뉴 위젯 동작 -->
 				<!-- <visible>!Control.Hasfocus(18304)</visible> -->
 				<!-- KM 1 라이브TV-->
 				<onup condition="Container(9000).Hasfocus(1)">43446</onup>
@@ -22,50 +24,36 @@
 				<!-- KM 재생목록 1 ~ 10 -->
 				<!-- <onup condition="Container(9000).Hasfocus(5) | Container(9000).Hasfocus(6) | Container(9000).Hasfocus(7) | Container(9000).Hasfocus(19) | Container(9000).Hasfocus(20) | Container(9000).Hasfocus(41) | Container(9000).Hasfocus(42) | Container(9000).Hasfocus(43) | Container(9000).Hasfocus(44) | Container(9000).Hasfocus(45)">18309</onup>
 				 -->
-				
-			
-				
-				
-				
-		<onup condition="Container(9000).Hasfocus(5) + Skin.HasSetting(movieplaylistButton1000)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(5) + !Skin.HasSetting(movieplaylistButton1000)">1864</onup>
+				<onup condition="Container(9000).Hasfocus(5) + Skin.HasSetting(movieplaylistButton1000)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(5) + !Skin.HasSetting(movieplaylistButton1000)">1864</onup>
 
-		<onup condition="Container(9000).Hasfocus(6) + Skin.HasSetting(movieplaylistButton2000)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(6) + Skin.HasSetting(movieplaylistButton2000)">1864</onup>
-		
-		<onup condition="Container(9000).Hasfocus(7) + Skin.HasSetting(movieplaylistButton3000)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(7) + !Skin.HasSetting(movieplaylistButton3000)">1864</onup>
+				<onup condition="Container(9000).Hasfocus(6) + Skin.HasSetting(movieplaylistButton2000)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(6) + Skin.HasSetting(movieplaylistButton2000)">1864</onup>
 
-		<onup condition="Container(9000).Hasfocus(19) + Skin.HasSetting(movieplaylistButton1001)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(19) + !Skin.HasSetting(movieplaylistButton1001)">1864</onup>
+				<onup condition="Container(9000).Hasfocus(7) + Skin.HasSetting(movieplaylistButton3000)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(7) + !Skin.HasSetting(movieplaylistButton3000)">1864</onup>
 
-		<onup condition="Container(9000).Hasfocus(20) + Skin.HasSetting(movieplaylistButton1002)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(20) + !Skin.HasSetting(movieplaylistButton1002)">1864</onup>
+				<onup condition="Container(9000).Hasfocus(19) + Skin.HasSetting(movieplaylistButton1001)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(19) + !Skin.HasSetting(movieplaylistButton1001)">1864</onup>
 
-		<onup condition="Container(9000).Hasfocus(41) + Skin.HasSetting(movieplaylistButton1003)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(41) + !Skin.HasSetting(movieplaylistButton1003)">1864</onup>
+				<onup condition="Container(9000).Hasfocus(20) + Skin.HasSetting(movieplaylistButton1002)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(20) + !Skin.HasSetting(movieplaylistButton1002)">1864</onup>
 
-		<onup condition="Container(9000).Hasfocus(42) + Skin.HasSetting(movieplaylistButton1004)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(42) + !Skin.HasSetting(movieplaylistButton1004)">1864</onup>
+				<onup condition="Container(9000).Hasfocus(41) + Skin.HasSetting(movieplaylistButton1003)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(41) + !Skin.HasSetting(movieplaylistButton1003)">1864</onup>
 
-		<onup condition="Container(9000).Hasfocus(43) + Skin.HasSetting(movieplaylistButton1005)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(43) + !Skin.HasSetting(movieplaylistButton1005)">1864</onup>
-		
-		<onup condition="Container(9000).Hasfocus(44) + Skin.HasSetting(movieplaylistButton1006)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(44) + !Skin.HasSetting(movieplaylistButton1006)">1864</onup>
+				<onup condition="Container(9000).Hasfocus(42) + Skin.HasSetting(movieplaylistButton1004)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(42) + !Skin.HasSetting(movieplaylistButton1004)">1864</onup>
 
-		<onup condition="Container(9000).Hasfocus(45) + Skin.HasSetting(movieplaylistButton1007)">18309</onup>
-		<onup condition="Container(9000).Hasfocus(45) + !Skin.HasSetting(movieplaylistButton1007)">1864</onup>
-				
-				
-		
-				
-				
-				
-				
-				
-				
-				
+				<onup condition="Container(9000).Hasfocus(43) + Skin.HasSetting(movieplaylistButton1005)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(43) + !Skin.HasSetting(movieplaylistButton1005)">1864</onup>
+
+				<onup condition="Container(9000).Hasfocus(44) + Skin.HasSetting(movieplaylistButton1006)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(44) + !Skin.HasSetting(movieplaylistButton1006)">1864</onup>
+
+				<onup condition="Container(9000).Hasfocus(45) + Skin.HasSetting(movieplaylistButton1007)">18309</onup>
+				<onup condition="Container(9000).Hasfocus(45) + !Skin.HasSetting(movieplaylistButton1007)">1864</onup>
+
 				<!-- KM 8 TV쇼-->
 				<onup condition="Container(9000).Hasfocus(8)">300002</onup>
 				<!-- KM 단순 재생목록 -->
@@ -88,7 +76,7 @@
 				<onup condition="Container(9000).Hasfocus(17)">1863</onup>
 				<!-- KM 18 즐겨찾기 -->
 				<onup condition="Container(9000).Hasfocus(18)">1863</onup>
-				
+
 				<!-- KM 23 넷플릭스 -->
 				<onup condition="Container(9000).Hasfocus(23) + Skin.HasSetting(movieplaylistButton1009) ">18309</onup>
 				<onup condition="Container(9000).Hasfocus(23) + !Skin.HasSetting(movieplaylistButton1009) ">1864</onup>
@@ -108,20 +96,30 @@
 				<onup condition="Container(9000).Hasfocus(28) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
 				<onup condition="Container(9000).Hasfocus(28) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
 
+				<!-- KM 28 삼성티비플러스 -->
+				<onup condition="Container(9000).Hasfocus(29) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
+				<onup condition="Container(9000).Hasfocus(29) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
+				<!-- KM 28 카카오티비 -->
+				<onup condition="Container(9000).Hasfocus(30) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
+				<onup condition="Container(9000).Hasfocus(30) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
+				<!-- KM 28 쿠팡티비 -->
+				<onup condition="Container(9000).Hasfocus(31) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
+				<onup condition="Container(9000).Hasfocus(31) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
+
 				<!-- Watchlist -->
-				<onup condition="Container(9000).Hasfocus(31)">709030</onup>
+				<!-- <onup condition="Container(9000).Hasfocus(31)">709030</onup> -->
 				<!-- AVM Addon -->
-				<onup condition="Container(9000).Hasfocus(32)">300001</onup>
+				<!-- <onup condition="Container(9000).Hasfocus(32)">300001</onup> -->
 				<!-- Search Addon -->
-				<onup condition="Container(9000).Hasfocus(33)">1863</onup>
+				<!-- <onup condition="Container(9000).Hasfocus(33)">1863</onup> -->
 				<!-- KM 50 전원-->
 				<onup condition="Container(9000).Hasfocus(50)">1863</onup>
 				<!-- KM 51 EmbyTV쇼-->
-				<onup condition="Container(9000).Hasfocus(51)">300002</onup>
+				<!-- <onup condition="Container(9000).Hasfocus(51)">300002</onup> -->
 				<!-- KM 52 컬렉션-->
 				<onup condition="Container(9000).Hasfocus(52)">300006</onup>
 				<!-- KM 53 Emby 컬렉션-->
-				<onup condition="Container(9000).Hasfocus(53)">300001</onup>
+				<!-- <onup condition="Container(9000).Hasfocus(53)">300001</onup> -->
 				<!-- Emby Collection -->
 				<scrolltime tween="Quadratic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>

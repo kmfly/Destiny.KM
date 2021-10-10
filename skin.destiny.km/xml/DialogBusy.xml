@@ -12,6 +12,7 @@
 			<bordertexture border="10">ThumbShadow.png</bordertexture>
 			<bordersize>7</bordersize>
 			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			<visible>!Skin.HasSetting(movie_trailerflag)</visible>
 
 
 		</control>
@@ -25,6 +26,7 @@
 			<fadetime>0</fadetime>
 			<imagepath>special://skin/spinner/widgets_busy_loader</imagepath>
 			<colordiffuse>white</colordiffuse>
+			<visible>!Skin.HasSetting(movie_trailerflag)</visible>
 			<!-- <visible>Control.HasFocus(9031) + !ListItem.IsCollection + !Player.Playing</visible> -->
 		</control>
 

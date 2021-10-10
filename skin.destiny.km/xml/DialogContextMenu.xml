@@ -1,41 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">1000</defaultcontrol>
-	<!-- <onload>Close</onload> -->
-
 	<controls>
-		<!-- <control type="button">
-			<description>button template</description>
-			<left>40</left>
-			<top>-</top>
-			<width>50%</width>
-			<height>50%</height>
-			<align>center</align>
-
-			<font>primal_20</font>
-
-		</control> -->
-
-		<!-- <control type="button">
-			<description>Close Window button</description>
-			<left>430</left>
-			<top>-10</top>
-			<width>48</width>
-			<height>48</height>
-			<label></label>
-			<font></font>
-			<onclick>Dialog.Close(106)</onclick>
-			<texturefocus>special://skin/backgrounds/icon/km_close_sel.png</texturefocus>
-			<texturenofocus>special://skin/backgrounds/icon/km_close.png</texturenofocus>
-			<visible>!Skin.HasSetting(tablet_modus)</visible>
-			<visible>!Container.Content(Episodes)</visible>
-		</control> -->
-		<include>DialogContextMenu_TVshow_ep</include>
-		<!-- <include condition="String.IsEqual(ListItem.DBType,movie)">DialogContextMenu_movies</include>
-		<include condition="String.IsEqual(ListItem.DBType,tvshow)">DialogContextMenu_TVshow_ep</include> -->
-
-		<!-- <include condition="Container.Content(movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons)">DialogContextMenu_movies</include> -->
-		<!-- condition="[Skin.HasTheme(classic) | Skin.HasSetting(smallContextMenu)]"	 -->
+		<include condition="!Container.Content(Episodes)">DialogContextMenu_movies</include>
+		<include condition="Container.Content(Episodes)">DialogContextMenu_TVshow_ep</include>
 	</controls>
 
 </window>

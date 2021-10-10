@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="MenuLiveTV">
-
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),1)">HomeMenuLiveTV</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),1)">HomeMenuRadio</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemMovies),1)">HomeMenuMovies</include>
@@ -35,14 +34,16 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSearch),1)">HomeMenuSearch</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemPower),1)">HomeMenuPower</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),1)">HomeMenuFav</include>
-
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemTving),1)">HomeMenuTving</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemNetflix),1)">HomeMenuNetflix</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWave),1)">HomeMenuWave</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),1)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),1)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),1)">HomeMenuSpotv</include>
-
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),1)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),1)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),1)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),1)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemLiveTV))">HomeMenuLiveTV</include>
 
 
@@ -88,6 +89,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),2)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),2)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),2)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),2)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),2)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),2)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),2)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemRadio))">HomeMenuRadio</include>
 
 	</include>
@@ -132,6 +137,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),3)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),3)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),3)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),3)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),3)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),3)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),3)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemMovies))">HomeMenuMovies</include>
 
 	</include>
@@ -176,6 +185,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),52)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),52)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),52)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),52)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),52)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),52)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),52)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemCollection))">HomeMenuCollection</include>
 
 	</include>
@@ -220,6 +233,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),8)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),8)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),8)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),8)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),8)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),8)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),8)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemTVShows))">HomeMenuTVShows</include>
 
 	</include>
@@ -243,7 +260,7 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist6),4)">HomeMenuPlaylist6</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist7),4)">HomeMenuPlaylist7</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist8),4)">HomeMenuPlaylist8</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist4),4)">HomeMenuPlaylist4</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist9),4)">HomeMenuPlaylist4</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist10),4)">HomeMenuPlaylist10</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemMusic),4)">HomeMenuMusic</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemAddons),4)">HomeMenuAddons</include>
@@ -264,6 +281,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),4)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),4)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),4)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),4)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),4)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),4)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),4)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemVideos))">HomeMenuVideos</include>
 	</include>
 	<include name="MenuPlaylist1">
@@ -306,6 +327,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),5)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),5)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),5)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),5)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),5)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),5)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),5)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist1))">HomeMenuPlaylist1</include>
 	</include>
 	<include name="MenuPlaylist2">
@@ -348,6 +373,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),6)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),6)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),6)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),6)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),6)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),6)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),6)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist2))">HomeMenuPlaylist2</include>
 	</include>
 	<include name="MenuPlaylist3">
@@ -390,6 +419,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),7)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),7)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),7)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),7)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),7)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),7)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),7)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist3))">HomeMenuPlaylist3</include>
 	</include>
 	<include name="MenuPlaylist4">
@@ -432,6 +465,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),19)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),19)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),19)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),19)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),19)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),19)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),19)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist4))">HomeMenuPlaylist4</include>
 	</include>
 	<include name="MenuPlaylist5">
@@ -474,6 +511,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),20)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),20)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),20)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),20)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),20)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),20)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),20)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist5))">HomeMenuPlaylist5</include>
 	</include>
 	<include name="MenuPlaylist6">
@@ -516,6 +557,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),41)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),41)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),41)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),41)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),41)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),41)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),41)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist6))">HomeMenuPlaylist6</include>
 	</include>
 	<include name="MenuPlaylist7">
@@ -558,6 +603,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),42)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),42)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),42)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),42)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),42)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),42)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),42)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist7))">HomeMenuPlaylist7</include>
 	</include>
 	<include name="MenuPlaylist8">
@@ -600,6 +649,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),43)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),43)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),43)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),43)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),43)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),43)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),43)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist8))">HomeMenuPlaylist8</include>
 	</include>
 	<include name="MenuPlaylist9">
@@ -642,6 +695,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),44)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),44)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),44)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),44)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),44)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),44)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),44)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist9))">HomeMenuPlaylist9</include>
 	</include>
 	<include name="MenuPlaylist10">
@@ -684,6 +741,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),45)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),45)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),45)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),45)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),45)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),45)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),45)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlaylist10))">HomeMenuPlaylist10</include>
 	</include>
 	<include name="MenuMusic">
@@ -726,6 +787,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),10)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),10)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),10)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),10)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),10)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),10)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),10)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemMusic))">HomeMenuMusic</include>
 	</include>
 	<include name="MenuAddons">
@@ -768,6 +833,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),11)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),11)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),11)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),11)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),11)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),11)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),11)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemAddons))">HomeMenuAddons</include>
 	</include>
 	<include name="MenuAndroidApps">
@@ -810,6 +879,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),12)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),12)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),12)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),12)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),12)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),12)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),12)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemAndroidApps))">HomeMenuAndroidApps</include>
 	</include>
 
@@ -853,6 +926,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),13)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),13)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),13)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),13)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),13)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),13)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),13)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPictures))">HomeMenuPictures</include>
 	</include>
 	<include name="MenuWeather">
@@ -895,6 +972,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),14)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),14)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),14)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),14)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),14)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),14)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),14)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemWeather))">HomeMenuWeather</include>
 	</include>
 	<include name="MenuSettings">
@@ -937,6 +1018,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),15)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),15)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),15)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),15)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),15)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),15)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),15)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemSettings))">HomeMenuSettings</include>
 	</include>
 	<include name="MenuPlayDisc">
@@ -979,6 +1064,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),16)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),16)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),16)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),16)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),16)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),16)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),16)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPlayDisc))">HomeMenuPlayDisc</include>
 	</include>
 	<!-- KM 17 파일매니저 -->
@@ -1022,6 +1111,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),17)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),17)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),17)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),17)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),17)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),17)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),17)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemFileManager))">HomeMenuFileManager</include>
 	</include>
 
@@ -1065,6 +1158,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),18)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),18)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),18)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),18)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),18)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),18)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),18)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemFav))">HomeMenuFav</include>
 	</include>
 
@@ -1108,6 +1205,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),23)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),23)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),23)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),23)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),23)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),23)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),23)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemNetflix))">HomeMenuNetflix</include>
 	</include>
 
@@ -1151,6 +1252,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),24)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),24)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),24)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),24)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),24)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),24)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),24)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemTving))">HomeMenuTving</include>
 	</include>
 
@@ -1194,6 +1299,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),25)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),25)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),25)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),25)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),25)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),25)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),25)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemWave))">HomeMenuWave</include>
 	</include>
 
@@ -1237,6 +1346,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),26)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),26)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),26)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),26)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),26)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),26)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),26)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemWatcha))">HomeMenuWatcha</include>
 	</include>
 
@@ -1280,6 +1393,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),27)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),27)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),27)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),27)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),27)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),27)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),27)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemYoutube))">HomeMenuYoutube</include>
 	</include>
 
@@ -1323,48 +1440,14 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),28)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),28)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),28)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),28)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),28)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),28)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),28)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemSpotv))">HomeMenuSpotv</include>
 	</include>
 
-
-	<!-- <include name="MenuWatchlist">
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),28)">HomeMenuLiveTV</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),28)">HomeMenuRadio</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemMovies),28)">HomeMenuMovies</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyMovies),28)">HomeMenuEmbyMovies</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),28)">HomeMenuCollection</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),28)">HomeMenuEmbyCollection</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemTVShows),28)">HomeMenuTVShows</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyTVShows),28)">HomeMenuEmbyTVShows</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemVideos),28)">HomeMenuVideos</include>
-		<include condition="String.IsEqual(Skin.String(HomeMyChannel10),28)">HomeMyChannel10</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist1),28)">HomeMenuPlaylist1</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist2),28)">HomeMenuPlaylist2</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist3),28)">HomeMenuPlaylist3</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist4),28)">HomeMenuPlaylist4</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist5),28)">HomeMenuPlaylist5</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist6),28)">HomeMenuPlaylist6</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist7),28)">HomeMenuPlaylist7</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist8),28)">HomeMenuPlaylist8</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist9),28)">HomeMenuPlaylist9</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist10),28)">HomeMenuPlaylist10</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemMusic),28)">HomeMenuMusic</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemAddons),28)">HomeMenuAddons</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemAndroidApps),28)">HomeMenuAndroidApps</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPictures),28)">HomeMenuPictures</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemWeather),28)">HomeMenuWeather</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemSettings),28)">HomeMenuSettings</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlayDisc),28)">HomeMenuPlayDisc</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemFileManager),28)">HomeMenuFileManager</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatchlist),28)">HomeMenuWatchlist</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemSimplePlaylists),28)">HomeMenuSimplePlaylists</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemSearch),28)">HomeMenuSearch</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPower),28)">HomeMenuPower</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),28)">HomeMenuFav</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),28)">HomeMenuTving</include>
-		<include condition="String.IsEmpty(Skin.String(HomeMenuItemWatchlist))">HomeMenuWatchlist</include>
-	</include> -->
-	<!-- <include name="MenuSimplePlaylists">
+	<include name="MenuSamsungtv">
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),29)">HomeMenuLiveTV</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),29)">HomeMenuRadio</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemMovies),29)">HomeMenuMovies</include>
@@ -1398,9 +1481,112 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSearch),29)">HomeMenuSearch</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemPower),29)">HomeMenuPower</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),29)">HomeMenuFav</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),29)">HomeMenuTving</include>
-		<include condition="String.IsEmpty(Skin.String(HomeMenuItemSimplePlaylists))">HomeMenuSimplePlaylists</include>
-	</include> -->
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTving),29)">HomeMenuTving</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNetflix),29)">HomeMenuNetflix</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWave),29)">HomeMenuWave</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),29)">HomeMenuWatcha</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),29)">HomeMenuYoutube</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),29)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),29)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),29)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),29)">HomeMenuNaversports</include>
+		<include condition="String.IsEmpty(Skin.String(HomeMenuItemSamsungtv))">HomeMenuSamsungtv</include>
+	</include>
+
+	<include name="MenuKakaotv">
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),30)">HomeMenuLiveTV</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),30)">HomeMenuRadio</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemMovies),30)">HomeMenuMovies</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyMovies),30)">HomeMenuEmbyMovies</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),30)">HomeMenuCollection</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),30)">HomeMenuEmbyCollection</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTVShows),30)">HomeMenuTVShows</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyTVShows),30)">HomeMenuEmbyTVShows</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemVideos),30)">HomeMenuVideos</include>
+		<include condition="String.IsEqual(Skin.String(HomeMyChannel10),30)">HomeMyChannel10</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist1),30)">HomeMenuPlaylist1</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist2),30)">HomeMenuPlaylist2</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist3),30)">HomeMenuPlaylist3</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist4),30)">HomeMenuPlaylist4</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist5),30)">HomeMenuPlaylist5</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist6),30)">HomeMenuPlaylist6</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist7),30)">HomeMenuPlaylist7</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist8),30)">HomeMenuPlaylist8</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist9),30)">HomeMenuPlaylist9</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist10),30)">HomeMenuPlaylist10</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemMusic),30)">HomeMenuMusic</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemAddons),30)">HomeMenuAddons</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemAndroidApps),30)">HomeMenuAndroidApps</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPictures),30)">HomeMenuPictures</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWeather),30)">HomeMenuWeather</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSettings),30)">HomeMenuSettings</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlayDisc),30)">HomeMenuPlayDisc</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemFileManager),30)">HomeMenuFileManager</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatchlist),30)">HomeMenuWatchlist</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSimplePlaylists),30)">HomeMenuSimplePlaylists</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSearch),30)">HomeMenuSearch</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPower),30)">HomeMenuPower</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),30)">HomeMenuFav</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTving),30)">HomeMenuTving</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNetflix),30)">HomeMenuNetflix</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWave),30)">HomeMenuWave</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),30)">HomeMenuWatcha</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),30)">HomeMenuYoutube</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),30)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),30)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),30)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),30)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),30)">HomeMenuNaversports</include>
+		<include condition="String.IsEmpty(Skin.String(HomeMenuItemKakaotv))">HomeMenuKakaotv</include>
+	</include>
+
+	<include name="MenuCoupang">
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),31)">HomeMenuLiveTV</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),31)">HomeMenuRadio</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemMovies),31)">HomeMenuMovies</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyMovies),31)">HomeMenuEmbyMovies</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),31)">HomeMenuCollection</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),31)">HomeMenuEmbyCollection</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTVShows),31)">HomeMenuTVShows</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyTVShows),31)">HomeMenuEmbyTVShows</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemVideos),31)">HomeMenuVideos</include>
+		<include condition="String.IsEqual(Skin.String(HomeMyChannel10),31)">HomeMyChannel10</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist1),31)">HomeMenuPlaylist1</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist2),31)">HomeMenuPlaylist2</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist3),31)">HomeMenuPlaylist3</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist4),31)">HomeMenuPlaylist4</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist5),31)">HomeMenuPlaylist5</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist6),31)">HomeMenuPlaylist6</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist7),31)">HomeMenuPlaylist7</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist8),31)">HomeMenuPlaylist8</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist9),31)">HomeMenuPlaylist9</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist10),31)">HomeMenuPlaylist10</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemMusic),31)">HomeMenuMusic</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemAddons),31)">HomeMenuAddons</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemAndroidApps),31)">HomeMenuAndroidApps</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPictures),31)">HomeMenuPictures</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWeather),31)">HomeMenuWeather</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSettings),31)">HomeMenuSettings</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlayDisc),31)">HomeMenuPlayDisc</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemFileManager),31)">HomeMenuFileManager</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatchlist),31)">HomeMenuWatchlist</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSimplePlaylists),31)">HomeMenuSimplePlaylists</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSearch),31)">HomeMenuSearch</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPower),31)">HomeMenuPower</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),31)">HomeMenuFav</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTving),31)">HomeMenuTving</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNetflix),31)">HomeMenuNetflix</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWave),31)">HomeMenuWave</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),31)">HomeMenuWatcha</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),31)">HomeMenuYoutube</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),31)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),31)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),31)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),31)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),31)">HomeMenuNaversports</include>
+		<include condition="String.IsEmpty(Skin.String(HomeMenuItemCoupang))">HomeMenuCoupang</include>
+	</include>
+
 	<include name="MenuSearch">
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),32)">HomeMenuLiveTV</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),32)">HomeMenuRadio</include>
@@ -1441,7 +1627,57 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),32)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),32)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),32)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),32)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),32)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),32)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),32)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemSearch))">HomeMenuSearch</include>
+	</include>
+	<include name="MenuNaversports">
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),33)">HomeMenuLiveTV</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),33)">HomeMenuRadio</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemMovies),33)">HomeMenuMovies</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyMovies),33)">HomeMenuEmbyMovies</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),33)">HomeMenuCollection</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),33)">HomeMenuEmbyCollection</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTVShows),33)">HomeMenuTVShows</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyTVShows),33)">HomeMenuEmbyTVShows</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemVideos),33)">HomeMenuVideos</include>
+		<include condition="String.IsEqual(Skin.String(HomeMyChannel10),33)">HomeMyChannel10</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist1),33)">HomeMenuPlaylist1</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist2),33)">HomeMenuPlaylist2</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist3),33)">HomeMenuPlaylist3</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist4),33)">HomeMenuPlaylist4</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist5),33)">HomeMenuPlaylist5</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist6),33)">HomeMenuPlaylist6</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist7),33)">HomeMenuPlaylist7</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist8),33)">HomeMenuPlaylist8</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist9),33)">HomeMenuPlaylist9</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist10),33)">HomeMenuPlaylist10</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemMusic),33)">HomeMenuMusic</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemAddons),33)">HomeMenuAddons</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemAndroidApps),33)">HomeMenuAndroidApps</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPictures),33)">HomeMenuPictures</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWeather),33)">HomeMenuWeather</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSettings),33)">HomeMenuSettings</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlayDisc),33)">HomeMenuPlayDisc</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemFileManager),33)">HomeMenuFileManager</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatchlist),33)">HomeMenuWatchlist</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSimplePlaylists),33)">HomeMenuSimplePlaylists</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSearch),33)">HomeMenuSearch</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPower),33)">HomeMenuPower</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),33)">HomeMenuFav</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTving),33)">HomeMenuTving</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNetflix),33)">HomeMenuNetflix</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWave),33)">HomeMenuWave</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),33)">HomeMenuWatcha</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),33)">HomeMenuYoutube</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),33)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),33)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),33)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),33)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),33)">HomeMenuNaversports</include>
+		<include condition="String.IsEmpty(Skin.String(HomeMenuItemNaversports))">HomeMenuNaversports</include>
 	</include>
 	<include name="MenuPower">
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),50)">HomeMenuLiveTV</include>
@@ -1483,6 +1719,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),50)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),50)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),50)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),50)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),50)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),50)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),50)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemPower))">HomeMenuPower</include>
 	</include>
 	<include name="MyChannel10">
@@ -1525,6 +1765,10 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),51)">HomeMenuWatcha</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),51)">HomeMenuYoutube</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),51)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),51)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),51)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),51)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),51)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMyChannel10))">HomeMyChannel10</include>
 	</include>
 
@@ -1565,6 +1809,10 @@
 		<!-- 16 -->
 		<include>MenuSpotv</include>
 		<!-- <include>MenuEmbyTVShows</include> -->
+		<include>MenuSamsungtv</include>
+		<include>MenuKakaotv</include>
+		<include>MenuCoupang</include>
+		<include>MenuNaversports</include>
 		<!-- 17 -->
 		<include>MenuPlaylist1</include>
 		<!-- 18 -->
@@ -1602,8 +1850,6 @@
 		<include>MyChannel10</include>
 		<include>MenuWatchlist</include>
 		<include>MenuSimplePlaylists</include>
-
-
 	</include>
 	<include name="HomeMenuLiveTV">
 		<!-- KM 1 라이브TV-->
@@ -1655,27 +1901,6 @@
 			<visible>!System.HasAddon(plugin.video.embycon)</visible>
 		</item>
 	</include>
-	<!-- <include name="HomeMenuEmbyMovies">
-		
-		<item id="50">
-			<description>Emby Movies</description>
-			<label>Emby Movies</label>
-			<onclick condition="String.IsEmpty(Window(Home).Property(first_load_done))">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.embycon/?mode=SHOW_CONTENT&amp;item_type=Movie&amp;media_type=movies,return)</onclick>
-			<onclick>SetProperty(first_load_done, done, 10000)</onclick>
-			<thumb>special://skin/backgrounds/09.jpg</thumb>
-			<property name="MenuIcon" fallback="home/homeicons/film.png">$INFO[Skin.String(IconMovies_Icon)]</property>
-			<property name="BackWebOS3">home/button/webos_button.png</property>
-			<property name="BackTizen3">home/button/submenubutton.png</property>
-			<property name="Info">$LOCALIZE[342]: $INFO[Window(Home).Property(Movies.Count)]</property>
-			<property name="submenuVisibility" fallback="x3">$INFO[Skin.String(MovieHomeItem.SubMenu)]</property>
-			<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
-			<visible>System.HasAddon(plugin.video.embycon)</visible>
-		</item>
-	</include> -->
-
-	<!-- KM 홈메뉴에서 컬렉션 눌렀을때 동작 -->
-
 	<include name="HomeMenuCollection">
 		<!-- KM 52 컬렉션 영화-->
 		<item id="52">
@@ -1692,22 +1917,6 @@
 			<visible>!System.HasAddon(plugin.video.embycon)</visible>
 		</item>
 	</include>
-	<!-- <include name="HomeMenuEmbyCollection">
-		
-		<item id="53">
-			<description>Emby Collection</description>
-			<label>Emby Collection</label>
-			<onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.embycon/?url=%7Bserver%7D/emby/Users/%7Buserid%7D/Items%3FParentId%3D9df4efab1f9566a6088195a3f6029855%26IsVirtualUnaired%3Dfalse%26IsMissing%3DFalse%26Fields%3D%7Bfield_filters%7D%26ImageTypeLimit%3D1%26format%3Djson&amp;mode=GET_CONTENT&amp;media_type=boxsets&quot;,return)</onclick>
-			<thumb>special://skin/backgrounds/09.jpg</thumb>
-			<property name="MenuIcon" fallback="home/homeicons/collections.png">$INFO[Skin.String(IconMovies_Icon)]</property>
-			<property name="BackWebOS4">home/button/webos_button.png</property>
-			<property name="BackTizen4">home/button/submenubutton.png</property>
-			<property name="Info">$LOCALIZE[342]: $INFO[Window(Home).Property(Movies.Count)]</property>
-			<property name="submenuVisibility" fallback="x3">$INFO[Skin.String(MovieHomeItem.SubMenu)]</property>
-			<visible>!Skin.HasSetting(HomeMenuNoCollectionButton)</visible>
-			<visible>System.HasAddon(plugin.video.embycon)</visible>
-		</item>
-	</include> -->
 	<include name="HomeMenuTVShows">
 		<!-- KM 8 TV쇼-->
 		<item id="8">
@@ -1725,23 +1934,6 @@
 			<visible>!System.HasAddon(plugin.video.embycon)</visible>
 		</item>
 	</include>
-	<!-- <include name="HomeMenuEmbyTVShows">
-	
-		<item id="51">
-			<description>EmbyTVShows</description>
-			<label>Emby TV Shows</label>
-			<onclick condition="String.IsEmpty(Window(Home).Property(first_load_done))">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
-			<onclick>ActivateWindow(Videos,plugin://plugin.video.embycon/?mode=SHOW_CONTENT&amp;item_type=Series&amp;media_type=tvshows,return)</onclick>
-			<onclick>SetProperty(first_load_done, done, 10000)</onclick>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-			<property name="MenuIcon" fallback="home/homeicons/tvshows.png">$INFO[Skin.String(IconTVShows_Icon)]</property>
-			<property name="BackWebOS5">home/button/webos_button.png</property>
-			<property name="BackTizen5">home/button/submenubutton.png</property>
-			<property name="Info">$LOCALIZE[20343]: $INFO[Window(Home).Property(TVShows.Count)]</property>
-			<property name="submenuVisibility" fallback="x8">$INFO[Skin.String(TVShowHomeItem.SubMenu)]</property>
-			<visible>System.HasAddon(plugin.video.embycon)</visible>
-		</item>
-	</include> -->
 	<include name="HomeMenuVideos">
 		<!-- KM 4 비디오-->
 		<item id="4">
@@ -2019,7 +2211,6 @@
 			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
 		</item>
 	</include>
-
 	<include name="HomeMenuAndroidApps">
 		<!-- KM 12 안드로이드 앱-->
 		<item id="12">
@@ -2037,7 +2228,6 @@
 
 		</item>
 	</include>
-
 	<include name="HomeMenuPictures">
 		<!-- KM 13 사진-->
 		<item id="13">
@@ -2100,7 +2290,6 @@
 			<visible>!Skin.HasSetting(HomeMenuNoDiscDriveButton)</visible>
 		</item>
 	</include>
-
 	<include name="HomeMenuFileManager">
 		<!-- KM 17 파일매니저 -->
 		<item id="17">
@@ -2128,8 +2317,6 @@
 			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_fav)</visible>
 		</item>
 	</include>
-
-
 	<include name="HomeMenuNetflix">
 		<!-- KM 23 넷플릭스 -->
 		<item id="23">
@@ -2149,7 +2336,6 @@
 			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_netflix)</visible>
 		</item>
 	</include>
-
 	<!-- KM 24 티빙 -->
 	<include name="HomeMenuTving">
 		<item id="24">
@@ -2189,10 +2375,10 @@
 			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_Wave)</visible>
 		</item>
 	</include>
-	<!-- KM 26 와챠 -->
+	<!-- KM 26 왓챠 -->
 	<include name="HomeMenuWatcha">
 		<item id="26">
-			<label>와챠</label>
+			<label>왓챠</label>
 			<onclick>RunAddon(plugin.video.watcham)</onclick>
 			<icon></icon>
 			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Watcha_Folder)]</thumb>
@@ -2226,7 +2412,7 @@
 			<visible>System.HasAddon(plugin.video.youtube)</visible>
 		</item>
 	</include>
-
+	<!-- KM 28 스포티비 -->
 	<include name="HomeMenuSpotv">
 		<item id="28">
 			<label>스포티비</label>
@@ -2234,8 +2420,8 @@
 			<icon></icon>
 			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Spotv_Folder)]</thumb>
 			<property name="MenuIcon" fallback="special://skin/media/home/spotv.png">$INFO[Skin.String(IconSpotv_Icon)]</property>
-			<property name="BackWebOS35">home/button/webos_button.png</property>
-			<property name="BackTizen35">home/button/submenubutton.png</property>
+			<property name="BackWebOS14">home/button/webos_button.png</property>
+			<property name="BackTizen14">home/button/submenubutton.png</property>
 			<property name="WidgetLabel">$INFO[Skin.String(SpotvHomeItem.WidgetLabel)]</property>
 			<property name="WidgetType">$INFO[Skin.String(SpotvHomeItem.WidgetType)]</property>
 			<property name="Path">$INFO[Skin.String(SpotvHomeItem.Path)]</property>
@@ -2244,19 +2430,61 @@
 			<visible>System.HasAddon(plugin.video.spotvm)</visible>
 		</item>
 	</include>
-
-	<!-- <include name="HomeMenuSimplePlaylists">
-		<item id="9">
-			<label>SimplePlaylists</label>
-			<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=showPlaylists)</onclick>
-			<icon/>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_ScriptWatchlist_Folder)]</thumb>
-			<property name="MenuIcon" fallback="home/homeicons/news.png">$INFO[Skin.String(IconSimplePlaylists_Icon)]</property>
-			<property name="BackWebOS28">home/button/webos_button.png</property>
-			<property name="BackTizen28">home/button/submenubutton.png</property>
-			<visible>Skin.HasSetting(HomeMenuNoScriptWatchlistButton)</visible>
+	<!-- KM 29 삼성TV플러스 -->
+	<include name="HomeMenuSamsungtv">
+		<item id="29">
+			<label>삼성TV플러스</label>
+			<onclick>RunAddon(plugin.video.samsungtvm)</onclick>
+			<icon></icon>
+			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Samsungtv_Folder)]</thumb>
+			<property name="MenuIcon" fallback="special://skin/media/home/samsungtvplus.png">$INFO[Skin.String(IconSamsungtv_Icon)]</property>
+			<property name="BackWebOS18">home/button/webos_button.png</property>
+			<property name="BackTizen18">home/button/submenubutton.png</property>
+			<property name="WidgetLabel">$INFO[Skin.String(SamsungtvHomeItem.WidgetLabel)]</property>
+			<property name="WidgetType">$INFO[Skin.String(SamsungtvHomeItem.WidgetType)]</property>
+			<property name="Path">$INFO[Skin.String(SamsungtvHomeItem.Path)]</property>
+			<property name="Item">Samsungtv</property>
+			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_Samsungtv)</visible>
+			<visible>System.HasAddon(plugin.video.samsungtvm)</visible>
 		</item>
-	</include> -->
+	</include>
+	<include name="HomeMenuKakaotv">
+		<item id="30">
+			<label>카카오TV</label>
+			<onclick>RunAddon(plugin.video.kakaotvm)</onclick>
+			<icon></icon>
+			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Kakaotv_Folder)]</thumb>
+			<property name="MenuIcon" fallback="special://skin/media/home/Kakao.png">$INFO[Skin.String(IconKakaotv_Icon)]</property>
+			<property name="BackWebOS35">home/button/webos_button.png</property>
+			<property name="BackTizen35">home/button/submenubutton.png</property>
+			<property name="WidgetLabel">$INFO[Skin.String(KakaotvHomeItem.WidgetLabel)]</property>
+			<property name="WidgetType">$INFO[Skin.String(KakaotvHomeItem.WidgetType)]</property>
+			<property name="Path">$INFO[Skin.String(KakaotvHomeItem.Path)]</property>
+			<property name="Item">Kakaotv</property>
+			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_Kakaotv)</visible>
+			<visible>System.HasAddon(plugin.video.kakaotvm)</visible>
+		</item>
+	</include>
+
+	<!-- 홈 메뉴 색깔 변경은 BackTizen17 -->
+	<include name="HomeMenuCoupang">
+		<item id="31">
+			<label>쿠팡 PLAY</label>
+			<onclick>RunAddon(plugin.video.coupangm)</onclick>
+			<icon></icon>
+			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Coupang_Folder)]</thumb>
+			<property name="MenuIcon" fallback="special://skin/media/home/Coupang.png">$INFO[Skin.String(IconCoupang_Icon)]</property>
+			<property name="BackWebOS17">home/button/webos_button.png</property>
+			<property name="BackTizen17">home/button/submenubutton.png</property>
+			<property name="WidgetLabel">$INFO[Skin.String(CoupangHomeItem.WidgetLabel)]</property>
+			<property name="WidgetType">$INFO[Skin.String(CoupangHomeItem.WidgetType)]</property>
+			<property name="Path">$INFO[Skin.StringCoupangHomeItem.Path)]</property>
+			<property name="Item">Coupang</property>
+			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_Coupang)</visible>
+			<visible>System.HasAddon(plugin.video.coupangm)</visible>
+		</item>
+	</include>
+	<!-- KM 32 서치 -->
 	<include name="HomeMenuSearch">
 		<item id="32">
 			<label>137</label>
@@ -2268,6 +2496,24 @@
 			<property name="BackTizen34">home/button/submenubutton.png</property>
 			<visible>System.HasAddon(script.globalsearch)</visible>
 			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_Search)</visible>
+		</item>
+	</include>
+
+	<include name="HomeMenuNaversports">
+		<item id="33">
+			<label>네이버 스포츠</label>
+			<onclick>RunAddon(plugin.video.nsportsm)</onclick>
+			<icon></icon>
+			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Naversports_Folder)]</thumb>
+			<property name="MenuIcon" fallback="special://skin/media/home/Naversports.png">$INFO[Skin.String(IconNaversports_Icon)]</property>
+			<property name="BackWebOS35">home/button/webos_button.png</property>
+			<property name="BackTizen35">home/button/submenubutton.png</property>
+			<property name="WidgetLabel">$INFO[Skin.String(NaversportsHomeItem.WidgetLabel)]</property>
+			<property name="WidgetType">$INFO[Skin.String(NaversportsHomeItem.WidgetType)]</property>
+			<property name="Path">$INFO[Skin.StringNaversportsHomeItem.Path)]</property>
+			<property name="Item">Naversports</property>
+			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_Naversports)</visible>
+			<visible>System.HasAddon(plugin.video.nsportsm)</visible>
 		</item>
 	</include>
 	<!-- KM 50 전원 -->
