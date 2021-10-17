@@ -39,13 +39,14 @@
 		</control>
 	</include>
 	<include name="ViewidAddons">
-		<views>77,901</views>
+		<views>55,77,901</views>
 	</include>
 	<include name="ViewsAddons">
 		<control type="group" id="777">
 			<visible>!Window.IsVisible(selectdialog)</visible>
+			<include>View_55_FileMode</include>
 			<include>View_77_FileMode</include>
-			<include>View_903_Plex_View</include>
+			<!-- <include>View_903_Plex_View</include> -->
 			<include>View_901_Ep_View</include>
 		</control>
 	</include>

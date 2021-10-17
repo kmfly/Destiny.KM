@@ -3,7 +3,7 @@
 	<defaultcontrol>-</defaultcontrol>
 	<onload>Skin.SetBool(ForceVideoPlaybackStop)</onload>
 	<onload condition="Player.HasVideo + !Window.IsVisible(videoosd) + !Player.Paused">SetProperty(DialogMPAATopBar,1,home)</onload>
-	<onunload condition="[!String.IsEmpty(Window(Home).Property(BaseWindow)) + $EXP[IsPlayingUnrecognizedContent]] | [Player.HasVideo + !VideoPlayer.Content(livetv) + Skin.HasSetting(ForceVideoPlaybackStop)]">AlarmClock(StopPlayback,PlayerControl(Stop),00:00,silent)</onunload>
+	<onunload condition="[!String.IsEmpty(Window(Home).Property(BaseWindow)) + $EXP[IsPlayingUnrecognizedContent]] | [Player.HasVideo + Skin.HasSetting(ForceVideoPlaybackStop)]">AlarmClock(StopPlayback,PlayerControl(Stop),00:00,silent)</onunload>
 
 
 	<controls>

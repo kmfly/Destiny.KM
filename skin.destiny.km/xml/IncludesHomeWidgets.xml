@@ -139,7 +139,8 @@
                             <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
                         </control>
                         <control type="label">
-                            <description>하단 홈 메뉴 최근 본 영화 진행 %</description>
+                            <description>하단 홈 메뉴 최근 본 영화 진행 %
+                            </description>
                             <left>65</left>
                             <top>40</top>
                             <height>34</height>
@@ -171,6 +172,9 @@
                             <width>900</width>
                             <height>36</height>
                             <font>primal_13_bold</font>
+                            <!-- <label>$LOCALIZE[31047] : [COLOR
+                            ff00ff7f]$VAR[RatingDecimalToPercentage,[B],% [/B][/COLOR]] $INFO[ListItem.Year]
+                            $INFO[ListItem.Duration(h,,시간]$INFO[ListItem.Duration(mm,,분]</label> -->
                             <label>$LOCALIZE[31047] : $VAR[RatingDecimalToPercentage]% $INFO[ListItem.Year] $INFO[ListItem.Duration(h,,시간]$INFO[ListItem.Duration(mm,,분]</label>
                             <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                             <align>left</align>
@@ -190,7 +194,11 @@
                             <align>left</align>
                             <aligny>top</aligny>
                         </control>
-
+                        <!-- <control type="textbox"> <description>Plot</description> <left>30</left>
+                        <top>190</top> <width>340</width> <height>100</height> <font>primal_13</font>
+                        <align>justify</align> <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+                        </control> -->
                     </focusedlayout>
                     <content target="video">special://skin/playlists/Last Played Movies.xsp</content>
                 </control>
@@ -807,7 +815,7 @@
                             <left>50</left>
                             <top>420</top>
                             <height>34</height>
-                            <width>190</width>
+                            <width>220</width>
                             <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
                             <align>left</align>
                             <aligny>left</aligny>
@@ -898,7 +906,7 @@
                             <left>50</left>
                             <top>420</top>
                             <height>34</height>
-                            <width>190</width>
+                            <width>220</width>
                             <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
                             <align>left</align>
                             <aligny>left</aligny>
@@ -980,264 +988,7 @@
                             <top>0</top>
                             <width>260</width>
                             <height>470</height>
-                            <texture background="true">skin/button_klein_tranz70.png</texture>
-                            <bordertexture border="10">ThumbShadow.png</bordertexture>
-                            <bordersize>6</bordersize>
-                            <aspectratio>stretch</aspectratio>
-                            <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
-                        </control>
-                        <!-- KM 20200511 -->
-                        <control type="image">
-                            <left>0</left>
-                            <top>0</top>
-                            <width>260</width>
-                            <height>360</height>
-                            <texture background="true">$VAR[MovieWidgetsIconsVar]</texture>
-                            <bordertexture border="10">-</bordertexture>
-                            <bordersize>6</bordersize>
-                            <aspectratio align="center" aligny="top">stretch</aspectratio>
-                        </control>
-                        <control type="image">
-                            <left>20</left>
-                            <top>367</top>
-                            <width>20</width>
-                            <height>20</height>
-                            <texture background="true">home/homeicons/video.png</texture>
-                            <aspectratio>stretch</aspectratio>
-                            <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
-                        </control>
-                        <control type="label">
-                            <description>Title label</description>
-                            <left>50</left>
-                            <top>364</top>
-                            <height>34</height>
-                            <width>210</width>
-                            <label>$INFO[ListItem.Label]</label>
-                            <align>left</align>
-                            <aligny>left</aligny>
-                            <font>primal_15_Title</font>
-                            <textcolor>$VAR[ColorFontNormal]</textcolor>
-                            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                        </control>
-                        <control type="group">
-                            <!-- KM 20200511 -->
-                            <visible>!Skin.HasSetting(movieactor)</visible>
-                            <control type="image">
-                                <left>20</left>
-                                <top>399</top>
-                                <width>20</width>
-                                <height>20</height>
-                                <texture background="true">home/homeicons/star.png</texture>
-                                <aspectratio>stretch</aspectratio>
-                                <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <left>50</left>
-                                <top>396</top>
-                                <height>34</height>
-                                <width>220</width>
-                                <label>$INFO[ListItem.RatingAndVotes]</label>
-                                <align>left</align>
-                                <aligny>left</aligny>
-                                <font>primal_15_Title</font>
-                                <!-- <textcolor>FFEBE627</textcolor> -->
-                                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                            </control>
-                            <control type="image">
-                                <left>20</left>
-                                <top>431</top>
-                                <width>20</width>
-                                <height>20</height>
-                                <texture background="true">home/homeicons/timers.png</texture>
-                                <aspectratio>stretch</aspectratio>
-                                <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <left>50</left>
-                                <top>429</top>
-                                <height>34</height>
-                                <width>220</width>
-                                <!-- $INFO[Player.Time(mm:ss)] -->
-                                <label>$INFO[ListItem.Duration(hh:mm)]</label>
-                                <align>left</align>
-                                <aligny>left</aligny>
-                                <font>primal_15_Title</font>
-                                <textcolor>$VAR[ColorFontNormal]</textcolor>
-                                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                            </control>
-                        </control>
-                    </itemlayout>
-                    <!-- // -->
-                    <focusedlayout width="265" height="475">
-                        <control type="image">
-                            <left>0</left>
-                            <top>0</top>
-                            <width>260</width>
-                            <height>470</height>
-                            <texture background="true">skin/button_klein_tranz70.png</texture>
-                            <bordertexture border="10">ThumbShadow.png</bordertexture>
-                            <bordersize>6</bordersize>
-                            <aspectratio>stretch</aspectratio>
-                            <colordiffuse>$VAR[BackColorButton]</colordiffuse>
-                            <visible>Control.HasFocus(18306)</visible>
-                        </control>
-                        <control type="image">
-                            <left>0</left>
-                            <top>0</top>
-                            <width>260</width>
-                            <height>360</height>
-                            <texture background="true">$VAR[MovieWidgetsIconsVar]</texture>
-                            <bordertexture border="10">-</bordertexture>
-                            <!-- KM 202001618 - 메인화면에서 모든영화 선택시 포스터 아이콘패널 테두리 6->12 -->
-                            <bordersize>12</bordersize>
-                            <aspectratio align="center" aligny="top">stretch</aspectratio>
-                        </control>
-                        <control type="image">
-                            <left>20</left>
-                            <top>367</top>
-                            <width>20</width>
-                            <height>20</height>
-                            <texture background="true">home/homeicons/video.png</texture>
-                            <aspectratio>stretch</aspectratio>
-                            <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
-                        </control>
-                        <control type="label">
-                            <description>Title label</description>
-                            <left>50</left>
-                            <top>364</top>
-                            <height>34</height>
-                            <width>200</width>
-                            <label>$INFO[ListItem.Label]</label>
-                            <align>left</align>
-                            <aligny>left</aligny>
-                            <font>primal_15_Title</font>
-                            <textcolor>ff00ff7f</textcolor>
-                            <!-- <textcolor>$VAR[ColorFontNormal]</textcolor> -->
-                            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                        </control>
-                        <control type="group">
-                            <visible>!Skin.HasSetting(movieactor)</visible>
-                            <control type="image">
-                                <left>20</left>
-                                <top>399</top>
-                                <width>20</width>
-                                <height>20</height>
-                                <texture background="true">home/homeicons/star.png</texture>
-                                <aspectratio>stretch</aspectratio>
-                                <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <left>50</left>
-                                <top>396</top>
-                                <height>34</height>
-                                <width>220</width>
-                                <label>$INFO[ListItem.RatingAndVotes]</label>
-                                <align>left</align>
-                                <aligny>left</aligny>
-                                <font>primal_15_Title</font>
-                                <textcolor>FFEBE627</textcolor>
-                                <!-- <textcolor>$VAR[ColorFontNormal]</textcolor> -->
-                                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                            </control>
-                            <control type="image">
-                                <left>20</left>
-                                <top>431</top>
-                                <width>20</width>
-                                <height>20</height>
-                                <texture background="true">home/homeicons/timers.png</texture>
-                                <aspectratio>stretch</aspectratio>
-                                <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <left>50</left>
-                                <top>429</top>
-                                <height>34</height>
-                                <width>220</width>
-                                <!-- $INFO[Player.Time(mm:ss)] -->
-                                <label>$INFO[ListItem.Duration(hh:mm)]</label>
-                                <align>left</align>
-                                <aligny>left</aligny>
-                                <font>primal_15_Title</font>
-                                <textcolor>FFEBE627</textcolor>
-                                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                            </control>
-                        </control>
-                    </focusedlayout>
-                    <content target="video" limit="30">$VAR[HomeWidgetsMovies]</content>
-                </control>
-            </control>
-            <!--===========================================================================================================================================-->
-            <!--========================================================== WIDGETS MOVIES
-            ENDE ============================================================-->
-
-            <!--===========================================================================================================================================-->
-            <!--============================================================ WIDGETS MOVIE Collection
-            ===============================================================-->
-            <!--===========================================================================================================================================-->
-            <control type="group">
-                <left>1580</left>
-                <visible>!Skin.HasSetting(NoWidgets)</visible>
-                <visible>Container(9000).Hasfocus(52)</visible>
-                <include>Fade_Widgets</include>
-                <include>widget_outzoom_submenu</include>
-                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300006) | Control.HasFocus(18307)">Conditional</animation>
-                <!-- KM: 홈화면 슬라이드될때 표시되는 글씨 90도 -->
-                <control type="button" id="300006">
-                    <include>Animation.ZoomIn</include>
-                    <left>310</left>
-                    <top>607</top>
-                    <height>45</height>
-                    <width>290</width>
-                    <font>primal_16_Title</font>
-                    <label>컬렉션영화</label>
-                    <textcolor>$VAR[ColorFontNormal]</textcolor>
-                    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
-                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                    <texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
-                    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
-                    <onclick condition="!Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(3dmovies) + !Skin.HasSetting(movieactor)">Skin.SetBool(unseenmovies)</onclick>
-                    <onclick condition="Skin.HasSetting(unseenmovies)">Skin.SetBool(recommendedmovies)</onclick>
-                    <onclick condition="Skin.HasSetting(recommendedmovies)">Skin.SetBool(fsk18movies)</onclick>
-                    <onclick condition="Skin.HasSetting(fsk18movies)">Skin.SetBool(moviessets)</onclick>
-                    <onclick condition="Skin.HasSetting(moviessets)">Skin.SetBool(moviessets)</onclick>
-                    <onclick condition="Skin.HasSetting(moviessets)">Skin.SetBool(topratedmovies)</onclick>
-                    <onclick condition="Skin.HasSetting(topratedmovies)">Skin.SetBool(3dmovies)</onclick>
-                    <onclick condition="Skin.HasSetting(3dmovies)">Skin.SetBool(movieactor)</onclick>
-                    <onclick condition="Skin.HasSetting(unseenmovies)">Skin.Reset(unseenmovies)</onclick>
-                    <onclick condition="Skin.HasSetting(recommendedmovies)">Skin.Reset(recommendedmovies)</onclick>
-                    <onclick condition="Skin.HasSetting(fsk18movies)">Skin.Reset(fsk18movies)</onclick>
-                    <onclick condition="Skin.HasSetting(moviessets)">Skin.Reset(moviessets)</onclick>
-                    <onclick condition="Skin.HasSetting(topratedmovies)">Skin.Reset(topratedmovies)</onclick>
-                    <onclick condition="Skin.HasSetting(3dmovies)">Skin.Reset(3dmovies)</onclick>
-                    <onclick condition="Skin.HasSetting(movieactor)">Skin.Reset(movieactor)</onclick>
-                    <onleft>9000</onleft>
-                    <onright>18307</onright>
-                    <!-- KM: 모든영화에서 화살표 위로 누르면 영화선택되도록 수정 -->
-                    <onup>18307</onup>
-                    <ondown>9000</ondown>
-                    <angle>90</angle>
-                </control>
-                <control type="panel" id="18307">
-                    <left>355</left>
-                    <top>250</top>
-                    <width>1570</width>
-                    <height>500</height>
-                    <onleft>300001</onleft>
-                    <onright>18306</onright>
-                    <onup>1860</onup>
-                    <ondown>9000</ondown>
-                    <viewtype>list</viewtype>
-                    <orientation>horizontal</orientation>
-                    <focusposition>0</focusposition>
-                    <pagecontrol>-</pagecontrol>
-                    <itemlayout width="265" height="475">
-                        <control type="image">
-                            <left>0</left>
-                            <top>0</top>
-                            <width>260</width>
-                            <height>470</height>
-                            <texture background="true">skin/button_klein_tranz70.png</texture>
+                            <texture background="true">skin/button_klein.png</texture>
                             <bordertexture border="10">ThumbShadow.png</bordertexture>
                             <bordersize>6</bordersize>
                             <aspectratio>stretch</aspectratio>
@@ -1336,7 +1087,263 @@
                             <bordersize>6</bordersize>
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[BackColorButton]</colordiffuse>
-                            <visible>Control.HasFocus(18307)</visible>
+                            <visible>Control.HasFocus(18306)</visible>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>260</width>
+                            <height>360</height>
+                            <texture background="true">$VAR[MovieWidgetsIconsVar]</texture>
+                            <bordertexture border="10">-</bordertexture>
+                            <!-- KM 202001618 - 메인화면에서 모든영화 선택시 포스터 아이콘패널 테두리 6->12 -->
+                            <bordersize>12</bordersize>
+                            <aspectratio align="center" aligny="top">stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <left>20</left>
+                            <top>367</top>
+                            <width>20</width>
+                            <height>20</height>
+                            <texture background="true">home/homeicons/video.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                            <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+                        </control>
+                        <control type="label">
+                            <description>Title label</description>
+                            <left>50</left>
+                            <top>363</top>
+                            <height>34</height>
+                            <width>200</width>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>left</align>
+                            <aligny>left</aligny>
+                            <font>primal_15_Title</font>
+                            <textcolor>ff00ff7f</textcolor>
+                            <!-- <textcolor>$VAR[ColorFontNormal]</textcolor> -->
+                            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        </control>
+                        <control type="group">
+                            <visible>!Skin.HasSetting(movieactor)</visible>
+                            <control type="image">
+                                <left>20</left>
+                                <top>399</top>
+                                <width>20</width>
+                                <height>20</height>
+                                <texture background="true">home/homeicons/star.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                                <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <left>50</left>
+                                <top>395</top>
+                                <height>34</height>
+                                <width>220</width>
+                                <label>$INFO[ListItem.RatingAndVotes]</label>
+                                <align>left</align>
+                                <aligny>left</aligny>
+                                <font>primal_15_Title</font>
+                                <textcolor>FFEBE627</textcolor>
+                                <!-- <textcolor>$VAR[ColorFontNormal]</textcolor> -->
+                                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                            </control>
+                            <control type="image">
+                                <left>20</left>
+                                <top>429</top>
+                                <width>20</width>
+                                <height>20</height>
+                                <texture background="true">home/homeicons/timers.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                                <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <left>50</left>
+                                <top>425</top>
+                                <height>34</height>
+                                <width>220</width>
+                                <label>$INFO[ListItem.EndTime]</label>
+                                <align>left</align>
+                                <aligny>left</aligny>
+                                <font>primal_15_Title</font>
+                                <textcolor>$VAR[ColorFontNormal]</textcolor>
+                                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <content target="video" limit="30">$VAR[HomeWidgetsMovies]</content>
+                </control>
+            </control>
+            <!--===========================================================================================================================================-->
+            <!--========================================================== WIDGETS MOVIES
+            ENDE ============================================================-->
+
+            <!--===========================================================================================================================================-->
+            <!--============================================================ WIDGETS MOVIE Collection
+            ===============================================================-->
+            <!--===========================================================================================================================================-->
+            <control type="group">
+                <left>1580</left>
+                <visible>!Skin.HasSetting(NoWidgets)</visible>
+                <visible> Container(9000).Hasfocus(52)
+                  </visible>
+                <include>Fade_Widgets</include>
+                <include>widget_outzoom_submenu</include>
+                <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout" condition="Control.HasFocus(300006) | Control.HasFocus(18306)">Conditional</animation>
+                <!-- KM: 홈화면 슬라이드될때 표시되는 글씨 90도 -->
+                <control type="button" id="300006">
+                    <include>Animation.ZoomIn</include>
+                    <left>310</left>
+                    <top>607</top>
+                    <height>45</height>
+                    <width>290</width>
+                    <font>primal_16_Title</font>
+                    <label>컬렉션영화</label>
+                    <textcolor>$VAR[ColorFontNormal]</textcolor>
+                    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                    <texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
+                    <onclick condition="!Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(3dmovies) + !Skin.HasSetting(movieactor)">Skin.SetBool(unseenmovies)</onclick>
+                    <onclick condition="Skin.HasSetting(unseenmovies)">Skin.SetBool(recommendedmovies)</onclick>
+                    <onclick condition="Skin.HasSetting(recommendedmovies)">Skin.SetBool(fsk18movies)</onclick>
+                    <onclick condition="Skin.HasSetting(fsk18movies)">Skin.SetBool(moviessets)</onclick>
+                    <onclick condition="Skin.HasSetting(moviessets)">Skin.SetBool(moviessets)</onclick>
+                    <onclick condition="Skin.HasSetting(moviessets)">Skin.SetBool(topratedmovies)</onclick>
+                    <onclick condition="Skin.HasSetting(topratedmovies)">Skin.SetBool(3dmovies)</onclick>
+                    <onclick condition="Skin.HasSetting(3dmovies)">Skin.SetBool(movieactor)</onclick>
+                    <onclick condition="Skin.HasSetting(unseenmovies)">Skin.Reset(unseenmovies)</onclick>
+                    <onclick condition="Skin.HasSetting(recommendedmovies)">Skin.Reset(recommendedmovies)</onclick>
+                    <onclick condition="Skin.HasSetting(fsk18movies)">Skin.Reset(fsk18movies)</onclick>
+                    <onclick condition="Skin.HasSetting(moviessets)">Skin.Reset(moviessets)</onclick>
+                    <onclick condition="Skin.HasSetting(topratedmovies)">Skin.Reset(topratedmovies)</onclick>
+                    <onclick condition="Skin.HasSetting(3dmovies)">Skin.Reset(3dmovies)</onclick>
+                    <onclick condition="Skin.HasSetting(movieactor)">Skin.Reset(movieactor)</onclick>
+                    <onleft>9000</onleft>
+                    <onright>18306</onright>
+                    <!-- KM: 모든영화에서 화살표 위로 누르면 영화선택되도록 수정 -->
+                    <onup>18306</onup>
+                    <ondown>9000</ondown>
+                    <angle>90</angle>
+                </control>
+                <control type="panel" id="18306">
+                    <left>355</left>
+                    <top>250</top>
+                    <width>1570</width>
+                    <height>500</height>
+                    <onleft>300001</onleft>
+                    <onright>18306</onright>
+                    <onup>1860</onup>
+                    <ondown>9000</ondown>
+                    <viewtype>list</viewtype>
+                    <orientation>horizontal</orientation>
+                    <focusposition>0</focusposition>
+                    <pagecontrol>-</pagecontrol>
+                    <itemlayout width="265" height="475">
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>260</width>
+                            <height>470</height>
+                            <texture background="true">skin/button_klein.png</texture>
+                            <bordertexture border="10">ThumbShadow.png</bordertexture>
+                            <bordersize>6</bordersize>
+                            <aspectratio>stretch</aspectratio>
+                            <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+                        </control>
+                        <!-- KM 20200511 -->
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>260</width>
+                            <height>360</height>
+                            <texture background="true">$VAR[MovieWidgetsIconsVar]</texture>
+                            <bordertexture border="10">-</bordertexture>
+                            <bordersize>6</bordersize>
+                            <aspectratio align="center" aligny="top">stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <left>20</left>
+                            <top>367</top>
+                            <width>20</width>
+                            <height>20</height>
+                            <texture background="true">home/homeicons/video.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                            <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+                        </control>
+                        <control type="label">
+                            <description>Title label</description>
+                            <left>50</left>
+                            <top>363</top>
+                            <height>34</height>
+                            <width>210</width>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>left</align>
+                            <aligny>left</aligny>
+                            <font>primal_15_Title</font>
+                            <textcolor>$VAR[ColorFontNormal]</textcolor>
+                            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        </control>
+                        <control type="group">
+                            <!-- KM 20200511 -->
+                            <visible>!Skin.HasSetting(movieactor)</visible>
+                            <control type="image">
+                                <left>20</left>
+                                <top>399</top>
+                                <width>20</width>
+                                <height>20</height>
+                                <texture background="true">home/homeicons/star.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                                <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <left>50</left>
+                                <top>395</top>
+                                <height>34</height>
+                                <width>220</width>
+                                <label>$INFO[ListItem.RatingAndVotes]</label>
+                                <align>left</align>
+                                <aligny>left</aligny>
+                                <font>primal_15_Title</font>
+                                <!-- <textcolor>FFEBE627</textcolor> -->
+                                <textcolor>$VAR[ColorFontNormal]</textcolor>
+                                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                            </control>
+                            <control type="image">
+                                <left>20</left>
+                                <top>429</top>
+                                <width>20</width>
+                                <height>20</height>
+                                <texture background="true">home/homeicons/timers.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                                <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <left>50</left>
+                                <top>425</top>
+                                <height>34</height>
+                                <width>220</width>
+                                <label>$INFO[ListItem.EndTime]</label>
+                                <align>left</align>
+                                <aligny>left</aligny>
+                                <font>primal_15_Title</font>
+                                <textcolor>$VAR[ColorFontNormal]</textcolor>
+                                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <!-- // -->
+                    <focusedlayout width="265" height="475">
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>260</width>
+                            <height>470</height>
+                            <texture background="true">skin/button_klein_tranz70.png</texture>
+                            <bordertexture border="10">ThumbShadow.png</bordertexture>
+                            <bordersize>6</bordersize>
+                            <aspectratio>stretch</aspectratio>
+                            <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+                            <visible>Control.HasFocus(18306)</visible>
                         </control>
                         <control type="image">
                             <left>0</left>
@@ -2202,14 +2209,14 @@
                             <left>0</left>
                             <top>0</top>
                             <width>260</width>
-                            <height>470</height>
-                            <texture background="true">skin/button_klein_tranz70.png</texture>
+                            <height>400</height>
+                            <texture background="true">skin/button_klein_tranz80.png</texture>
                             <bordertexture border="10">ThumbShadow.png</bordertexture>
                             <bordersize>6</bordersize>
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
                         </control>
-                        <!-- <control type="image">
+                        <control type="image">
                             <left>10</left>
                             <top>250</top>
                             <width>240</width>
@@ -2217,7 +2224,7 @@
                             <texture background="true">skin/button_klein_tranz50.png</texture>
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-                        </control> -->
+                        </control>
                         <control type="image">
                             <left>5</left>
                             <top>5</top>
@@ -2291,7 +2298,7 @@
                             <left>0</left>
                             <top>0</top>
                             <width>260</width>
-                            <height>470</height>
+                            <height>400</height>
                             <texture background="true">skin/button_klein_tranz70.png</texture>
                             <bordertexture border="10">ThumbShadow.png</bordertexture>
                             <bordersize>6</bordersize>
@@ -2299,7 +2306,7 @@
                             <colordiffuse>$VAR[BackColorButton]</colordiffuse>
                             <visible>Control.HasFocus(18501)</visible>
                         </control>
-                        <!-- <control type="image">
+                        <control type="image">
                             <left>10</left>
                             <top>250</top>
                             <width>240</width>
@@ -2307,7 +2314,7 @@
                             <texture background="true">skin/button_klein_tranz70.png</texture>
                             <aspectratio>stretch</aspectratio>
                             <colordiffuse>$VAR[BackColorFront]</colordiffuse>
-                        </control> -->
+                        </control>
                         <control type="image">
                             <left>5</left>
                             <top>5</top>
@@ -2518,100 +2525,198 @@
                     <content target="Programs">androidapp://sources/apps/</content>
                 </control>
             </control>
-
+            <!--===========================================================================================================================================-->
+            <!--========================================================== WIDGETS ADDONS
+            ENDE ============================================================-->
+            <!--===========================================================================================================================================-->
+            <!--===========================================================================================================================================-->
+            <!--============================================================ WIDGETS AMAZON
+            ===============================================================-->
+            <!--===========================================================================================================================================-->
+            <!--<control type="group"> <left>1580</left>
+            <visible>!Skin.HasSetting(NoWidgets)</visible>
+            <visible>Container(9000).Hasfocus(40)</visible>
+            <visible>System.HasAddon(plugin.video.amazon-test)</visible>
+            <include>Fade_Widgets</include> <include>widget_outzoom_submenu</include>
+            <animation effect="slide" end="-1580,0" time="500" tween="Cubic" easing="inout"
+            condition="Control.HasFocus(300005) |
+            Control.HasFocus(18322)">Conditional</animation> <control type="button"
+            id="300005"> <include>Animation.ZoomIn</include> <left>280</left> <top>607</top>
+            <height>45</height> <width>290</width> <font>primal_16_Title</font>
+            <label>Amazon Prime Video</label> <textcolor>$VAR[ColorFontNormal]</textcolor>
+            <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> <texturenofocus
+            colordiffuse="$VAR[ColorIcons]">-</texturenofocus> <texturefocus
+            colordiffuse="$VAR[BackColorButton]">-</texturefocus> <onclick
+            condition="!Skin.HasSetting(amazonmovies) +
+            !Skin.HasSetting(amazontvshows)">Skin.SetBool(amazontvshows)</onclick> <onclick
+            condition="Skin.HasSetting(amazontvshows)">Skin.Reset(amazontvshows)</onclick>
+            <onclick
+            condition="Skin.HasSetting(amazonmovies)">Skin.Reset(amazonmovies)</onclick>
+            <onleft>9000</onleft> <onright>18322</onright> <onup>1860</onup>
+            <ondown>9000</ondown> <angle>90</angle> </control> <control type="panel"
+            id="18322"> <left>355</left> <top>250</top> <width>1570</width>
+            <height>500</height> <onleft>300005</onleft> <onright>18322</onright>
+            <onup>1860</onup> <ondown>9000</ondown> <viewtype>list</viewtype>
+            <orientation>horizontal</orientation> <focusposition>0</focusposition>
+            <pagecontrol>-</pagecontrol> <itemlayout width="265" height="475"> <control
+            type="image"> <left>0</left> <top>0</top> <width>260</width>
+            <height>470</height> <texture
+            background="true">skin/button_klein_tranz80.png</texture> <bordertexture
+            border="10">ThumbShadow.png</bordertexture> <bordersize>6</bordersize>
+            <aspectratio>stretch</aspectratio>
+            <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse> </control> <control
+            type="image"> <left>10</left> <top>250</top> <width>240</width>
+            <height>210</height> <texture
+            background="true">skin/button_klein_tranz50.png</texture>
+            <aspectratio>stretch</aspectratio>
+            <colordiffuse>$VAR[BackColorFront]</colordiffuse> </control> <control
+            type="image"> <left>20</left> <top>40</top> <width>220</width>
+            <height>220</height> <texture background="true">$INFO[ListItem.Icon]</texture>
+            <bordertexture border="10">-</bordertexture> <bordersize>6</bordersize>
+            <aspectratio align="center" aligny="top">keep</aspectratio> </control> <control
+            type="label"> <description>Title label</description> <left>20</left>
+            <top>270</top> <height>34</height> <width>220</width>
+            <label>$INFO[ListItem.Label]</label> <align>left</align> <aligny>left</aligny>
+            <font>primal_15_Title</font> <textcolor>$VAR[ColorFontNormal]</textcolor>
+            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> </control> <control
+            type="textbox"> <description>Title</description> <left>20</left> <top>310</top>
+            <height>100</height> <width>220</width> <font>primal_15</font>
+            <align>left</align> <textcolor>white</textcolor>
+            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> <label>[COLOR
+            $VAR[ColorFontNormal]]$INFO[ListItem.Title][/COLOR]</label> <autoscroll
+            time="2000" delay="15000"
+            repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll> </control> <control
+            type="image"> <left>20</left> <top>425</top> <width>20</width>
+            <height>20</height> <texture
+            background="true">home/homeicons/timers.png</texture>
+            <aspectratio>stretch</aspectratio>
+            <colordiffuse>$VAR[ColorFontNormal]</colordiffuse> </control> <control
+            type="label"> <left>50</left> <top>420</top> <height>34</height>
+            <width>220</width> <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, -
+            ]</label> <align>left</align> <aligny>left</aligny> <font>primal_15_Title</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> </control> </itemlayout>
+            <focusedlayout width="265" height="475"> <control type="image"> <left>0</left>
+            <top>0</top> <width>260</width> <height>470</height> <texture
+            background="true">skin/button_klein_tranz80.png</texture> <bordertexture
+            border="10">ThumbShadow.png</bordertexture> <bordersize>6</bordersize>
+            <aspectratio>stretch</aspectratio>
+            <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+            <visible>Control.HasFocus(18322)</visible> </control> <control type="image">
+            <left>10</left> <top>250</top> <width>240</width> <height>210</height> <texture
+            background="true">skin/button_klein_tranz50.png</texture>
+            <aspectratio>stretch</aspectratio>
+            <colordiffuse>$VAR[BackColorFront]</colordiffuse> </control> <control
+            type="image"> <left>20</left> <top>40</top> <width>220</width>
+            <height>220</height> <texture background="true">$INFO[ListItem.Icon]</texture>
+            <bordertexture border="10">-</bordertexture> <bordersize>6</bordersize>
+            <aspectratio align="center" aligny="top">keep</aspectratio> </control> <control
+            type="label"> <description>Title label</description> <left>20</left>
+            <top>270</top> <height>34</height> <width>220</width>
+            <label>$INFO[ListItem.Label]</label> <align>left</align> <aligny>left</aligny>
+            <font>primal_15_Title</font> <textcolor>$VAR[ColorFontNormal]</textcolor>
+            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> </control> <control
+            type="textbox"> <description>Title</description> <left>20</left> <top>310</top>
+            <height>100</height> <width>220</width> <font>primal_15</font>
+            <align>left</align> <textcolor>white</textcolor>
+            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> <label>[COLOR
+            $VAR[ColorFontNormal]]$INFO[ListItem.Title][/COLOR]</label> <autoscroll
+            time="2000" delay="15000"
+            repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll> </control> <control
+            type="image"> <left>20</left> <top>425</top> <width>20</width>
+            <height>20</height> <texture
+            background="true">home/homeicons/timers.png</texture>
+            <aspectratio>stretch</aspectratio>
+            <colordiffuse>$VAR[ColorFontNormal]</colordiffuse> </control> <control
+            type="label"> <left>50</left> <top>420</top> <height>34</height>
+            <width>220</width> <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, -
+            ]</label> <align>left</align> <aligny>left</aligny> <font>primal_15_Title</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> </control> </focusedlayout>
+            <content target="programs">$VAR[HomeWidgetsAmazon]</content> </control>
+            </control>-->
+            <!--===========================================================================================================================================-->
+            <!--========================================================== WIDGETS AMAZON
+            ENDE ============================================================-->
+            <!--===========================================================================================================================================-->
             <control type="group">
                 <left>355</left>
                 <animation effect="slide" end="-310,0" time="500" tween="Cubic" easing="inout" condition="Control.Hasfocus(888809) | Control.HasFocus(888810) | Skin.HasSetting(homebigrandomwidget)">Conditional</animation>
                 <top>0</top>
                 <!-- KM: 홈화면 모든영화선택시 맨위에 있는 영화제목표시 -->
 
-                <control type="grouplist">
+                <control type="label">
                     <left>5</left>
                     <top>90</top>
-                    <itemgap>1</itemgap>
-                    <orientation>horizontal</orientation>
-                    <control type="label">
-                        <width>900</width>
-                        <height>60</height>
-                        <font>primal_60_Title</font>
-                        <label>$VAR[VarWidgetsLabelVertical]</label>
-                        <textcolor>$VAR[ColorFontNormal]</textcolor>
-                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <visible>!Control.Hasfocus(43944)</visible>
-                    </control>
-                </control>
-
-                <!-- KM: 홈화면 모든영화선택시 영화장르표시 -->
-                <!-- <control type="label">
-                    <left>10</left>
-                    <top>170</top>
                     <width>900</width>
-                    <height>18</height>
-                    <font>primal_15_Bold</font>
-                    <label>$VAR[VarWidgetsPlotVertical]</label>
+                    <height>36</height>
+                    <font>primal_60_Title</font>
+                    <label>$VAR[VarWidgetsLabelVertical]</label>
                     <textcolor>$VAR[ColorFontNormal]</textcolor>
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                     <align>left</align>
-                    <aligny>top</aligny>
-                </control> -->
-
+                    <aligny>center</aligny>
+                    <visible>!Control.Hasfocus(43944)</visible>
+                </control>
 
                 <control type="grouplist">
                     <description>Media Codec Flagging Images</description>
-                    <top>650</top>
-                    <left>0</left>
+                    <top>660</top>
+                    <left>1100</left>
                     <width>1000</width>
                     <itemgap>1</itemgap>
                     <orientation>horizontal</orientation>
                     <include>KM_MediaInfo_Icon_home</include>
                     <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
                 </control>
-
-                <!-- 작업 -->
-                <!-- <control type="group">
-                    <top>650</top>
-                    <left>0</left>
-                    <height>70</height>
-                    <width>85</width>
-                    <bottom>0</bottom>
-                    <right>0</right>
-                    <include>TomatoMeter</include>
-                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter)) + Skin.HasSetting(EnableRTAndMetaCriticRating)</visible>
-                    <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))">Conditional</animation>
-                    <animation effect="slide" end="-100" time="0" condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))">Conditional</animation>
-                </control> -->
-
-                <control type="grouplist">
+                <control type="group">
                     <!-- 팝콘지수 -->
-                    <top>280</top>
-                    <left>0</left>
-                    <itemgap>0</itemgap>
-                    <orientation>horizontal</orientation>
+
+
                     <visible>!Control.HasFocus(709051)</visible>
                     <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(18307) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
                     <control type="image">
+                        <top>260</top>
+                        <left>0</left>
                         <width>50</width>
                         <height>50</height>
                         <bordersize>2</bordersize>
                         <aspectratio>keep</aspectratio>
-                        <texture colordiffuse="$VAR[ColorIcons]">special://skin/flags/flags_color/pngegg.png</texture>
+                        <texture colordiffuse="$VAR[ColorIcons]">special://skin/flags/flags_color/popcorn.png</texture>
+                        <visible>Integer.IsGreater(ListItem.Rating,6)</visible>
                         <visible>!String.IsEmpty(ListItem.Rating)</visible>
+                        <visible>!Control.HasFocus(709051)</visible>
+                        <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(18307) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
+                    </control>
+                    <control type="image">
+                        <top>260</top>
+                        <left>0</left>
+                        <width>50</width>
+                        <height>50</height>
+                        <bordersize>2</bordersize>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="$VAR[ColorIcons]">special://skin/flags/flags_color/popcorn2.png</texture>
+                        <visible>!Integer.IsGreater(ListItem.Rating,6)</visible>
+                        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+                        <visible>!Control.HasFocus(709051)</visible>
+                        <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(18307) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
                     </control>
 
 
                     <control type="label">
+                        <top>270</top>
+                        <left>50</left>
                         <width>auto</width>
                         <height>80</height>
                         <font>primal_18_Bold</font>
                         <label fallback="정보 없슴"> $VAR[RatingDecimalToPercentage]%</label>
                         <textcolor>ffffffff</textcolor>
                         <visible>!String.IsEmpty(ListItem.Rating)</visible>
+                        <visible>!Control.HasFocus(709051)</visible>
+                        <visible>![Control.HasFocus(709051) | Control.HasFocus(18306) | Control.HasFocus(18307) | Control.HasFocus(43944) | Control.HasFocus(18401)]</visible>
                     </control>
                 </control>
-
-
                 <control type="grouplist">
                     <left>10</left>
                     <top>210</top>
@@ -2669,10 +2774,11 @@
                     </control>
 
                 </control>
+
                 <!-- KM 홈화면 영화 줄거리 테두리 박스 -->
                 <control type="image">
                     <left>-10</left>
-                    <top>350</top>
+                    <top>340</top>
                     <width>935</width>
                     <height>300</height>
                     <align>justify</align>
@@ -2682,24 +2788,24 @@
                     <aspectratio>stretch</aspectratio>
                     <colordiffuse>$VAR[BackColorFront]</colordiffuse>
                     <aspectratio>stretch</aspectratio>
-                    <visible>Control.HasFocus(888111)</visible>
+                    <visible>Control.HasFocus(888111) + Skin.HasSetting(homemovieplotflag)</visible>
                 </control>
                 <!-- KM 홈화면 영화 줄거리 -->
                 <control type="textbox">
                     <description>Movie Plot</description>
                     <left>15</left>
-                    <top>380</top>
+                    <top>370</top>
                     <width>885</width>
                     <height>235</height>
                     <font>primal_15_Bold</font>
                     <align>justify</align>
                     <label>$INFO[ListItem.Plot]</label>
                     <autoscroll time="2000" delay="10000" repeat="5000">true</autoscroll>
-                    <visible>Control.HasFocus(888111)</visible>
+                    <visible>Control.HasFocus(888111) + Skin.HasSetting(homemovieplotflag)</visible>
                 </control>
-
             </control>
         </control>
+
     </include>
     <!--===========================================================================================================================================-->
     <!--====================================================== WIDGETS MY CHANNEL
@@ -2767,16 +2873,63 @@
                         <textcolor>$VAR[BackColorButton]</textcolor>
                         <visible>Control.HasFocus(888111)</visible>
                     </control>
+                    <!-- <texture background="true">special://skin/backgrounds/shadow.png</texture>
+                    -->
+                    <!-- <control type="image"> <left>356</left> <top>260</top> <width>915</width>
+                    <height>220</height> <texture
+                    background="true">skin/cdcase_diffuse.png</texture> <bordertexture
+                    border="10">ThumbShadow.png</bordertexture> <bordersize>7</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+                    <aspectratio>stretch</aspectratio> <visible>Control.HasFocus(888111)</visible>
+                    </control> -->
+                    <!-- <control type="image"> <left>365</left> <top>270</top> <width>895</width>
+                    <height>200</height> <texture
+                    background="true">$INFO[ListItem.Art(banner)]</texture>
+                    <aspectratio>stretch</aspectratio> <visible>Control.HasFocus(888111)</visible>
+                    </control> <control type="image"> <left>365</left> <top>270</top>
+                    <width>895</width> <height>200</height> <texture
+                    background="true">$INFO[ListItem.Art(fanart)]</texture>
+                    <aspectratio>stretch</aspectratio>
+                    <visible>String.IsEmpty(ListItem.Art(banner))</visible>
+                    <visible>Control.HasFocus(888111)</visible> </control> -->
+                    <!-- KM: 홈화면 좌측 추천 영화 설명 -->
+                    <!-- <control type="textbox"> <description>Movie Plot</description>
+                    <left>365</left> <top>250</top> <width>450</width> <height>350</height>
+                    <font>primal_16</font> <align>justify</align>
+                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> <label>[COLOR
+                    $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label> <autoscroll
+                    time="2000" delay="5000" repeat="5000">true</autoscroll>
+                    <visible>Control.HasFocus(888111)</visible> </control> -->
+                    <!-- <control type="textbox"> <description>Movie Plot</description>
+                    <left>360</left> <top>290</top> <width>450</width> <height>350</height>
+                    <font>primal_16</font> <textcolor>$VAR[ColorFontNormal]</textcolor>
+                    <align>justify</align> <label>$INFO[ListItem.Plot]</label> <autoscroll
+                    time="2000" delay="5000" repeat="5000">true</autoscroll>
+                    <visible>Control.HasFocus(888111)</visible> </control> -->
+                    <!-- <control type="image"> <left>320</left> <top>280</top> <width>550</width>
+                    <height>450</height> <align>justify</align> <texture
+                    background="true">skin/button_klein_tranz20.png</texture> <bordertexture
+                    border="10">ThumbShadow.png</bordertexture> <bordersize>7</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+                    <aspectratio>stretch</aspectratio> <visible>Control.HasFocus(888111)</visible>
+                    </control> -->
+                    <!-- KM: 홈화면 우측 클리어아트명 -->
+                    <!-- <control type="image"> <left>1300</left> <top>320</top> <width>600</width>
+                    <height>520</height> <texture>$INFO[ListItem.Art(clearart)]</texture>
+                    <aspectratio scalediffuse="false" align="right" aligny="top">keep</aspectratio>
+                    <visible>Control.HasFocus(888111)</visible> </control> -->
                     <!-- KM: 홈화면 우측 팬아트 오버레이 -->
                     <control type="group">
                         <control type="image">
-                            <left>0</left>
+                            <left>350</left>
                             <top>0</top>
-                            <width>1920</width>
-                            <height>1080</height>
+                            <width>1600</width>
+                            <height>800</height>
                             <texture diffuse="special://skin/backgrounds/abc.png">$INFO[ListItem.Art(fanart)]</texture>
                             <!-- <texture>$INFO[ListItem.Art(fanart)]</texture> -->
-                            <aspectratio align="right" aligny="top">keep</aspectratio>
+                            <aspectratio align="right" aligny="top">stretch</aspectratio>
                             <visible>Control.HasFocus(888111)</visible>
                         </control>
                     </control>

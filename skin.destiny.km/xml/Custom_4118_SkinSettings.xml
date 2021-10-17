@@ -283,19 +283,41 @@
 					<onclick>Skin.ToggleSetting(videoosdflag)</onclick>
 					<selected>Skin.HasSetting(videoosdflag)</selected>
 				</control>
-
-
-				<!-- <control type="radiobutton" id="3042">
-					<label>$LOCALIZE[50409]</label>
+				<control type="radiobutton" id="3043">
+					<label>홈화면 영화 Plot 보이기</label>
 					<width>787</width>
 					<height>60</height>
 					<font>primal_20</font>
 					<textoffsetx>30</textoffsetx>
 					<textwidth>600</textwidth>
-					<onclick>Skin.ToggleSetting(homebigrandomwidget)</onclick>
-					<selected>Skin.HasSetting(homebigrandomwidget)</selected>
-				</control> -->
-				<control type="radiobutton" id="3043">
+					<onclick>Skin.ToggleSetting(homemovieplotflag)</onclick>
+					<selected>Skin.HasSetting(homemovieplotflag)</selected>
+				</control>
+				<control type="radiobutton" id="3044">
+					<label>시작화면 Intro OFF</label>
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+					<onclick>Skin.ToggleSetting(introflag)</onclick>
+					<selected>Skin.HasSetting(introflag)</selected>
+				</control>
+
+				<control type="button" id="3045">
+					<description>Single Image button</description>
+					<label>홈 배경화면 변경</label>
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+					<label2>[COLOR=selected]$INFO[Skin.String(Home_Custom_Background)][/COLOR]</label2>
+					<onclick>Skin.Reset(Home_Custom_Background)</onclick>
+					<onclick>Skin.SetImage(Home_Custom_Background)</onclick>
+				</control>
+
+				<control type="radiobutton" id="3053">
 					<label>$LOCALIZE[50394]</label>
 					<width>787</width>
 					<height>60</height>
@@ -307,7 +329,7 @@
 					<onclick>Skin.Reset(ArtistslideshowHome)</onclick>
 					<selected>Skin.HasSetting(HomeMusicFanart)</selected>
 				</control>
-				<control type="radiobutton" id="3044">
+				<control type="radiobutton" id="3054">
 					<label>$LOCALIZE[50393]</label>
 					<width>787</width>
 					<height>60</height>
@@ -319,7 +341,7 @@
 					<onclick>Skin.Reset(HomeMusicExtraFanart)</onclick>
 					<selected>Skin.HasSetting(ArtistslideshowHome)</selected>
 				</control>
-				<control type="radiobutton" id="3045">
+				<control type="radiobutton" id="3055">
 					<label>$LOCALIZE[50392]</label>
 					<width>787</width>
 					<height>60</height>
@@ -331,7 +353,7 @@
 					<onclick>Skin.Reset(ArtistslideshowHome)</onclick>
 					<selected>Skin.HasSetting(HomeMusicExtraFanart)</selected>
 				</control>
-				<control type="radiobutton" id="3046">
+				<control type="radiobutton" id="3056">
 					<label>$LOCALIZE[50391]</label>
 					<width>787</width>
 					<height>60</height>
@@ -341,7 +363,7 @@
 					<onclick>Skin.ToggleSetting(GrabFanart)</onclick>
 					<selected>Skin.HasSetting(GrabFanart)</selected>
 				</control>
-				<control type="radiobutton" id="3047">
+				<control type="radiobutton" id="3057">
 					<width>787</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -351,7 +373,7 @@
 					<onclick>Skin.ToggleSetting(WheaterMultiFanart)</onclick>
 					<selected>Skin.HasSetting(WheaterMultiFanart)</selected>
 				</control>
-				<control type="radiobutton" id="3048">
+				<control type="radiobutton" id="3058">
 					<width>787</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -361,7 +383,7 @@
 					<onclick>Skin.ToggleSetting(homenocolorbutton)</onclick>
 					<selected>Skin.HasSetting(homenocolorbutton)</selected>
 				</control>
-				<control type="radiobutton" id="3049">
+				<control type="radiobutton" id="3059">
 					<label>$LOCALIZE[50390]</label>
 					<width>787</width>
 					<height>60</height>
@@ -371,7 +393,7 @@
 					<onclick>Skin.ToggleSetting(NoWidgets)</onclick>
 					<selected>Skin.HasSetting(NoWidgets)</selected>
 				</control>
-				<control type="button" id="3050">
+				<control type="button" id="3060">
 					<description>Widget Pictures Path</description>
 					<width>787</width>
 					<height>60</height>
@@ -382,7 +404,7 @@
 					<onclick>Skin.Reset(Pictures_Folder_Path)</onclick>
 					<onclick>Skin.SetPath(Pictures_Folder_Path)</onclick>
 				</control>
-				<control type="radiobutton" id="3051">
+				<control type="radiobutton" id="3061">
 					<label>$LOCALIZE[50367]</label>
 					<width>787</width>
 					<height>60</height>
@@ -392,7 +414,7 @@
 					<onclick>Skin.ToggleSetting(NoInstallAddons)</onclick>
 					<selected>Skin.HasSetting(NoInstallAddons)</selected>
 				</control>
-				<control type="radiobutton" id="3052">
+				<control type="radiobutton" id="3062">
 					<label>$LOCALIZE[50411]</label>
 					<width>787</width>
 					<height>60</height>

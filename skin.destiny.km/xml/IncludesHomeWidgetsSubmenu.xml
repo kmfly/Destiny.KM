@@ -5,7 +5,7 @@
         <!--=================================== SUBMENU WIDGETS FOR PLAYLIST
         =====================================-->
         <control type="group">
-            <left>ü</left>
+            <left></left>
             <visible>ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus |
                 Control.HasFocus(43944)</visible>
             <include>widget_inzoom_submenu</include>

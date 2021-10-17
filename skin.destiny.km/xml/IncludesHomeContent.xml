@@ -1586,6 +1586,52 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),31)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemCoupang))">HomeMenuCoupang</include>
 	</include>
+	<include name="MenuNaversports">
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),33)">HomeMenuLiveTV</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),33)">HomeMenuRadio</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemMovies),33)">HomeMenuMovies</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyMovies),33)">HomeMenuEmbyMovies</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),33)">HomeMenuCollection</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),33)">HomeMenuEmbyCollection</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTVShows),33)">HomeMenuTVShows</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyTVShows),33)">HomeMenuEmbyTVShows</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemVideos),33)">HomeMenuVideos</include>
+		<include condition="String.IsEqual(Skin.String(HomeMyChannel10),33)">HomeMyChannel10</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist1),33)">HomeMenuPlaylist1</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist2),33)">HomeMenuPlaylist2</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist3),33)">HomeMenuPlaylist3</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist4),33)">HomeMenuPlaylist4</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist5),33)">HomeMenuPlaylist5</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist6),33)">HomeMenuPlaylist6</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist7),33)">HomeMenuPlaylist7</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist8),33)">HomeMenuPlaylist8</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist9),33)">HomeMenuPlaylist9</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist10),33)">HomeMenuPlaylist10</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemMusic),33)">HomeMenuMusic</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemAddons),33)">HomeMenuAddons</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemAndroidApps),33)">HomeMenuAndroidApps</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPictures),33)">HomeMenuPictures</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWeather),33)">HomeMenuWeather</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSettings),33)">HomeMenuSettings</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlayDisc),33)">HomeMenuPlayDisc</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemFileManager),33)">HomeMenuFileManager</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatchlist),33)">HomeMenuWatchlist</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSimplePlaylists),33)">HomeMenuSimplePlaylists</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSearch),33)">HomeMenuSearch</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemPower),33)">HomeMenuPower</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),33)">HomeMenuFav</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemTving),33)">HomeMenuTving</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNetflix),33)">HomeMenuNetflix</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWave),33)">HomeMenuWave</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),33)">HomeMenuWatcha</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),33)">HomeMenuYoutube</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),33)">HomeMenuSpotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),33)">HomeMenuSamsungtv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),33)">HomeMenuKakaotv</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),33)">HomeMenuCoupang</include>
+		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),33)">HomeMenuNaversports</include>
+		<include condition="String.IsEmpty(Skin.String(HomeMenuItemNaversports))">HomeMenuNaversports</include>
+	</include>
 
 	<include name="MenuSearch">
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),32)">HomeMenuLiveTV</include>
@@ -1633,52 +1679,7 @@
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),32)">HomeMenuNaversports</include>
 		<include condition="String.IsEmpty(Skin.String(HomeMenuItemSearch))">HomeMenuSearch</include>
 	</include>
-	<include name="MenuNaversports">
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),33)">HomeMenuLiveTV</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),33)">HomeMenuRadio</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemMovies),33)">HomeMenuMovies</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyMovies),33)">HomeMenuEmbyMovies</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),33)">HomeMenuCollection</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemCollection),33)">HomeMenuEmbyCollection</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemTVShows),33)">HomeMenuTVShows</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemEmbyTVShows),33)">HomeMenuEmbyTVShows</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemVideos),33)">HomeMenuVideos</include>
-		<include condition="String.IsEqual(Skin.String(HomeMyChannel10),33)">HomeMyChannel10</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist1),33)">HomeMenuPlaylist1</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist2),33)">HomeMenuPlaylist2</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist3),33)">HomeMenuPlaylist3</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist4),33)">HomeMenuPlaylist4</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist5),33)">HomeMenuPlaylist5</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist6),33)">HomeMenuPlaylist6</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist7),33)">HomeMenuPlaylist7</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist8),33)">HomeMenuPlaylist8</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist9),33)">HomeMenuPlaylist9</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlaylist10),33)">HomeMenuPlaylist10</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemMusic),33)">HomeMenuMusic</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemAddons),33)">HomeMenuAddons</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemAndroidApps),33)">HomeMenuAndroidApps</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPictures),33)">HomeMenuPictures</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemWeather),33)">HomeMenuWeather</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemSettings),33)">HomeMenuSettings</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPlayDisc),33)">HomeMenuPlayDisc</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemFileManager),33)">HomeMenuFileManager</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatchlist),33)">HomeMenuWatchlist</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemSimplePlaylists),33)">HomeMenuSimplePlaylists</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemSearch),33)">HomeMenuSearch</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemPower),33)">HomeMenuPower</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemFav),33)">HomeMenuFav</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemTving),33)">HomeMenuTving</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemNetflix),33)">HomeMenuNetflix</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemWave),33)">HomeMenuWave</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemWatcha),33)">HomeMenuWatcha</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemYoutube),33)">HomeMenuYoutube</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemSpotv),33)">HomeMenuSpotv</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemSamsungtv),33)">HomeMenuSamsungtv</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemKakaotv),33)">HomeMenuKakaotv</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemCoupang),33)">HomeMenuCoupang</include>
-		<include condition="String.IsEqual(Skin.String(HomeMenuItemNaversports),33)">HomeMenuNaversports</include>
-		<include condition="String.IsEmpty(Skin.String(HomeMenuItemNaversports))">HomeMenuNaversports</include>
-	</include>
+
 	<include name="MenuPower">
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemLiveTV),50)">HomeMenuLiveTV</include>
 		<include condition="String.IsEqual(Skin.String(HomeMenuItemRadio),50)">HomeMenuRadio</include>
@@ -1858,7 +1859,8 @@
 			<label>$LOCALIZE[50201]</label>
 			<onclick>ActivateWindow(tvchannels)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_LiveTV]</thumb>
+			<!-- <thumb fallback="$VAR[ImageFanart]">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/tv.png">$INFO[Skin.String(IconLiveTV_Icon)]</property>
 			<property name="BackWebOS1">home/button/webos_button.png</property>
 			<property name="BackTizen1">home/button/submenubutton.png</property>
@@ -1875,7 +1877,8 @@
 			<label>$LOCALIZE[19021]</label>
 			<onclick>ActivateWindow(RadioChannels)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Radio_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Radio]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Radio_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/music.png">$INFO[Skin.String(IconRadio_Icon)]</property>
 			<property name="BackWebOS2">home/button/webos_button.png</property>
 			<property name="BackTizen2">home/button/submenubutton.png</property>
@@ -1891,7 +1894,8 @@
 			<label>$LOCALIZE[50236]</label>
 			<onclick>ActivateWindow(10025,videodb://movies/titles/,return)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Movies]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/film.png">$INFO[Skin.String(IconMovies_Icon)]</property>
 			<property name="BackWebOS3">home/button/webos_button.png</property>
 			<property name="BackTizen3">home/button/submenubutton.png</property>
@@ -1907,7 +1911,8 @@
 			<description>Collection</description>
 			<label>$LOCALIZE[50536]</label>
 			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Collection_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Collection]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Collection_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/collections.png">$INFO[Skin.String(IconCollection_Icon)]</property>
 			<property name="BackWebOS4">home/button/webos_button.png</property>
 			<property name="BackTizen4">home/button/submenubutton.png</property>
@@ -1924,7 +1929,8 @@
 			<label>$LOCALIZE[50204]</label>
 			<onclick>ActivateWindow(10025,videodb://tvshows/titles/,return)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_TVShows]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/tvshows.png">$INFO[Skin.String(IconTVShows_Icon)]</property>
 			<property name="BackWebOS5">home/button/webos_button.png</property>
 			<property name="BackTizen5">home/button/submenubutton.png</property>
@@ -1941,7 +1947,8 @@
 			<label>$LOCALIZE[3]</label>
 			<onclick>ActivateWindow(Videos,Root)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Videos]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/video.png">$INFO[Skin.String(IconVideo_Icon)]</property>
 			<property name="BackWebOS6">home/button/webos_button.png</property>
 			<property name="BackTizen6">home/button/submenubutton.png</property>
@@ -1956,7 +1963,8 @@
 			<label>$INFO[Skin.String(Menu_HomeVideosButtonfavourite10.Label)]</label>
 			<onclick>$INFO[Skin.String(Menu_HomeVideosButtonfavourite10.Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_MyChannel10]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/video.png">$INFO[Skin.String(IconVideo_Icon)]</property>
 			<property name="BackWebOS1">home/button/webos_button.png</property>
 			<property name="BackTizen1">home/button/submenubutton.png</property>
@@ -1966,10 +1974,11 @@
 	<include name="HomeMenuPlaylist1">
 		<!-- KM 5 플레이리스트1-->
 		<item id="5">
-			<description>Playlist 1</description>
+			<description>Playlist1</description>
 			<label>$INFO[Skin.String(movieplaylistButton100_label)]</label>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist1_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist1]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist1_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/film.png">$INFO[Skin.String(IconPlaylist01_Icon)]</property>
 			<property name="BackWebOS9">home/button/webos_button.png</property>
 			<property name="BackTizen9">home/button/submenubutton.png</property>
@@ -1981,7 +1990,8 @@
 			<label fallback="Playlist 1">$INFO[Skin.String(Playlist1HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist1_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist1]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist1_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist1HomeItem.Path)]</property>
 			<property name="Item">Playlist1</property>
 			<property name="Widget">$INFO[Skin.String(Playlist1HomeItem.Widget)]</property>
@@ -1995,10 +2005,11 @@
 	</include>
 	<include name="HomeMenuPlaylist2">
 		<item id="6">
-			<description>Playlist 2</description>
+			<description>Playlist2</description>
 			<label>$INFO[Skin.String(movieplaylistButton200_label)]</label>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist2_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist2]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist2_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/film.png">$INFO[Skin.String(IconPlaylist02_Icon)]</property>
 			<property name="BackWebOS10">home/button/webos_button.png</property>
 			<property name="BackTizen10">home/button/submenubutton.png</property>
@@ -2010,7 +2021,8 @@
 			<label fallback="Playlist 2">$INFO[Skin.String(Playlist2HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist2_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist2]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist2_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist2HomeItem.Path)]</property>
 			<property name="Item">Playlist2</property>
 			<property name="Widget">$INFO[Skin.String(Playlist2HomeItem.Widget)]</property>
@@ -2024,10 +2036,11 @@
 	</include>
 	<include name="HomeMenuPlaylist3">
 		<item id="7">
-			<description>Playlist 3</description>
+			<description>Playlist3</description>
 			<label>$INFO[Skin.String(movieplaylistButton300_label)]</label>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist3_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist3]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist3_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/film.png">$INFO[Skin.String(IconPlaylist03_Icon)]</property>
 			<property name="BackWebOS11">home/button/webos_button.png</property>
 			<property name="BackTizen11">home/button/submenubutton.png</property>
@@ -2039,7 +2052,8 @@
 			<label fallback="Playlist 3">$INFO[Skin.String(Playlist3HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist3_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist3]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist3_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist3HomeItem.Path)]</property>
 			<property name="Item">Playlist3</property>
 			<property name="Widget">$INFO[Skin.String(Playlist3HomeItem.Widget)]</property>
@@ -2053,11 +2067,12 @@
 	</include>
 	<include name="HomeMenuPlaylist4">
 		<item id="19">
-			<description>Playlist 4</description>
+			<description>Playlist4</description>
 			<label fallback="Playlist 4">$INFO[Skin.String(Playlist4HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist4_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist4]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist4_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist4HomeItem.Path)]</property>
 			<property name="Item">Playlist4</property>
 			<property name="Widget">$INFO[Skin.String(Playlist4HomeItem.Widget)]</property>
@@ -2071,11 +2086,12 @@
 	</include>
 	<include name="HomeMenuPlaylist5">
 		<item id="20">
-			<description>Playlist 5</description>
+			<description>Playlist5</description>
 			<label fallback="Playlist 5">$INFO[Skin.String(Playlist5HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist5_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist5]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist5_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist5HomeItem.Path)]</property>
 			<property name="Item">Playlist5</property>
 			<property name="Widget">$INFO[Skin.String(Playlist5HomeItem.Widget)]</property>
@@ -2089,11 +2105,12 @@
 	</include>
 	<include name="HomeMenuPlaylist6">
 		<item id="41">
-			<description>Playlist 6</description>
-			<label fallback="Playlist 6">$INFO[Skin.String(Playlist6HomeItem.Label)]</label>
+			<description>Playlist6</description>
+			<label fallback="Playlist6">$INFO[Skin.String(Playlist6HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist29_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist6]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist29_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist6HomeItem.Path)]</property>
 			<property name="Item">Playlist6</property>
 			<property name="Widget">$INFO[Skin.String(Playlist6HomeItem.Widget)]</property>
@@ -2111,7 +2128,8 @@
 			<label fallback="Playlist 7">$INFO[Skin.String(Playlist7HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist7_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist7]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist7_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist7HomeItem.Path)]</property>
 			<property name="Item">Playlist7</property>
 			<property name="Widget">$INFO[Skin.String(Playlist7HomeItem.Widget)]</property>
@@ -2125,11 +2143,12 @@
 	</include>
 	<include name="HomeMenuPlaylist8">
 		<item id="43">
-			<description>Playlist 8</description>
+			<description>Playlist8</description>
 			<label fallback="Playlist 8">$INFO[Skin.String(Playlist8HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist8_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist8]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist8_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist8HomeItem.Path)]</property>
 			<property name="Item">Playlist8</property>
 			<property name="Widget">$INFO[Skin.String(Playlist8HomeItem.Widget)]</property>
@@ -2147,7 +2166,8 @@
 			<label fallback="Playlist 9">$INFO[Skin.String(Playlist9HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist9_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist9]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist9_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist9HomeItem.Path)]</property>
 			<property name="Item">Playlist9</property>
 			<property name="Widget">$INFO[Skin.String(Playlist9HomeItem.Widget)]</property>
@@ -2166,7 +2186,8 @@
 			<label fallback="Playlist 10">$INFO[Skin.String(Playlist10HomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist10_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Playlist10]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist10_Folder)]</thumb> -->
 			<property name="Path">$INFO[Skin.String(Playlist10HomeItem.Path)]</property>
 			<property name="Item">Playlist10</property>
 			<property name="Widget">$INFO[Skin.String(Playlist10HomeItem.Widget)]</property>
@@ -2185,7 +2206,8 @@
 			<label>$LOCALIZE[2]</label>
 			<onclick>ActivateWindow(10502,musicdb://albums/,return)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Music]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/cd.png">$INFO[Skin.String(IconMusic_Icon)]</property>
 			<property name="BackWebOS19">home/button/webos_button.png</property>
 			<property name="BackTizen19">home/button/submenubutton.png</property>
@@ -2203,7 +2225,8 @@
 			<!-- <onclick>ActivateWindow(Programs,Addons,return)</onclick> -->
 			<onclick>ActivateWindow(AddonBrowser)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Addon_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Addons]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Addon_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/addons.png">$INFO[Skin.String(IconAddons_Icon)]</property>
 			<property name="BackWebOS20">home/button/webos_button.png</property>
 			<property name="BackTizen20">home/button/submenubutton.png</property>
@@ -2217,7 +2240,8 @@
 			<description>HomeMenuAndroidApps</description>
 			<label>앱</label>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Android_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_AndroidApps]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Android_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="buttons/home/android64.png">$INFO[Skin.String(IconAndroid_Icon)]</property>
 			<property name="BackWebOS21">home/button/webos_button.png</property>
 			<property name="BackTizen21">home/button/submenubutton.png</property>
@@ -2235,7 +2259,8 @@
 			<label>$LOCALIZE[1]</label>
 			<onclick>ActivateWindow(Pictures)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Pictures]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/photos.png">$INFO[Skin.String(IconPictures_Icon)]</property>
 			<property name="BackWebOS22">home/button/webos_button.png</property>
 			<property name="BackTizen22">home/button/submenubutton.png</property>
@@ -2250,7 +2275,8 @@
 			<label>$LOCALIZE[8]</label>
 			<onclick>ActivateWindow(Weather)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Weather]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/weather.png">$INFO[Skin.String(IconWeather_Icon)]</property>
 			<property name="BackWebOS23">home/button/webos_button.png</property>
 			<property name="BackTizen23">home/button/submenubutton.png</property>
@@ -2265,7 +2291,8 @@
 			<label>33063</label>
 			<onclick>ActivateWindow(Settings)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Option_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Settings]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Option_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/sonstiges.png">$INFO[Skin.String(IconSettings_Icon)]</property>
 			<property name="BackWebOS24">home/button/webos_button.png</property>
 			<property name="BackTizen24">home/button/submenubutton.png</property>
@@ -2281,7 +2308,8 @@
 			<label2>31010</label2>
 			<onclick>PlayDVD()</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Disc]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/dvd.png">$INFO[Skin.String(IconDVD_Icon)]</property>
 			<property name="BackWebOS25">home/button/webos_button.png</property>
 			<property name="BackTizen25">home/button/submenubutton.png</property>
@@ -2296,7 +2324,8 @@
 			<label>$LOCALIZE[7]</label>
 			<onclick>ActivateWindow(FileManager)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Filemanager_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_FileManager]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Filemanager_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/homeicons/data.png">$INFO[Skin.String(IconFileManager_Icon)]</property>
 			<property name="BackWebOS26">home/button/webos_button.png</property>
 			<property name="BackTizen26">home/button/submenubutton.png</property>
@@ -2310,7 +2339,8 @@
 			<label>즐겨찾기</label>
 			<onclick>ActivateWindow(Favourites)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_fav_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Favourites]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_fav_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="home/icons_oben/star.png">$INFO[Skin.String(IconFav_Icon)]</property>
 			<property name="BackWebOS28">home/button/webos_button.png</property>
 			<property name="BackTizen28">home/button/submenubutton.png</property>
@@ -2323,8 +2353,9 @@
 			<label>넷플릭스</label>
 			<onclick>RunAddon(plugin.video.netflix)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Common_Folder)]</thumb>
-			<property name="MenuIcon" fallback="special://skin/media/home/netflix.png">$INFO[Skin.String(IconCommon_Icon)]</property>
+			<thumb>$VAR[Backgroundfallback_netflix]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_netflix_Folder)]</thumb> -->
+			<property name="MenuIcon" fallback="special://skin/media/home/netflix.png">$INFO[Skin.String(Iconnetfix_Icon)]</property>
 			<property name="BackWebOS17">home/button/webos_button.png</property>
 			<property name="BackTizen17">home/button/submenubutton.png</property>
 			<property name="WidgetLabel">$INFO[Skin.String(NetflixHomeItem.WidgetLabel)]</property>
@@ -2343,7 +2374,8 @@
 			<onclick>RunAddon(plugin.video.tvingm)</onclick>
 			<onclick>Container.SetViewMode(1000)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Tving_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_tving]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Tving_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/tvingm.png">$INFO[Skin.String(IconTving_Icon)]</property>
 			<property name="BackWebOS16">home/button/webos_button.png</property>
 			<property name="BackTizen16">home/button/submenubutton.png</property>
@@ -2362,7 +2394,8 @@
 			<label>웨이브</label>
 			<onclick>RunAddon(plugin.video.wavvem)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Wave_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_wavve]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Wave_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/wavem.png">$INFO[Skin.String(IconWave_Icon)]</property>
 			<property name="BackWebOS18">home/button/webos_button.png</property>
 			<property name="BackTizen18">home/button/submenubutton.png</property>
@@ -2381,7 +2414,8 @@
 			<label>왓챠</label>
 			<onclick>RunAddon(plugin.video.watcham)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Watcha_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_watcha]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Watcha_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/wacha.png">$INFO[Skin.String(IconWacha_Icon)]</property>
 			<property name="BackWebOS15">home/button/webos_button.png</property>
 			<property name="BackTizen15">home/button/submenubutton.png</property>
@@ -2400,7 +2434,8 @@
 			<label>유튜브</label>
 			<onclick>RunAddon(plugin.video.youtube)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_youtube_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Youtube]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_youtube_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/youtube.png">$INFO[Skin.String(Iconyoutube_Icon)]</property>
 			<property name="BackWebOS14">home/button/webos_button.png</property>
 			<property name="BackTizen14">home/button/submenubutton.png</property>
@@ -2418,7 +2453,8 @@
 			<label>스포티비</label>
 			<onclick>RunAddon(plugin.video.spotvm)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Spotv_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_spotv]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Spotv_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/spotv.png">$INFO[Skin.String(IconSpotv_Icon)]</property>
 			<property name="BackWebOS14">home/button/webos_button.png</property>
 			<property name="BackTizen14">home/button/submenubutton.png</property>
@@ -2436,7 +2472,8 @@
 			<label>삼성TV플러스</label>
 			<onclick>RunAddon(plugin.video.samsungtvm)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Samsungtv_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_samsungtv]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Samsungtv_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/samsungtvplus.png">$INFO[Skin.String(IconSamsungtv_Icon)]</property>
 			<property name="BackWebOS18">home/button/webos_button.png</property>
 			<property name="BackTizen18">home/button/submenubutton.png</property>
@@ -2453,7 +2490,8 @@
 			<label>카카오TV</label>
 			<onclick>RunAddon(plugin.video.kakaotvm)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Kakaotv_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_kakaotv]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Kakaotv_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/Kakao.png">$INFO[Skin.String(IconKakaotv_Icon)]</property>
 			<property name="BackWebOS35">home/button/webos_button.png</property>
 			<property name="BackTizen35">home/button/submenubutton.png</property>
@@ -2472,7 +2510,8 @@
 			<label>쿠팡 PLAY</label>
 			<onclick>RunAddon(plugin.video.coupangm)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Coupang_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_coupang]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Coupang_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/Coupang.png">$INFO[Skin.String(IconCoupang_Icon)]</property>
 			<property name="BackWebOS17">home/button/webos_button.png</property>
 			<property name="BackTizen17">home/button/submenubutton.png</property>
@@ -2484,27 +2523,14 @@
 			<visible>System.HasAddon(plugin.video.coupangm)</visible>
 		</item>
 	</include>
-	<!-- KM 32 서치 -->
-	<include name="HomeMenuSearch">
-		<item id="32">
-			<label>137</label>
-			<onclick>RunScript(script.globalsearch)</onclick>
-			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Search_Folder)]</thumb>
-			<property name="MenuIcon" fallback="home/homeicons/search.png">$INFO[Skin.String(IconSearch_Icon)]</property>
-			<property name="BackWebOS34">home/button/webos_button.png</property>
-			<property name="BackTizen34">home/button/submenubutton.png</property>
-			<visible>System.HasAddon(script.globalsearch)</visible>
-			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_Search)</visible>
-		</item>
-	</include>
 
 	<include name="HomeMenuNaversports">
 		<item id="33">
 			<label>네이버 스포츠</label>
 			<onclick>RunAddon(plugin.video.nsportsm)</onclick>
 			<icon></icon>
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Naversports_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_nsports]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Naversports_Folder)]</thumb> -->
 			<property name="MenuIcon" fallback="special://skin/media/home/Naversports.png">$INFO[Skin.String(IconNaversports_Icon)]</property>
 			<property name="BackWebOS35">home/button/webos_button.png</property>
 			<property name="BackTizen35">home/button/submenubutton.png</property>
@@ -2516,13 +2542,33 @@
 			<visible>System.HasAddon(plugin.video.nsportsm)</visible>
 		</item>
 	</include>
+
+
+	<!-- KM 32 서치 -->
+	<include name="HomeMenuSearch">
+		<item id="32">
+			<label>137</label>
+			<onclick>RunScript(script.globalsearch)</onclick>
+			<icon />
+			<thumb>$VAR[Backgroundfallback_globalsearch]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Search_Folder)]</thumb> -->
+			<property name="MenuIcon" fallback="home/homeicons/search.png">$INFO[Skin.String(IconSearch_Icon)]</property>
+			<property name="BackWebOS34">home/button/webos_button.png</property>
+			<property name="BackTizen34">home/button/submenubutton.png</property>
+			<visible>System.HasAddon(script.globalsearch)</visible>
+			<visible>!Skin.HasSetting(HomeMenuNoScriptsButton_Search)</visible>
+		</item>
+	</include>
+
+
 	<!-- KM 50 전원 -->
 	<include name="HomeMenuPower">
 		<item id="50">
 			<label>33060</label>
 			<onclick>ActivateWindow(111)</onclick>
 			<icon />
-			<thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Power_Folder)]</thumb>
+			<thumb>$VAR[Backgroundfallback_Power]</thumb>
+			<!-- <thumb fallback="special://skin/backgrounds/09.jpg">$INFO[Skin.String(Home_Custom_Back_Power_Folder)]</thumb> -->
 			<property name="MenuIcon">home/homeicons/off.png</property>
 			<property name="MenuIcon" fallback="home/homeicons/off.png">$INFO[Skin.String(IconPower_Icon)]</property>
 			<property name="BackWebOS27">home/button/webos_button.png</property>
@@ -3192,7 +3238,7 @@
 			<visible>Container(9000).HasFocus(11)</visible>
 		</item>
 	</include>
-	<include name="HomeSubMenuSettings">
+	<!-- <include name="HomeSubMenuSettings">
 		<item>
 			<label>$LOCALIZE[14200]</label>
 			<onclick>ActivateWindow(PlayerSettings)</onclick>
@@ -3302,8 +3348,8 @@
 			<visible>system.getbool(eventlog.enabled)</visible>
 			<visible>Container(9000).HasFocus(15)</visible>
 		</item>
-	</include>
-	<include name="HomeSubMenuShutdown">
+	</include> -->
+	<!-- <include name="HomeSubMenuShutdown">
 		<item>
 			<label>13009</label>
 			<onclick>Quit</onclick>
@@ -3379,7 +3425,7 @@
 			<property name="BackWebOS27">home/button/webos_button.png</property>
 			<visible>Container(9000).HasFocus(33)</visible>
 		</item>
-	</include>
+	</include> -->
 	<include name="HomeSubMenuPlaylist1">
 		<item id="270101">
 			<label>$INFO[Skin.String(movieplaylistButton101_label)]</label>

@@ -2,18 +2,34 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<onload condition="System.HasAddon(plugin.image.mypicsdb)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&method ='Latest'&sort ='Added'&limit=7)</onload>
+	<!-- <onload condition="System.HasAddon(plugin.image.mypicsdb)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&method ='Latest'&sort ='Added'&limit=7)</onload> -->
 	<onload condition="Skin.HasSetting(Use_Startup_Playlist)">PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onload>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow, daemon=True)</onload>
+	<!-- <onload condition="!Skin.HasSetting(introflag)">AlarmClock(intro_video,PlayMedia(special://skin/extra/Destiny_home_intro.mp4,1),00:00,silent)</onload> -->
+	<!-- <include>FullscreenDimensions</include> -->
+	<!-- <onload>Notification(,$VAR[WelcomeNotificationMsg],3000,$INFO[System.ProfileThumb])</onload>
+	<onload>AlarmClock(welcomedone,SetProperty(WelcomeMsg, $INFO[System.ProfileName],Home),00:01,silent)</onload> -->
+
+
 	<controls>
+		<control type="videowindow">
+			<description>Trailer for Intro Video Window</description>
+			<width>auto</width>
+			<height>auto</height>
+		</control>
+
 		<control type="button" id="10">
 			<animation effect="fade" start="0" end="100" time="0" delay="5000" condition="Skin.HasSetting(startupname)">Focus</animation>
 			<description>trigger</description>
+			<onfocus condition="!Skin.HasSetting(introflag)">AlarmClock(intro_video,PlayMedia(special://skin/extra/Destiny_home_intro.mp4,1),00:00,silent)</onfocus>
+			<onfocus condition="System.AddonIsEnabled(plugin.video.plexkodiconnect)">AlarmClock(intro_video,ReplaceWindow($INFO[System.StartupWindow]),00:00,silent)</onfocus>
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Use_Startup_Playlist) + !Skin.HasSetting(Use_Startup_VideoPlaylist) + !Skin.HasSetting(Use_Startup_Favorites)</visible>
+
 		</control>
+
 		<control type="button" id="10">
 			<animation effect="fade" start="0" end="100" time="0" delay="8000" condition="Skin.HasSetting(startupname)">Focus</animation>
 			<description>trigger with startup Playlist</description>

@@ -37,7 +37,7 @@
                 <width>auto</width>
                 <height>100%</height>
                 <align>left</align>
-                <font>primal_20_Bold</font>
+                <font>primal_22_Bold</font>
                 <textcolor>white</textcolor>
                 <shadowcolor>ff373737</shadowcolor>
                 <label>$INFO[VideoPlayer.MPAA]</label>

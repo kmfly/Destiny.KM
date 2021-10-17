@@ -129,7 +129,7 @@
 					<font>primal_20</font>
 					<ondown>113</ondown>
 					<onright>100</onright>
-					<label>2.0.0</label>
+					<label>2.0.5</label>
 					<textoffsetx>30</textoffsetx>
 					<textwidth>600</textwidth>
 				</control>

@@ -47,7 +47,10 @@
 		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]+트레일러+예고편</value> -->
 		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$ESCINFO[ListItem.Label],return</value> -->
 		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q="$INFO[ListItem.Title]+영화", return</value> -->
-		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]+trailer+예고편&amp;search_type=videos</value>
+		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]+trailer+예고편&amp;search_type=videos</value> -->
+		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag) + Container.Content(movies)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]%2B$LOCALIZE[32042]%2B$LOCALIZE[32043]</value>
+		<!-- Container.Content(movies) | Container.Content(tvshows) -->
+		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag) + Container.Content(tvshows)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]%2B$LOCALIZE[32046]</value>
 
 		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]&quot;,return</value> -->
 	</variable>

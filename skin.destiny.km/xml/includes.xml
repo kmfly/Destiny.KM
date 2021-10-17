@@ -1,5 +1,239 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
+	<variable name="Backgroundfallback_Default">
+		<value condition="!Skin.String(Home_Custom_Background)">special://skin/backgrounds/destiny_default_back.jpg</value>
+		<!-- <value>$INFO[Skin.String(Home_Custom_Background)]</value> -->
+	</variable>
+
+	<variable name="Backgroundfallback_LiveTV">
+		<value condition="Skin.String(Home_Custom_Back_TV_Folder)">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+	<variable name="Backgroundfallback_Radio">
+		<value condition="Skin.String(Home_Custom_Back_Radio_Folder)">$INFO[Skin.String(Home_Custom_Back_Radio_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+	<variable name="Backgroundfallback_Movies">
+		<value condition="Skin.String(Home_Custom_Back_Movies_Folder)">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Collection">
+		<value condition="Skin.String(Home_Custom_Back_Collection_Folder)">$INFO[Skin.String(Home_Custom_Back_Collection_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_TVShows">
+		<value condition="Skin.String(Home_Custom_Back_TVShow_Folder)">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Videos">
+		<value condition="Skin.String(Home_Custom_Back_Video_Folder)">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_MyChannel10">
+		<value condition="Skin.String(Home_Custom_Back_Video_Folder)">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Playlist1">
+		<value condition="Skin.String(Home_Custom_Back_Playlist1_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist1_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_Playlist2">
+		<value condition="Skin.String(Home_Custom_Back_Playlist2_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist2_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_Playlist3">
+		<value condition="Skin.String(Home_Custom_Back_Playlist3_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist3_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Playlist4">
+		<value condition="Skin.String(Home_Custom_Back_Playlist4_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist4_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Playlist5">
+		<value condition="Skin.String(Home_Custom_Back_Playlist5_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist5_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Playlist6">
+		<value condition="Skin.String(Home_Custom_Back_Playlist6_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist6_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+	<variable name="Backgroundfallback_Playlist7">
+		<value condition="Skin.String(Home_Custom_Back_Playlist7_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist7_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Playlist8">
+		<value condition="Skin.String(Home_Custom_Back_Playlist8_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist8_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Playlist9">
+		<value condition="Skin.String(Home_Custom_Back_Playlist9_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist9_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Playlist10">
+		<value condition="Skin.String(Home_Custom_Back_Playlist10_Folder)">$INFO[Skin.String(Home_Custom_Back_Playlist10_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Music">
+		<value condition="Skin.String(Home_Custom_Back_Music_Folder)">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Addons">
+		<value condition="Skin.String(Home_Custom_Back_Addon_Folder)">$INFO[Skin.String(Home_Custom_Back_Addon_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_AndroidApps">
+		<value condition="Skin.String(Home_Custom_Back_Android_Folder)">$INFO[Skin.String(Home_Custom_Back_Android_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Pictures">
+		<value condition="Skin.String(Home_Custom_Back_Pictures_Folder)">$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Weather">
+		<value condition="Skin.String(Home_Custom_Back_Weather_Folder)">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Settings">
+		<value condition="Skin.String(Home_Custom_Back_Option_Folder)">$INFO[Skin.String(Home_Custom_Back_Option_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Disc">
+		<value condition="Skin.String(Home_Custom_Back_PlayDisc_Folder)">$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_FileManager">
+		<value condition="Skin.String(Home_Custom_Back_Filemanager_Folder)">$INFO[Skin.String(Home_Custom_Back_Filemanager_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Favourites">
+		<value condition="Skin.String(Home_Custom_Back_fav_Folder)">$INFO[Skin.String(Home_Custom_Back_fav_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_netflix">
+		<value condition="Skin.String(Home_Custom_Back_netflix_Folder)">$INFO[Skin.String(Home_Custom_Back_netflix_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_tving">
+		<value condition="Skin.String(Home_Custom_Back_Tving_Folder)">$INFO[Skin.String(Home_Custom_Back_Tving_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_wavve">
+		<value condition="Skin.String(Home_Custom_Back_Wave_Folder)">$INFO[Skin.String(Home_Custom_Back_Wave_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_watcha">
+		<value condition="Skin.String(Home_Custom_Back_Watcha_Folder)">$INFO[Skin.String(Home_Custom_Back_Watcha_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+	<variable name="Backgroundfallback_Youtube">
+		<value condition="Skin.String(Home_Custom_Back_youtube_Folder)">$INFO[Skin.String(Home_Custom_Back_youtube_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_spotv">
+		<value condition="Skin.String(Home_Custom_Back_Spotv_Folder)">$INFO[Skin.String(Home_Custom_Back_Spotv_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_samsungtv">
+		<value condition="Skin.String(Home_Custom_Back_Samsungtv_Folder)">$INFO[Skin.String(Home_Custom_Back_Samsungtv_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_kakaotv">
+		<value condition="Skin.String(Home_Custom_Back_Kakaotv_Folder)">$INFO[Skin.String(Home_Custom_Back_Kakaotv_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_coupang">
+		<value condition="Skin.String(Home_Custom_Back_Coupang_Folder)">$INFO[Skin.String(Home_Custom_Back_Coupang_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_nsports">
+		<value condition="Skin.String(Home_Custom_Back_Naversports_Folder)">$INFO[Skin.String(Home_Custom_Back_Naversports_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_globalsearch">
+		<value condition="Skin.String(Home_Custom_Back_Search_Folder)">$INFO[Skin.String(Home_Custom_Back_Search_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="Backgroundfallback_Power">
+		<value condition="Skin.String(Home_Custom_Back_Power_Folder)">$INFO[Skin.String(Home_Custom_Back_Power_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+	////////////////
+	<variable name="Backgroundfallback1">
+		<value condition="!Skin.String(Home_Custom_Background)">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
+
+	<variable name="StartUpWindow">
+		<value>1103</value>
+		<value condition="!Skin.HasSetting(BingieFirstStartupDone)">1101</value>
+		<value condition="!Skin.HasSetting(BingieSecondStartupDone)">1102</value>
+		<value>$INFO[System.StartupWindow]</value>
+	</variable>
+
+
+	<include name="FullscreenDimensions">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>100%</width>
+		<height>100%</height>
+	</include>
+	<include name="HiddenObject">
+		<left>-3000</left>
+		<top>-3000</top>
+		<width>1</width>
+		<height>1</height>
+		<texturefocus />
+		<texturenofocus />
+		<label />
+		<font />
+	</include>
+	<expression name="IsFirstRun">!Skin.HasSetting(BingieFirstStartupDone) | !Skin.HasSetting(BingieSecondStartupDone)</expression>
+
 	<include file="defaults.xml" />
 	<include file="ViewsViewTypeList.xml" />
 	<include file="ViewsMusic.xml" />
@@ -2826,6 +3060,13 @@
 
 	<!-- ============================= KM adding ============================== -->
 
+	<variable name="WelcomeNotificationMsg">
+		<value condition="!Skin.HasSetting(BingieFirstStartupDone) | !Skin.HasSetting(BingieSecondStartupDone)">[B]Welcome to Destiny![/B]</value>
+		<value condition="!String.IsEqual(System.ProfileName,Master user)">$INFO[System.ProfileName,Welcome to Destiny1![CR][B],[/B]!]</value>
+		<value>[B]Welcome to Destiny2![/B]</value>
+	</variable>
+
+
 	<variable name="OTTName">
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.tvingm)">TVING</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.watcham)">WATCHA</value>
@@ -3096,12 +3337,7 @@
 		</control>
 	</include>
 
-	<include name="FullscreenDimensions">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>100%</width>
-		<height>100%</height>
-	</include>
+
 	<expression name="IsPlayingUnrecognizedContent">Player.HasVideo + Player.Playing + ![VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(livetv) | Pvr.IsPlayingRecording]</expression>
 
 </includes>

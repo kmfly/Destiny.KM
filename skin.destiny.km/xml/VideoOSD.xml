@@ -6,15 +6,14 @@
 	<controls>
 		<include>BigInfosTime</include>
 		<include>CommonHomeButton</include>
-		<include>HomePlaying</include>
-
-
 		<control type="image">
 			<width>100%</width>
 			<height>100%</height>
 			<texture background="true" border="15">special://skin/media/new_video_osd/vignette.png</texture>
 			<colordiffuse>cc000000</colordiffuse>
+			<visible>!Skin.HasSetting(videoosdflag)</visible>
 		</control>
+		<include>HomePlaying</include>
 
 
 		<control type="group">

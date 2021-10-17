@@ -2078,3 +2078,18 @@ msgctxt "#32041"
 msgid "Filmography"
 msgstr "필모그래피"
 
+msgctxt "#32042"
+msgid "trailer"
+msgstr "예고편"
+
+msgctxt "#32043"
+msgid "trailer"
+msgstr "영화"
+
+msgctxt "#32045"
+msgid "end"
+msgstr "[종영]"
+
+msgctxt "#32046"
+msgid "end"
+msgstr "방송"

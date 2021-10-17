@@ -1295,6 +1295,7 @@
                             <width>30</width>
                             <height>30</height>
                             <aspectratio>keep</aspectratio>
+                            <colordiffuse>$VAR[BackColorButton]</colordiffuse>
                             <texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
                             <!-- <colordiffuse>$VAR[BackColorButton]</colordiffuse> -->
                         </control>
@@ -2398,7 +2399,7 @@
                 <width>500</width>
                 <height>800</height>
 
-                <texture>special://skin/backgrounds/destiny_background.jpg</texture>
+                <texture>special://skin/backgrounds/destiny_big_poster.jpg</texture>
                 <bordertexture border="10">ThumbShadow.png</bordertexture>
                 <bordersize>6</bordersize>
                 <aspectratio align="center" aligny="top">stretch</aspectratio>
@@ -2464,6 +2465,7 @@
                 <onunfocus condition="System.HasAlarm(preview_delay)">CancelAlarm(preview_delay,silent)</onunfocus>
                 <onunfocus condition="Control.HasFocus(9031)">stop</onunfocus>
                 <visible>!Container(906).IsUpdating + Skin.HasSetting(movie_trailerflag)</visible>
+                <visible>!String.IsEqual(ListItem.label,..)</visible>
 
             </control>
 
@@ -2697,6 +2699,7 @@
                             <width>48</width>
                             <height>48</height>
                             <aspectratio>keep</aspectratio>
+                            <colordiffuse>$VAR[BackColorButton]</colordiffuse>
                             <texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
                             <!-- <colordiffuse>$VAR[BackColorButton]</colordiffuse> -->
                         </control>
@@ -2962,6 +2965,7 @@
                         <label>$INFO[Listitem.Label]</label>
                         <visible>!String.IsEqual(ListItem.label,..)</visible>
                     </control>
+
                     <control type="button">
                         <visible allowhiddenfocus="true">false</visible>
                         <onclick>Container.SetViewMode(1000)</onclick>
@@ -3014,8 +3018,8 @@
                     </control>
                     <control type="button">
                         <visible allowhiddenfocus="true">false</visible>
-
                         <onfocus condition="!Player.Playing + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)]">Container.SetViewMode(900)</onfocus>
+
                         <!-- <onfocus condition=" ![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) ]">Container.SetViewMode(1000)</onfocus> -->
                         <!-- <onfocus condition="!Player.Playing + ![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)]">Container.SetViewMode(900)</onfocus> -->
 
@@ -3091,7 +3095,8 @@
                         <top>5</top>
                         <width>300</width>
                         <height>450</height>
-                        <texture fallback="special://skin/media/home/netflix.png" background="true">$VAR[Poster]</texture>
+                        <texture background="true" fallback="special://skin/backgrounds/destiny_poster.jpg">$VAR[Poster]</texture>
+                        <texture background="true" fallback="special://skin/backgrounds/destiny_poster.jpg">$INFO[ListItem.Icon]</texture>
                         <bordertexture border="10">ThumbShadow.png</bordertexture>
                         <bordersize>6</bordersize>
                         <aspectratio>scale</aspectratio>
@@ -3099,7 +3104,7 @@
                     </control>
 
 
-                    <control type="image">
+                    <!-- <control type="image">
                         <left>5</left>
                         <top>5</top>
                         <width>300</width>
@@ -3109,7 +3114,7 @@
                         <bordersize>6</bordersize>
                         <aspectratio align="center" aligny="top">scale</aspectratio>
                         <visible>String.IsEqual(ListItem.label,..)</visible>
-                    </control>
+                    </control> -->
 
                     <control type="image">
                         <left>240</left>
@@ -3135,7 +3140,7 @@
                         <colordiffuse>FFFF002B</colordiffuse>
                     </control>
 
-                    <control type="image">
+                    <!-- <control type="image">
                         <left>5</left>
                         <top>5</top>
                         <width>300</width>
@@ -3145,14 +3150,14 @@
                         <bordersize>6</bordersize>
                         <aspectratio align="left" aligny="top">scale</aspectratio>
                         <visible>String.IsEqual(ListItem.label,..)</visible>
-                    </control>
+                    </control> -->
 
                     <control type="image">
                         <left>5</left>
                         <top>5</top>
                         <width>300</width>
                         <height>450</height>
-                        <texture fallback="special://skin/media/home/netflix.png" background="true">$VAR[Poster]</texture>
+                        <texture background="true" fallback="special://skin/backgrounds/destiny_poster.jpg">$VAR[Poster]</texture>
                         <bordertexture border="10">ThumbShadow.png</bordertexture>
                         <bordersize>3</bordersize>
                         <aspectratio>scale</aspectratio>
@@ -3174,8 +3179,11 @@
                         <width>48</width>
                         <height>48</height>
                         <aspectratio>keep</aspectratio>
+                        <colordiffuse>$VAR[BackColorButton]</colordiffuse>
                         <texture>$VAR[Image_Overlay_List]</texture>
                     </control>
+
+
                 </focusedlayout>
             </control>
             <control type="scrollbar" id="1610">

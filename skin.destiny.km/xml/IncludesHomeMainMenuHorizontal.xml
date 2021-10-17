@@ -105,6 +105,9 @@
 				<!-- KM 28 쿠팡티비 -->
 				<onup condition="Container(9000).Hasfocus(31) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
 				<onup condition="Container(9000).Hasfocus(31) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
+				<!-- KM 33 네이버스포츠 -->
+				<onup condition="Container(9000).Hasfocus(33) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
+				<onup condition="Container(9000).Hasfocus(33) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
 
 				<!-- Watchlist -->
 				<!-- <onup condition="Container(9000).Hasfocus(31)">709030</onup> -->

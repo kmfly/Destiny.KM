@@ -4,6 +4,7 @@
 	<controls>
 		<include condition="!Container.Content(Episodes)">DialogContextMenu_movies</include>
 		<include condition="Container.Content(Episodes)">DialogContextMenu_TVshow_ep</include>
+		<!-- <include condition="Control.HasFocus(709051)">DialogContextMenu_TVshow_ep</include> -->
 	</controls>
 
 </window>

@@ -5,13 +5,12 @@
 		<!-- ============================================= HOME MUSICSEKTION ============================================ -->
 		<!-- ============================================================================================================ -->
 		<control type="group">
-			<!-- <animation type="Conditional" condition="System.IdleTime(3) + !Player.Caching" reversible="true">
-				<effect type="fade" start="100" end="0" time="400"/>
-			</animation> -->
+
 			<visible>Window.IsVisible(Home) | !Skin.HasSetting(NoHomeDBCounter)</visible>
-			<control type="label">
-				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV) + !Skin.HasSetting(Use_Startup_DreamVideo)</visible>
+			<!-- <control type="label">
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV) + !Skin.HasSetting(Use_Startup_DreamVideo) + !String.Contains(ListItem.Filenameandpath,Destiny_home_intro)</visible>
 				<visible>Player.HasVideo</visible>
+				<visible></visible>
 				<left>665</left>
 				<top>18</top>
 				<height>45</height>
@@ -24,28 +23,28 @@
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> - </scrollsuffix>
-			</control>
+			</control> -->
 			<!-- NOW PLAYING INFO MOVIES -->
-			<!-- <control type="label">
+			<control type="label">
 				<visible>VideoPlayer.Content(Movies)</visible>
 				<visible>Player.HasVideo</visible>
-				<left>665</left>
-				<top>18</top>
+				<left>350</left>
+				<top>980</top>
 				<height>45</height>
 				<width>1200</width>
-				<label>[B]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)][/B] - $INFO[Player.Time]$INFO[Player.Duration, / ] - $LOCALIZE[50012]: $INFO[VideoPlayer.FinishTime]</label>
-				<align>right</align>
+				<label>[B]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)][/B] - $LOCALIZE[50012]: $INFO[VideoPlayer.FinishTime]</label>
+				<align>center</align>
 				<font>primal_16_Title</font>
 				<textcolor>$VAR[ColorFontNormal]</textcolor>
 				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> - </scrollsuffix>
-			</control> -->
+			</control>
 			<!-- KM added 20200429 -->
 
 			<!-- NOW PLAYING INFO LiveTV -->
-			<!-- <control type="label">
+			<control type="label">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 				<visible>Player.HasVideo</visible>
 				<left>665</left>
@@ -60,24 +59,24 @@
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> - </scrollsuffix>
-			</control> -->
+			</control>
 			<!-- NOW PLAYING EPISODES -->
-			<!-- <control type="label">
+			<control type="label">
 				<visible>VideoPlayer.Content(Episodes)</visible>
 				<visible>Player.HasVideo</visible>
-				<left>665</left>
-				<top>18</top>
+				<left>350</left>
+				<top>980</top>
 				<height>45</height>
 				<width>1200</width>
-				<label>$INFO[VideoPlayer.TVShowTitle] - S$INFO[VideoPlayer.Season] E$INFO[VideoPlayer.episode] - $INFO[VideoPlayer.Title] - $INFO[Player.Time]$INFO[Player.Duration, / ] - $LOCALIZE[50012]: $INFO[VideoPlayer.FinishTime]</label>
-				<align>right</align>
+				<label>$INFO[VideoPlayer.TVShowTitle] - S$INFO[VideoPlayer.Season] E$INFO[VideoPlayer.episode] - $INFO[VideoPlayer.Title] - $LOCALIZE[50012]: $INFO[VideoPlayer.FinishTime]</label>
+				<align>center</align>
 				<font>primal_16_Title</font>
 				<textcolor>$VAR[ColorFontNormal]</textcolor>
 				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> - </scrollsuffix>
-			</control> -->
+			</control>
 			<!-- NOW PLAYING MUSIC -->
 			<control type="label">
 				<visible>Player.HasAudio</visible>
@@ -94,4 +93,6 @@
 			</control>
 		</control>
 	</include>
+
+
 </includes>
