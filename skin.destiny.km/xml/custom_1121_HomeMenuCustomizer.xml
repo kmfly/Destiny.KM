@@ -91,6 +91,7 @@
 					<include>HomeMenuPlaylist8</include>
 					<include>HomeMenuPlaylist9</include>
 					<include>HomeMenuPlaylist10</include>
+					<include>HomeMenuTMDB</include>
 					<include>HomeMenuTving</include>
 					<include>HomeMenuSamsungtv</include>
 					<include>HomeMenuKakaotv</include>
@@ -120,7 +121,7 @@
 					<description>Edit Label Button</description>
 					<width>1316</width>
 					<height>60</height>
-					<label>$LOCALIZE[13334]</label>
+					<label>홈 메뉴 이름변경</label>
 					<label2>$INFO[Container(90000).ListItem.Label,[COLOR ColorFontSelected],[/COLOR]]</label2>
 					<onclick>Skin.SetString($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Label])</onclick>
 				</control>
@@ -141,7 +142,7 @@
 					<description>Default select action Button</description>
 					<width>1316</width>
 					<height>60</height>
-					<label>$LOCALIZE[22079]</label>
+					<label>해당 홈 메뉴 클릭시 기본동작(Default:해당 메뉴실행)</label>
 					<label2>$INFO[Container(90000).ListItem.Property(Path),[COLOR ColorFontSelected],[/COLOR]]</label2>
 					<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;skinLabel=$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Label]&amp;skinAction=$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Path])</onclick>
 					<visible>System.HasAddon(script.skinshortcuts)</visible>
@@ -151,11 +152,12 @@
 					<description>Widget Button</description>
 					<width>1316</width>
 					<height>60</height>
-					<label>$LOCALIZE[50226]</label>
+					<label>해당 홈메뉴에 표시할 위젯 선택</label>
 					<label2>$INFO[Container(90000).ListItem.Property(WidgetLabel),[COLOR ColorFontSelected],[/COLOR]]</label2>
 					<onfocus>Skin.Reset(ItemToEdit.Widget)</onfocus>
 					<onfocus>Skin.Reset(ItemToEdit.WidgetLabel)</onfocus>
 					<onfocus>Skin.Reset(ItemToEdit.WidgetType)</onfocus>
+					<onclick condition="!System.HasAddon(script.skinshortcuts)">RunPlugin(plugin://script.skinshortcuts)</onclick>
 					<onclick>SetProperty(Destiny.Widget,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Widget],home)</onclick>
 					<onclick>SetProperty(Destiny.WidgetLabel,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetLabel],home)</onclick>
 					<onclick>SetProperty(Destiny.WidgetType,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetType],home)</onclick>
@@ -176,6 +178,14 @@
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetLabel])</onclick>
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetType])</onclick>
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.BGType])</onclick>
+				</control>
+				<control type="button" id="90021">
+					<description>Dummy Button</description>
+					<width>1316</width>
+					<height>60</height>
+					<label>확인</label>
+					<onclick>back</onclick>
+
 				</control>
 			</control>
 			<control type="scrollbar" id="60">

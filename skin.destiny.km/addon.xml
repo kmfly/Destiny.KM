@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.destiny.km" name="KM.Destiny" version="2.0.5" provider-name="KM">
+<addon id="skin.destiny.km" name="KM.Destiny" version="2.1.6" provider-name="KM">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="service.upnext" version="1.1.5+matrix.1" />
 		<import addon="script.embuary.helper" version="2.0.8" />
-		<import addon="script.globalsearch" version="9.0.5" />
 		<import addon="plugin.video.themoviedb.helper" version="0.0.1" />
-		<import addon="plugin.video.youtube" version="6.8.17+matrix.1" />
-
+		<import addon="plugin.video.youtube" version="6.8.18+matrix.1" />
 
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
@@ -25,16 +23,16 @@
 		<source>https://github.com/kmfly/kodiskin</source>
 		<assets>
 			<icon>resources/icon.jpg</icon>
-			<fanart>resources/fanart.png</fanart>
-			<screenshot>resources/1.png</screenshot>
-			<screenshot>resources/2.png</screenshot>
-			<screenshot>resources/3.png</screenshot>
-			<screenshot>resources/4.png</screenshot>
-			<screenshot>resources/5.png</screenshot>
-			<screenshot>resources/6.png</screenshot>
-			<screenshot>resources/7.png</screenshot>
-			<screenshot>resources/8.png</screenshot>
-			<screenshot>resources/9.png</screenshot>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/1.jpg</screenshot>
+			<screenshot>resources/2.jpg</screenshot>
+			<screenshot>resources/3.jpg</screenshot>
+			<screenshot>resources/4.jpg</screenshot>
+			<screenshot>resources/5.jpg</screenshot>
+			<screenshot>resources/6.jpg</screenshot>
+			<screenshot>resources/7.jpg</screenshot>
+			<screenshot>resources/8.jpg</screenshot>
+			<screenshot>resources/9.jpg</screenshot>
 		</assets>
 	</extension>
 </addon>

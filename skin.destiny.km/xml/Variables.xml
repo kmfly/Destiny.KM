@@ -22,37 +22,21 @@
 		<!-- <value condition="String.IsEqual(ListItem.DBType,movie) + String.IsEqual(ListItem.DBID,0)">plugin://plugin.video.themoviedb.helper/?info=details&amp;type=person&amp;query=$INFO[ListItem.Label]'</value> -->
 
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID) + !String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;dbid=$INFO[ListItem.DBID]</value>
-		<!-- <value condition="String.IsEqual(ListItem.DBType,tvshow) + String.IsEqual(ListItem.DBID,0)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem.TVShowTitle]'</value> -->
-		<!-- <value condition="[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season)] + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem.TVShowTitle]'</value>
 		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem(1).DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem(1).TVShowTitle]'</value>
-		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem(2).DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem(2).TVShowTitle]'</value> -->
-
-
+		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem(2).DBID)">plugin://script.embuary.helper?info=getcast&amp;type=tvshow&amp;title='$ESCINFO[ListItem(2).TVShowTitle]'</value>
+		-->
 		<value>-</value>
 	</variable>
-
-
 	<variable name="Similiar_Content">
-		<!-- <value>special://skin/playlists/All Movies.xsp</value> -->
 		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</value>
-		<value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)">videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22year%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Container(904).ListItem.Label]%22%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(EncodedTitle)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
-	</variable>
-	<!-- <variable name="Similiar_Content">
-		<value>videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22검색키워드%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</value>
-		<value>videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22year%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Container(904).ListItem.Label]%22%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(EncodedTitle)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
-		<value>special://skin/playlists/korea.xsp</value>
-	</variable> -->
-	<variable name="ContentVideoYoutube">
-		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Label]+트레일러+예고편</value> -->
-		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$ESCINFO[ListItem.Label],return</value> -->
-		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q="$INFO[ListItem.Title]+영화", return</value> -->
-		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]+trailer+예고편&amp;search_type=videos</value> -->
-		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag) + Container.Content(movies)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]%2B$LOCALIZE[32042]%2B$LOCALIZE[32043]</value>
-		<!-- Container.Content(movies) | Container.Content(tvshows) -->
-		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag) + Container.Content(tvshows)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]%2B$LOCALIZE[32046]</value>
+		<!-- <value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=tvshow</value> -->
+		<!-- <value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper/?info=getnextup</value> -->
+		<value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)">plugin://script.embuary.helper/?info=getinprogress&amp;type=tvshow</value>
 
-		<!-- <value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]&quot;,return</value> -->
+	</variable>
+	<variable name="ContentVideoYoutube">
+		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag) + Container.Content(movies)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.OriginalTitle]%2B$LOCALIZE[32042]%2B$LOCALIZE[32043]</value>
+		<value condition="String.IsEqual(Window.Property(videoyoutube),1) + Skin.HasSetting(movie_trailerflag) + Container.Content(tvshows)">plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]%2B$LOCALIZE[32046]</value>
 	</variable>
 
 
@@ -141,12 +125,13 @@
 		<value condition="Container(9000).Hasfocus(26)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(27)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(28)">$INFO[Container(9000).ListItem.Label]</value>
-
-
+		<value condition="Container(9000).Hasfocus(29)">$INFO[Container(9000).ListItem.Label]</value>
+		<!-- 홈화면 홈메뉴 포커스시 상단 제목나오는 레이블 -->
 		<value condition="Container(9000).Hasfocus(30)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(31)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(32)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(33)">$INFO[Container(9000).ListItem.Label]</value>
+		<value condition="Container(9000).Hasfocus(34)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(40)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(41)">$INFO[Container(9000).ListItem.Label]</value>
 		<value condition="Container(9000).Hasfocus(42)">$INFO[Container(9000).ListItem.Label]</value>
@@ -162,6 +147,7 @@
 		<!-- KM OTT 위젯 슬라이드  -->
 		<value>HOME</value>
 	</variable>
+
 	<variable name="VarWidgetsPlotVertical">
 		<value condition="Control.HasFocus(18304)">$INFO[Container(18304).ListItem.Plot]</value>
 		<value condition="Control.HasFocus(18305)">$INFO[Container(18305).ListItem.Plot]</value>
@@ -421,6 +407,10 @@
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<!-- ======================= Widget Umschalt Begin ================================= -->
+	<variable name="TMDB_LIST">
+		<value>plugin://plugin.video.themoviedb.helper?info=trakt_anticipated&amp;type=movie</value>
+	</variable>
+
 	<variable name="HomeWidgetsMovies">
 		<value condition="!Skin.HasSetting(recentmovies) + !Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(3dmovies) + !Skin.HasSetting(movieactor)">special://skin/playlists/Movies Recent.xsp</value>
 		<value condition="Skin.HasSetting(recommendedmovies)">special://skin/playlists/Last Played Movies.xsp</value>
@@ -431,6 +421,7 @@
 		<value condition="Skin.HasSetting(3dmovies)">special://skin/playlists/3D Movies.xsp</value>
 		<value condition="Skin.HasSetting(movieactor)">videodb://movies/actors/</value>
 	</variable>
+
 	<variable name="MovieWidgetsSettingVar">
 		<value condition="Skin.HasSetting(recommendedmovies)">$LOCALIZE[50005]</value>
 		<value condition="Skin.HasSetting(unseenmovies)">$LOCALIZE[50309]</value>
@@ -542,7 +533,16 @@
 		<value condition="Container(9000).Hasfocus(25) + Skin.HasSetting(movieplaylistButton1010)">$INFO[Skin.String(WaveHomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(26) + Skin.HasSetting(movieplaylistButton1011)">$INFO[Skin.String(WachaHomeItem.Widget)]</value>
 		<value condition="Container(9000).Hasfocus(27) + Skin.HasSetting(movieplaylistButton1012)">$INFO[Skin.String(YoutubeHomeItem.Widget)]</value>
+		<!-- KM 28 스포티비 -->
 		<value condition="Container(9000).Hasfocus(28) + Skin.HasSetting(movieplaylistButton1013)">$INFO[Skin.String(SpotvHomeItem.Widget)]</value>
+		<!-- KM 29 삼성티비플러스 -->
+		<value condition="Container(9000).Hasfocus(29) + Skin.HasSetting(movieplaylistButton1014)">$INFO[Skin.String(SamsungtvHomeItem.Widget)]</value>
+		<!-- KM 30 카카오티비 -->
+		<value condition="Container(9000).Hasfocus(30) + Skin.HasSetting(movieplaylistButton1015)">$INFO[Skin.String(KakaotvHomeItem.Widget)]</value>
+		<!-- KM 31 쿠팡티비 -->
+		<value condition="Container(9000).Hasfocus(31) + Skin.HasSetting(movieplaylistButton1016)">$INFO[Skin.String(CoupangHomeItem.Widget)]</value>
+		<!-- KM 33 네이버스포츠 -->
+		<value condition="Container(9000).Hasfocus(33) + Skin.HasSetting(movieplaylistButton1018)">$INFO[Skin.String(NaversportsHomeItem.Widget)]</value>
 
 
 	</variable>
@@ -2370,7 +2370,6 @@
 	</variable>
 
 	<variable name="ColorBackWebOS41">
-
 		<value condition="Skin.HasSetting(ColorBackWebOS41)">$INFO[Skin.String(SelfColorWebOS41_Path)]</value>
 		<value>ColorBackHomeButton41</value>
 	</variable>

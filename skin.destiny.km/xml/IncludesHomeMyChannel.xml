@@ -103,35 +103,36 @@
 			  </item>-->
 					<item id="260101">
 						<label>50606</label>
+						<onclick condition="!System.HasAddon(script.favourites)">RunPlugin(plugin://script.favourites)</onclick>
 						<onclick>ActivateWindow(4107)</onclick>
 						<icon>home/homeicons/newmovies.png</icon>
 						<property name="BackButton">home/menuicons/blank.png</property>
 					</item>
 					<item id="260103">
-						<label/>
+						<label />
 						<onclick>ActivateWindow(4116)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/fritz_avm.png</property>
 						<visible>System.HasAddon(plugin.program.fritzact)</visible>
 					</item>
 					<item id="260104">
-						<label/>
+						<label />
 						<onclick>ActivateWindow(4117)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/newscenter.png</property>
 						<visible>System.HasAddon(plugin.program.newscenter)</visible>
 					</item>
 					<item id="260105">
-						<label/>
+						<label />
 						<onclick>RunAddon(plugin.audio.radio_de)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/radio.png</property>
 						<visible>System.HasAddon(plugin.audio.radio_de)</visible>
 					</item>
 					<item id="260106">
-						<label/>
+						<label />
 						<onclick>RunAddon(plugin.video.netflix)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/netflix.png</property>
 						<visible>System.HasAddon(plugin.video.netflix)</visible>
 					</item>
@@ -160,37 +161,37 @@
 					</item> -->
 
 					<item id="260107">
-						<label/>
+						<label />
 						<onclick>RunAddon(plugin.audio.prime_music)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/amazon_music.png</property>
 						<visible>System.HasAddon(plugin.audio.prime_music)</visible>
 					</item>
 					<item id="260108">
-						<label/>
+						<label />
 						<onclick>RunAddon(plugin.video.amazon-test)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/amazon_video.png</property>
 						<visible>System.HasAddon(plugin.video.amazon-test)</visible>
 					</item>
 					<item id="260109">
-						<label/>
+						<label />
 						<onclick>RunAddon(plugin.video.maxdome)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/maxdome.png</property>
 						<visible>System.HasAddon(plugin.video.maxdome)</visible>
 					</item>
 					<item id="2601010">
-						<label/>
+						<label />
 						<onclick>RunAddon(plugin.video.youtube)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/youtube.png</property>
 						<visible>System.HasAddon(plugin.video.youtube)</visible>
 					</item>
 					<item id="260111">
-						<label/>
+						<label />
 						<onclick>RunAddon(plugin.video.mediathekview)</onclick>
-						<icon/>
+						<icon />
 						<property name="BackButton">home/menuicons/mediathekviewweb.png</property>
 						<visible>System.HasAddon(plugin.video.mediathekview)</visible>
 					</item>

@@ -22,8 +22,6 @@
 				<!-- KM 4 비디오-->
 				<onup condition="Container(9000).Hasfocus(4)">1863</onup>
 				<!-- KM 재생목록 1 ~ 10 -->
-				<!-- <onup condition="Container(9000).Hasfocus(5) | Container(9000).Hasfocus(6) | Container(9000).Hasfocus(7) | Container(9000).Hasfocus(19) | Container(9000).Hasfocus(20) | Container(9000).Hasfocus(41) | Container(9000).Hasfocus(42) | Container(9000).Hasfocus(43) | Container(9000).Hasfocus(44) | Container(9000).Hasfocus(45)">18309</onup>
-				 -->
 				<onup condition="Container(9000).Hasfocus(5) + Skin.HasSetting(movieplaylistButton1000)">18309</onup>
 				<onup condition="Container(9000).Hasfocus(5) + !Skin.HasSetting(movieplaylistButton1000)">1864</onup>
 
@@ -91,23 +89,26 @@
 				<onup condition="Container(9000).Hasfocus(26) + !Skin.HasSetting(movieplaylistButton1011) ">1864</onup>
 				<!-- KM 27 유튜브 -->
 				<onup condition="Container(9000).Hasfocus(27) + Skin.HasSetting(movieplaylistButton1012) ">18309</onup>
-				<onup condition="Container(9000).Hasfocus(27) + Skin.HasSetting(movieplaylistButton1012) ">1864</onup>
+				<onup condition="Container(9000).Hasfocus(27) + !Skin.HasSetting(movieplaylistButton1012) ">1864</onup>
 				<!-- KM 28 스포티비 -->
 				<onup condition="Container(9000).Hasfocus(28) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
 				<onup condition="Container(9000).Hasfocus(28) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
 
-				<!-- KM 28 삼성티비플러스 -->
-				<onup condition="Container(9000).Hasfocus(29) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
-				<onup condition="Container(9000).Hasfocus(29) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
-				<!-- KM 28 카카오티비 -->
-				<onup condition="Container(9000).Hasfocus(30) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
-				<onup condition="Container(9000).Hasfocus(30) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
-				<!-- KM 28 쿠팡티비 -->
-				<onup condition="Container(9000).Hasfocus(31) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
-				<onup condition="Container(9000).Hasfocus(31) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
+				<!-- KM 29 삼성티비플러스 -->
+				<onup condition="Container(9000).Hasfocus(29) + Skin.HasSetting(movieplaylistButton1014) ">18309</onup>
+				<onup condition="Container(9000).Hasfocus(29) + !Skin.HasSetting(movieplaylistButton1014) ">1864</onup>
+				<!-- KM 30 카카오티비 -->
+				<onup condition="Container(9000).Hasfocus(30) + Skin.HasSetting(movieplaylistButton1015) ">18309</onup>
+				<onup condition="Container(9000).Hasfocus(30) + !Skin.HasSetting(movieplaylistButton1015) ">1864</onup>
+				<!-- KM 31 쿠팡티비 -->
+				<onup condition="Container(9000).Hasfocus(31) + Skin.HasSetting(movieplaylistButton1016) ">18309</onup>
+				<onup condition="Container(9000).Hasfocus(31) + !Skin.HasSetting(movieplaylistButton1016) ">1864</onup>
 				<!-- KM 33 네이버스포츠 -->
-				<onup condition="Container(9000).Hasfocus(33) + Skin.HasSetting(movieplaylistButton1013) ">18309</onup>
-				<onup condition="Container(9000).Hasfocus(33) + !Skin.HasSetting(movieplaylistButton1013) ">1864</onup>
+				<onup condition="Container(9000).Hasfocus(33) + Skin.HasSetting(movieplaylistButton1018) ">18309</onup>
+				<onup condition="Container(9000).Hasfocus(33) + !Skin.HasSetting(movieplaylistButton1018) ">1864</onup>
+				<!-- KM 38 TMDB -->
+				<onup condition="Container(9000).Hasfocus(34)">300001</onup>
+				<!-- <onup condition="Container(9000).Hasfocus(38) + !Skin.HasSetting(movieplaylistButton1000)">1864</onup> -->
 
 				<!-- Watchlist -->
 				<!-- <onup condition="Container(9000).Hasfocus(31)">709030</onup> -->

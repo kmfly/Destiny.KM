@@ -1050,7 +1050,7 @@ msgstr "사용자 애드온설정 켜기/끄기"
 
 msgctxt "#50226"
 msgid "Select widget"
-msgstr "위젯 선택"
+msgstr "애드온 위젯 경로설정"
 
 
 msgctxt "#50228"
@@ -2064,11 +2064,11 @@ msgstr "스마트 재생 리스트 에디터"
 
 msgctxt "#31049"
 msgid "Widget Setting"
-msgstr "위젯설정"
+msgstr "위젯 설정"
 
 msgctxt "#31050"
 msgid Please set Widget Shortcut"
-msgstr "위젯을 설정해주세요"
+msgstr "위젯 설정 페이지 진입"
 
 msgctxt "#31051"
 msgid "Home Menu Buttons Reset"
@@ -2080,11 +2080,11 @@ msgstr "필모그래피"
 
 msgctxt "#32042"
 msgid "trailer"
-msgstr "예고편"
+msgstr "공식예고편"
 
 msgctxt "#32043"
 msgid "trailer"
-msgstr "영화"
+msgstr "trailer"
 
 msgctxt "#32045"
 msgid "end"

@@ -26,7 +26,7 @@
 			</control> -->
 			<!-- NOW PLAYING INFO MOVIES -->
 			<control type="label">
-				<visible>VideoPlayer.Content(Movies)</visible>
+				<visible>Player.HasVideo + VideoPlayer.Content(Movies) + !Control.HasFocus(9000) + !Skin.HasSetting(videoosdflag)</visible>
 				<visible>Player.HasVideo</visible>
 				<left>350</left>
 				<top>980</top>
@@ -62,8 +62,9 @@
 			</control>
 			<!-- NOW PLAYING EPISODES -->
 			<control type="label">
-				<visible>VideoPlayer.Content(Episodes)</visible>
-				<visible>Player.HasVideo</visible>
+				<!-- <visible>VideoPlayer.Content(Episodes)</visible> -->
+				<visible>Player.HasVideo + VideoPlayer.Content(Episodes) + !Control.HasFocus(9000)+ !Skin.HasSetting(videoosdflag)</visible>
+				<!-- <visible>Player.HasVideo</visible> -->
 				<left>350</left>
 				<top>980</top>
 				<height>45</height>

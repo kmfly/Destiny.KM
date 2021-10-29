@@ -18,7 +18,7 @@
 			<top>175</top>
 			<width>60</width>
 			<height>60</height>
-			
+
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>default/close_selected.png</texturefocus>
 			<texturenofocus>default/close.png</texturenofocus>
@@ -27,6 +27,21 @@
 			<onup>1860</onup>
 			<ondown>140500</ondown>
 		</control>
+
+		<control type="label">
+			<left>980</left>
+			<top>180</top>
+			<width>356</width>
+			<height>60</height>
+			<font>primal_20</font>
+			<textoffsetx>15</textoffsetx>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>등록된 즐겨찾기 채널등록</label>
+		</control>
+
 		<control type="grouplist" id="140500">
 			<left>995</left>
 			<top>250</top>
@@ -52,6 +67,7 @@
 				<height>51</height>
 				<font>primal_20</font>
 				<label>$LOCALIZE[50238] 1</label>
+				<label>$INFO[ListItem.Label2]</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(Menu_HomeVideosButtonfavourite1.Label)][/COLOR]</label2>
 				<textoffsetx>30</textoffsetx>
 				<onclick>RunScript(script.favourites,property=Menu_HomeVideosButtonfavourite1)</onclick>

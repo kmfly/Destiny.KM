@@ -201,7 +201,12 @@
 		<value condition="Skin.String(Home_Custom_Back_Power_Folder)">$INFO[Skin.String(Home_Custom_Back_Power_Folder)]</value>
 		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
 	</variable>
-	////////////////
+
+	<variable name="Backgroundfallback_TMDB">
+		<value condition="Skin.String(Home_Custom_Back_TMDB_Folder)">$INFO[Skin.String(Home_Custom_Back_TMDB_Folder)]</value>
+		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
+	</variable>
+
 	<variable name="Backgroundfallback1">
 		<value condition="!Skin.String(Home_Custom_Background)">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</value>
 		<value>$INFO[Skin.String(Home_Custom_Background)]</value>
@@ -1489,6 +1494,16 @@
 			<colordiffuse>$VAR[ColorBackWebOS43]</colordiffuse>
 			<visible>!Skin.HasSetting(homenocolorbutton)</visible>
 		</control>
+		<control type="image">
+			<texture background="true">$INFO[ListItem.Property(BackWebOS44)]</texture>
+			<colordiffuse>$VAR[ColorBackWebOS44]</colordiffuse>
+			<visible>!Skin.HasSetting(homenocolorbutton)</visible>
+		</control>
+		<control type="image">
+			<texture background="true">$INFO[ListItem.Property(BackWebOS45)]</texture>
+			<colordiffuse>$VAR[ColorBackWebOS45]</colordiffuse>
+			<visible>!Skin.HasSetting(homenocolorbutton)</visible>
+		</control>
 
 
 	</include>
@@ -1695,6 +1710,21 @@
 			<colordiffuse>$VAR[ColorBackWebOS38]</colordiffuse>
 			<visible>!Skin.HasSetting(homenocolorbutton)</visible>
 		</control>
+		<control type="image">
+			<texture background="true">$INFO[ListItem.Property(BackTizen39)]</texture>
+			<colordiffuse>$VAR[ColorBackWebOS39]</colordiffuse>
+			<visible>!Skin.HasSetting(homenocolorbutton)</visible>
+		</control>
+		<control type="image">
+			<texture background="true">$INFO[ListItem.Property(BackTizen40)]</texture>
+			<colordiffuse>$VAR[ColorBackWebOS40]</colordiffuse>
+			<visible>!Skin.HasSetting(homenocolorbutton)</visible>
+		</control>
+		<control type="image">
+			<texture background="true">$INFO[ListItem.Property(BackTizen41)]</texture>
+			<colordiffuse>$VAR[ColorBackWebOS41]</colordiffuse>
+			<visible>!Skin.HasSetting(homenocolorbutton)</visible>
+		</control>
 
 	</include>
 	<!-- HOMEMENU NO FOCUS BUTTON CLOSE -->
@@ -1758,7 +1788,57 @@
 	</include>
 	<!-- HOMESUBMENU BUTTON END -->
 	<!-- BUTTON UP RIGHT -->
+
 	<include name="CommonHomeButton">
+
+		<control type="group">
+			<visible>Window.IsVisible(Home)</visible>
+			<control type="image">
+				<left>1510</left>
+				<top>157</top>
+				<width>32</width>
+				<height>32</height>
+				<texture background="true">special://skin/media/new_video_osd/film_32.png</texture>
+				<!-- <bordertexture border="4">ThumbShadow.png</bordertexture> -->
+				<aspectratio>keep</aspectratio>
+				<bordersize>1</bordersize>
+				<colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+
+			</control>
+			<control type="image">
+				<left>1510</left>
+				<top>195</top>
+				<width>32</width>
+				<height>32</height>
+				<texture background="true">special://skin/media/new_video_osd/tv.png</texture>
+				<!-- <bordertexture border="4">ThumbShadow.png</bordertexture> -->
+				<aspectratio>keep</aspectratio>
+				<bordersize>1</bordersize>
+				<colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+			</control>
+
+			<control type="label">
+				<left>1565</left>
+				<top>159</top>
+				<width>200</width>
+				<font>primal_16_Bold</font>
+				<label>$INFO[Window(Home).Property(Movies.Count)]</label>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+
+			</control>
+			<control type="label">
+				<left>1565</left>
+				<top>197</top>
+				<width>200</width>
+				<font>primal_16_Bold</font>
+				<label>$INFO[Window(Home).Property(episodes.Count)]</label>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+		</control>
+
+
 		<control type="image">
 			<left>1490</left>
 			<top>143</top>
@@ -3068,6 +3148,7 @@
 
 
 	<variable name="OTTName">
+		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.youtube)">YOUTUBE</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.tvingm)">TVING</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.watcham)">WATCHA</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.wavvem)">WAVVE</value>
@@ -3081,6 +3162,11 @@
 
 	<!-- OTT 아이콘 -->
 	<variable name="OTTicon">
+
+		<!-- <value condition="Container.Content(movies)">special://skin/media/new_video_osd/film_96.png</value>
+		<value condition="Container.Content(tvshows)">special://skin/media/new_video_osd/tv_96.png</value> -->
+
+		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.youtube)">special://skin/media/home/youtube.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.tvingm)">special://skin/media/home/tvingm.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.watcham)">special://skin/media/home/wacha.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.wavvem)">special://skin/media/home/wavem.png</value>
@@ -3090,6 +3176,7 @@
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.kakaotvm)">special://skin/media/home/kakao.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.coupangm)">special://skin/media/home/coupang.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,plugin.video.nsportsm)">special://skin/media/home/Naversports.png</value>
+		<value>special://skin/media/new_video_osd/local.png</value>
 	</variable>
 
 	<variable name="OTTpath">

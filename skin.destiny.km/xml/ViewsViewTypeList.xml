@@ -1198,6 +1198,21 @@
             <!-- <include>SlideInAndOutAnimationRNL</include> -->
             <visible>!Container.Content(episodes)</visible>
             <visible>Control.IsVisible(903)</visible>
+            <control type="image">
+                <left>1100</left>
+                <top>50</top>
+                <width>900</width>
+                <height>700</height>
+                <texture background="true" diffuse="special://skin/backgrounds/overray_fanart.png">$INFO[ListItem.Art(fanart)]</texture>
+                <!-- <texture background="true">$INFO[ListItem.Art(fanart)]</texture> -->
+                <!-- <bordertexture border="10">ThumbShadow.png</bordertexture> -->
+                <!-- <bordersize>6</bordersize> -->
+                <aspectratio align="center" aligny="top">stretch</aspectratio>
+                <visible>Control.IsVisible(903)</visible>
+                <visible>!Control.HasFocus(904)</visible>
+                <visible>![Control.HasFocus(9100) |Control.HasFocus(9000)] </visible>
+                <visible>!ListItem.IsCollection</visible>
+            </control>
 
 
             <control type="list" id="903">
@@ -1333,7 +1348,7 @@
             <!-- 캐스팅 정보 -->
             <control type="panel" id="904">
                 <top>530</top>
-                <left>950</left>
+                <left>970</left>
                 <height>300</height>
                 <width>900</width>
 
@@ -1363,13 +1378,13 @@
                 <!-- <visible allowhiddenfocus="true">!Container(904).IsUpdating</visible> -->
                 <orientation>horizontal</orientation>
                 <itemlayout height="225" width="180">
-                    <control type="image">
+                    <!-- <control type="image">
                         <width>500</width>
                         <height>150</height>
                         <texture background="true">skin/button_klein_tranz50.png</texture>
                         <aspectratio>stretch</aspectratio>
                         <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
-                    </control>
+                    </control> -->
                     <control type="image">
                         <texture background="true" diffuse="special://skin/media/home/roundmask.png" fallback="DefaultActor.png">$INFO[ListItem.Art(thumb)]</texture>
                         <width>140</width>
@@ -1505,22 +1520,22 @@
                 <ondown>903</ondown>
                 <onleft>906</onleft>
                 <onright>906</onright>
-                <onload>ClearProperty(ContentVideoYoutube,Home)</onload>
+                <!-- <onload>ClearProperty(ContentVideoYoutube,Home)</onload> -->
                 <orientation>horizontal</orientation>
                 <visible>!Container.Content(sets)</visible>
                 <visible>!ListItem.IsParentFolder</visible>
                 <itemlayout height="260" width="160"></itemlayout>
                 <focusedlayout></focusedlayout>
-                <content limit="1" sortby="file" sortorder="" target="videos">$VAR[ContentVideoYoutube]</content>
+                <content limit="3" sortby="file" sortorder="" target="videos">$VAR[ContentVideoYoutube]</content>
                 <!-- <content limit="3" sortorder="" target="videos">$VAR[ContentVideoYoutube]</content> -->
             </control>
             <!-- 영화 배우 출연작품  -->
             <control type="panel" id="9000">
 
                 <height>300</height>
-                <width>640</width>
-                <top>290</top>
-                <left>1210</left>
+                <width>540</width>
+                <top>270</top>
+                <left>1350</left>
                 <orientation>horizontal</orientation>
                 <!-- <onup>ClearProperty(ShowCastContent,Home)</onup> -->
                 <onunfocus>ClearProperty(ShowCastContent,Home)</onunfocus>
@@ -1552,7 +1567,7 @@
 
                         <wrapmultiline>true</wrapmultiline>
 
-                        <top>170</top>
+                        <top>175</top>
                         <left>5</left>
                         <width>150</width>
                         <height>50</height>
@@ -1595,7 +1610,7 @@
 
                         <wrapmultiline>true</wrapmultiline>
 
-                        <top>170</top>
+                        <top>175</top>
                         <left>5</left>
                         <width>150</width>
                         <height>50</height>
@@ -1614,28 +1629,15 @@
                     </control>
 
                 </focusedlayout>
-                <!-- $INFO[Container(903).ListItem.Label] or
-            $INFO[Window(home).Property(CastMemberLabel)] -->
                 <content target="videos">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22actor%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Container(904).ListItem.Label]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
-                <!-- <content
-            target="videos">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22actor%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Skin.String(CustomSearchTerm)]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
-            -->
-                <!-- <content
-            target="videos">videodb://movies/titles/?xsp={"order":{"direction":"ascending","ignorefolders":0,"method":"year"},"rules":{"and":[{"field":"director","operator":"contains","value":["$INFO[Container(903).ListItem.Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
-            -->
-                <!-- <content
-            target="videos">videodb://tvshows/titles/?xsp={"order":{"direction":"ascending","ignorefolders":0,"method":"year"},"rules":{"and":[{"field":"director","operator":"contains","value":["$INFO[Container(903).ListItem.Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</content>
-            <content
-            target="videos">videodb://tvshows/titles/-1/-1/?xsp={"order":{"direction":"ascending","ignorefolders":0,"method":"sorttitle"},"rules":{"and":[{"field":"actor","operator":"contains","value":["$INFO[Container(903).ListItem.Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</content>
-            -->
             </control>
             <!--TV쇼 배우 출연작품  -->
             <control type="panel" id="9100">
 
                 <height>300</height>
-                <width>650</width>
-                <top>290</top>
-                <left>1210</left>
+                <width>540</width>
+                <top>270</top>
+                <left>1350</left>
                 <orientation>horizontal</orientation>
                 <onup>ClearProperty(ShowCastContent,Home)</onup>
                 <onunfocus>ClearProperty(ShowCastContent,Home)</onunfocus>
@@ -1651,23 +1653,7 @@
                 <onback>SetFocus(903)</onback>
 
 
-                <!-- <visible>![Container.Content(seasons) |
-            Container.Content(episodes)]</visible> <visible
-            allowhiddenfocus="true">!Container(9000).IsUpdating</visible> -->
-
-                <!--
-            <onclick>RunScript(script.embuary.info,call=person,query=$INFO[Container(904).ListItem.label])</onclick>
-            -->
-                <!--
-            <onclick>RunScript(script.embuary.info,call=person,query='$INFO[Container(904).ListItem.Label]')</onclick>
-            -->
-
                 <itemlayout height="225" width="180">
-
-                    <!-- <control type="image"> <width>300</width> <height>150</height> <texture
-                background="true">skin/button_klein_tranz50.png</texture>
-                <aspectratio>stretch</aspectratio>
-                <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse> </control> -->
 
                     <control type="image">
                         <texture background="true" diffuse="special://skin/media/home/roundmask.png" fallback="DefaultActor.png">$INFO[ListItem.Art(poster)]</texture>
@@ -1734,23 +1720,7 @@
                     </control>
 
                 </focusedlayout>
-                <!-- $INFO[Container(903).ListItem.Label] or
-            $INFO[Window(home).Property(CastMemberLabel)] -->
                 <content target="videos">videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22year%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Container(904).ListItem.Label]%22%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(EncodedTitle)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</content>
-                <!-- <content
-            target="videos">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22actor%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Container(904).ListItem.Label]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
-            -->
-                <!-- <content
-            target="videos">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22actor%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Skin.String(CustomSearchTerm)]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
-            -->
-                <!-- <content
-            target="videos">videodb://movies/titles/?xsp={"order":{"direction":"ascending","ignorefolders":0,"method":"year"},"rules":{"and":[{"field":"director","operator":"contains","value":["$INFO[Container(903).ListItem.Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
-            -->
-                <!-- <content
-            target="videos">videodb://tvshows/titles/?xsp={"order":{"direction":"ascending","ignorefolders":0,"method":"year"},"rules":{"and":[{"field":"director","operator":"contains","value":["$INFO[Container(903).ListItem.Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</content>
-            <content
-            target="videos">videodb://tvshows/titles/-1/-1/?xsp={"order":{"direction":"ascending","ignorefolders":0,"method":"sorttitle"},"rules":{"and":[{"field":"actor","operator":"contains","value":["$INFO[Container(903).ListItem.Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</content>
-            -->
             </control>
             <control type="panel" id="9200">
                 <description>캐스트용 히든 패널리스트</description>
@@ -1784,6 +1754,7 @@
                     <align>justify</align>
                     <aligny>center</aligny>
                     <label fallback="정보 없슴">$INFO[Container(906).ListItem.Label]</label>
+                    <visible>Control.HasFocus(9031)</visible>
                     <!-- <label fallback="없슴">$INFO[Container(905).ListItem.Label]</label> -->
 
                 </control>
@@ -2181,38 +2152,51 @@
                     <align>left</align>
                     <width>800</width>
                     <height>120</height>
-                    <itemgap>5</itemgap>
+                    <itemgap>2</itemgap>
                     <orientation>horizontal</orientation>
+                    String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)
+                    String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)
                     <control type="label">
-                        <width>175</width>
+                        <width>130</width>
                         <height>36</height>
                         <font>primal_13_Bold</font>
-                        <textcolor>$VAR[ColorFontSelected]</textcolor>
-                        <label>비슷한 콘텐츠 -</label>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <label>비슷한 영화 :</label>
                         <visible>!String.IsEqual(ListItem.label,..)</visible>
                         <!-- <visible>Control.IsVisible(903) + !Skin.HasSetting(videoyoutube)</visible> -->
                         <visible>Control.IsVisible(903) </visible>
-                        <visible>!ListItem.IsCollection</visible>
+                        <visible>!ListItem.IsCollection + String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)</visible>
                     </control>
-                    <!-- <control type="label">
-                    <width>175</width>
-                    <height>36</height>
-                    <font>primal_13_Bold</font>
-                    <textcolor>$VAR[ColorFontSelected]</textcolor>
-                    <label>YouTube 검색 -</label>
-                    <visible>!String.IsEqual(ListItem.label,..)</visible>
-                    <visible>Control.IsVisible(903) + Skin.HasSetting(videoyoutube)</visible>
-                </control> -->
                     <control type="label">
+                        <width>150</width>
                         <height>36</height>
                         <font>primal_13_Bold</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
                         <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                        <label>Loading...</label>
-                        <!-- <visible>[Container(905).IsUpdating + !Skin.HasSetting(videoyoutube)] |
-                        [Container(906).IsUpdating + Skin.HasSetting(videoyoutube)]</visible> -->
+                        <label>계속 시청하기 :</label>
+                        <visible>!String.IsEqual(ListItem.label,..)</visible>
+                        <!-- <visible>Control.IsVisible(903) + !Skin.HasSetting(videoyoutube)</visible> -->
+                        <visible>Control.IsVisible(903) </visible>
+                        <visible>!ListItem.IsCollection + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)</visible>
+                    </control>
+
+
+                    <control type="multiimage">
+                        <top>-15</top>
+                        <width>50</width>
+                        <height>55</height>
+                        <aspectratio>keep</aspectratio>
+                        <imagepath>special://skin/spinner/search_widget_loader</imagepath>
+                        <timeperimage>250</timeperimage>
+                        <pauseatend>500</pauseatend>
+                        <colordiffuse>white</colordiffuse>
+                        <fadetime>0</fadetime>
                         <visible>Container(905).IsUpdating</visible>
                         <visible>!ListItem.IsCollection</visible>
                     </control>
+
+
                     <control type="label">
                         <height>36</height>
                         <font>primal_13_Bold</font>
@@ -2224,6 +2208,20 @@
                         <!-- <visible>Control.IsVisible(903) + !Skin.HasSetting(videoyoutube)</visible> -->
                         <visible>Control.IsVisible(903)</visible>
                         <visible allowhiddenfocus="true">!Container(905).IsUpdating</visible>
+                        <visible>!ListItem.IsCollection + String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)</visible>
+                    </control>
+                    <control type="label">
+                        <height>36</height>
+                        <font>primal_13_Bold</font>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <label fallback="없슴">$INFO[Container(905).ListItem.TVShowTitle] / $INFO[Container(905).ListItem.Label]</label>
+                        <visible>!String.IsEqual(ListItem.label,..)</visible>
+                        <visible>Control.IsVisible(903) + !ListItem.IsCollection</visible>
+                        <!-- <visible>Control.IsVisible(903) + !Skin.HasSetting(videoyoutube)</visible> -->
+                        <visible>Control.IsVisible(903)</visible>
+                        <visible allowhiddenfocus="true">!Container(905).IsUpdating</visible>
+                        <visible>!ListItem.IsCollection + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)</visible>
                     </control>
 
 
@@ -2238,29 +2236,68 @@
                 |Control.HasFocus(811)|Control.HasFocus(812)|Control.HasFocus(815)]</visible>
                 <visible>!Player.Playing</visible>
 
-                <!-- 필모그래피-->
-                <control type="label" id="999">
-                    <!-- 필모그래피 로딩-->
-
-                    <top>110</top>
-                    <left>1295</left>
-                    <font>primal_13_bold</font>
-                    <label>Loading...</label>
-                    <textcolor>$VAR[ColorFontNormal]</textcolor>
-                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                    <aligny>top</aligny>
-
+                <control type="grouplist">
+                    <top>120</top>
+                    <left>1430</left>
+                    <itemgap>1</itemgap>
+                    <orientation>vertical</orientation>
                     <visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
                     <visible>Container(9200).IsUpdating</visible>
-                    <aligny>top</aligny>
+
+                    <control type="multiimage">
+                        <width>30</width>
+                        <height>30</height>
+                        <aspectratio>keep</aspectratio>
+                        <imagepath>special://skin/spinner/search_widget_loader</imagepath>
+                        <timeperimage>250</timeperimage>
+                        <pauseatend>500</pauseatend>
+                        <colordiffuse>white</colordiffuse>
+                        <fadetime>0</fadetime>
+
+                    </control>
+                    <control type="multiimage">
+                        <width>30</width>
+                        <height>30</height>
+                        <aspectratio>keep</aspectratio>
+                        <imagepath>special://skin/spinner/search_widget_loader</imagepath>
+                        <timeperimage>250</timeperimage>
+                        <pauseatend>500</pauseatend>
+                        <colordiffuse>white</colordiffuse>
+                        <fadetime>0</fadetime>
+
+                    </control>
+                    <control type="multiimage">
+                        <width>30</width>
+                        <height>30</height>
+                        <aspectratio>keep</aspectratio>
+                        <imagepath>special://skin/spinner/search_widget_loader</imagepath>
+                        <timeperimage>250</timeperimage>
+                        <pauseatend>500</pauseatend>
+                        <colordiffuse>white</colordiffuse>
+                        <fadetime>0</fadetime>
+
+                    </control>
+                    <control type="multiimage">
+                        <width>30</width>
+                        <height>30</height>
+                        <aspectratio>keep</aspectratio>
+                        <imagepath>special://skin/spinner/search_widget_loader</imagepath>
+                        <timeperimage>250</timeperimage>
+                        <pauseatend>500</pauseatend>
+                        <colordiffuse>white</colordiffuse>
+                        <fadetime>0</fadetime>
+
+                    </control>
+
                 </control>
+
 
                 <control type="label" id="999">
                     <!-- 필모그래피 이름-->
-                    <top>110</top>
-                    <left>1210</left>
+                    <top>120</top>
+                    <left>1350</left>
                     <font>primal_13_bold</font>
-                    <label>Name:</label>
+                    <label>Name</label>
                     <textcolor>$VAR[ColorFontNormal]</textcolor>
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                     <aligny>top</aligny>
@@ -2270,8 +2307,8 @@
                 </control>
                 <control type="label" id="999">
                     <!-- 필모그래피 이름-->
-                    <top>110</top>
-                    <left>1295</left>
+                    <top>120</top>
+                    <left>1430</left>
                     <font>primal_13_bold</font>
                     <label fallback="N.A"> $INFO[container(904).ListItem.Label] </label>
                     <textcolor>$VAR[ColorFontSelected]</textcolor>
@@ -2286,17 +2323,17 @@
 
                 <control type="label">
                     <!-- 필모그래피 나이-->
-                    <top>145</top>
-                    <left>1210</left>
+                    <top>150</top>
+                    <left>1351</left>
                     <font>primal_13_bold</font>
-                    <label>Age:</label>
+                    <label>Age</label>
                     <textcolor>$VAR[ColorFontNormal]</textcolor>
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                 </control>
                 <control type="label">
                     <!-- 필모그래피 나이-->
-                    <top>145</top>
-                    <left>1300</left>
+                    <top>150</top>
+                    <left>1435</left>
                     <width>400</width>
                     <height>30</height>
                     <font>primal_13_bold</font>
@@ -2308,15 +2345,15 @@
                 </control>
                 <control type="label">
                     <top>180</top>
-                    <left>1210</left>
+                    <left>1350</left>
                     <font>primal_13_bold</font>
-                    <label>Birth:</label>
+                    <label>Birth</label>
                     <textcolor>$VAR[ColorFontNormal]</textcolor>
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                 </control>
                 <control type="label">
                     <top>180</top>
-                    <left>1300</left>
+                    <left>1435</left>
                     <font>primal_13_bold</font>
                     <label fallback="N.A">$INFO[Container(9200).ListItem.Property(Birthday)]</label>
                     <textcolor>$VAR[ColorFontSelected]</textcolor>
@@ -2324,16 +2361,16 @@
                     <visible>!Container(9200).IsUpdating</visible>
                 </control>
                 <control type="label">
-                    <top>215</top>
-                    <left>1210</left>
+                    <top>210</top>
+                    <left>1351</left>
                     <font>primal_13_bold</font>
-                    <label>Born:</label>
+                    <label>Born</label>
                     <textcolor>$VAR[ColorFontNormal]</textcolor>
                     <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                 </control>
                 <control type="label">
-                    <top>215</top>
-                    <left>1300</left>
+                    <top>210</top>
+                    <left>1435</left>
                     <font>primal_13_bold</font>
                     <label fallback="N.A">$INFO[Container(9200).ListItem.Property(Born)]</label>
                     <textcolor>$VAR[ColorFontSelected]</textcolor>
@@ -2342,12 +2379,29 @@
                 </control>
 
                 <control type="image">
+                    <top>90</top>
+                    <left>930</left>
+                    <width>370</width>
+                    <height>370</height>
+                    <aspectratio>stretch</aspectratio>
+
+                    <texture background="true">skin/button_klein_tranz20.png</texture>
+                    <bordertexture border="20">ThumbShadow.png</bordertexture>
+                    <bordersize>7</bordersize>
+                    <aspectratio>stretch</aspectratio>
+                    <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+                    <aspectratio>stretch</aspectratio>
+                    <visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
+                </control>
+
+
+                <control type="image">
                     <description>여기에 배우사진</description>
-                    <texture background="true" diffuse="special://skin/media/home/rounded.png" fallback="DefaultActor.png">$INFO[container(904).ListItem.Art(thumb)]</texture>
-                    <top>50</top>
-                    <left>900</left>
-                    <width>280</width>
-                    <height>470</height>
+                    <texture background="true" fallback="DefaultActor.png">$INFO[container(904).ListItem.Art(thumb)]</texture>
+                    <top>100</top>
+                    <left>940</left>
+                    <width>350</width>
+                    <height>350</height>
                     <aspectratio>stretch</aspectratio>
                     <visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
                 </control>
@@ -2371,7 +2425,7 @@
             <control type="image">
                 <description>background image</description>
                 <left>380</left>
-                <top>80</top>
+                <top>55</top>
                 <width>520</width>
                 <height>820</height>
                 <texture background="true">skin/button_klein.png</texture>
@@ -2379,23 +2433,22 @@
                 <bordersize>7</bordersize>
                 <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
             </control>
-
-
             <control type="image">
                 <left>390</left>
-                <top>90</top>
+                <top>65</top>
                 <width>500</width>
                 <height>800</height>
-
                 <texture background="true">$INFO[ListItem.Art(poster)]</texture>
                 <bordertexture border="10">ThumbShadow.png</bordertexture>
                 <bordersize>6</bordersize>
                 <aspectratio align="center" aligny="top">stretch</aspectratio>
                 <visible>Control.IsVisible(903) | ListItem.IsCollection</visible>
             </control>
+
+
             <control type="image">
                 <left>390</left>
-                <top>90</top>
+                <top>65</top>
                 <width>500</width>
                 <height>800</height>
 
@@ -2441,9 +2494,9 @@
             <control type="videowindow">
                 <description>Trailer Video Window</description>
                 <posx>980</posx>
-                <posy>100</posy>
+                <posy>175</posy>
                 <width>45%</width>
-                <height>65%</height>
+                <height>50%</height>
                 <visible>Control.HasFocus(9031)</visible>
             </control>
 
@@ -2451,7 +2504,7 @@
             <!-- 트레일러 버튼-->
             <control type="button" id="9031">
                 <left>790</left>
-                <top>120</top>
+                <top>100</top>
                 <width>72</width>
                 <height>72</height>
 
@@ -2461,18 +2514,19 @@
                 <ondown>905</ondown>
                 <texturenofocus>special://skin/media/home/trailer.png</texturenofocus>
                 <texturefocus colordiffuse="$VAR[BackColorButton]">special://skin/media/home/trailer.png</texturefocus>
-                <onfocus condition="!IsEmpty(ListItem.trailer)">AlarmClock(preview_delay,PlayMedia($ESCINFO[Container(906).ListItem.FileNameAndPath],1),00:02,silent)</onfocus>
+                <onfocus condition="!IsEmpty(ListItem.trailer)">AlarmClock(preview_delay,PlayMedia($ESCINFO[Container(906).ListItem.FileNameAndPath],1),00:00,silent)</onfocus>
                 <onunfocus condition="System.HasAlarm(preview_delay)">CancelAlarm(preview_delay,silent)</onunfocus>
                 <onunfocus condition="Control.HasFocus(9031)">stop</onunfocus>
                 <visible>!Container(906).IsUpdating + Skin.HasSetting(movie_trailerflag)</visible>
                 <visible>!String.IsEqual(ListItem.label,..)</visible>
+                <visible>!Container.Content(Sets)</visible>
 
             </control>
 
             <!-- 트레일러 서치아이콘 로딩 위젯 -->
             <control type="multiimage">
                 <left>780</left>
-                <top>100</top>
+                <top>80</top>
                 <width>100</width>
                 <height>100</height>
                 <aspectratio>keep</aspectratio>
@@ -2481,7 +2535,7 @@
                 <pauseatend>500</pauseatend>
                 <colordiffuse>white</colordiffuse>
                 <fadetime>0</fadetime>
-                <visible>Container(906).IsUpdating </visible>
+                <visible>Container(906).IsUpdating + Skin.HasSetting(movie_trailerflag) </visible>
                 <visible>![ListItem.IsCollection | String.IsEqual(ListItem.label,..)] </visible>
             </control>
             <!-- 트레일러 플레이 로딩 위젯 -->
@@ -2495,70 +2549,57 @@
                 <fadetime>0</fadetime>
                 <imagepath>special://skin/spinner/widgets_busy_loader</imagepath>
                 <colordiffuse>white</colordiffuse>
-                <visible>Control.HasFocus(9031) + !ListItem.IsCollection + !Player.Playing</visible>
+                <visible>Control.HasFocus(9031) + !ListItem.IsCollection + !Player.Playing + Skin.HasSetting(movie_trailerflag)</visible>
             </control>
 
-            <!-- <control type="multiimage">
-                <left>825</left>
-                <top>845</top>
-                <width>24</width>
-                <height>10</height>
-                <aspectratio>keep</aspectratio>
-                <imagepath>spinner/search_widget_loader/</imagepath>
-                <timeperimage>250</timeperimage>
-                <pauseatend>500</pauseatend>
-                <fadetime>0</fadetime>
-                <visible>Container($PARAM[id]).IsUpdating</visible>
-            </control> -->
 
             <control type="image">
                 <description>background image</description>
                 <left>380</left>
-                <top>900</top>
+                <top>870</top>
                 <width>520</width>
                 <height>118</height>
                 <texture background="true">skin/button_klein.png</texture>
                 <bordertexture border="10">ThumbShadow.png</bordertexture>
                 <bordersize>7</bordersize>
                 <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
-                <visible>!Container.Content(Sets)</visible>
+                <visible>![Container.Content(Sets) | String.IsEqual(ListItem.label,..) ]</visible>
             </control>
-            <!-- <control type="label">
-                <left>690</left>
-                <top>860</top>
-
-                <height>36</height>
-                <font>primal_13_Bold</font>
-                <textcolor>$VAR[ColorFontSelected]</textcolor>
-                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
-                <label>Trailer Loading..</label>
-                <visible>Container(906).IsUpdating</visible>
-
-                <visible>!ListItem.IsCollection</visible>
-                <visible>Skin.HasSetting(movie_trailerflag)</visible>
-
-            </control> -->
 
 
             <!-- 영화 줄거리 -->
             <control type="textbox">
                 <description>Movie Plot</description>
                 <left>415</left>
-                <top>915</top>
+                <top>885</top>
                 <width>450</width>
                 <height>90</height>
                 <font>primal_13</font>
                 <align>justify</align>
                 <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                 <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+                <visible>!String.IsEqual(ListItem.label,..)</visible>
                 <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
             </control>
-            <control type="group">
-                <top>20</top>
-                <left>-10</left>
+            <control type="image">
+                <description>background image</description>
+                <top>990</top>
+                <left>380</left>
+                <width>520</width>
+                <height>80</height>
+                <texture background="true">skin/button_klein.png</texture>
+                <bordertexture border="10">ThumbShadow.png</bordertexture>
+                <bordersize>7</bordersize>
+                <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+                <visible>![Container.Content(Sets) | Container.Content(tvshows) | String.IsEqual(ListItem.label,..) ]</visible>
+            </control>
 
-                <include>KM_MediaInfo_Icon</include>
+            <control type="group">
+                <top>990</top>
+                <left>400</left>
+
+                <include>KM_MediaInfo_Icon_home</include>
+                <visible>![Container.Content(Sets) | Container.Content(tvshows) | String.IsEqual(ListItem.label,..)]</visible>
             </control>
         </control>
 
@@ -2730,10 +2771,10 @@
 
             <control type="image">
                 <left>200</left>
-                <top>590</top>
-                <width>50</width>
-                <height>50</height>
-                <texture background="true">$VAR[OTTicon]</texture>
+                <top>560</top>
+                <width>90</width>
+                <height>90</height>
+                <texture background="true" diffuse="special://skin/media/home/rounded.png" fallback="">$VAR[OTTicon]</texture>
                 <bordertexture border="10">ThumbShadow.png</bordertexture>
                 <bordersize>6</bordersize>
             </control>
@@ -2777,8 +2818,8 @@
 
             <control type="image">
                 <left>195</left>
-                <top>90</top>
-                <width>95</width>
+                <top>85</top>
+                <width>90</width>
                 <height>3</height>
                 <texture background="true">skin/button_klein.png</texture>
                 <bordertexture border="3">ThumbShadow.png</bordertexture>
@@ -2892,32 +2933,27 @@
             <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus | ControlGroup(9030).HasFocus">Conditional</animation>
             <visible>Control.IsVisible(1000)</visible>
 
-            <control type="grouplist">
-                <left>210</left>
-                <top>80</top>
-                <width>1800</width>
-                <height>600</height>
-                <itemgap>12</itemgap>
-                <orientation>horizontal</orientation>
-
-                <control type="image">
-                    <width>90</width>
-                    <height>90</height>
-                    <texture background="true">$VAR[OTTicon]</texture>
-                    <bordertexture border="10">ThumbShadow.png</bordertexture>
-                    <bordersize>6</bordersize>
-                </control>
-                <control type="label">
-                    <width>1000</width>
-                    <height>30</height>
-                    <font>primal_50_Bold</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
-                    <label>$VAR[OTTName]</label>
-                </control>
-
-
+            <control type="image">
+                <left>205</left>
+                <top>100</top>
+                <width>90</width>
+                <height>90</height>
+                <texture background="true" diffuse="special://skin/media/home/rounded.png" fallback="">$VAR[OTTicon]</texture>
+                <bordertexture border="10">ThumbShadow.png</bordertexture>
+                <bordersize>6</bordersize>
             </control>
+            <control type="label">
+                <left>305</left>
+                <top>120</top>
+                <width>1000</width>
+                <height>30</height>
+                <font>primal_30_Bold</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                <label>$VAR[OTTName]</label>
+            </control>
+
+
             <control type="panel" id="1000">
                 <left>200</left>
                 <top>200</top>
@@ -3019,7 +3055,6 @@
                     <control type="button">
                         <visible allowhiddenfocus="true">false</visible>
                         <onfocus condition="!Player.Playing + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)]">Container.SetViewMode(900)</onfocus>
-
                         <!-- <onfocus condition=" ![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) ]">Container.SetViewMode(1000)</onfocus> -->
                         <!-- <onfocus condition="!Player.Playing + ![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)]">Container.SetViewMode(900)</onfocus> -->
 
@@ -3051,13 +3086,27 @@
             <visible>Control.IsVisible(900)</visible>
 
             <control type="image">
-                <left>170</left>
-                <top>30</top>
-                <width>50</width>
-                <height>50</height>
-                <texture background="true">$VAR[OTTicon]</texture>
+                <left>220</left>
+                <top>50</top>
+                <width>90</width>
+                <height>90</height>
+                <texture background="true" diffuse="special://skin/media/home/rounded.png" fallback="">$VAR[OTTicon]</texture>
                 <bordertexture border="10">ThumbShadow.png</bordertexture>
                 <bordersize>6</bordersize>
+            </control>
+            <control type="label">
+                <left>320</left>
+                <top>70</top>
+                <width>1500</width>
+                <height>60</height>
+                <font>primal_30_Bold</font>
+                <textcolor>$VAR[ColorFontNormal]</textcolor>
+                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.Label]</label>
+                <visible>!String.IsEqual(ListItem.label,..)</visible>
             </control>
 
             <control type="panel" id="900">
@@ -3185,7 +3234,9 @@
 
 
                 </focusedlayout>
+
             </control>
+
             <control type="scrollbar" id="1610">
                 <include>Animation.ZoomIn</include>
                 <left>1875</left>
@@ -3205,12 +3256,30 @@
             </control>
 
 
-            <control type="label">
+        </control>
+
+    </include>
+    <include name="View_7000_POSTER_TMDB">
+        <control type="group">
+            <include>Animation.ZoomIn</include>
+            <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus | ControlGroup(9030).HasFocus">Conditional</animation>
+            <visible>Control.IsVisible(7001)</visible>
+
+            <control type="image">
                 <left>220</left>
+                <top>50</top>
+                <width>90</width>
+                <height>90</height>
+                <texture background="true" diffuse="special://skin/media/home/rounded.png" fallback="">special://skin/media/home/themoviedb_color.png</texture>
+                <bordertexture border="10">ThumbShadow.png</bordertexture>
+                <bordersize>6</bordersize>
+            </control>
+            <control type="label">
+                <left>320</left>
                 <top>70</top>
                 <width>1500</width>
                 <height>60</height>
-                <font>primal_40_Bold</font>
+                <font>primal_30_Bold</font>
                 <textcolor>$VAR[ColorFontNormal]</textcolor>
                 <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
                 <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
@@ -3218,6 +3287,164 @@
                 <aligny>center</aligny>
                 <label>$INFO[ListItem.Label]</label>
                 <visible>!String.IsEqual(ListItem.label,..)</visible>
+            </control>
+
+            <control type="multiimage">
+                <left>320</left>
+                <top>50</top>
+                <width>100</width>
+                <height>100</height>
+                <aspectratio>keep</aspectratio>
+                <imagepath>special://skin/spinner/search_widget_loader</imagepath>
+                <timeperimage>250</timeperimage>
+                <pauseatend>500</pauseatend>
+                <colordiffuse>white</colordiffuse>
+                <fadetime>0</fadetime>
+                <visible>Container(7001).IsUpdating </visible>
+                <visible>![ListItem.IsCollection | String.IsEqual(ListItem.label,..)] </visible>
+            </control>
+
+            <control type="panel" id="7001">
+                <include>Animation.ZoomIn</include>
+                <left>210</left>
+                <top>140</top>
+                <height>970</height>
+                <onright>7001</onright>
+                <!-- <onleft>9020</onleft> -->
+                <onup>7001</onup>
+                <ondown>7001</ondown>
+                <scrolltime tween="Quadratic" easing="out">500</scrolltime>
+                <focusposition>0</focusposition>
+                <orientation>vertical</orientation>
+                <movement>1</movement>
+                <pagecontrol>1610</pagecontrol>
+
+
+                <itemlayout height="470" width="320">
+
+                    <control type="image">
+                        <left>5</left>
+                        <top>5</top>
+                        <width>300</width>
+                        <height>450</height>
+                        <bordersize>6</bordersize>
+                        <texture background="true">special://skin/backgrounds/destiny_poster.jpg</texture>
+                        <aspectratio>scale</aspectratio>
+                        <visible>String.IsEqual(ListItem.label,..)</visible>
+                    </control>
+
+
+                    <control type="image">
+                        <left>5</left>
+                        <top>5</top>
+                        <width>300</width>
+                        <height>450</height>
+                        <texture background="true" fallback="special://skin/backgrounds/destiny_poster.jpg">$VAR[Poster]</texture>
+                        <texture background="true" fallback="special://skin/backgrounds/destiny_poster.jpg">$INFO[ListItem.Icon]</texture>
+                        <bordertexture border="10">ThumbShadow.png</bordertexture>
+                        <bordersize>6</bordersize>
+                        <aspectratio>scale</aspectratio>
+                        <visible>!String.IsEqual(ListItem.label,..)</visible>
+                    </control>
+
+
+                    <!-- <control type="image">
+                        <left>5</left>
+                        <top>5</top>
+                        <width>300</width>
+                        <height>450</height>
+                        <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+                        <bordertexture border="10">ThumbShadow.png</bordertexture>
+                        <bordersize>6</bordersize>
+                        <aspectratio align="center" aligny="top">scale</aspectratio>
+                        <visible>String.IsEqual(ListItem.label,..)</visible>
+                    </control> -->
+
+                    <control type="image">
+                        <left>240</left>
+                        <top>30</top>
+                        <width>48</width>
+                        <height>48</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[Image_Overlay_List]</texture>
+                    </control>
+
+
+                </itemlayout>
+                <focusedlayout height="470" width="320">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>310</width>
+                        <height>460</height>
+                        <texture background="true">skin/button_klein_tranz50.png</texture>
+                        <bordertexture border="10">ThumbShadow.png</bordertexture>
+                        <bordersize>2</bordersize>
+                        <aspectratio>scale</aspectratio>
+                        <colordiffuse>FFFF002B</colordiffuse>
+                    </control>
+
+                    <!-- <control type="image">
+                        <left>5</left>
+                        <top>5</top>
+                        <width>300</width>
+                        <height>450</height>
+                        <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+                        <bordertexture border="10">ThumbShadow.png</bordertexture>
+                        <bordersize>6</bordersize>
+                        <aspectratio align="left" aligny="top">scale</aspectratio>
+                        <visible>String.IsEqual(ListItem.label,..)</visible>
+                    </control> -->
+
+                    <control type="image">
+                        <left>5</left>
+                        <top>5</top>
+                        <width>300</width>
+                        <height>450</height>
+                        <texture background="true" fallback="special://skin/backgrounds/destiny_poster.jpg">$VAR[Poster]</texture>
+                        <bordertexture border="10">ThumbShadow.png</bordertexture>
+                        <bordersize>3</bordersize>
+                        <aspectratio>scale</aspectratio>
+                        <visible>!String.IsEqual(ListItem.label,..)</visible>
+                    </control>
+                    <control type="image">
+                        <left>5</left>
+                        <top>5</top>
+                        <width>300</width>
+                        <height>450</height>
+                        <texture background="true">special://skin/backgrounds/destiny_poster.jpg</texture>
+                        <bordersize>6</bordersize>
+                        <aspectratio>scale</aspectratio>
+                        <visible>String.IsEqual(ListItem.label,..)</visible>
+                    </control>
+                    <control type="image">
+                        <left>240</left>
+                        <top>30</top>
+                        <width>48</width>
+                        <height>48</height>
+                        <aspectratio>keep</aspectratio>
+                        <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+                        <texture>$VAR[Image_Overlay_List]</texture>
+                    </control>
+                </focusedlayout>
+                <content target="video" sortby="year" limit="30">$VAR[TMDB_LIST]</content>
+            </control>
+            <control type="scrollbar" id="1610">
+                <include>Animation.ZoomIn</include>
+                <left>1875</left>
+                <top>100</top>
+                <width>10</width>
+                <height>910</height>
+                <texturesliderbackground>progress/bg.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="$VAR[BackColorButton]">progress/blank.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">progress/blank.png</texturesliderbarfocus>
+                <textureslidernib>button/ScrollBarNib.png</textureslidernib>
+                <textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+                <onleft>611</onleft>
+                <onright>290000</onright>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <visible>Control.IsVisible(7001) + !Skin.HasSetting(viewnoscrollbar)</visible>
             </control>
 
 

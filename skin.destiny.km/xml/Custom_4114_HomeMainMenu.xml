@@ -138,114 +138,128 @@
 				<!-- KM 12 넷플릭스 -->
 				<item id="12">
 					<label>넷플릭스</label>
+					<visible>System.HasAddon(plugin.video.netflix)</visible>
 					<onclick>noop</onclick>
 				</item>
 				<!-- KM 13 티빙 -->
 				<item id="13">
 					<label>티빙</label>
+					<visible>System.HasAddon(plugin.video.tvingm)</visible>
 					<onclick>noop</onclick>
 				</item>
 				<!-- KM 14 웨이브 -->
 				<item id="14">
 					<label>웨이브</label>
+					<visible>System.HasAddon(plugin.video.wavvem)</visible>
 					<onclick>noop</onclick>
 				</item>
 				<!-- KM 15 와챠 -->
 				<item id="15">
 					<label>왓챠</label>
+					<visible>System.HasAddon(plugin.video.watcham)</visible>
 					<onclick>noop</onclick>
 				</item>
 				<item id="16">
 					<label>스포티비</label>
+					<visible>System.HasAddon(plugin.video.spotvm)</visible>
 					<onclick>noop</onclick>
 				</item>
 				<!--  New OTT -->
 				<item id="17">
 					<label>삼성TV플러스</label>
+					<visible>System.HasAddon(plugin.video.samsungtvm)</visible>
 					<onclick>noop</onclick>
 				</item>
 				<item id="18">
 					<label>카카오 TV</label>
+					<visible>System.HasAddon(plugin.video.kakaotvm)</visible>
 					<onclick>noop</onclick>
 				</item>
 				<item id="19">
 					<label>쿠팡 PLAY</label>
+					<visible>System.HasAddon(plugin.video.coupangm)</visible>
 					<onclick>noop</onclick>
 				</item>
 				<item id="20">
 					<label>네이버 스포츠</label>
+					<visible>System.HasAddon(plugin.video.nsportsm)</visible>
 					<onclick>noop</onclick>
 				</item>
-				<item id="30">
+
+				<item id="21">
 					<label>사용자 버튼 01</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="31">
+				<item id="22">
 					<label>사용자 버튼 02</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="32">
+				<item id="23">
 					<label>사용자 버튼 03</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="33">
+				<item id="24">
 					<label>사용자 버튼 04</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="34">
+				<item id="25">
 					<label>사용자 버튼 05</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="35">
+				<item id="26">
 					<label>사용자 버튼 06</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="36">
+				<item id="27">
 					<label>사용자 버튼 07</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="37">
+				<item id="28">
 					<label>사용자 버튼 08</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="38">
+				<item id="29">
 					<label>사용자 버튼 09</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="39">
+				<item id="30">
 					<label>사용자 버튼 10</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="40">
+				<item id="31">
 					<label>$LOCALIZE[50197]</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="41">
+				<item id="32">
 					<label>안드로이드앱</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="42">
+				<item id="33">
 					<description>날씨</description>
 					<label>$LOCALIZE[8]</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="43">
+				<item id="34">
 					<label>파일매니져</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="44">
+				<item id="35">
 					<label>옵션</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="45">
+				<item id="36">
 					<label>글로벌서치</label>
 					<onclick>noop</onclick>
 				</item>
 				<!-- KM 31 전원 -->
-				<!-- <item id="46">
+				<item id="37">
 					<label>전원</label>
 					<onclick>noop</onclick>
-				</item> -->
+				</item>
+				<item id="38">
+					<label>개봉예정작</label>
+					<onclick>noop</onclick>
+				</item>
 			</content>
 		</control>
 		<control type="group">
@@ -493,7 +507,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS3_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS3)</visible>
 				</control>
-				<control type="label" id="8003">
+				<control type="label" id="8505">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20_Bold</font>
@@ -504,7 +518,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
-				<control type="radiobutton" id="8004">
+				<control type="radiobutton" id="8506">
 					<!-- preview Playlist -->
 					<width>1337</width>
 					<height>50</height>
@@ -513,7 +527,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton1)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton1)</selected>
 				</control>
-				<control type="button" id="8005">
+				<control type="button" id="8507">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -522,7 +536,7 @@
 					<onclick>Skin.SetString(movieplaylistButton1_label)</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton1)</visible>
 				</control>
-				<control type="button" id="8006">
+				<control type="button" id="8508">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -532,7 +546,7 @@
 					<onclick>Skin.SetString(movieplaylistButton1_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_1)]))</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton1)</visible>
 				</control>
-				<control type="radiobutton" id="8007">
+				<control type="radiobutton" id="8509">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -540,7 +554,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton2)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton2)</selected>
 				</control>
-				<control type="button" id="8008">
+				<control type="button" id="8510">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -549,7 +563,7 @@
 					<onclick>Skin.SetString(movieplaylistButton2_label)</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton2)</visible>
 				</control>
-				<control type="button" id="8009">
+				<control type="button" id="8511">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -559,7 +573,7 @@
 					<onclick>Skin.SetString(movieplaylistButton2_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_2)]))</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton2)</visible>
 				</control>
-				<control type="radiobutton" id="8010">
+				<control type="radiobutton" id="8512">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -567,7 +581,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton3)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton3)</selected>
 				</control>
-				<control type="button" id="8011">
+				<control type="button" id="8513">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -576,7 +590,7 @@
 					<onclick>Skin.SetString(movieplaylistButton3_label)</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton3)</visible>
 				</control>
-				<control type="button" id="8012">
+				<control type="button" id="8514">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -586,7 +600,7 @@
 					<onclick>Skin.SetString(movieplaylistButton3_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_3)]))</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton3)</visible>
 				</control>
-				<control type="radiobutton" id="8013">
+				<control type="radiobutton" id="8515">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -594,7 +608,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton4)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton4)</selected>
 				</control>
-				<control type="button" id="8014">
+				<control type="button" id="8516">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -603,7 +617,7 @@
 					<onclick>Skin.SetString(movieplaylistButton4_label)</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton4)</visible>
 				</control>
-				<control type="button" id="8015">
+				<control type="button" id="8517">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -630,7 +644,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="8498">
+				<control type="radiobutton" id="8600">
 					<description>Hide Collection Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -640,7 +654,7 @@
 					<selected>Skin.HasSetting(HomeMenuNoCollectionButton)</selected>
 					<!-- <enable>Library.HasContent(Movies)</enable> -->
 				</control>
-				<control type="button" id="8499">
+				<control type="button" id="8601">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -650,7 +664,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Collection_Folder)</onclick>
 				</control>
-				<control type="button" id="8500">
+				<control type="button" id="8602">
 					<description>Default Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -660,7 +674,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Collection_Folder)</onclick>
 				</control>
 				<!-- KM 컬렉션 아이콘 변경 -->
-				<control type="button" id="7501">
+				<control type="button" id="8603">
 					<!-- ICON WECHSEL -->
 					<description>Icon</description>
 					<width>1337</width>
@@ -669,7 +683,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconCollection_Icon)</onclick>
 				</control>
-				<control type="button" id="8502">
+				<control type="button" id="8604">
 					<description>Default Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -677,7 +691,7 @@
 					<label>$LOCALIZE[50269]</label>
 					<onclick>Skin.Reset(IconCollection_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="8503">
+				<control type="radiobutton" id="8605">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -686,7 +700,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS4)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS4)</selected>
 				</control>
-				<control type="button" id="8504">
+				<control type="button" id="8607">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -713,7 +727,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="8639">
+				<control type="radiobutton" id="8700">
 					<description>Hide TV Shows Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -722,7 +736,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsButton)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
 				</control>
-				<control type="button" id="8640">
+				<control type="button" id="8701">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -732,7 +746,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_TVShow_Folder)</onclick>
 				</control>
-				<control type="button" id="8641">
+				<control type="button" id="8702">
 					<description>Default Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -741,7 +755,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_TVShow_Folder)</onclick>
 				</control>
-				<control type="button" id="8642">
+				<control type="button" id="8703">
 					<!-- ICON WECHSEL -->
 					<description>Icon</description>
 					<width>1337</width>
@@ -750,7 +764,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconTVShows_Icon)</onclick>
 				</control>
-				<control type="button" id="8643">
+				<control type="button" id="8704">
 					<description>Default Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -758,7 +772,7 @@
 					<label>$LOCALIZE[50269]</label>
 					<onclick>Skin.Reset(IconTVShows_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="8644">
+				<control type="radiobutton" id="8705">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -767,7 +781,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS5)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS5)</selected>
 				</control>
-				<control type="button" id="8645">
+				<control type="button" id="8706">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -776,7 +790,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS5_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS5)</visible>
 				</control>
-				<control type="label" id="8074">
+				<control type="label" id="8707">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20_Bold</font>
@@ -787,7 +801,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
-				<control type="radiobutton" id="8075">
+				<control type="radiobutton" id="8708">
 					<!-- Submenu TVShows Paylist -->
 					<width>1337</width>
 					<height>50</height>
@@ -796,7 +810,7 @@
 					<onclick>Skin.ToggleSetting(tvplaylistButton1)</onclick>
 					<selected>Skin.HasSetting(tvplaylistButton1)</selected>
 				</control>
-				<control type="button" id="8076">
+				<control type="button" id="8709">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -805,7 +819,7 @@
 					<onclick>Skin.SetString(tvplaylistButton1_label)</onclick>
 					<visible>Skin.HasSetting(tvplaylistButton1)</visible>
 				</control>
-				<control type="button" id="8077">
+				<control type="button" id="8710">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -815,7 +829,7 @@
 					<onclick>Skin.SetString(tvplaylistButton1_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_1)]))</onclick>
 					<visible>Skin.HasSetting(tvplaylistButton1)</visible>
 				</control>
-				<control type="radiobutton" id="8078">
+				<control type="radiobutton" id="8711">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -823,7 +837,7 @@
 					<onclick>Skin.ToggleSetting(tvplaylistButton2)</onclick>
 					<selected>Skin.HasSetting(tvplaylistButton2)</selected>
 				</control>
-				<control type="button" id="8079">
+				<control type="button" id="8712">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -832,7 +846,7 @@
 					<onclick>Skin.SetString(tvplaylistButton2_label)</onclick>
 					<visible>Skin.HasSetting(tvplaylistButton2)</visible>
 				</control>
-				<control type="button" id="8080">
+				<control type="button" id="8713">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -842,7 +856,7 @@
 					<onclick>Skin.SetString(tvplaylistButton2_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_2)]))</onclick>
 					<visible>Skin.HasSetting(tvplaylistButton2)</visible>
 				</control>
-				<control type="radiobutton" id="8081">
+				<control type="radiobutton" id="8714">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -850,7 +864,7 @@
 					<onclick>Skin.ToggleSetting(tvplaylistButton3)</onclick>
 					<selected>Skin.HasSetting(tvplaylistButton3)</selected>
 				</control>
-				<control type="button" id="8082">
+				<control type="button" id="8715">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -859,7 +873,7 @@
 					<onclick>Skin.SetString(tvplaylistButton3_label)</onclick>
 					<visible>Skin.HasSetting(tvplaylistButton3)</visible>
 				</control>
-				<control type="button" id="8083">
+				<control type="button" id="8716">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -869,7 +883,7 @@
 					<onclick>Skin.SetString(tvplaylistButton3_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_3)]))</onclick>
 					<visible>Skin.HasSetting(tvplaylistButton3)</visible>
 				</control>
-				<control type="radiobutton" id="8084">
+				<control type="radiobutton" id="8717">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -877,7 +891,7 @@
 					<onclick>Skin.ToggleSetting(tvplaylistButton4)</onclick>
 					<selected>Skin.HasSetting(tvplaylistButton4)</selected>
 				</control>
-				<control type="button" id="8085">
+				<control type="button" id="8718">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -886,7 +900,7 @@
 					<onclick>Skin.SetString(tvplaylistButton4_label)</onclick>
 					<visible>Skin.HasSetting(tvplaylistButton4)</visible>
 				</control>
-				<control type="button" id="8086">
+				<control type="button" id="8719">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -913,7 +927,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="8660">
+				<control type="radiobutton" id="8800">
 					<description>Hide Videos Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -923,7 +937,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoVideosButton)</selected>
 				</control>
-				<control type="button" id="8661">
+				<control type="button" id="8801">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -944,7 +958,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_Video_Folder)</onclick>
 				</control>
-				<control type="button" id="8664">
+				<control type="button" id="8802">
 					<!-- KM 홈메뉴 아이콘 변경 -->
 					<description>Icon</description>
 					<width>1337</width>
@@ -953,7 +967,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconVideo_Icon)</onclick>
 				</control>
-				<control type="button" id="8645">
+				<control type="button" id="8803">
 					<!-- KM 홈메뉴 아이콘 초기화 -->
 					<description>Default Icon</description>
 					<width>1337</width>
@@ -963,7 +977,7 @@
 					<onclick>Skin.Reset(IconVideo_Icon)</onclick>
 				</control>
 				<!-- KM 홈메뉴 색 변경 -->
-				<control type="radiobutton" id="8666">
+				<control type="radiobutton" id="8804">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -973,7 +987,7 @@
 					<selected>Skin.HasSetting(ColorBackWebOS6)</selected>
 				</control>
 				<!-- KM 홈메뉴 색 선택 -->
-				<control type="button" id="8667">
+				<control type="button" id="8805">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1000,7 +1014,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="8760">
+				<control type="radiobutton" id="8900">
 					<description>Hide play disc</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1009,7 +1023,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoDiscDriveButton)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoDiscDriveButton)</selected>
 				</control>
-				<control type="button" id="8761">
+				<control type="button" id="8901">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1019,7 +1033,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_PlayDisc_Folder)</onclick>
 				</control>
-				<control type="button" id="8763">
+				<control type="button" id="8902">
 					<description>Default Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1028,7 +1042,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_PlayDisc_Folder)</onclick>
 				</control>
-				<control type="button" id="8764">
+				<control type="button" id="8903">
 					<!-- ICON WECHSEL -->
 					<description>Icon</description>
 					<width>1337</width>
@@ -1037,7 +1051,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconDVD_Icon)</onclick>
 				</control>
-				<control type="button" id="8765">
+				<control type="button" id="8904">
 					<description>Default Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1045,7 +1059,7 @@
 					<label>$LOCALIZE[50269]</label>
 					<onclick>Skin.Reset(IconDVD_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="8766">
+				<control type="radiobutton" id="8905">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1054,7 +1068,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS25)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS25)</selected>
 				</control>
-				<control type="button" id="8767">
+				<control type="button" id="8906">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1081,7 +1095,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="8161">
+				<control type="radiobutton" id="8910">
 					<description>Hide Music Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1090,7 +1104,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
 				</control>
-				<control type="button" id="8162">
+				<control type="button" id="8911">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1100,7 +1114,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Music_Folder)</onclick>
 				</control>
-				<control type="button" id="8163">
+				<control type="button" id="8912">
 					<description>Default Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1109,7 +1123,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_Music_Folder)</onclick>
 				</control>
-				<control type="button" id="8164">
+				<control type="button" id="8913">
 					<!-- ICON WECHSEL -->
 					<description>Icon</description>
 					<width>1337</width>
@@ -1118,7 +1132,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconMusic_Icon)</onclick>
 				</control>
-				<control type="button" id="8165">
+				<control type="button" id="8914">
 					<description>Default Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1126,7 +1140,7 @@
 					<label>$LOCALIZE[50269]</label>
 					<onclick>Skin.Reset(IconMusic_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="8166">
+				<control type="radiobutton" id="8915">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1135,7 +1149,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS19)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS19)</selected>
 				</control>
-				<control type="button" id="8167">
+				<control type="button" id="8916">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1144,7 +1158,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS19_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS19)</visible>
 				</control>
-				<control type="label" id="8168">
+				<control type="label" id="8917">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20_Bold</font>
@@ -1155,7 +1169,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
-				<control type="radiobutton" id="8169">
+				<control type="radiobutton" id="8918">
 					<!-- Submenu Playlist Music -->
 					<width>1337</width>
 					<height>50</height>
@@ -1164,7 +1178,7 @@
 					<onclick>Skin.ToggleSetting(musicplaylistButton1)</onclick>
 					<selected>Skin.HasSetting(musicplaylistButton1)</selected>
 				</control>
-				<control type="button" id="8170">
+				<control type="button" id="8919">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -1173,7 +1187,7 @@
 					<onclick>Skin.SetString(musicplaylistButton1_label)</onclick>
 					<visible>Skin.HasSetting(musicplaylistButton1)</visible>
 				</control>
-				<control type="button" id="8171">
+				<control type="button" id="8920">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -1183,7 +1197,7 @@
 					<onclick>Skin.SetString(musicplaylistButton1_Path,ActivateWindow(musiclibrary,$INFO[Skin.String(musicplaylistButtonPathScript_1)]))</onclick>
 					<visible>Skin.HasSetting(musicplaylistButton1)</visible>
 				</control>
-				<control type="radiobutton" id="8172">
+				<control type="radiobutton" id="8921">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1191,7 +1205,7 @@
 					<onclick>Skin.ToggleSetting(musicplaylistButton2)</onclick>
 					<selected>Skin.HasSetting(musicplaylistButton2)</selected>
 				</control>
-				<control type="button" id="8173">
+				<control type="button" id="8922">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -1200,7 +1214,7 @@
 					<onclick>Skin.SetString(musicplaylistButton2_label)</onclick>
 					<visible>Skin.HasSetting(musicplaylistButton2)</visible>
 				</control>
-				<control type="button" id="8174">
+				<control type="button" id="8923">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -1210,7 +1224,7 @@
 					<onclick>Skin.SetString(musicplaylistButton2_Path,ActivateWindow(musiclibrary,$INFO[Skin.String(musicplaylistButtonPathScript_2)]))</onclick>
 					<visible>Skin.HasSetting(musicplaylistButton2)</visible>
 				</control>
-				<control type="radiobutton" id="8175">
+				<control type="radiobutton" id="8924">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1218,7 +1232,7 @@
 					<onclick>Skin.ToggleSetting(musicplaylistButton3)</onclick>
 					<selected>Skin.HasSetting(musicplaylistButton3)</selected>
 				</control>
-				<control type="button" id="8176">
+				<control type="button" id="8925">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -1227,7 +1241,7 @@
 					<onclick>Skin.SetString(musicplaylistButton3_label)</onclick>
 					<visible>Skin.HasSetting(musicplaylistButton3)</visible>
 				</control>
-				<control type="button" id="8177">
+				<control type="button" id="8926">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -1237,7 +1251,7 @@
 					<onclick>Skin.SetString(musicplaylistButton3_Path,ActivateWindow(musiclibrary,$INFO[Skin.String(musicplaylistButtonPathScript_3)]))</onclick>
 					<visible>Skin.HasSetting(musicplaylistButton3)</visible>
 				</control>
-				<control type="radiobutton" id="8178">
+				<control type="radiobutton" id="8927">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1245,7 +1259,7 @@
 					<onclick>Skin.ToggleSetting(musicplaylistButton4)</onclick>
 					<selected>Skin.HasSetting(musicplaylistButton4)</selected>
 				</control>
-				<control type="button" id="8179">
+				<control type="button" id="8928">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -1254,7 +1268,7 @@
 					<onclick>Skin.SetString(musicplaylistButton4_label)</onclick>
 					<visible>Skin.HasSetting(musicplaylistButton4)</visible>
 				</control>
-				<control type="button" id="8180">
+				<control type="button" id="8929">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -1281,7 +1295,7 @@
 				<onright>66</onright>
 				<onup>9013</onup>
 				<ondown>9013</ondown>
-				<control type="radiobutton" id="8770">
+				<control type="radiobutton" id="8930">
 					<description>Hide Pictures Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1290,7 +1304,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
 				</control>
-				<control type="button" id="8771">
+				<control type="button" id="8931">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1300,7 +1314,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Pictures_Folder)</onclick>
 				</control>
-				<control type="button" id="8773">
+				<control type="button" id="8932">
 					<description>Default Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1309,7 +1323,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_Pictures_Folder)</onclick>
 				</control>
-				<control type="button" id="8774">
+				<control type="button" id="8933">
 					<!-- ICON WECHSEL -->
 					<description>Icon</description>
 					<width>1337</width>
@@ -1318,7 +1332,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconPictures_Icon)</onclick>
 				</control>
-				<control type="button" id="8775">
+				<control type="button" id="8944">
 					<description>Default Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1326,7 +1340,7 @@
 					<label>$LOCALIZE[50269]</label>
 					<onclick>Skin.Reset(IconPictures_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="8776">
+				<control type="radiobutton" id="8945">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1335,7 +1349,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS22)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS22)</selected>
 				</control>
-				<control type="button" id="8777">
+				<control type="button" id="8946">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1362,7 +1376,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="9100">
+				<control type="radiobutton" id="8947">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1371,7 +1385,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_fav)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_fav)</selected>
 				</control>
-				<control type="button" id="8721">
+				<control type="button" id="8948">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1381,7 +1395,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_fav_Folder)</onclick>
 				</control>
-				<control type="button" id="8723">
+				<control type="button" id="8949">
 					<description>Default Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1390,7 +1404,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_fav_Folder)</onclick>
 				</control>
-				<control type="button" id="8724">
+				<control type="button" id="8950">
 
 					<description>Icon</description>
 					<width>1337</width>
@@ -1399,7 +1413,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconFav_Icon)</onclick>
 				</control>
-				<control type="button" id="8725">
+				<control type="button" id="8951">
 					<description>Default Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1407,7 +1421,7 @@
 					<label>$LOCALIZE[50269]</label>
 					<onclick>Skin.Reset(IconFav_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="8726">
+				<control type="radiobutton" id="8952">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1416,7 +1430,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS28)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS28)</selected>
 				</control>
-				<control type="button" id="8727">
+				<control type="button" id="8953">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1442,7 +1456,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="5000">
+				<control type="radiobutton" id="8954">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1451,7 +1465,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_youtube)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_youtube)</selected>
 				</control>
-				<control type="button" id="5100">
+				<control type="button" id="8955">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1462,7 +1476,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_youtube_Folder)</onclick>
 				</control>
 
-				<control type="button" id="5200">
+				<control type="button" id="8956">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1470,7 +1484,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(Iconyoutube_Icon)</onclick>
 				</control>
-				<control type="button" id="5300">
+				<control type="button" id="8957">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1481,7 +1495,7 @@
 					<onclick>Skin.Reset(Iconyoutube_Icon)</onclick>
 
 				</control>
-				<control type="radiobutton" id="5400">
+				<control type="radiobutton" id="8958">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1490,7 +1504,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS14)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS14)</selected>
 				</control>
-				<control type="button" id="5500">
+				<control type="button" id="8959">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1499,7 +1513,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS14_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS14)</visible>
 				</control>
-				<control type="radiobutton" id="5600">
+				<control type="radiobutton" id="8960">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
@@ -1507,7 +1521,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton1012)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton1012)</selected>
 				</control>
-				<control type="button" id="5700">
+				<control type="button" id="8961">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1533,7 +1547,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="9100">
+				<control type="radiobutton" id="8962">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1542,7 +1556,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_netflix)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_netflix)</selected>
 				</control>
-				<control type="button" id="2000">
+				<control type="button" id="8963">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1553,7 +1567,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_netflix_Folder)</onclick>
 				</control>
 
-				<control type="button" id="2200">
+				<control type="button" id="8964">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1561,7 +1575,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(Iconnetflix_Icon)</onclick>
 				</control>
-				<control type="button" id="2300">
+				<control type="button" id="8965">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1572,7 +1586,7 @@
 					<onclick>Skin.Reset(Iconnetflix_Icon)</onclick>
 
 				</control>
-				<control type="radiobutton" id="2400">
+				<control type="radiobutton" id="8966">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1581,7 +1595,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS17)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS17)</selected>
 				</control>
-				<control type="button" id="2500">
+				<control type="button" id="8967">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1591,7 +1605,7 @@
 					<visible>Skin.HasSetting(ColorBackWebOS17)</visible>
 				</control>
 
-				<control type="radiobutton" id="2600">
+				<control type="radiobutton" id="8968">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
@@ -1600,7 +1614,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton1009)</selected>
 				</control>
 
-				<control type="button" id="2700">
+				<control type="button" id="8969">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1630,7 +1644,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="9100">
+				<control type="radiobutton" id="8970">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1639,7 +1653,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Tving)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Tving)</selected>
 				</control>
-				<control type="button" id="1000">
+				<control type="button" id="8971">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1650,7 +1664,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_Tving_Folder)</onclick>
 				</control>
 
-				<control type="button" id="1100">
+				<control type="button" id="8972">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1658,7 +1672,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconTving_Icon)</onclick>
 				</control>
-				<control type="button" id="1200">
+				<control type="button" id="8973">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1669,7 +1683,7 @@
 					<onclick>Skin.Reset(IconTving_Icon)</onclick>
 				</control>
 
-				<control type="radiobutton" id="1300">
+				<control type="radiobutton" id="8974">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1678,7 +1692,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS16)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS16)</selected>
 				</control>
-				<control type="button" id="1400">
+				<control type="button" id="8975">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1687,7 +1701,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS16_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS16)</visible>
 				</control>
-				<control type="radiobutton" id="1500">
+				<control type="radiobutton" id="8976">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
@@ -1695,7 +1709,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton1008)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton1008)</selected>
 				</control>
-				<control type="button" id="1600">
+				<control type="button" id="8977">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1722,7 +1736,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="9100">
+				<control type="radiobutton" id="8988">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1731,7 +1745,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Wave)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Wave)</selected>
 				</control>
-				<control type="button" id="3000">
+				<control type="button" id="8989">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1742,7 +1756,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_Wave_Folder)</onclick>
 				</control>
 
-				<control type="button" id="3100">
+				<control type="button" id="8990">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1750,7 +1764,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconWave_Icon)</onclick>
 				</control>
-				<control type="button" id="3200">
+				<control type="button" id="8991">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1760,7 +1774,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Wave_Folder)</onclick>
 					<onclick>Skin.Reset(IconWave_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="3300">
+				<control type="radiobutton" id="8992">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1769,7 +1783,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS18)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS18)</selected>
 				</control>
-				<control type="button" id="3400">
+				<control type="button" id="8993">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1777,7 +1791,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS18_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS18)</visible>
 				</control>
-				<control type="radiobutton" id="3500">
+				<control type="radiobutton" id="8994">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
@@ -1785,7 +1799,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton1010)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton1010)</selected>
 				</control>
-				<control type="button" id="3600">
+				<control type="button" id="8995">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1812,7 +1826,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="9100">
+				<control type="radiobutton" id="8996">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1821,7 +1835,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Watcha)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Watcha)</selected>
 				</control>
-				<control type="button" id="4000">
+				<control type="button" id="8997">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1832,7 +1846,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_Watcha_Folder)</onclick>
 				</control>
 
-				<control type="button" id="4100">
+				<control type="button" id="8998">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1841,7 +1855,7 @@
 					<onclick>Skin.SetImage(IconWacha_Icon)</onclick>
 				</control>
 
-				<control type="button" id="4200">
+				<control type="button" id="8999">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1851,7 +1865,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Wave_Folder)</onclick>
 					<onclick>Skin.Reset(IconWave_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="4300">
+				<control type="radiobutton" id="9000">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1860,7 +1874,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS15)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS15)</selected>
 				</control>
-				<control type="button" id="4400">
+				<control type="button" id="9001">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1869,7 +1883,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS15_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS15)</visible>
 				</control>
-				<control type="radiobutton" id="4500">
+				<control type="radiobutton" id="9001">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
@@ -1877,7 +1891,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton1011)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton1011)</selected>
 				</control>
-				<control type="button" id="4600">
+				<control type="button" id="9002">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1904,7 +1918,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="6000">
+				<control type="radiobutton" id="9003">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1913,7 +1927,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Spotv)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Spotv)</selected>
 				</control>
-				<control type="button" id="6100">
+				<control type="button" id="9004">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1924,7 +1938,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_Spotv_Folder)</onclick>
 				</control>
 
-				<control type="button" id="6200">
+				<control type="button" id="9005">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1932,7 +1946,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconSpotv_Icon)</onclick>
 				</control>
-				<control type="button" id="6300">
+				<control type="button" id="9006">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1942,7 +1956,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Spotv_Folder)</onclick>
 					<onclick>Skin.Reset(IconSpotv_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="6400">
+				<control type="radiobutton" id="9007">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -1951,7 +1965,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS35)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS35)</selected>
 				</control>
-				<control type="button" id="6500">
+				<control type="button" id="9008">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1960,7 +1974,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS35_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS35)</visible>
 				</control>
-				<control type="radiobutton" id="6600">
+				<control type="radiobutton" id="9009">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
@@ -1968,7 +1982,7 @@
 					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
 				</control>
-				<control type="button" id="6700">
+				<control type="button" id="9010">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -1998,7 +2012,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="6000">
+				<control type="radiobutton" id="9011">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2007,7 +2021,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_SamsungTV)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_SamsungTV)</selected>
 				</control>
-				<control type="button" id="6100">
+				<control type="button" id="9012">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2018,7 +2032,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_SamsungTV_Folder)</onclick>
 				</control>
 
-				<control type="button" id="6200">
+				<control type="button" id="9013">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2026,7 +2040,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconSamsungTV_Icon)</onclick>
 				</control>
-				<control type="button" id="6300">
+				<control type="button" id="9014">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2036,7 +2050,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_SamsungTV_Folder)</onclick>
 					<onclick>Skin.Reset(IconSamsungTV_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="6400">
+				<control type="radiobutton" id="9015">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2045,7 +2059,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS41)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS41)</selected>
 				</control>
-				<control type="button" id="6500">
+				<control type="button" id="9016">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -2054,22 +2068,22 @@
 					<onclick>Skin.SetString(SelfColorWebOS41_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS41)</visible>
 				</control>
-				<control type="radiobutton" id="6600">
+				<control type="radiobutton" id="9017">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
 					<label>$LOCALIZE[31049]</label>
-					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
-					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
+					<onclick>Skin.ToggleSetting(movieplaylistButton1014)</onclick>
+					<selected>Skin.HasSetting(movieplaylistButton1014)</selected>
 				</control>
-				<control type="button" id="6700">
+				<control type="button" id="9018">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
 					<label>$LOCALIZE[31050]</label>
 					<label2>$INFO[Container(90000).ListItem.Property(Path)</label2>
 					<onclick>ActivateWindow(1121)</onclick>
-					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
+					<visible>Skin.HasSetting(movieplaylistButton1014)</visible>
 				</control>
 			</control>
 			<!--  New OTT -->
@@ -2090,7 +2104,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="6000">
+				<control type="radiobutton" id="9019">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2099,7 +2113,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Kakaotv)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Kakaotv)</selected>
 				</control>
-				<control type="button" id="6100">
+				<control type="button" id="9020">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2110,7 +2124,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_Kakaotv_Folder)</onclick>
 				</control>
 
-				<control type="button" id="6200">
+				<control type="button" id="9021">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2118,7 +2132,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconKakaotv_Icon)</onclick>
 				</control>
-				<control type="button" id="6300">
+				<control type="button" id="9022">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2128,7 +2142,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Kakaotv_Folder)</onclick>
 					<onclick>Skin.Reset(IconWave_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="6400">
+				<control type="radiobutton" id="9023">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2137,7 +2151,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS42)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS42)</selected>
 				</control>
-				<control type="button" id="6500">
+				<control type="button" id="9024">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -2146,22 +2160,22 @@
 					<onclick>Skin.SetString(SelfColorWebOS42_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS42)</visible>
 				</control>
-				<control type="radiobutton" id="6600">
+				<control type="radiobutton" id="9025">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
 					<label>$LOCALIZE[31049]</label>
-					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
-					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
+					<onclick>Skin.ToggleSetting(movieplaylistButton1015)</onclick>
+					<selected>Skin.HasSetting(movieplaylistButton1015)</selected>
 				</control>
-				<control type="button" id="6700">
+				<control type="button" id="9026">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
 					<label>$LOCALIZE[31050]</label>
 					<label2>$INFO[Container(90000).ListItem.Property(Path)</label2>
 					<onclick>ActivateWindow(1121)</onclick>
-					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
+					<visible>Skin.HasSetting(movieplaylistButton1015)</visible>
 				</control>
 			</control>
 			<!--  New OTT -->
@@ -2182,7 +2196,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="6000">
+				<control type="radiobutton" id="9027">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2191,7 +2205,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Coupang)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Coupang)</selected>
 				</control>
-				<control type="button" id="6100">
+				<control type="button" id="9028">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2202,7 +2216,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_Coupang_Folder)</onclick>
 				</control>
 
-				<control type="button" id="6200">
+				<control type="button" id="9029">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2210,7 +2224,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconCoupang_Icon)</onclick>
 				</control>
-				<control type="button" id="6300">
+				<control type="button" id="9030">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2220,7 +2234,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Coupang_Folder)</onclick>
 					<onclick>Skin.Reset(IconWave_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="6400">
+				<control type="radiobutton" id="9031">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2229,7 +2243,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS43)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS43)</selected>
 				</control>
-				<control type="button" id="6500">
+				<control type="button" id="9032">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -2238,22 +2252,22 @@
 					<onclick>Skin.SetString(SelfColorWebOS43_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS43)</visible>
 				</control>
-				<control type="radiobutton" id="6600">
+				<control type="radiobutton" id="9033">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
 					<label>$LOCALIZE[31049]</label>
-					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
-					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
+					<onclick>Skin.ToggleSetting(movieplaylistButton1016)</onclick>
+					<selected>Skin.HasSetting(movieplaylistButton1016)</selected>
 				</control>
-				<control type="button" id="6700">
+				<control type="button" id="9034">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
 					<label>$LOCALIZE[31050]</label>
 					<label2>$INFO[Container(90000).ListItem.Property(Path)</label2>
 					<onclick>ActivateWindow(1121)</onclick>
-					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
+					<visible>Skin.HasSetting(movieplaylistButton1016)</visible>
 				</control>
 			</control>
 			<!-- 20 포커스 아이디 / 44(버튼색깔)-->
@@ -2273,7 +2287,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="radiobutton" id="6000">
+				<control type="radiobutton" id="9035">
 					<description>Hide Scripts Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2282,7 +2296,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_Naversports)</onclick>
 					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_Naversports)</selected>
 				</control>
-				<control type="button" id="6100">
+				<control type="button" id="9036">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2293,7 +2307,7 @@
 					<onclick>Skin.SetImage(Home_Custom_Back_Naversports_Folder)</onclick>
 				</control>
 
-				<control type="button" id="6200">
+				<control type="button" id="9037">
 					<description>Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2301,7 +2315,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconNaversports_Icon)</onclick>
 				</control>
-				<control type="button" id="6300">
+				<control type="button" id="9038">
 					<description>홈메뉴 아이콘/배경 초기화</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2311,7 +2325,7 @@
 					<onclick>Skin.Reset(Home_Custom_Back_Naversports_Folder)</onclick>
 					<onclick>Skin.Reset(IconWave_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="6400">
+				<control type="radiobutton" id="9039">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -2320,7 +2334,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS44)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS44)</selected>
 				</control>
-				<control type="button" id="6500">
+				<control type="button" id="9040">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -2329,32 +2343,31 @@
 					<onclick>Skin.SetString(SelfColorWebOS44_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS44)</visible>
 				</control>
-				<control type="radiobutton" id="6600">
+				<control type="radiobutton" id="9041">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
 					<label>$LOCALIZE[31049]</label>
-					<onclick>Skin.ToggleSetting(movieplaylistButton1013)</onclick>
-					<selected>Skin.HasSetting(movieplaylistButton1013)</selected>
+					<onclick>Skin.ToggleSetting(movieplaylistButton1018)</onclick>
+					<selected>Skin.HasSetting(movieplaylistButton1018)</selected>
 				</control>
-				<control type="button" id="6700">
+				<control type="button" id="9042">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
 					<label>$LOCALIZE[31050]</label>
 					<label2>$INFO[Container(90000).ListItem.Property(Path)</label2>
 					<onclick>ActivateWindow(1121)</onclick>
-					<visible>Skin.HasSetting(movieplaylistButton1013)</visible>
+					<visible>Skin.HasSetting(movieplaylistButton1018)</visible>
 				</control>
 			</control>
-
 
 			<!--===================================================================================================-->
 			<!--====================================== HOME PLAYLIST 1 ============================================-->
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(30)</visible>
+				<visible>Container(9080).Hasfocus(21)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -2411,12 +2424,12 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS9)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS9)</selected>
 				</control>
-				<control type="button" id="8517">
+				<control type="button" id="8526">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
 					<label>$LOCALIZE[50314]</label>
-					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS7_Path)][/COLOR]</label2>
+					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS9_Path)][/COLOR]</label2>
 					<onclick>Skin.SetString(SelfColorWebOS9_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS9)</visible>
 				</control>
@@ -2826,7 +2839,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(31)</visible>
+				<visible>Container(9080).Hasfocus(22)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3207,7 +3220,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(32)</visible>
+				<visible>Container(9080).Hasfocus(23)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3218,7 +3231,7 @@
 				<onright>66</onright>
 				<onup>9004</onup>
 				<ondown>9004</ondown>
-				<control type="button" id="8596">
+				<control type="button" id="8556">
 					<description>Single Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -3228,7 +3241,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.SetImage(Home_Custom_Back_Playlist3_Folder)</onclick>
 				</control>
-				<control type="button" id="8597">
+				<control type="button" id="8557">
 					<description>Default Image button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -3237,7 +3250,7 @@
 					<font>primal_20</font>
 					<onclick>Skin.Reset(Home_Custom_Back_Playlist3_Folder)</onclick>
 				</control>
-				<control type="button" id="8598">
+				<control type="button" id="8558">
 					<!-- ICON WECHSEL -->
 					<description>Icon</description>
 					<width>1337</width>
@@ -3246,7 +3259,7 @@
 					<label>$LOCALIZE[50268]</label>
 					<onclick>Skin.SetImage(IconPlaylist03_Icon)</onclick>
 				</control>
-				<control type="button" id="8599">
+				<control type="button" id="8559">
 					<description>Default Icon</description>
 					<width>1337</width>
 					<height>50</height>
@@ -3254,7 +3267,7 @@
 					<label>$LOCALIZE[50269]</label>
 					<onclick>Skin.Reset(IconPlaylist03_Icon)</onclick>
 				</control>
-				<control type="radiobutton" id="8600">
+				<control type="radiobutton" id="8560">
 					<description>Color Button</description>
 					<width>1337</width>
 					<height>50</height>
@@ -3263,7 +3276,7 @@
 					<onclick>Skin.ToggleSetting(ColorBackWebOS11)</onclick>
 					<selected>Skin.HasSetting(ColorBackWebOS11)</selected>
 				</control>
-				<control type="button" id="8601">
+				<control type="button" id="8561">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -3272,7 +3285,7 @@
 					<onclick>Skin.SetString(SelfColorWebOS11_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS11)</visible>
 				</control>
-				<control type="label" id="8605">
+				<control type="label" id="8565">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20_Bold</font>
@@ -3283,7 +3296,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
-				<control type="radiobutton" id="8606">
+				<control type="radiobutton" id="8566">
 					<font>primal_20</font>
 					<width>1337</width>
 					<height>50</height>
@@ -3292,7 +3305,7 @@
 					<onclick>Skin.Reset(movieplaylistButton300)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton3000)</selected>
 				</control>
-				<control type="button" id="8607">
+				<control type="button" id="8567">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20</font>
@@ -3301,7 +3314,7 @@
 					<onclick>ActivateWindow(1121)</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton3000)</visible>
 				</control>
-				<control type="label" id="8609">
+				<control type="label" id="8569">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_20_Bold</font>
@@ -3312,7 +3325,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
-				<control type="radiobutton" id="8610">
+				<control type="radiobutton" id="8570">
 					<description>custom home 4</description>
 					<font>primal_20</font>
 					<width>1337</width>
@@ -3323,7 +3336,7 @@
 					<onclick>Skin.Reset(movieplaylistButton3900)</onclick>
 					<selected>Skin.HasSetting(movieplaylistButton300)</selected>
 				</control>
-				<control type="button" id="8611">
+				<control type="button" id="8571">
 					<width>1337</width>
 					<height>50</height>
 					<font>primal_18</font>
@@ -3332,7 +3345,7 @@
 					<onclick>Skin.SetString(movieplaylistButton300_label)</onclick>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="radiobutton" id="8612">
+				<control type="radiobutton" id="8572">
 					<!-- Playlist 3 -->
 					<width>1337</width>
 					<height>60</height>
@@ -3343,7 +3356,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton301)</selected>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8613">
+				<control type="button" id="8573">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3353,7 +3366,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton301)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8614">
+				<control type="button" id="8574">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3364,7 +3377,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton301)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="radiobutton" id="8615">
+				<control type="radiobutton" id="8575">
 					<width>1337</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -3374,7 +3387,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton302)</selected>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8616">
+				<control type="button" id="8576">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3384,7 +3397,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton302)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8617">
+				<control type="button" id="8577">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3395,7 +3408,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton302)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="radiobutton" id="8618">
+				<control type="radiobutton" id="8578">
 					<width>1337</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -3405,7 +3418,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton303)</selected>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8619">
+				<control type="button" id="8579">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3415,7 +3428,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton303)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8620">
+				<control type="button" id="8580">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3426,7 +3439,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton303)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="radiobutton" id="8621">
+				<control type="radiobutton" id="8581">
 					<width>1337</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -3436,7 +3449,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton304)</selected>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8622">
+				<control type="button" id="8582">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3446,7 +3459,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton304)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8623">
+				<control type="button" id="8583">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3457,7 +3470,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton304)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="radiobutton" id="8624">
+				<control type="radiobutton" id="8584">
 					<width>1337</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -3467,7 +3480,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton305)</selected>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8625">
+				<control type="button" id="8585">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3477,7 +3490,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton305)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8626">
+				<control type="button" id="8586">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3488,7 +3501,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton305)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="radiobutton" id="8627">
+				<control type="radiobutton" id="8587">
 					<width>1337</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -3498,7 +3511,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton306)</selected>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8628">
+				<control type="button" id="8588">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3508,7 +3521,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton306)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8629">
+				<control type="button" id="8589">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3519,7 +3532,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton306)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="radiobutton" id="8630">
+				<control type="radiobutton" id="8590">
 					<width>1337</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -3529,7 +3542,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton307)</selected>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8631">
+				<control type="button" id="8591">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3539,7 +3552,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton307)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8632">
+				<control type="button" id="8592">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3550,7 +3563,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton307)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="radiobutton" id="8633">
+				<control type="radiobutton" id="8593">
 					<width>1337</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -3560,7 +3573,7 @@
 					<selected>Skin.HasSetting(movieplaylistButton308)</selected>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8634">
+				<control type="button" id="8594">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3570,7 +3583,7 @@
 					<visible>Skin.HasSetting(movieplaylistButton308)</visible>
 					<visible>Skin.HasSetting(movieplaylistButton300)</visible>
 				</control>
-				<control type="button" id="8635">
+				<control type="button" id="8595">
 					<width>1337</width>
 					<height>40</height>
 					<font>primal_18</font>
@@ -3587,7 +3600,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(33)</visible>
+				<visible>Container(9080).Hasfocus(24)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3675,7 +3688,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(34)</visible>
+				<visible>Container(9080).Hasfocus(25)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3763,7 +3776,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(35)</visible>
+				<visible>Container(9080).Hasfocus(26)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3851,7 +3864,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(36)</visible>
+				<visible>Container(9080).Hasfocus(27)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -3939,7 +3952,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(37)</visible>
+				<visible>Container(9080).Hasfocus(28)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4027,7 +4040,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(38)</visible>
+				<visible>Container(9080).Hasfocus(29)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4115,7 +4128,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(39)</visible>
+				<visible>Container(9080).Hasfocus(30)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4203,7 +4216,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(40)</visible>
+				<visible>Container(9080).Hasfocus(31)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4283,7 +4296,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(41)</visible>
+				<visible>Container(9080).Hasfocus(32)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4363,7 +4376,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(42)</visible>
+				<visible>Container(9080).Hasfocus(33)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4443,7 +4456,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(43)</visible>
+				<visible>Container(9080).Hasfocus(34)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4525,7 +4538,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(44)</visible>
+				<visible>Container(9080).Hasfocus(35)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4606,7 +4619,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(45)</visible>
+				<visible>Container(9080).Hasfocus(36)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4688,7 +4701,7 @@
 			<!--===================================================================================================-->
 			<control type="grouplist" id="9010">
 				<include>SlideInAndOutAnimationRNL</include>
-				<visible>Container(9080).Hasfocus(46)</visible>
+				<visible>Container(9080).Hasfocus(37)</visible>
 				<left>505</left>
 				<top>165</top>
 				<width>1337</width>
@@ -4761,6 +4774,87 @@
 					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS27_Path)][/COLOR]</label2>
 					<onclick>Skin.SetString(SelfColorWebOS27_Path)</onclick>
 					<visible>Skin.HasSetting(ColorBackWebOS27)</visible>
+				</control>
+			</control>
+
+			<!--===================================================================================================-->
+			<!--====================================== TMDB ===============================================-->
+			<!--===================================================================================================-->
+			<control type="grouplist" id="9010">
+				<include>SlideInAndOutAnimationRNL</include>
+				<visible>Container(9080).Hasfocus(38)</visible>
+				<left>505</left>
+				<top>165</top>
+				<width>1337</width>
+				<height>810</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>66</pagecontrol>
+				<onleft>9080</onleft>
+				<onright>66</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<control type="radiobutton" id="9100">
+					<description>Hide Scripts Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50266]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton_TMDB)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoScriptsButton_TMDB)</selected>
+				</control>
+				<control type="button" id="8721">
+					<description>Single Image button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50399]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(Home_Custom_Back_TMDB_Folder)][/COLOR]</label2>
+					<font>primal_20</font>
+					<onclick>Skin.SetImage(Home_Custom_Back_TMDB_Folder)</onclick>
+				</control>
+				<control type="button" id="8723">
+					<description>Default Image button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50400]</label>
+					<font>primal_20</font>
+					<onclick>Skin.Reset(Home_Custom_Back_TMDB_Folder)</onclick>
+				</control>
+				<control type="button" id="8724">
+
+					<description>Icon</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50268]</label>
+					<onclick>Skin.SetImage(IconTMDB_Icon)</onclick>
+				</control>
+				<control type="button" id="8725">
+					<description>Default Icon</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50269]</label>
+					<onclick>Skin.Reset(IconTMDB_Icon)</onclick>
+				</control>
+				<control type="radiobutton" id="8726">
+					<description>Color Button</description>
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50139]</label>
+					<onclick>Skin.ToggleSetting(ColorBackWebOS45)</onclick>
+					<selected>Skin.HasSetting(ColorBackWebOS45)</selected>
+				</control>
+				<control type="button" id="8727">
+					<width>1337</width>
+					<height>50</height>
+					<font>primal_20</font>
+					<label>$LOCALIZE[50314]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(SelfColorWebOS45_Path)][/COLOR]</label2>
+					<onclick>Skin.SetString(SelfColorWebOS45_Path)</onclick>
+					<visible>Skin.HasSetting(ColorBackWebOS45)</visible>
 				</control>
 			</control>
 

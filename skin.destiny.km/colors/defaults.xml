@@ -1,4 +1,5 @@
 <colors>
+	<!-- 색 컬러 값 -->
 	<color name="BackColorBackground">FF262626</color>
 	<color name="BackColorFront">FF404040</color>
 	<color name="BackColorButton">FFcf0652</color>
@@ -58,11 +59,11 @@
 	<color name="ColorBackHomeButton38">FF2EFEF7</color>
 	<color name="ColorBackHomeButton39">FF0B4C5F</color>
 	<color name="ColorBackHomeButton40">FFD66321</color>
-	<color name="ColorBackHomeButton41">FF2EFEF7</color>
+	<color name="ColorBackHomeButton41">FF1e9185</color>
 	<color name="ColorBackHomeButton42">FF441660</color>
-	<color name="ColorBackHomeButton43">FFF7FE2E</color>
+	<color name="ColorBackHomeButton43">FF910808</color>
 	<color name="ColorBackHomeButton44">FFBA55D3</color>
-	<color name="ColorBackHomeButton45">FF315E3F</color>
+	<color name="ColorBackHomeButton45">FF1e9185</color>
 	<color name="ColorBackHomeButton46">FF9A8309</color>
 
 

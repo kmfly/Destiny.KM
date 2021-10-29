@@ -267,6 +267,7 @@
 					<width>787</width>
 					<height>60</height>
 					<font>primal_20</font>
+					<textcolor>yellow</textcolor>
 					<textoffsetx>30</textoffsetx>
 					<textwidth>600</textwidth>
 					<onclick>Skin.ToggleSetting(movie_trailerflag)</onclick>
@@ -275,6 +276,7 @@
 
 				<control type="radiobutton" id="3042">
 					<label>Video OSD OFF</label>
+					<textcolor>yellow</textcolor>
 					<width>787</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -285,6 +287,7 @@
 				</control>
 				<control type="radiobutton" id="3043">
 					<label>홈화면 영화 Plot 보이기</label>
+					<textcolor>yellow</textcolor>
 					<width>787</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -295,6 +298,7 @@
 				</control>
 				<control type="radiobutton" id="3044">
 					<label>시작화면 Intro OFF</label>
+					<textcolor>yellow</textcolor>
 					<width>787</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -304,9 +308,23 @@
 					<selected>Skin.HasSetting(introflag)</selected>
 				</control>
 
-				<control type="button" id="3045">
+
+				<control type="radiobutton" id="3045">
+					<label>Back버튼 Video Stop 끄기</label>
+					<textcolor>yellow</textcolor>
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+					<onclick>Skin.ToggleSetting(ForceVideoStop)</onclick>
+					<selected>Skin.HasSetting(ForceVideoStop)</selected>
+				</control>
+
+				<control type="button" id="3046">
 					<description>Single Image button</description>
 					<label>홈 배경화면 변경</label>
+					<textcolor>yellow</textcolor>
 					<width>787</width>
 					<height>60</height>
 					<font>primal_20</font>
@@ -315,6 +333,18 @@
 					<label2>[COLOR=selected]$INFO[Skin.String(Home_Custom_Background)][/COLOR]</label2>
 					<onclick>Skin.Reset(Home_Custom_Background)</onclick>
 					<onclick>Skin.SetImage(Home_Custom_Background)</onclick>
+				</control>
+				<control type="radiobutton" id="3047">
+					<width>1360</width>
+					<label>Skin 백업/복구</label>
+					<textcolor>red</textcolor>
+					<width>787</width>
+					<height>60</height>
+					<font>primal_20</font>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>600</textwidth>
+					<onclick condition="!System.HasAddon(script.xbmcbackup)">InstallAddon(script.xbmcbackup)</onclick>
+					<onclick>RunScript(script.xbmcbackup)</onclick>
 				</control>
 
 				<control type="radiobutton" id="3053">

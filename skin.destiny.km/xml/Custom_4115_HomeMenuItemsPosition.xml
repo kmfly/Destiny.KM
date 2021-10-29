@@ -134,6 +134,7 @@
 						<icon>home/homeicons/close.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemLiveTV)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemRadio)</onclick>
+
 						<onclick>Skin.Reset(HomeMenuItemMovies)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemCollection)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemTVShows)</onclick>
@@ -171,6 +172,7 @@
 						<onclick>Skin.Reset(HomeMenuItemSearch)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemSimplePlaylists)</onclick>
 						<onclick>Skin.Reset(HomeMenuItemPower)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemTMDB)</onclick>
 						<visible></visible>
 					</item>
 					<item id="1">
@@ -195,6 +197,14 @@
 						<icon>home/homeicons/music.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemRadio)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemRadio)</onclick>
+						<visible></visible>
+					</item>
+					<item id="37">
+						<label>개봉예정작</label>
+						<label2 fallback="38.">$INFO[Skin.String(HomeMenuItemTMDB),,.]</label2>
+						<icon>special://skin/media/home/tmdb_icon.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemTMDB)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemTMDB)</onclick>
 						<visible></visible>
 					</item>
 					<item id="4">
@@ -428,6 +438,7 @@
 					</item>
 
 					<item id="32">
+						<!-- 애드온 -->
 						<label>$LOCALIZE[50562]</label>
 						<label2 fallback="31.">$INFO[Skin.String(HomeMenuItemAddons),,.]</label2>
 						<icon>home/homeicons/addons.png</icon>
@@ -438,12 +449,13 @@
 					<item id="33">
 						<label>안드로이드 앱</label>
 						<label2 fallback="32.">$INFO[Skin.String(HomeMenuItemAndroidApps),,.]</label2>
-						<icon>home/homeicons/musicvideos.png</icon>
+						<icon>buttons/home/android64.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemAndroidApps)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemAndroidApps)</onclick>
 						<visible></visible>
 					</item>
 					<item id="34">
+						<!-- 날씨 -->
 						<label>$LOCALIZE[50259]</label>
 						<label2 fallback="33.">$INFO[Skin.String(HomeMenuItemWeather),,.]</label2>
 						<icon>home/homeicons/weather.png</icon>
@@ -454,7 +466,7 @@
 					<item id="35">
 						<label>파일매니져</label>
 						<label2 fallback="34.">$INFO[Skin.String(HomeMenuItemFileManager),,.]</label2>
-						<icon>home/homeicons/games.png</icon>
+						<icon>home/homeicons/data.png</icon>
 						<onclick>Skin.Reset(HomeMenuItemFileManager)</onclick>
 						<onclick>Skin.SetNumeric(HomeMenuItemFileManager)</onclick>
 						<visible></visible>
@@ -483,6 +495,7 @@
 						<onclick>Skin.SetNumeric(HomeMenuItemPower)</onclick>
 						<visible></visible>
 					</item>
+
 
 				</content>
 			</control>

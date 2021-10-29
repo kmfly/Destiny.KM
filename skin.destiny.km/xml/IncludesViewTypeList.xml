@@ -4,6 +4,20 @@
 	<!-- active view mode : 55(파일모드),903(Plex view),901(에피소드 view),900(빅포스터),611(스몰포스터) -->
 	<!-- 비디오 애드온은 myvideonave로 들어가기 때문에 기본적으로 viewvideo에 include 시켜줘야함 -->
 
+
+	<include name="ViewidTMDB">
+		<views>7001</views>
+	</include>
+	<include name="ViewsTMDB">
+		<control type="group" id="777">
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<!-- <include>View_903_Plex_View</include> -->
+			<!-- <include>View_55_FileMode</include> -->
+			<include>View_7000_POSTER_TMDB</include>
+		</control>
+	</include>
+
+
 	<include name="ViewidVideo">
 		<views>55,88,903,900,901,1000</views>
 	</include>
@@ -132,7 +146,8 @@
 					<label>KM VIEW</label>
 					<onclick>Container.SetViewMode(903)</onclick>
 					<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
-					<visible>Container.Content(Movies)|Container.Content(Sets)| Container.Content(TVShows) | Container.Content(Seasons) </visible>
+					<visible>Container.Content(Movies)|Container.Content(Sets)| Container.Content(TVShows) | Container.Content(Seasons) + ![System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) | System.HasAddon(plugin.video.samsungtvm) |System.HasAddon(plugin.video.kakaotvm) | System.HasAddon(plugin.video.coupangm) | System.HasAddon(plugin.video.nsportsm)]</visible>
+					<visible></visible>
 				</control>
 
 				<control type="button" id="812">
@@ -161,7 +176,7 @@
 					<width>398</width>
 					<label>KM OTT LIST</label>
 					<onclick>Container.SetViewMode(1000)</onclick>
-					<visible>System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) | System.HasAddon(plugin.video.samsungtvm) |System.HasAddon(plugin.video.kakaotvm) | System.HasAddon(plugin.video.coupangm) | System.HasAddon(plugin.video.nsportsm) </visible>
+					<visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)]+ [System.HasAddon(plugin.video.tvingm) | System.HasAddon(plugin.video.netflix) | System.HasAddon(plugin.video.wavvem) | System.HasAddon(plugin.video.watcham) | System.HasAddon(plugin.video.youtube) | System.HasAddon(plugin.video.spotvm) | System.HasAddon(plugin.video.samsungtvm) |System.HasAddon(plugin.video.kakaotvm) | System.HasAddon(plugin.video.coupangm) | System.HasAddon(plugin.video.nsportsm)] </visible>
 				</control>
 
 

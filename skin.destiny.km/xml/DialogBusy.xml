@@ -26,7 +26,7 @@
 			<fadetime>0</fadetime>
 			<imagepath>special://skin/spinner/widgets_busy_loader</imagepath>
 			<colordiffuse>white</colordiffuse>
-			<visible>!Skin.HasSetting(movie_trailerflag)</visible>
+			<visible>![Skin.HasSetting(movie_trailerflag) + Player.HasVideo + Control.HasFocus(9031)]</visible>
 			<!-- <visible>Control.HasFocus(9031) + !ListItem.IsCollection + !Player.Playing</visible> -->
 		</control>
 

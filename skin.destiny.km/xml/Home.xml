@@ -21,7 +21,6 @@
 			<texture>$VAR[Backgroundfallback_Default]</texture>
 		</control>
 
-
 		<include>CommonHomeBack</include>
 		<include>HomeMainMenuHorizontal</include>
 		<include>HomeWidgets</include>
